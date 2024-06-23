@@ -1,0 +1,54 @@
+.partnercont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding: 1rem;
+}
+.partnerright {
+  padding: 1rem;
+  max-width: 35%;
+}
+.partnerright > div {
+  margin-bottom: 0.5rem;
+}
+.partnerright > button {
+  margin-top: 1rem;
+}
+.partnerright .aboveheading {
+  font-size: 1.5rem;
+  color: var(--org-primary);
+  font-weight: 400;
+}
+.partnerright .heading {
+  font-size: 2rem;
+  color: black;
+  font-weight: 500;
+}
+.partnerright .subdata {
+  font-size: 1.3rem;
+  color: var(--dark-gray);
+}
+.actionbtn {
+  background-color: 0;
+  border: 0;
+}
+.partnerleft {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+.partnerleft .bennerself {
+  border: 2px solid transparent;
+  border-radius: 6px;
+  border: 1px solid #d3d3d34d;
+  box-shadow: 0 0 24px 5px rgba(0, 0, 0, 0.05);
+  width: calc(100% / 4);
+  min-height: 8rem;
+  cursor: pointer;
+}
+.partnerleft .bennerself:hover {
+  border: 1px solid #e5e7eb;
+  box-shadow: 0;
+}
