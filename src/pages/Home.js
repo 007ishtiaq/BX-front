@@ -6,6 +6,7 @@ import { getRelatedBanners } from "../functions/banner";
 import Countriesbanner from "../components/countriesbanner/Countriesbanner";
 import Partnersbanner from "../components/partnersbanner/Partnersbanner";
 import Visatypes from "../components/visatypes/Visatypes";
+import Reviewsbox from "../components/reviewsbox/Reviewsbox";
 
 const Home = () => {
   const [banners, setBanners] = useState([]);
@@ -38,6 +39,7 @@ const Home = () => {
         <Countriesbanner />
         <Partnersbanner />
         <Visatypes />
+        <Reviewsbox />
       </div>
     </>
   );

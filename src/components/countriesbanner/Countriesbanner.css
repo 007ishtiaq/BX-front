@@ -108,8 +108,8 @@
 }
 
 .botnamepre {
-  margin-bottom: 50%;
-  margin-left: 5%;
+  margin-top: 50%;
+  margin-left: 0%;
   opacity: 1;
   color: rgb(255, 255, 255);
   transition: 0.5s;
@@ -291,7 +291,7 @@ figure.snip0016 .botnamepost {
 
 figure.snip0016 .botnamepost span {
   font-weight: 600;
-  color: rgb(190, 47, 190);
+  color: rgb(114, 84, 252);
 }
 
 .botnamepost h1 {
