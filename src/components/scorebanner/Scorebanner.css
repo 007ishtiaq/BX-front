@@ -1,0 +1,16 @@
+.mainreviewcont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 2rem;
+}
+.mainreviewcont > div {
+  margin-bottom: 1.5rem;
+}
+.mainreviewheading {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--org-primary);
+}

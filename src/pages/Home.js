@@ -7,6 +7,7 @@ import Countriesbanner from "../components/countriesbanner/Countriesbanner";
 import Partnersbanner from "../components/partnersbanner/Partnersbanner";
 import Visatypes from "../components/visatypes/Visatypes";
 import Reviewsbox from "../components/reviewsbox/Reviewsbox";
+import Scorebanner from "../components/scorebanner/Scorebanner";
 
 const Home = () => {
   const [banners, setBanners] = useState([]);
@@ -34,12 +35,13 @@ const Home = () => {
   return (
     <>
       <div className="centercont">
-        <Sliderdiv />
+        {/* <Sliderdiv /> */}
         {/* <MegaBanner loading={loading} banner={banners[0]} /> */}
-        <Countriesbanner />
-        <Partnersbanner />
-        <Visatypes />
+        {/* <Countriesbanner /> */}
+        {/* <Partnersbanner /> */}
+        {/* <Visatypes /> */}
         <Reviewsbox />
+        <Scorebanner />
       </div>
     </>
   );
