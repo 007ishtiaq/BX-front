@@ -1,16 +1,42 @@
-.mainreviewcont {
+.contentcont.scorecardcontainer {
+  padding: 0;
+}
+.scorecardcont {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 2rem 2rem;
+  max-height: 300px;
 }
-.mainreviewcont > div {
-  margin-bottom: 1.5rem;
+.scorecardleft {
+  width: 62%;
+  padding: 2rem;
+  background-color: #231f20;
+  color: white;
 }
-.mainreviewheading {
-  font-size: 3rem;
+.scorecardright {
+  width: 38%;
+  position: relative;
+}
+.cornerstyle {
+  position: absolute;
+  left: -10rem;
+}
+.scorecardright img {
+  /* width: 100%; */
+  height: 100%;
+}
+.scorecontent {
+  width: 60%;
+}
+.actionbtncont {
+  width: 12rem;
+}
+.scoreheading {
+  font-size: 2rem;
+}
+.scoreheading span {
+  color: #2782eb;
+  font-size: 2.5;
   font-weight: 600;
-  color: var(--org-primary);
+}
+.scoresub {
+  font-size: 1.5rem;
 }
