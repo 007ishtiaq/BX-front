@@ -7,7 +7,7 @@ import { createOptinEmail } from "../../functions/optinEmail";
 import { getRelatedStaticText } from "../../functions/staticText";
 import { useFormik } from "formik";
 import { optinSchema } from "../../schemas";
-import { ReactComponent as Logotextblack } from "../../images/headersvgs/logotextblack.svg";
+import { ReactComponent as Logotexttrans } from "../../images/headersvgs/logotexttrans.svg";
 
 export default function Footer() {
   const [footertag, setFootertag] = useState([]);
@@ -105,7 +105,7 @@ export default function Footer() {
           <div class="center-footer footerrow">
             <div class="footer-logo-side">
               <div class="footer-logo">
-                <Logotextblack />
+                <Logotexttrans />
               </div>
               <div class="footer-site-desc">
                 <p>{footertag && footertag.length > 0 && footertag[0].info1}</p>
@@ -129,23 +129,23 @@ export default function Footer() {
               <div class="col-ul">
                 <ul>
                   <li>
-                    <Link to="/ManageMyAc?page=Manageac" class="col-li">
-                      Manage Account
+                    <Link to="#" class="col-li">
+                      Team
                     </Link>
                   </li>
                   <li>
-                    <Link to="/ManageMyAc?page=userOrders" class="col-li">
-                      My Orders
+                    <Link to="#" class="col-li">
+                      Courses
                     </Link>
                   </li>
                   <li>
-                    <Link to="/ManageMyAc?page=userReviews" class="col-li">
-                      My Reviews
+                    <Link to="#" class="col-li">
+                      Career
                     </Link>
                   </li>
                   <li>
-                    <Link to="/ManageMyAc?page=userReturns" class="col-li">
-                      My Returns
+                    <Link to="#" class="col-li">
+                      About us
                     </Link>
                   </li>
                 </ul>
@@ -156,29 +156,29 @@ export default function Footer() {
               <div class="col-ul">
                 <ul>
                   <li>
-                    <Link to="/HelpCenter?page=Payments" class="col-li">
-                      Help Center
+                    <Link to="#" class="col-li">
+                      Service
                     </Link>
                   </li>
                   <li>
-                    <Link to="/HelpCenter?page=Place" class="col-li">
-                      Place an Order
+                    <Link to="#" class="col-li">
+                      Partners
                     </Link>
                   </li>
                   <li>
-                    <Link to="/HelpCenter?page=Pay" class="col-li">
-                      Pay for Order
+                    <Link to="#" class="col-li">
+                      Apply Now
                     </Link>
                   </li>
                   <li>
-                    <Link to="/ReturnandRefundPolicy" class="col-li">
-                      Returns & Refunds
+                    <Link to="#" class="col-li">
+                      Contact us
                     </Link>
                   </li>
 
                   <li>
-                    <Link to="/ContactUs" class="col-li">
-                      Contact Us
+                    <Link to="#" class="col-li">
+                      News & Events
                     </Link>
                   </li>
                 </ul>

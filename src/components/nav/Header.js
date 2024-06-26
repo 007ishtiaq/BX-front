@@ -80,16 +80,16 @@ const Header = () => {
             </div>
           </div>
           <div class="newsright">
-            <Link to="/HelpCenter" className="helperlinkcont">
+            <Link to="#" className="helperlinkcont">
               <Facebooksvg></Facebooksvg>
             </Link>
-            <Link to="/HelpCenter" className="helperlinkcont">
+            <Link to="#" className="helperlinkcont">
               <Instagramsvg></Instagramsvg>
             </Link>
-            <Link to="/HelpCenter" className="helperlinkcont">
+            <Link to="#" className="helperlinkcont">
               <Linkedinsvg></Linkedinsvg>
             </Link>
-            <Link to="/HelpCenter" className="helperlinkcont">
+            <Link to="#" className="helperlinkcont">
               <Whatsappsvg></Whatsappsvg>
             </Link>
           </div>

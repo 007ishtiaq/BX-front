@@ -10,38 +10,38 @@ import Reviewsbox from "../components/reviewsbox/Reviewsbox";
 import Scorebanner from "../components/scorebanner/Scorebanner";
 
 const Home = () => {
-  const [banners, setBanners] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // const [banners, setBanners] = useState([]);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    if (navigator.onLine) {
-      loadBannerData();
-    }
-  }, [navigator.onLine, Online]);
+  // useEffect(() => {
+  //   if (navigator.onLine) {
+  //     loadBannerData();
+  //   }
+  // }, [navigator.onLine, Online]);
 
-  const loadBannerData = () => {
-    getRelatedBanners("FlashSaleBanner")
-      .then((res) => {
-        setBanners(res.data);
-        console.log(res.data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-        setLoading(false);
-      });
-  };
+  // const loadBannerData = () => {
+  //   getRelatedBanners("FlashSaleBanner")
+  //     .then((res) => {
+  //       setBanners(res.data);
+  //       console.log(res.data);
+  //       setLoading(false);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error:", error);
+  //       setLoading(false);
+  //     });
+  // };
 
   return (
     <>
       <div className="centercont">
-        {/* <Sliderdiv /> */}
+        <Sliderdiv />
         {/* <MegaBanner loading={loading} banner={banners[0]} /> */}
-        {/* <Countriesbanner /> */}
-        {/* <Partnersbanner /> */}
-        {/* <Visatypes /> */}
-        <Reviewsbox />
+        <Partnersbanner />
         <Scorebanner />
+        <Visatypes />
+        <Countriesbanner />
+        <Reviewsbox />
       </div>
     </>
   );

@@ -31,39 +31,39 @@ const ItemReturn = lazy(() => import("./pages/user/ItemAction/ItemReturn"));
 const RequestSubmitted = lazy(() =>
   import("./pages/user/ItemAction/RequestSubmitted")
 );
-// const UserReviews = lazy(() => import("./pages/user/UserReviews/MyReviews"));
-// const UserWishlist = lazy(() => import("./pages/user/UserWishlist/MyWishlist"));
+const UserReviews = lazy(() => import("./pages/user/UserReviews/MyReviews"));
+const UserWishlist = lazy(() => import("./pages/user/UserWishlist/MyWishlist"));
 const UserRoute = lazy(() => import("./components/routes/UserRoute"));
 const AdminRoute = lazy(() => import("./components/routes/AdminRoute"));
 const Password = lazy(() => import("./pages/user/Password"));
-// const AdminDashboard = lazy(() =>
-//   import("./pages/admin/AdminDashboard/AdminDashboard")
-// );
+const AdminDashboard = lazy(() =>
+  import("./pages/admin/AdminDashboard/AdminDashboard")
+);
 const OrderDetail = lazy(() =>
   import("./pages/admin/AdminDashboard/OrderDetail")
 );
-// const CategoryCreate = lazy(() =>
-//   import("./pages/admin/category/CategoryCreate")
-// );
+const CategoryCreate = lazy(() =>
+  import("./pages/admin/category/CategoryCreate")
+);
 const CategoryUpdate = lazy(() =>
   import("./pages/admin/category/CategoryUpdate")
 );
 const BrandUpdate = lazy(() => import("./pages/admin/brand/BrandUpdate"));
-// const BannerCreate = lazy(() =>
-//   import("./pages/admin/Slider&Banners/BannerCreate")
-// );
+const BannerCreate = lazy(() =>
+  import("./pages/admin/Slider&Banners/BannerCreate")
+);
 const BannerUpdate = lazy(() =>
   import("./pages/admin/Slider&Banners/BannerUpdate")
 );
 const StaticTextupdate = lazy(() =>
   import("./pages/admin/statictext/StaticTextupdate")
 );
-// const SubCreate = lazy(() => import("./pages/admin/sub/SubCreate"));
+const SubCreate = lazy(() => import("./pages/admin/sub/SubCreate"));
 const SubUpdate = lazy(() => import("./pages/admin/sub/SubUpdate"));
-// const Sub2Create = lazy(() => import("./pages/admin/sub2/Sub2Create"));
+const Sub2Create = lazy(() => import("./pages/admin/sub2/Sub2Create"));
 const Sub2Update = lazy(() => import("./pages/admin/sub2/Sub2Update"));
-// const ProductCreate = lazy(() => import("./pages/admin/product/ProductCreate"));
-// const AllProducts = lazy(() => import("./pages/admin/product/AllProducts"));
+const ProductCreate = lazy(() => import("./pages/admin/product/ProductCreate"));
+const AllProducts = lazy(() => import("./pages/admin/product/AllProducts"));
 const ProductUpdate = lazy(() => import("./pages/admin/product/ProductUpdate"));
 const Product = lazy(() => import("./pages/Product"));
 const CategoryHome = lazy(() => import("./pages/category/CategoryHome"));
@@ -222,77 +222,77 @@ const App = () => {
             {/* common unprotected Routes */}
 
             <Route exact path="/" component={Home} />
-            <Route exact path="/product/:slug" component={Product} />
-            <Route exact path="/shop" component={Shop} />
-            <Route exact path="/cart" component={Cart} />
-            <Route exact path="/category" component={CategoryHome} />
-            <Route
+            {/* <Route exact path="/product/:slug" component={Product} /> */}
+            {/* <Route exact path="/shop" component={Shop} /> */}
+            {/* <Route exact path="/cart" component={Cart} /> */}
+            {/* <Route exact path="/category" component={CategoryHome} /> */}
+            {/* <Route
               exact
               path="/category?category=:slug"
               component={CategoryHome}
-            />
-            <Route exact path="/Flashsale" component={FlashHome} />
-            <Route exact path="/brand/" component={BrandsHome} />
-            <Route exact path="/brand/?brand=:slug" component={BrandsHome} />
-            <Route exact path="/sub/:slug" component={SubHome} />
+            /> */}
+            {/* <Route exact path="/Flashsale" component={FlashHome} /> */}
+            {/* <Route exact path="/brand/" component={BrandsHome} /> */}
+            {/* <Route exact path="/brand/?brand=:slug" component={BrandsHome} /> */}
+            {/* <Route exact path="/sub/:slug" component={SubHome} /> */}
 
-            <Route exact path="/HelpCenter" component={HelpCenter} />
-            <Route exact path="/HelpCenter?page=:page" component={HelpCenter} />
-            <Route exact path="/aboutus" component={AboutUs} />
-            <Route exact path="/ContactUs" component={ContactUs} />
-            <Route exact path="/PrivacyPolicy" component={PrivacyPolicy} />
-            <Route
+            {/* <Route exact path="/HelpCenter" component={HelpCenter} /> */}
+            {/* <Route exact path="/HelpCenter?page=:page" component={HelpCenter} /> */}
+            {/* <Route exact path="/aboutus" component={AboutUs} /> */}
+            {/* <Route exact path="/ContactUs" component={ContactUs} /> */}
+            {/* <Route exact path="/PrivacyPolicy" component={PrivacyPolicy} /> */}
+            {/* <Route
               exact
               path="/ReturnandRefundPolicy"
               component={ReturnandRefundPolicy}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path="/TermsAndConditions"
               component={TermsAndConditions}
-            />
-            <Route exact path="/CookiePolicy" component={CookiePolicy} />
+            /> */}
+            {/* <Route exact path="/CookiePolicy" component={CookiePolicy} /> */}
 
             <Route exact path="/admin" component={Login} />
-            <Route exact path="/register" component={Register} />
-            <Route
+            {/* <Route exact path="/register" component={Register} /> */}
+            {/* <Route
               exact
               path="/register/complete"
               component={RegisterComplete}
-            />
-            <Route exact path="/forgot/password" component={ForgotPassword} />
+            /> */}
+            {/* <Route exact path="/forgot/password" component={ForgotPassword} /> */}
 
             {/* User protected Routes */}
 
-            <UserRoute exact path="/checkout" component={Checkout} />
-            <UserRoute
+            {/* <UserRoute exact path="/checkout" component={Checkout} /> */}
+            {/* <UserRoute
               exact
               path="/OrderPlaced/:orderId"
               component={Thankyou}
-            />
-            <UserRoute exact path="/ManageMyAc" component={ManageMyAccount} />
-            <UserRoute
+            /> */}
+            {/* <UserRoute exact path="/ManageMyAc" component={ManageMyAccount} /> */}
+            {/* <UserRoute
               exact
               path="/ManageMyAc?page=:page"
               component={ManageMyAccount}
-            />
+            /> */}
             {/* <UserRoute exact path="/user/password" component={Password} /> */}
-            <UserRoute exact path="/order/:id" component={OrderDetails} />
-            <UserRoute
+            {/* <UserRoute exact path="/order/:id" component={OrderDetails} /> */}
+            {/* <UserRoute
               exact
               path="/order/:id/itemCancel/:itemid"
               component={ItemCancel}
-            />
-            <UserRoute
+            /> */}
+            {/* <UserRoute
               exact
               path="/order/:id/itemReturn/:itemid"
               component={ItemReturn}
-            />
-            <UserRoute
+            /> */}
+            {/* <UserRoute
               exact
               path="/Request/:requestType/RequestNum/:requestNum"
               component={RequestSubmitted}
-            />
+            /> */}
             {/* <UserRoute exact path="/user/userreviews" component={UserReviews} />
           <UserRoute exact path="/user/userwishlist" component={UserWishlist} /> */}
 
