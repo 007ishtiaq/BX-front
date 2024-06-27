@@ -1,3 +1,6 @@
+.cardcontainer.reviewsbox {
+  padding-bottom: 1.6rem;
+}
 .mainreviewcont {
   display: flex;
   flex-direction: column;

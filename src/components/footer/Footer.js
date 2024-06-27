@@ -8,6 +8,7 @@ import { getRelatedStaticText } from "../../functions/staticText";
 import { useFormik } from "formik";
 import { optinSchema } from "../../schemas";
 import { ReactComponent as Logotexttrans } from "../../images/headersvgs/logotexttrans.svg";
+import { ReactComponent as Footerdemotxt } from "../../images/headersvgs/footerdemotxt.svg";
 
 export default function Footer() {
   const [footertag, setFootertag] = useState([]);
@@ -106,6 +107,7 @@ export default function Footer() {
             <div class="footer-logo-side">
               <div class="footer-logo">
                 <Logotexttrans />
+                <div class="footerdemotxt">Study Guide International</div>
               </div>
               <div class="footer-site-desc">
                 <p>{footertag && footertag.length > 0 && footertag[0].info1}</p>
@@ -186,7 +188,7 @@ export default function Footer() {
             </div>
 
             <div class="footer-colum">
-              <div class="col-heading">AppliaceBazar</div>
+              <div class="col-heading">Study Guide International</div>
               <div class="col-ul">
                 <ul>
                   <li>

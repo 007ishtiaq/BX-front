@@ -64,7 +64,7 @@ export default function Countriesbanner() {
   };
 
   return (
-    <div className="countrymaincont cardcontainer">
+    <div className="countrymaincont cardcontainer countrycardcontainer">
       {cardData.map((card, index) => (
         <div
           key={index}

@@ -4,23 +4,19 @@ footer {
   width: 100%;
 }
 /* ------footer top area----- */
-
-.newsletter {
+.optinouter {
   max-width: 118.4rem;
   margin-left: auto;
   margin-right: auto;
+}
+.newsletter {
   color: var(--dark-gray);
   text-align: center;
   display: flex;
   justify-content: center;
-  background-color: #1456a3;
   align-items: center;
   gap: 10px;
-  padding: 46px 70px;
-  border-radius: 14px;
-  -ms-box-shadow: 0 40px 50px rgba(2, 29, 26, 0.14);
-  -o-box-shadow: 0 40px 50px rgba(2, 29, 26, 0.14);
-  box-shadow: 0 40px 50px rgba(2, 29, 26, 0.14);
+  padding: 0.8rem;
 }
 .optinformcont {
   width: 50%;
@@ -29,12 +25,18 @@ footer {
   border-radius: 0.4rem;
 }
 .optin-form {
+  background-color: #1456a3;
+  padding: 46px 70px;
+  border-radius: 0.4rem;
+  -ms-box-shadow: 0 40px 50px rgba(2, 29, 26, 0.14);
+  -o-box-shadow: 0 40px 50px rgba(2, 29, 26, 0.14);
+  box-shadow: 0 40px 50px rgba(2, 29, 26, 0.14);
   display: flex;
   justify-content: space-between;
   margin: 0;
   align-items: center;
   /* padding: 2.5rem; */
-  padding-bottom: 0.5rem;
+  /* padding-bottom: 0.5rem; */
   width: 100%;
 }
 .optin-form h3 {
@@ -151,15 +153,17 @@ footer {
   align-items: center;
   padding-bottom: 2.5rem;
 }
-.footer-logo .logo-svgsize svg:first-child {
-  width: 3.8rem;
-}
-.footer-logo svg:last-child {
+.footer-logo svg {
   fill: var(--logotxt-footer-gray);
-  width: 15rem;
+  width: 10rem;
   margin-left: 1rem;
   height: auto;
   display: block;
+}
+.footerdemotxt {
+  font-size: 1.7rem;
+  color: gray;
+  font-weight: 600;
 }
 .footer-site-desc {
   margin-bottom: 3rem;

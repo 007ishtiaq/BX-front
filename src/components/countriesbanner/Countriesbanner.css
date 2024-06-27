@@ -3,6 +3,9 @@
   gap: 2rem;
   grid-template-columns: 1fr 1fr 1fr;
 }
+.cardcontainer.countrycardcontainer {
+  padding: 1.6rem;
+}
 
 .countrycont {
   border-radius: 5px;

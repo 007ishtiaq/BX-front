@@ -34,8 +34,8 @@ const Home = () => {
 
   return (
     <>
+      <Sliderdiv />
       <div className="centercont">
-        <Sliderdiv />
         {/* <MegaBanner loading={loading} banner={banners[0]} /> */}
         <Partnersbanner />
         <Scorebanner />

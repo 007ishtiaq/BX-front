@@ -8,7 +8,7 @@ import Mystars from "../ratingstars/Mystars";
 
 export default function Reviewsbox() {
   return (
-    <div className="cardcontainer">
+    <div className="cardcontainer reviewsbox">
       <div className="insidecont contentcont ">
         <div className="mainreviewcont">
           <h1 className="mainreviewheading"> Customers Reviews</h1>
