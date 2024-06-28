@@ -65,3 +65,57 @@
   height: 100%;
   display: block;
 }
+
+/* -----css for carousal---- */
+/* Partnersbanner.css */
+
+.partnerleft {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.carousel-btn.left {
+  left: 0;
+}
+
+.carousel-btn.right {
+  right: 0;
+}
+
+.bennerself {
+  min-width: 25%; /* 100% / 4 items */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.uniimages {
+  width: 100%;
+  max-width: 150px; /* Adjust as needed */
+}

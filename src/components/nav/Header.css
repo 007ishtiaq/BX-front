@@ -913,3 +913,34 @@
     width: 93%;
   }
 }
+
+/* ----css for nav----- */
+.centernavbar li {
+  position: relative;
+}
+
+.centernavbar li .subnav {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.centernavbar li:hover .subnav {
+  display: block;
+}
+
+.centernavbar li .subnav li {
+  white-space: nowrap;
+}
+
+.centernavbar li.active > a {
+  color: #007bff; /* Change this to your active color */
+}
+
+.subnav li.active > a {
+  color: #007bff; /* Change this to your active color */
+}

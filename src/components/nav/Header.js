@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "firebase/auth"; // Import the Firebase Authentication module
 import { Detector } from "react-detect-offline";
 import { useDispatch, useSelector } from "react-redux";
@@ -26,6 +26,7 @@ const Header = () => {
 
   let dispatch = useDispatch();
   let { user } = useSelector((state) => ({ ...state }));
+  let location = useLocation();
 
   useEffect(() => {
     const handleResize = () => {
@@ -48,109 +49,122 @@ const Header = () => {
     return <div dangerouslySetInnerHTML={{ __html: htmlString }} />;
   };
 
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    {
+      name: "Services",
+      path: "/services",
+      subNav: [
+        { name: "Service 1", path: "/services/service1" },
+        { name: "Service 2", path: "/services/service2" },
+      ],
+    },
+    { name: "Portfolio", path: "/portfolio" },
+    { name: "Team", path: "/team" },
+    { name: "Contact", path: "/contact" },
+  ];
+
   return (
     <>
-      <div class="headermain">
-        <div class="top-header">
-          <div class="newsleft">
+      <div className="headermain">
+        <div className="top-header">
+          <div className="newsleft">
             <div className="helperlinkcont">
-              <Mailsvg className="mailsvgcont"></Mailsvg>
-              <p class="top_tag_Center">
-                info@Studyguideint.com
-                {/* {htmlToRender(
-                staticTexts && staticTexts.length > 0 && staticTexts[0].info1
-                )} */}
-              </p>
+              <Mailsvg className="mailsvgcont" />
+              <p className="top_tag_Center">info@Studyguideint.com</p>
             </div>
             <div className="seprator">{"|"}</div>
             <div className="helperlinkcont">
-              <Clocksvg></Clocksvg>
-              <p className="top_tag_Right">
-                10:30 AM To 6:30 PM | Sunday Off
-                {/* {contactinfo && contactinfo.length > 0 && contactinfo[0].info1} */}
-              </p>
+              <Clocksvg />
+              <p className="top_tag_Right">10:30 AM To 6:30 PM | Sunday Off</p>
             </div>
             <div className="seprator">{"|"}</div>
             <div className="helperlinkcont">
-              <Callsvg></Callsvg>
+              <Callsvg />
               <p className="top_tag_Right">
-                +92 322 5005810
-                {/* {contactinfo && contactinfo.length > 0 && contactinfo[0].info1} */}
+                +92 322 5005810, +92 300 1234567, +92 300 1234567
               </p>
             </div>
           </div>
-          <div class="newsright">
+          <div className="newsright">
             <Link to="#" className="helperlinkcont">
-              <Facebooksvg></Facebooksvg>
+              <Facebooksvg />
             </Link>
             <Link to="#" className="helperlinkcont">
-              <Instagramsvg></Instagramsvg>
+              <Instagramsvg />
             </Link>
             <Link to="#" className="helperlinkcont">
-              <Linkedinsvg></Linkedinsvg>
+              <Linkedinsvg />
             </Link>
             <Link to="#" className="helperlinkcont">
-              <Whatsappsvg></Whatsappsvg>
+              <Whatsappsvg />
             </Link>
           </div>
         </div>
 
         <div id="Mainheader" className="middlemainheader">
-          <div class="middle-header">
-            <div class="binder">
+          <div className="middle-header">
+            <div className="binder">
               {windowWidth <= 700 && <BurdermenuSmall />}
               <Link to="/">
-                <div class="logodiv">
-                  <div class="logo-txtsize">
+                <div className="logodiv">
+                  <div className="logo-txtsize">
                     <Logotextblack />
                   </div>
-                  <div class="logo-sampletxt">Study Guide International</div>
+                  <div className="logo-sampletxt">
+                    Study Guide International
+                  </div>
                 </div>
               </Link>
             </div>
 
-            <div class={`middleheaderrightside`}>
-              <div class="middleheadercenterside">
-                <ul class="centernavbar">
-                  <li>
-                    <Link to="#">Home</Link>{" "}
-                  </li>
-                  <li>
-                    <Link to="#">About</Link>{" "}
-                  </li>
-                  <li>
-                    <Link to="#">Services</Link>{" "}
-                  </li>
-                  <li>
-                    <Link to="#">Porfolio</Link>{" "}
-                  </li>
-                  <li>
-                    <Link to="#">Team</Link>{" "}
-                  </li>
-                  <li>
-                    <Link to="#">Contact</Link>{" "}
-                  </li>
-                </ul>
-              </div>{" "}
-              <div class="apllyBtn">
-                {user && user.role === "admin" ? (
-                  <>
-                    <Link
-                      to="/AdminPanel?page=AdminDashboard"
-                      class="accountlistlinks"
+            <div className="middleheaderrightside">
+              <div className="middleheadercenterside">
+                <ul className="centernavbar">
+                  {navItems.map((item, index) => (
+                    <li
+                      key={index}
+                      className={
+                        location.pathname === item.path ? "active" : ""
+                      }
                     >
-                      <div className="acsvg">
-                        <Adminsvg />
-                      </div>
-                      Admin Dashboard
-                    </Link>
-                  </>
+                      <Link to={item.path}>{item.name}</Link>
+                      {item.subNav && (
+                        <ul className="subnav">
+                          {item.subNav.map((subItem, subIndex) => (
+                            <li
+                              key={subIndex}
+                              className={
+                                location.pathname === subItem.path
+                                  ? "active"
+                                  : ""
+                              }
+                            >
+                              <Link to={subItem.path}>{subItem.name}</Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="apllyBtn">
+                {user && user.role === "admin" ? (
+                  <Link
+                    to="/AdminPanel?page=AdminDashboard"
+                    className="accountlistlinks"
+                  >
+                    <div className="acsvg">
+                      <Adminsvg />
+                    </div>
+                    Admin Dashboard
+                  </Link>
                 ) : (
-                  <>
-                    <Link to="#">
-                      <span>Apply Now</span>
-                    </Link>
-                  </>
+                  <Link to="#">
+                    <span>Apply Now</span>
+                  </Link>
                 )}
               </div>
             </div>
@@ -158,8 +172,7 @@ const Header = () => {
           <div
             className={` netnotifier ${
               netconnection ? "connected" : "notconnected"
-            } ${hideOnlineText ? "hideonline" : "showonline"}
-             `}
+            } ${hideOnlineText ? "hideonline" : "showonline"}`}
           >
             <Detector
               render={({ online }) => {
