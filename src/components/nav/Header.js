@@ -81,9 +81,9 @@ const Header = () => {
             </div>
             <div className="seprator">{"|"}</div>
             <div className="helperlinkcont">
-              <Callsvg />
+              <Callsvg /> <Whatsappsvg />
               <p className="top_tag_Right">
-                +92 322 5005810, +92 300 1234567, +92 300 1234567
+                +92 322 5005810, +92 321 0378899, +92 300 8478889
               </p>
             </div>
           </div>

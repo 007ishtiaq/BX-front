@@ -1,31 +1,27 @@
 import React, { useState } from "react";
 import "./Countriesbanner.css";
+import sweden from "../../images/democountryimgs/sweden.webp";
 import finland from "../../images/democountryimgs/finland.png";
 import belgium from "../../images/democountryimgs/belgium.jpg";
 import denmark from "../../images/democountryimgs/denmark.webp";
+import australia from "../../images/democountryimgs/australia.jpg";
+import france from "../../images/democountryimgs/france.jpg";
 import uk from "../../images/democountryimgs/uk.jpg";
 import cyprus from "../../images/democountryimgs/cyprus.png";
 import ireland from "../../images/democountryimgs/ireland.png";
 
 const cardData = [
   {
-    imgSrc: finland, // replace with actual image paths as needed
-    botNamePre: "Finland",
-    botNamePost: "Finland",
+    imgSrc: sweden, // replace with actual image paths as needed
+    botNamePre: "Sweden",
+    botNamePost: "Sweden",
     description:
       "A fascinating intellectual and cultural experience can be had while studying in Germany. German institutions are well-known for...",
   },
   {
-    imgSrc: belgium,
-    botNamePre: "Belgium",
-    botNamePost: "Belgium",
-    description:
-      "France offers a rich cultural heritage and an excellent academic environment. French universities are renowned for their quality of education...",
-  },
-  {
-    imgSrc: denmark,
-    botNamePre: "Denmark",
-    botNamePost: "Denmark",
+    imgSrc: australia,
+    botNamePre: "Australia",
+    botNamePost: "Australia",
     description:
       "France offers a rich cultural heritage and an excellent academic environment. French universities are renowned for their quality of education...",
   },
@@ -37,16 +33,44 @@ const cardData = [
       "France offers a rich cultural heritage and an excellent academic environment. French universities are renowned for their quality of education...",
   },
   {
-    imgSrc: cyprus,
-    botNamePre: "Cyprus",
-    botNamePost: "Cyprus",
+    imgSrc: denmark,
+    botNamePre: "Denmark",
+    botNamePost: "Denmark",
     description:
       "France offers a rich cultural heritage and an excellent academic environment. French universities are renowned for their quality of education...",
+  },
+  {
+    imgSrc: finland, // replace with actual image paths as needed
+    botNamePre: "Finland",
+    botNamePost: "Finland",
+    description:
+      "A fascinating intellectual and cultural experience can be had while studying in Germany. German institutions are well-known for...",
   },
   {
     imgSrc: ireland,
     botNamePre: "Ireland",
     botNamePost: "Ireland",
+    description:
+      "France offers a rich cultural heritage and an excellent academic environment. French universities are renowned for their quality of education...",
+  },
+  {
+    imgSrc: france,
+    botNamePre: "France",
+    botNamePost: "France",
+    description:
+      "France offers a rich cultural heritage and an excellent academic environment. French universities are renowned for their quality of education...",
+  },
+  {
+    imgSrc: belgium,
+    botNamePre: "Belgium",
+    botNamePost: "Belgium",
+    description:
+      "France offers a rich cultural heritage and an excellent academic environment. French universities are renowned for their quality of education...",
+  },
+  {
+    imgSrc: cyprus,
+    botNamePre: "Cyprus",
+    botNamePost: "Cyprus",
     description:
       "France offers a rich cultural heritage and an excellent academic environment. French universities are renowned for their quality of education...",
   },

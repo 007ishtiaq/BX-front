@@ -11,6 +11,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 import "./loader.css";
 import ScrollToTop from "./components/Scroll/ScrollToTop";
 import GoToTop from "./components/Scroll/GoToTop";
+import Whatsappbtn from "./components/whatsappbtn/Whatsappbtn";
 
 // using lazy
 const Login = lazy(() => import("./pages/auth/Login"));
@@ -218,6 +219,7 @@ const App = () => {
           <Header />
           <Toaster />
           <GoToTop />
+          <Whatsappbtn />
           <Switch>
             {/* common unprotected Routes */}
 
