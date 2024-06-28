@@ -86,7 +86,7 @@
 
 .carousel-images {
   display: flex;
-  transition: transform 0.5s ease;
+  width: 400%; /* 4 items at a time, so 400% */
 }
 
 .carousel-btn {
@@ -118,4 +118,25 @@
 .uniimages {
   width: 100%;
   max-width: 150px; /* Adjust as needed */
+}
+
+.image-container {
+  overflow: hidden;
+  width: 100%; /* Adjust as needed */
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease;
+  position: relative;
+  left: 0;
+}
+
+.carousel-images > div {
+  flex: 0 0 25%; /* Adjust as needed */
+}
+
+.carousel-images img {
+  width: 100%; /* Adjust as needed */
+  display: block;
 }

@@ -52,17 +52,17 @@ const Header = () => {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
+    { name: "Our Team", path: "/team" },
     {
-      name: "Services",
-      path: "/services",
+      name: "Destinations",
+      path: "/Destinations",
       subNav: [
-        { name: "Service 1", path: "/services/service1" },
-        { name: "Service 2", path: "/services/service2" },
+        { name: "United Kingdom", path: "/Destinations/United-Kingdom" },
+        { name: "Australia", path: "/Destinations/Australia" },
       ],
     },
-    { name: "Portfolio", path: "/portfolio" },
-    { name: "Team", path: "/team" },
-    { name: "Contact", path: "/contact" },
+    { name: "Success Stories", path: "/Stories" },
+    { name: "Contact Us", path: "/contact" },
   ];
 
   return (

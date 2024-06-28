@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import "./Partnersbanner.css";
 import uni1 from "../../images/partnerdiv/1.png";
 import uni2 from "../../images/partnerdiv/2.png";
@@ -7,41 +7,26 @@ import uni4 from "../../images/partnerdiv/4.png";
 import uni5 from "../../images/partnerdiv/5.png";
 import uni6 from "../../images/partnerdiv/6.png";
 import uni7 from "../../images/partnerdiv/7.png";
-import uni8 from "../../images/partnerdiv/8.png";
-import uni9 from "../../images/partnerdiv/9.png";
-import uni10 from "../../images/partnerdiv/10.png";
 
-const images = [uni1, uni2, uni3, uni4, uni5, uni6, uni7, uni8, uni9, uni10];
-const delay = 2000;
+const images = [uni1, uni2, uni3, uni4, uni5, uni6, uni7];
 
 export default function Partnersbanner() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
-  const intervalRef = useRef(null);
 
   const nextImage = () => {
-    setIsTransitioning(true);
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
   const prevImage = () => {
-    setIsTransitioning(true);
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
 
   useEffect(() => {
-    intervalRef.current = setInterval(nextImage, delay);
-    return () => clearInterval(intervalRef.current);
+    const interval = setInterval(nextImage, 1000);
+    return () => clearInterval(interval);
   }, []);
-
-  useEffect(() => {
-    if (isTransitioning) {
-      const timeout = setTimeout(() => setIsTransitioning(false), 500);
-      return () => clearTimeout(timeout);
-    }
-  }, [isTransitioning]);
 
   return (
     <div className="cardcontainer">
@@ -66,15 +51,15 @@ export default function Partnersbanner() {
                 transform: `translateX(-${
                   (currentIndex % images.length) * 25
                 }%)`,
-                transition: isTransitioning ? "transform 0.5s ease" : "none",
+                transition: "transform 0.5s ease",
               }}
             >
-              {images.concat(images).map((image, index) => (
+              {images.map((image, index) => (
                 <div key={index} className="bennerself">
                   <img
                     className="uniimages"
                     src={image}
-                    alt={`Partner ${index % images.length}`}
+                    alt={`Partner ${index}`}
                   />
                 </div>
               ))}
