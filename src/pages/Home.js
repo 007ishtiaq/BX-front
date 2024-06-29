@@ -8,6 +8,7 @@ import Partnersbanner from "../components/partnersbanner/Partnersbanner";
 import Visatypes from "../components/visatypes/Visatypes";
 import Reviewsbox from "../components/reviewsbox/Reviewsbox";
 import Scorebanner from "../components/scorebanner/Scorebanner";
+import Stepsbanner from "../components/stepsbanner/Stepsbanner";
 
 const Home = () => {
   // const [banners, setBanners] = useState([]);
@@ -41,6 +42,7 @@ const Home = () => {
         <Scorebanner />
         <Visatypes />
         <Countriesbanner />
+        <Stepsbanner />
         <Reviewsbox />
       </div>
     </>

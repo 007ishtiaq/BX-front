@@ -11,34 +11,34 @@ export default function Visatypes() {
         <div className="vtypesheadingcont">HOW WE HELP CLIENTS!</div>
         <div className="vtypescont">
           <div className="vtypesself">
-            <div className="svgcont touristsvg">
-              <Touristsvg />
-            </div>
-            <div className="heading">Tourist Visa</div>
-            <div className="detailscont">
-              Travelers may sometimes require transit visas in order to pass
-              through a country that is not their
-            </div>
-          </div>
-          <div className="vtypesself">
             <div className="svgcont">
               <Studysvg />
             </div>
-            <div className="heading">Study Visa</div>
-            <div className="detailscont">
+            <h1 className="heading">Study Visa</h1>
+            <p className="detailscont">
               Travelers may sometimes require transit visas in order to pass
               through a country that is not their
+            </p>
+          </div>
+          <div className="vtypesself">
+            <div className="svgcont touristsvg">
+              <Touristsvg />
             </div>
+            <h1 className="heading">Work Permit</h1>
+            <p className="detailscont">
+              Travelers may sometimes require transit visas in order to pass
+              through a country that is not their
+            </p>
           </div>
           <div className="vtypesself">
             <div className="svgcont">
               <Spousalsvg />
             </div>
-            <div className="heading">Spousal Visa</div>
-            <div className="detailscont">
+            <h1 className="heading">Spousal Visa</h1>
+            <p className="detailscont">
               Travelers may sometimes require transit visas in order to pass
               through a country that is not their
-            </div>
+            </p>
           </div>
         </div>
       </div>
