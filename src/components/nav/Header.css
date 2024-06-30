@@ -923,7 +923,7 @@
   display: none;
   position: absolute;
   left: 0;
-  top: 100%;
+  top: 130%;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -935,6 +935,10 @@
 
 .centernavbar li .subnav li {
   white-space: nowrap;
+  padding: 0.8rem 0;
+}
+.centernavbar li .subnav li:last-child {
+  padding-bottom: 1.2rem;
 }
 
 .centernavbar li.active > a {

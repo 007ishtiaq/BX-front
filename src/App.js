@@ -17,6 +17,7 @@ import Whatsappbtn from "./components/whatsappbtn/Whatsappbtn";
 const Login = lazy(() => import("./pages/auth/Login"));
 const Register = lazy(() => import("./pages/auth/Register"));
 const Home = lazy(() => import("./pages/Home"));
+const Destination = lazy(() => import("./pages/destination/Destination"));
 const Header = lazy(() => import("./components/nav/Header"));
 const NotFound = lazy(() => import("./pages/NotFound/NotFound"));
 
@@ -224,6 +225,9 @@ const App = () => {
             {/* common unprotected Routes */}
 
             <Route exact path="/" component={Home} />
+            <Route exact path="/country/" component={Destination} />
+            {/* <Route exact path="/country/?country=:slug" component={Destination} /> */}
+
             {/* <Route exact path="/product/:slug" component={Product} /> */}
             {/* <Route exact path="/shop" component={Shop} /> */}
             {/* <Route exact path="/cart" component={Cart} /> */}

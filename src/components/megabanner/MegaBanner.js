@@ -16,11 +16,11 @@ export default function MegaBanner({ banner, loading }) {
                 <Skeleton className="Skeletonsize" count={1} />
               </div>
             ) : (
-              <Link to={banner && banner.link}>
+              <Link to="#">
                 <img
                   className="bigbannerimg"
-                  src={banner && banner.image.url}
-                  alt={banner && banner.image.public_id}
+                  src={banner}
+                  alt={"123123"}
                   onLoad={() => setImageLoaded(true)}
                   style={{ display: imageLoaded ? "block" : "none" }}
                 />
