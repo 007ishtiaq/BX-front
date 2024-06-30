@@ -16,6 +16,13 @@ import { ReactComponent as Facebooksvg } from "../../images/social/facebook.svg"
 import { ReactComponent as Instagramsvg } from "../../images/social/instagram.svg";
 import { ReactComponent as Linkedinsvg } from "../../images/social/linked_in.svg";
 import { ReactComponent as Whatsappsvg } from "../../images/social/Whatsapp.svg";
+import ShippingModal from "../../components/modal/ShippingModal";
+import ShippingForm from "../../components/forms/ShippingForm";
+import { getUserAddress, saveUserAddress } from "../../functions/user";
+import { useFormik } from "formik";
+import { UserAddressAndContactSchema } from "../../schemas";
+import { toast } from "react-hot-toast";
+import NoNetModal from "../../components/NoNetModal/NoNetModal";
 
 const Header = () => {
   const [staticTexts, setStaticTexts] = useState([]);
@@ -23,6 +30,8 @@ const Header = () => {
   const [netconnection, setNetconnection] = useState(true);
   const [hideOnlineText, setHideOnlineText] = useState(true);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [modalVisible, setModalVisible] = useState(false);
+  const [noNetModal, setNoNetModal] = useState(false);
 
   let dispatch = useDispatch();
   let { user } = useSelector((state) => ({ ...state }));
@@ -63,6 +72,62 @@ const Header = () => {
     { name: "Success Stories", path: "/Stories" },
     { name: "Contact Us", path: "/contact" },
   ];
+
+  // ------apply form working------
+
+  const initialValues = {
+    Name: "",
+    Contact: "",
+    Address: "",
+    City: "",
+    Province: "",
+    Area: "",
+    LandMark: "",
+  };
+
+  const {
+    values,
+    errors,
+    touched,
+    isSubmitting,
+    handleBlur,
+    handleChange,
+    handleSubmit,
+    setValues,
+  } = useFormik({
+    initialValues: initialValues,
+    validationSchema: UserAddressAndContactSchema,
+    onSubmit: async (values, action) => {
+      if (navigator.onLine) {
+        try {
+          saveUserAddress(user.token, values)
+            .then((res) => {
+              if (res.data.ok) {
+                toast.success("Address saved");
+                setModalVisible(false);
+              }
+            })
+            .catch((err) => console.log("cart save err", err));
+        } catch (error) {
+          console.error(error);
+          setModalVisible(false);
+          // Handle errors if necessary
+        }
+      } else {
+        setModalVisible(false);
+        setNoNetModal(true);
+      }
+    },
+  });
+
+  const handlecancel = () => {
+    if (user && user.token) {
+      getUserAddress(user.token).then((a) => {
+        setValues({ ...initialValues, ...a.data });
+      });
+    }
+    setModalVisible(false);
+  };
 
   return (
     <>
@@ -149,7 +214,7 @@ const Header = () => {
                   ))}
                 </ul>
               </div>
-              <div className="apllyBtn">
+              <div className="">
                 {user && user.role === "admin" ? (
                   <Link
                     to="/AdminPanel?page=AdminDashboard"
@@ -161,9 +226,24 @@ const Header = () => {
                     Admin Dashboard
                   </Link>
                 ) : (
-                  <Link to="#">
-                    <span>Apply Now</span>
-                  </Link>
+                  <>
+                    <ShippingModal
+                      onModalok={handleSubmit}
+                      onModalcancel={handlecancel}
+                      setModalVisible={setModalVisible}
+                      modalVisible={modalVisible}
+                      values={values}
+                      btnClasses={"apllyBtn"}
+                    >
+                      <ShippingForm
+                        values={values}
+                        errors={errors}
+                        touched={touched}
+                        handleBlur={handleBlur}
+                        handleChange={handleChange}
+                      />
+                    </ShippingModal>
+                  </>
                 )}
               </div>
             </div>

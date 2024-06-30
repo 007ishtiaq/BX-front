@@ -593,6 +593,12 @@
   margin-top: 16px;
 }
 .apllyBtn {
+  display: inline-block;
+  border-radius: 0.4rem;
+  line-height: initial;
+  user-select: none;
+  overflow: hidden;
+
   border: none;
   background-color: #1456a3;
   cursor: pointer;
@@ -601,9 +607,36 @@
   padding: 8px 20px;
   color: #fff;
   font-size: 1.5rem;
+  position: relative;
+  transition: 0.6s;
+}
+.apllyBtn:hover {
+  background-color: #1870d4;
+}
+.apllyBtn:active {
+  background-color: #1456a3;
 }
 .apllyBtn a {
   color: #fff;
+}
+.apllyBtn:after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  transform: scale(10);
+  transition: transform 1s, opacity 1s;
+  pointer-events: none;
+  background: radial-gradient(circle, #fff 10%, transparent 0) 50%;
+}
+.apllyBtn:active:after {
+  opacity: 0.2;
+  transform: scale(0);
+  transition: 0s;
 }
 .apllyBtnsvg {
   padding: 0.4rem 1rem;
@@ -942,9 +975,10 @@
 }
 
 .centernavbar li.active > a {
-  color: #007bff; /* Change this to your active color */
+  color: var(--org-primary); /* Change this to your active color */
+  font-weight: 600;
 }
 
 .subnav li.active > a {
-  color: #007bff; /* Change this to your active color */
+  color: var(--org-primary); /* Change this to your active color */
 }

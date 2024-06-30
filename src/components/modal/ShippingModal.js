@@ -25,14 +25,7 @@ const ShippingModal = ({
 
   const handleModal = () => {
     if (navigator.onLine) {
-      if (user && user.token) {
-        setModalVisible(true);
-      } else {
-        history.push({
-          pathname: "/login",
-          state: { from: `product/${slug}` },
-        });
-      }
+      setModalVisible(true);
     } else {
       dispatch({
         type: "SET_NETMODAL_VISIBLE",
@@ -44,31 +37,11 @@ const ShippingModal = ({
   return (
     <>
       <button onClick={handleModal} className={btnClasses}>
-        {!values.Address ? (
-          <div className="adrchangesvg">
-            <div>
-              <div className="btnsvg prodsidesvg">
-                <AddAdrsvg />
-              </div>
-              <p className="btntext textadd">Add</p>
-            </div>
-          </div>
-        ) : (
-          <div className="adrchangesvg">
-            {
-              <div>
-                <div className="btnsvg prodsidesvg">
-                  <Editsvg />
-                </div>
-                <div className="btntext textchange">Change</div>
-              </div>
-            }
-          </div>
-        )}
+        <span>Apply Now</span>
       </button>
 
       <Modal
-        title="Shipping Address"
+        title="Free Assesment Apply Now!"
         className="shippingheading"
         centered
         visible={modalVisible}
