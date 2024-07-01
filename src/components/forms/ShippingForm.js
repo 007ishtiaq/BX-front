@@ -8,6 +8,7 @@ export default function ShippingForm(props) {
     <div class="shippingsubcont">
       <form className="form shippingform">
         <div class="formsubcont formsubcont2">
+          {JSON.stringify(values)}
           <div class="singleinput">
             <label for="full-name">Full Name:</label>
             <input
@@ -26,19 +27,19 @@ export default function ShippingForm(props) {
           </div>
 
           <div class="singleinput">
-            <label for="Contact">Phone number:</label>
+            <label for="PhoneNum">Phone number:</label>
             <input
-              name="Contact"
-              id="Contact"
+              name="PhoneNum"
+              id="PhoneNum"
               type="text"
-              placeholder="Contact Details*"
-              value={values.Contact}
+              placeholder="Phone Number*"
+              value={values.PhoneNum}
               onBlur={handleBlur}
               onChange={handleChange}
               autoComplete="off"
             />
-            {errors.Contact && touched.Contact ? (
-              <p class="helperline errorstate">{errors.Contact}</p>
+            {errors.PhoneNum && touched.PhoneNum ? (
+              <p class="helperline errorstate">{errors.PhoneNum}</p>
             ) : null}
           </div>
           <div class="singleinput">
@@ -48,29 +49,41 @@ export default function ShippingForm(props) {
               id="Email"
               type="text"
               placeholder="Email Address*"
-              value={values.Contact}
+              value={values.Email}
               onBlur={handleBlur}
               onChange={handleChange}
               autoComplete="off"
             />
-            {errors.Contact && touched.Contact ? (
-              <p class="helperline errorstate">{errors.Contact}</p>
+            {errors.Email && touched.Email ? (
+              <p class="helperline errorstate">{errors.Email}</p>
             ) : null}
           </div>
-          <div class="singleinput">
-            <label for="Contact">Gender:</label>
-            <input
-              name="Contact"
-              id="Contact"
-              type="text"
-              placeholder="Contact Details*"
-              value={values.Contact}
-              onBlur={handleBlur}
-              onChange={handleChange}
-              autoComplete="off"
-            />
-            {errors.Contact && touched.Contact ? (
-              <p class="helperline errorstate">{errors.Contact}</p>
+          <div className="singleinput">
+            <label>Gender:</label>
+            <div role="group" aria-labelledby="gender-group">
+              <label>
+                <input
+                  type="radio"
+                  name="Gender"
+                  value="male"
+                  checked={values.Gender === "male"}
+                  onChange={handleChange}
+                />
+                Male
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="Gender"
+                  value="female"
+                  checked={values.Gender === "female"}
+                  onChange={handleChange}
+                />
+                Female
+              </label>
+            </div>
+            {errors.Gender && touched.Gender ? (
+              <p className="helperline errorstate">{errors.Gender}</p>
             ) : null}
           </div>
 
@@ -92,91 +105,78 @@ export default function ShippingForm(props) {
           </div>
 
           <div class="singleinput">
-            <label for="City">Qualification:</label>
+            <label for="Qualification">Qualification:</label>
             <input
-              name="City"
-              id="City"
+              name="Qualification"
+              id="Qualification"
               type="text"
-              placeholder="City*"
-              value={values.City}
+              placeholder="Qualification*"
+              value={values.Qualification}
               onBlur={handleBlur}
               onChange={handleChange}
               autoComplete="off"
             />
-            {errors.City && touched.City ? (
-              <p class="helperline errorstate">{errors.City}</p>
-            ) : null}
+            {/* {errors.Qualification && touched.Qualification ? (
+              <p class="helperline errorstate">{errors.Qualification}</p>
+            ) : null} */}
           </div>
           <div class="singleinput">
-            <label for="City">Institution:</label>
+            <label for="Institution">Institution:</label>
             <input
-              name="City"
-              id="City"
+              name="Institution"
+              id="Institution"
               type="text"
-              placeholder="City*"
-              value={values.City}
+              placeholder="Institution*"
+              value={values.Institution}
               onBlur={handleBlur}
               onChange={handleChange}
               autoComplete="off"
             />
-            {errors.City && touched.City ? (
-              <p class="helperline errorstate">{errors.City}</p>
-            ) : null}
+            {/* {errors.Institution && touched.Institution ? (
+              <p class="helperline errorstate">{errors.Institution}</p>
+            ) : null} */}
           </div>
           <div class="singleinput">
             <label for="City">CGPA:</label>
             <input
-              name="City"
-              id="City"
+              name="CGPA"
+              id="CGPA"
               type="text"
-              placeholder="City*"
-              value={values.City}
+              placeholder="CGPA*"
+              value={values.CGPA}
               onBlur={handleBlur}
               onChange={handleChange}
               autoComplete="off"
             />
-            {errors.City && touched.City ? (
-              <p class="helperline errorstate">{errors.City}</p>
-            ) : null}
+            {/* {errors.CGPA && touched.CGPA ? (
+              <p class="helperline errorstate">{errors.CGPA}</p>
+            ) : null} */}
           </div>
 
           <div class="singleinput">
-            <label for="City">Last Degree passing Year:</label>
+            <label for="PassingYear">Last Degree passing Year:</label>
             <input
-              name="City"
-              id="City"
+              name="PassingYear"
+              id="PassingYear"
               type="text"
-              placeholder="City*"
-              value={values.City}
+              placeholder="Passing Year*"
+              value={values.PassingYear}
               onBlur={handleBlur}
               onChange={handleChange}
               autoComplete="off"
             />
-            {errors.City && touched.City ? (
-              <p class="helperline errorstate">{errors.City}</p>
-            ) : null}
+            {/* {errors.PassingYear && touched.PassingYear ? (
+              <p class="helperline errorstate">{errors.PassingYear}</p>
+            ) : null} */}
           </div>
           <div class="singleinput">
-            <label for="Area">Country Interested in:</label>
+            <label for="CountryInterestedIn">Country Interested in:</label>
             <input
               type="text"
-              placeholder="Area / Block (optional)"
-              name="Area"
-              id="Area"
-              value={values.Area}
-              onBlur={handleBlur}
-              onChange={handleChange}
-              autoComplete="off"
-            />
-          </div>
-          <div class="singleinput">
-            <label for="Area">Applying For:</label>
-            <input
-              type="text"
-              placeholder="Area / Block (optional)"
-              name="Area"
-              id="Area"
-              value={values.Area}
+              placeholder="Country Interested In (optional)"
+              name="CountryInterestedIn"
+              id="CountryInterestedIn"
+              value={values.CountryInterestedIn}
               onBlur={handleBlur}
               onChange={handleChange}
               autoComplete="off"
@@ -184,68 +184,124 @@ export default function ShippingForm(props) {
           </div>
 
           <div class="singleinput">
-            <label for="Area">
-              Have you ever taken any English Language Test?
-            </label>
+            <label for="ApplyingForVisaType">Applying For:</label>
             <input
               type="text"
-              placeholder="Area / Block (optional)"
-              name="Area"
-              id="Area"
-              value={values.Area}
-              onBlur={handleBlur}
-              onChange={handleChange}
-              autoComplete="off"
-            />
-          </div>
-          <div class="singleinput">
-            <label for="Area">Which Test ?</label>
-            <input
-              type="text"
-              placeholder="Area / Block (optional)"
-              name="Area"
-              id="Area"
-              value={values.Area}
-              onBlur={handleBlur}
-              onChange={handleChange}
-              autoComplete="off"
-            />
-          </div>
-          <div class="singleinput">
-            <label for="Area">Overall Marks:</label>
-            <input
-              type="text"
-              placeholder="Area / Block (optional)"
-              name="Area"
-              id="Area"
-              value={values.Area}
+              placeholder=" Applying For Visa Type (optional)"
+              name="ApplyingForVisaType"
+              id="ApplyingForVisaType"
+              value={values.ApplyingForVisaType}
               onBlur={handleBlur}
               onChange={handleChange}
               autoComplete="off"
             />
           </div>
 
+          <div className="singleinput">
+            <label> Have you ever taken any English Language Test?</label>
+            <div role="group" aria-labelledby="gender-group">
+              <label>
+                <input
+                  type="radio"
+                  name="EnglishLanguageTest"
+                  value="Yes"
+                  checked={values.EnglishLanguageTest === "Yes"}
+                  onChange={handleChange}
+                />
+                Yes
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="EnglishLanguageTest"
+                  value="No"
+                  checked={values.EnglishLanguageTest === "No"}
+                  onChange={handleChange}
+                />
+                No
+              </label>
+            </div>
+            {/* {errors.EnglishLanguageTest && touched.EnglishLanguageTest ? (
+              <p className="helperline errorstate">{errors.EnglishLanguageTest}</p>
+            ) : null} */}
+          </div>
+
+          <div className="singleinput">
+            <label htmlFor="TestName">Which Test?</label>
+            <select
+              name="TestName"
+              id="TestName"
+              value={values.TestName}
+              onBlur={handleBlur}
+              onChange={handleChange}
+            >
+              <option value="" label="Select a test" />
+              <option value="IELTS" label="IELTS" />
+              <option value="TOEFL" label="TOEFL" />
+              <option value="PTE" label="PTE" />
+              <option value="ESOL" label="ESOL" />
+              <option value="UKVI" label="UKVI" />
+            </select>
+          </div>
+
           <div class="singleinput">
-            <label for="LandMark">Estimated Budget:</label>
+            <label for="TestMarks">Overall Marks:</label>
             <input
               type="text"
-              placeholder="Land Mark (optional)"
-              name="LandMark"
-              id="LandMark"
-              value={values.LandMark}
+              placeholder="Obtained Marks (optional)"
+              name="TestMarks"
+              id="TestMarks"
+              value={values.TestMarks}
               onBlur={handleBlur}
               onChange={handleChange}
               autoComplete="off"
-            ></input>
+            />
           </div>
+
+          <div className="singleinput">
+            <label> Estimated Budget:</label>
+            <div role="group" aria-labelledby="gender-group">
+              <label>
+                <input
+                  type="radio"
+                  name="EstimatedBudget"
+                  value="1M"
+                  checked={values.EstimatedBudget === "1M"}
+                  onChange={handleChange}
+                />
+                Under 1 Million
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="EstimatedBudget"
+                  value="2M"
+                  checked={values.EstimatedBudget === "2M"}
+                  onChange={handleChange}
+                />
+                2 to 3 Million
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="EstimatedBudget"
+                  value="3M"
+                  checked={values.EstimatedBudget === "3M"}
+                  onChange={handleChange}
+                />
+                More then 3 Million
+              </label>
+            </div>
+          </div>
+
           <div class="singleinput inputfullwidth">
-            <label for="LandMark">Any Query:</label>
+            <label for="AnyQuery">Any Query:</label>
             <input
               type="text"
               placeholder="Drop here (optional)"
-              name="LandMark"
-              id="LandMark"
-              value={values.LandMark}
+              name="AnyQuery"
+              id="AnyQuery"
+              value={values.AnyQuery}
               onBlur={handleBlur}
               onChange={handleChange}
               autoComplete="off"

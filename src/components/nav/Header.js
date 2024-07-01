@@ -20,7 +20,7 @@ import ShippingModal from "../../components/modal/ShippingModal";
 import ShippingForm from "../../components/forms/ShippingForm";
 import { getUserAddress, saveUserAddress } from "../../functions/user";
 import { useFormik } from "formik";
-import { UserAddressAndContactSchema } from "../../schemas";
+import { ApplyNowSchema } from "../../schemas";
 import { toast } from "react-hot-toast";
 import NoNetModal from "../../components/NoNetModal/NoNetModal";
 
@@ -32,6 +32,7 @@ const Header = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [modalVisible, setModalVisible] = useState(false);
   const [noNetModal, setNoNetModal] = useState(false);
+  const [shipping, setShipping] = useState("");
 
   let dispatch = useDispatch();
   let { user } = useSelector((state) => ({ ...state }));
@@ -77,12 +78,21 @@ const Header = () => {
 
   const initialValues = {
     Name: "",
-    Contact: "",
+    PhoneNum: "",
+    Email: "",
+    Gender: "",
     Address: "",
-    City: "",
-    Province: "",
-    Area: "",
-    LandMark: "",
+    Qualification: "",
+    Institution: "",
+    CGPA: "",
+    PassingYear: "",
+    CountryInterestedIn: "",
+    ApplyingForVisaType: "",
+    EnglishLanguageTest: "",
+    TestName: "",
+    TestMarks: "",
+    EstimatedBudget: "",
+    AnyQuery: "",
   };
 
   const {
@@ -96,18 +106,19 @@ const Header = () => {
     setValues,
   } = useFormik({
     initialValues: initialValues,
-    validationSchema: UserAddressAndContactSchema,
+    validationSchema: ApplyNowSchema,
     onSubmit: async (values, action) => {
       if (navigator.onLine) {
         try {
-          saveUserAddress(user.token, values)
-            .then((res) => {
-              if (res.data.ok) {
-                toast.success("Address saved");
-                setModalVisible(false);
-              }
-            })
-            .catch((err) => console.log("cart save err", err));
+          console.log("values we have", values);
+          // saveUserAddress(user.token, values)
+          //   .then((res) => {
+          //     if (res.data.ok) {
+          //       toast.success("Address saved");
+          //       setModalVisible(false);
+          //     }
+          //   })
+          //   .catch((err) => console.log("cart save err", err));
         } catch (error) {
           console.error(error);
           setModalVisible(false);

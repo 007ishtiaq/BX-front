@@ -140,7 +140,7 @@ export const UserAddressAndContactSchema = Yup.object({
     .min(2, "Name must be long")
     .required("Please enter your name"),
   Contact: Yup.string()
-    .min(5, "Contact must be valid")
+    .min(9, "Contact must be valid")
     .required("Please enter contact details"),
   Address: Yup.string()
     .min(2, "Address must be long")
@@ -149,4 +149,20 @@ export const UserAddressAndContactSchema = Yup.object({
   Province: Yup.string()
     .min(2, "Province must be long")
     .required("Please Enter Province, exp 'Punjab'*"),
+});
+// User Address+Contact book schema
+export const ApplyNowSchema = Yup.object({
+  Name: Yup.string()
+    .min(2, "Name must be long")
+    .required("Please enter your name"),
+  PhoneNum: Yup.string()
+    .min(9, "Contact must be valid")
+    .required("Please enter contact details"),
+  Email: Yup.string().email().required("Please enter your email"),
+  Gender: Yup.string()
+    .oneOf(["male", "female"], "Invalid gender")
+    .required("Required"),
+  Address: Yup.string()
+    .min(10, "Address must be long")
+    .required("Home Address Required*"),
 });
