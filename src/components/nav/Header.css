@@ -39,6 +39,10 @@
   transition: all 0.2s linear;
   fill: black;
 }
+.helperlinkcont .wpthinsvg {
+  width: 2.2rem;
+  height: 2.2rem;
+}
 .helperlinkcont .mailsvgcont {
   width: 2rem;
   height: 2rem;

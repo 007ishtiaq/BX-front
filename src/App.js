@@ -225,7 +225,7 @@ const App = () => {
             {/* common unprotected Routes */}
 
             <Route exact path="/" component={Home} />
-            <Route exact path="/country/" component={Destination} />
+            <Route exact path="/Destinations/sweden" component={Destination} />
             {/* <Route exact path="/country/?country=:slug" component={Destination} /> */}
 
             {/* <Route exact path="/product/:slug" component={Product} /> */}

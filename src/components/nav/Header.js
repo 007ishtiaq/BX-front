@@ -16,6 +16,7 @@ import { ReactComponent as Facebooksvg } from "../../images/social/facebook.svg"
 import { ReactComponent as Instagramsvg } from "../../images/social/instagram.svg";
 import { ReactComponent as Linkedinsvg } from "../../images/social/linked_in.svg";
 import { ReactComponent as Whatsappsvg } from "../../images/social/Whatsapp.svg";
+import { ReactComponent as Whatsappthin } from "../../images/social/whatsappthin.svg";
 import ShippingModal from "../../components/modal/ShippingModal";
 import ShippingForm from "../../components/forms/ShippingForm";
 import { getUserAddress, saveUserAddress } from "../../functions/user";
@@ -64,9 +65,8 @@ const Header = () => {
     { name: "About", path: "/about" },
     {
       name: "Destinations",
-      path: "/country",
       subNav: [
-        { name: "United Kingdom", path: "/Destinations/United-Kingdom" },
+        { name: "Sweden", path: "/Destinations/sweden" },
         { name: "Australia", path: "/Destinations/Australia" },
       ],
     },
@@ -156,7 +156,7 @@ const Header = () => {
             </div>
             <div className="seprator">{"|"}</div>
             <div className="helperlinkcont">
-              <Callsvg /> <Whatsappsvg />
+              <Callsvg /> <Whatsappthin className="wpthinsvg" />
               <p className="top_tag_Right">
                 +92 322 5005810, +92 321 0378899, +92 300 8478889
               </p>
