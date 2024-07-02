@@ -21,7 +21,8 @@ export default function Stepsbanner() {
             <p className="detailscont">
               Applying for studying abroad is a huge decision which is why we do
               not limit our counselling decision which is why we do not limit
-              our counselling..
+              our counselling decision which is why we do not limit our
+              counselling
             </p>
           </div>
           <div className="stepself orange">

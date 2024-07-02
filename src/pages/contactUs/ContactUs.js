@@ -20,13 +20,62 @@ export default function ContactUs() {
   const [image, setImage] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const [staticTexts, setStaticTexts] = useState([]);
+  const [staticTexts, setStaticTexts] = useState([
+    {
+      _id: "6567f9bca815956b1f8eaee6",
+      identity: "contactpageinfo",
+      serialNum: 1,
+      info1: "+92 322 5005810, +92 321 0378899, +92 300 8478889",
+      slug: "+92 322 5005810, +92 321 0378899, +92 300 8478889",
+      info2: "",
+      info3: "",
+      createdAt: "2023-11-30T02:55:56.539Z",
+      updatedAt: "2024-05-26T08:03:27.922Z",
+      __v: 0,
+    },
+    {
+      _id: "6567f9dba815956b1f8eaeea",
+      identity: "contactpageinfo",
+      serialNum: 2,
+      info1: "Info@Studyguideint.com",
+      slug: "Info@Studyguideint.com",
+      info2: "",
+      info3: "",
+      createdAt: "2023-11-30T02:56:27.008Z",
+      updatedAt: "2023-11-30T02:56:27.008Z",
+      __v: 0,
+    },
+    {
+      _id: "6567f9eca815956b1f8eaeee",
+      identity: "contactpageinfo",
+      serialNum: 3,
+      info1: "78-A, Garden Block, Garden Town, Lahore.",
+      slug: "abuja-uk",
+      info2: "",
+      info3: "",
+      createdAt: "2023-11-30T02:56:44.709Z",
+      updatedAt: "2023-11-30T02:56:44.709Z",
+      __v: 0,
+    },
+    {
+      _id: "6567fa01a815956b1f8eaef2",
+      identity: "contactpageinfo",
+      serialNum: 4,
+      info1: "@Study-guide-International",
+      slug: "@Study-guide-International ",
+      info2: "",
+      info3: "",
+      createdAt: "2023-11-30T02:57:05.646Z",
+      updatedAt: "2023-11-30T02:57:05.646Z",
+      __v: 0,
+    },
+  ]);
 
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    getRelatedStaticText("contactpageinfo").then((t) => setStaticTexts(t.data));
-  }, []);
+  // useEffect(() => {
+  //   getRelatedStaticText("contactpageinfo").then((t) => console.log(t.data));
+  // }, []);
 
   const htmlToRender = (htmlString) => {
     return <div dangerouslySetInnerHTML={{ __html: htmlString }} />;
@@ -248,41 +297,6 @@ export default function ContactUs() {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="contactbelowcont">
-          <div class="qnasectiontagline">
-            <p>Frequently Asked Qestions</p>
-          </div>
-          <div class="contactqnacont">
-            <div class="contactqnahead">
-              {staticTexts && staticTexts.length > 0 && staticTexts[4].info1}
-            </div>
-            <div class="contactqnasub">
-              {htmlToRender(
-                staticTexts && staticTexts.length > 0 && staticTexts[4].info2
-              )}
-            </div>
-          </div>
-          <div class="contactqnacont">
-            <div class="contactqnahead">
-              {staticTexts && staticTexts.length > 0 && staticTexts[5].info1}
-            </div>
-            <div class="contactqnasub">
-              {htmlToRender(
-                staticTexts && staticTexts.length > 0 && staticTexts[5].info2
-              )}
-            </div>
-          </div>
-          <div class="contactqnacont">
-            <div class="contactqnahead">
-              {staticTexts && staticTexts.length > 0 && staticTexts[6].info1}
-            </div>
-            <div class="contactqnasub">
-              {htmlToRender(
-                staticTexts && staticTexts.length > 0 && staticTexts[6].info2
-              )}
             </div>
           </div>
         </div>

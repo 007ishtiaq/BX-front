@@ -245,7 +245,7 @@ const App = () => {
             {/* <Route exact path="/HelpCenter" component={HelpCenter} /> */}
             {/* <Route exact path="/HelpCenter?page=:page" component={HelpCenter} /> */}
             {/* <Route exact path="/aboutus" component={AboutUs} /> */}
-            {/* <Route exact path="/ContactUs" component={ContactUs} /> */}
+            <Route exact path="/ContactUs" component={ContactUs} />
             {/* <Route exact path="/PrivacyPolicy" component={PrivacyPolicy} /> */}
             {/* <Route
               exact

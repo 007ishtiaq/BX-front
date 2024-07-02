@@ -15,19 +15,41 @@ export default function Ourteam() {
             obcaecati illo dolorum maxime. Excepturi!
           </p>
           <div class="teamrow">
-            {/* <div className="teamcol"> */}
-            <div class="team-col">
-              <img src={person1} alt="" />
+            <div className="teamcol">
+              <div class="team-col">
+                <img src={person1} alt="" />
+              </div>
+              <div className="teamdetails">
+                <p className="teamdesi">Mentor</p>
+                <p className="teamname">Siddique Minhas</p>
+              </div>
             </div>
-            {/* </div> */}
-            <div class="team-col">
-              <img src={person1} alt="" />
+            <div className="teamcol">
+              <div class="team-col">
+                <img src={person1} alt="" />
+              </div>
+              <div className="teamdetails">
+                <p className="teamdesi">CEO</p>
+                <p className="teamname">Hassan Zaman Khan</p>
+              </div>
             </div>
-            <div class="team-col">
-              <img src={person1} alt="" />
+            <div className="teamcol">
+              <div class="team-col">
+                <img src={person1} alt="" />
+              </div>
+              <div className="teamdetails">
+                <p className="teamdesi">CEO</p>
+                <p className="teamname">Waseem</p>
+              </div>
             </div>
-            <div class="team-col">
-              <img src={person1} alt="" />
+            <div className="teamcol">
+              <div class="team-col">
+                <img src={person1} alt="" />
+              </div>
+              <div className="teamdetails">
+                <p className="teamdesi">CEO</p>
+                <p className="teamname">Hadi Zaman Khan</p>
+              </div>
             </div>
           </div>
         </div>

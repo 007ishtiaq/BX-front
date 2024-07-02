@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { ReactComponent as Whatsappsvg } from "../../images/social/Whatsapp.svg";
 import "./Whatsappbtn.css";
@@ -16,6 +16,7 @@ const shake = keyframes`
 // Styled component for the WhatsApp button
 const Button = styled.a`
   position: fixed;
+  z-index: 1000;
   bottom: 110px;
   right: 20px;
   padding: 0.8rem;
@@ -38,14 +39,37 @@ const Button = styled.a`
 `;
 
 const WhatsAppButton = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const listenToScroll = () => {
+    let heightToHidden = 300;
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+
+    if (winScroll > heightToHidden) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenToScroll);
+    return () => window.removeEventListener("scroll", listenToScroll);
+  }, []);
+
   return (
-    <Button
-      href="https://wa.me/00923076570551"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Whatsappsvg className="whatsappsvg" />
-    </Button>
+    <>
+      {isVisible && (
+        <Button
+          href="https://wa.me/00923455005810"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Whatsappsvg className="whatsappsvg" />
+        </Button>
+      )}
+    </>
   );
 };
 

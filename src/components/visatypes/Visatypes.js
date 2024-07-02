@@ -16,8 +16,8 @@ export default function Visatypes() {
             </div>
             <h1 className="heading">Study Visa</h1>
             <p className="detailscont">
-              Travelers may sometimes require transit visas in order to pass
-              through a country that is not their
+              Securing a student visa transforms dreams into reality, unlocking
+              global education opportunities.
             </p>
           </div>
           <div className="vtypesself">
@@ -26,8 +26,8 @@ export default function Visatypes() {
             </div>
             <h1 className="heading">Work Permit</h1>
             <p className="detailscont">
-              Travelers may sometimes require transit visas in order to pass
-              through a country that is not their
+              Unlock new career horizons with a work permit visa, bridging
+              borders for global opportunities and growth.
             </p>
           </div>
           <div className="vtypesself">
@@ -36,8 +36,8 @@ export default function Visatypes() {
             </div>
             <h1 className="heading">Spousal Visa</h1>
             <p className="detailscont">
-              Travelers may sometimes require transit visas in order to pass
-              through a country that is not their
+              A spouse visa allows married partners of citizens to live and work
+              together in another country.
             </p>
           </div>
         </div>

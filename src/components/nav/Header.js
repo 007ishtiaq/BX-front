@@ -68,10 +68,17 @@ const Header = () => {
       subNav: [
         { name: "Sweden", path: "/Destinations/sweden" },
         { name: "Australia", path: "/Destinations/Australia" },
+        { name: "United Kingdom", path: "/Destinations/United-Kingdom" },
+        { name: "Denmark", path: "/Destinations/Denmark" },
+        { name: "Finland", path: "/Destinations/Finland" },
+        { name: "Ireland", path: "/Destinations/Ireland" },
+        { name: "France", path: "/Destinations/France" },
+        { name: "Belgium", path: "/Destinations/Belgium" },
+        { name: "Cyprus", path: "/Destinations/Cyprus" },
       ],
     },
     { name: "Success Stories", path: "/Stories" },
-    { name: "Contact Us", path: "/contact" },
+    { name: "Contact Us", path: "/ContactUs" },
   ];
 
   // ------apply form working------
@@ -147,12 +154,12 @@ const Header = () => {
           <div className="newsleft">
             <div className="helperlinkcont">
               <Mailsvg className="mailsvgcont" />
-              <p className="top_tag_Center">info@Studyguideint.com</p>
+              <p className="top_tag_Center">Info@Studyguideint.com</p>
             </div>
             <div className="seprator">{"|"}</div>
             <div className="helperlinkcont">
               <Clocksvg />
-              <p className="top_tag_Right">10:30 AM To 6:30 PM | Sunday Off</p>
+              <p className="top_tag_Right">10:00 AM To 6:00 PM | Sunday Off</p>
             </div>
             <div className="seprator">{"|"}</div>
             <div className="helperlinkcont">
@@ -163,18 +170,28 @@ const Header = () => {
             </div>
           </div>
           <div className="newsright">
-            <Link to="#" className="helperlinkcont">
+            <a
+              href="https://www.facebook.com/profile.php?id=100069348382258&mibextid=ZbWKwL"
+              className="helperlinkcont"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Facebooksvg />
-            </Link>
+            </a>
             <Link to="#" className="helperlinkcont">
               <Instagramsvg />
             </Link>
             <Link to="#" className="helperlinkcont">
               <Linkedinsvg />
             </Link>
-            <Link to="#" className="helperlinkcont">
+            <a
+              href={`https://api.whatsapp.com/send?phone=00923455005810`}
+              className="helperlinkcont"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Whatsappsvg />
-            </Link>
+            </a>
           </div>
         </div>
 

@@ -8,7 +8,7 @@ export default function ShippingForm(props) {
     <div class="shippingsubcont">
       <form className="form shippingform">
         <div class="formsubcont formsubcont2">
-          {JSON.stringify(values)}
+          {/* {JSON.stringify(values)} */}
           <div class="singleinput">
             <label for="full-name">Full Name:</label>
             <input
@@ -169,32 +169,43 @@ export default function ShippingForm(props) {
               <p class="helperline errorstate">{errors.PassingYear}</p>
             ) : null} */}
           </div>
-          <div class="singleinput">
-            <label for="CountryInterestedIn">Country Interested in:</label>
-            <input
-              type="text"
-              placeholder="Country Interested In (optional)"
+
+          <div className="singleinput">
+            <label htmlFor="CountryInterestedIn">Country Interested in:</label>
+            <select
               name="CountryInterestedIn"
               id="CountryInterestedIn"
               value={values.CountryInterestedIn}
               onBlur={handleBlur}
               onChange={handleChange}
-              autoComplete="off"
-            />
+            >
+              <option value="" label="Select country" />
+              <option value="Sweden" label="Sweden" />
+              <option value="Australia" label="Australia" />
+              <option value="United-Kingdom" label="United Kingdom" />
+              <option value="Denmark" label="Denmark" />
+              <option value="Finland" label="Finland" />
+              <option value="Ireland" label="Ireland" />
+              <option value="France" label="France" />
+              <option value="Belgium" label="Belgium" />
+              <option value="Cyprus" label="Cyprus" />
+            </select>
           </div>
 
-          <div class="singleinput">
-            <label for="ApplyingForVisaType">Applying For:</label>
-            <input
-              type="text"
-              placeholder=" Applying For Visa Type (optional)"
+          <div className="singleinput">
+            <label htmlFor="ApplyingForVisaType">Applying For:</label>
+            <select
               name="ApplyingForVisaType"
               id="ApplyingForVisaType"
               value={values.ApplyingForVisaType}
               onBlur={handleBlur}
               onChange={handleChange}
-              autoComplete="off"
-            />
+            >
+              <option value="" label="Select visa type" />
+              <option value="Study-Visa" label="Study Visa" />
+              <option value="Work-Permit" label="Work Permit" />
+              <option value="Spousal-Visa" label="Spousal Visa" />
+            </select>
           </div>
 
           <div className="singleinput">
