@@ -10,8 +10,23 @@ import uni7 from "../../images/partnerdiv/7.png";
 import uni8 from "../../images/partnerdiv/8.png";
 import uni9 from "../../images/partnerdiv/9.png";
 import uni10 from "../../images/partnerdiv/10.png";
+import uni11 from "../../images/partnerdiv/11.png";
+import uni12 from "../../images/partnerdiv/12.png";
 
-const images = [uni1, uni2, uni3, uni4, uni5, uni6, uni7, uni8, uni9, uni10];
+const images = [
+  uni1,
+  uni2,
+  uni3,
+  uni4,
+  uni5,
+  uni6,
+  uni7,
+  uni8,
+  uni9,
+  uni10,
+  uni11,
+  uni12,
+];
 const delay = 2000;
 
 export default function Partnersbanner() {

@@ -17,6 +17,7 @@ import { ReactComponent as Instagramsvg } from "../../images/social/instagram.sv
 import { ReactComponent as Linkedinsvg } from "../../images/social/linked_in.svg";
 import { ReactComponent as Whatsappsvg } from "../../images/social/Whatsapp.svg";
 import { ReactComponent as Whatsappthin } from "../../images/social/whatsappthin.svg";
+import { ReactComponent as DownArrow } from "../../images/productpage/downbtn.svg";
 import ShippingModal from "../../components/modal/ShippingModal";
 import ShippingForm from "../../components/forms/ShippingForm";
 import { getUserAddress, saveUserAddress } from "../../functions/user";
@@ -221,7 +222,12 @@ const Header = () => {
                         location.pathname === item.path ? "active" : ""
                       }
                     >
-                      <Link to={item.path}>{item.name}</Link>
+                      <Link to={item.path}>
+                        {item.name}
+                        {item.subNav && (
+                          <DownArrow className="down-arrow-icon" />
+                        )}
+                      </Link>
                       {item.subNav && (
                         <ul className="subnav">
                           {item.subNav.map((subItem, subIndex) => (

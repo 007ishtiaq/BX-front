@@ -1,6 +1,8 @@
 import React from "react";
 import "./Ourteam.css";
 import person1 from "../../images/team/1.png";
+import person2 from "../../images/team/2.jpg";
+import person3 from "../../images/team/3.jpg";
 
 export default function Ourteam() {
   return (
@@ -21,7 +23,25 @@ export default function Ourteam() {
               </div>
               <div className="teamdetails">
                 <p className="teamdesi">Mentor</p>
-                <p className="teamname">Siddique Minhas</p>
+                <p className="teamname">Mr Siddique Minhas</p>
+              </div>
+            </div>
+            <div className="teamcol">
+              <div class="team-col">
+                <img src={person3} alt="" />
+              </div>
+              <div className="teamdetails">
+                <p className="teamdesi">CEO</p>
+                <p className="teamname">Mr Hassan Zaman Khan</p>
+              </div>
+            </div>
+            <div className="teamcol">
+              <div class="team-col">
+                <img src={person2} alt="" />
+              </div>
+              <div className="teamdetails">
+                <p className="teamdesi">Senior Counselor</p>
+                <p className="teamname">Mr Waseem</p>
               </div>
             </div>
             <div className="teamcol">
@@ -29,26 +49,8 @@ export default function Ourteam() {
                 <img src={person1} alt="" />
               </div>
               <div className="teamdetails">
-                <p className="teamdesi">CEO</p>
-                <p className="teamname">Hassan Zaman Khan</p>
-              </div>
-            </div>
-            <div className="teamcol">
-              <div class="team-col">
-                <img src={person1} alt="" />
-              </div>
-              <div className="teamdetails">
-                <p className="teamdesi">CEO</p>
-                <p className="teamname">Waseem</p>
-              </div>
-            </div>
-            <div className="teamcol">
-              <div class="team-col">
-                <img src={person1} alt="" />
-              </div>
-              <div className="teamdetails">
-                <p className="teamdesi">CEO</p>
-                <p className="teamname">Hadi Zaman Khan</p>
+                <p className="teamdesi">Senior Counselor</p>
+                <p className="teamname">Mr Hadi Zaman Khan</p>
               </div>
             </div>
           </div>

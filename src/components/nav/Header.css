@@ -761,6 +761,22 @@
 .netnotifier.notconnected {
   background: rgb(209, 2, 2);
 }
+
+/* ----styling for down error----- */
+.down-arrow-icon {
+  margin-left: 5px; /* Adjust spacing as needed */
+  width: 10px; /* Adjust size as needed */
+  height: 10px; /* Adjust size as needed */
+}
+
+.subnav {
+  display: none; /* Hide subnav by default */
+}
+
+li:hover > .subnav {
+  display: block; /* Show subnav on hover */
+}
+
 /* ***************************************
 **************Responsiveness***********
 *************************************** */
