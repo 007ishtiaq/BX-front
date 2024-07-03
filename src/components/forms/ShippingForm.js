@@ -2,7 +2,15 @@ import React, { useEffect } from "react";
 import "./shippingForm.css";
 
 export default function ShippingForm(props) {
-  const { values, errors, touched, handleBlur, handleChange } = props;
+  const {
+    values,
+    errors,
+    touched,
+    handleBlur,
+    handleChange,
+    selectedGender,
+    handleGenderSelect,
+  } = props;
 
   return (
     <div class="shippingsubcont">
@@ -58,24 +66,31 @@ export default function ShippingForm(props) {
               <p class="helperline errorstate">{errors.Email}</p>
             ) : null}
           </div>
+
           <div className="singleinput">
             <label>Gender:</label>
-            <div role="group" aria-labelledby="gender-group">
-              <label>
+            <div
+              role="group"
+              aria-labelledby="gender-group"
+              className="gender-group"
+            >
+              <label className="gender-label">
                 <input
                   type="radio"
                   name="Gender"
                   value="male"
+                  className="genderInput"
                   checked={values.Gender === "male"}
                   onChange={handleChange}
                 />
                 Male
               </label>
-              <label>
+              <label className="gender-label">
                 <input
                   type="radio"
                   name="Gender"
                   value="female"
+                  className="genderInput"
                   checked={values.Gender === "female"}
                   onChange={handleChange}
                 />
@@ -210,8 +225,12 @@ export default function ShippingForm(props) {
 
           <div className="singleinput">
             <label> Have you ever taken any English Language Test?</label>
-            <div role="group" aria-labelledby="gender-group">
-              <label>
+            <div
+              role="group"
+              aria-labelledby="gender-group"
+              className="gender-group"
+            >
+              <label className="gender-label">
                 <input
                   type="radio"
                   name="EnglishLanguageTest"
@@ -221,7 +240,7 @@ export default function ShippingForm(props) {
                 />
                 Yes
               </label>
-              <label>
+              <label className="gender-label">
                 <input
                   type="radio"
                   name="EnglishLanguageTest"
@@ -271,33 +290,37 @@ export default function ShippingForm(props) {
 
           <div className="singleinput">
             <label> Estimated Budget:</label>
-            <div role="group" aria-labelledby="gender-group">
-              <label>
+            <div
+              role="group"
+              aria-labelledby="gender-group"
+              className="gender-group"
+            >
+              <label className="gender-label">
                 <input
                   type="radio"
                   name="EstimatedBudget"
-                  value="1M"
-                  checked={values.EstimatedBudget === "1M"}
+                  value="Under-1-Million"
+                  checked={values.EstimatedBudget === "Under-1-Million"}
                   onChange={handleChange}
                 />
                 Under 1 Million
               </label>
-              <label>
+              <label className="gender-label">
                 <input
                   type="radio"
                   name="EstimatedBudget"
-                  value="2M"
-                  checked={values.EstimatedBudget === "2M"}
+                  value="2-to-3-Million"
+                  checked={values.EstimatedBudget === "2-to-3-Million"}
                   onChange={handleChange}
                 />
                 2 to 3 Million
               </label>
-              <label>
+              <label className="gender-label">
                 <input
                   type="radio"
                   name="EstimatedBudget"
-                  value="3M"
-                  checked={values.EstimatedBudget === "3M"}
+                  value="More-then-3-Million"
+                  checked={values.EstimatedBudget === "More-then-3-Million"}
                   onChange={handleChange}
                 />
                 More then 3 Million

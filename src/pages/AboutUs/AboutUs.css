@@ -23,7 +23,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: #ff8a20;
+  background-color: var(--org-primary);
   color: white;
   font-size: 2rem;
   font-weight: 600;

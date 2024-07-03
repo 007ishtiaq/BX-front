@@ -73,6 +73,31 @@
 .shippingform {
   width: 100%;
 }
+
+/* ----checkbox styling---- */
+
+.gender-group {
+  display: flex;
+  /* gap: 10px; */
+}
+.gender-label {
+  position: relative;
+  cursor: pointer;
+  padding-left: 25px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #020202;
+  user-select: none;
+}
+.gender-label input {
+  margin-right: 0.5rem;
+}
+
+.gender-label:hover,
+.gender-label:active {
+  color: var(--org-primary); /* Change color on hover */
+}
+
 /* ----antd modal setting---- */
 .ant-modal.shippingheading {
   max-width: 950px !important;

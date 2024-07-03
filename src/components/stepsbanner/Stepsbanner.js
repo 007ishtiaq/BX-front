@@ -1,8 +1,11 @@
 import React from "react";
 import "./Stepsbanner.css";
-import { ReactComponent as Touristsvg } from "../../images/visatypes/tourist.svg";
-import { ReactComponent as Studysvg } from "../../images/visatypes/study.svg";
-import { ReactComponent as Spousalsvg } from "../../images/visatypes/spousal.svg";
+import { ReactComponent as Counsellingsvg } from "../../images/stepsbanner/counselling.svg";
+import { ReactComponent as Guidancesvg } from "../../images/stepsbanner/guidance.svg";
+import { ReactComponent as Financialsvg } from "../../images/stepsbanner/financial.svg";
+import { ReactComponent as Travelsvg } from "../../images/stepsbanner/travel.svg";
+import { ReactComponent as Universitysvg } from "../../images/stepsbanner/university.svg";
+import { ReactComponent as Visasvg } from "../../images/stepsbanner/visa.svg";
 
 export default function Stepsbanner() {
   return (
@@ -12,7 +15,7 @@ export default function Stepsbanner() {
         <div className="stepscont">
           <div className="stepself aqua">
             <div className="svgcont touristsvg">
-              <Touristsvg />
+              <Counsellingsvg />
               <div className="contcount">
                 <h1> 1 </h1>
               </div>
@@ -27,7 +30,7 @@ export default function Stepsbanner() {
           </div>
           <div className="stepself orange">
             <div className="svgcont touristsvg">
-              <Touristsvg />
+              <Guidancesvg />
               <div className="contcount">
                 <h1> 2 </h1>
               </div>
@@ -41,7 +44,7 @@ export default function Stepsbanner() {
           </div>
           <div className="stepself green">
             <div className="svgcont touristsvg">
-              <Touristsvg />
+              <Universitysvg />
               <div className="contcount">
                 <h1> 3 </h1>
               </div>
@@ -55,7 +58,7 @@ export default function Stepsbanner() {
           </div>
           <div className="stepself pink">
             <div className="svgcont touristsvg">
-              <Touristsvg />
+              <Visasvg />
               <div className="contcount">
                 <h1> 4 </h1>
               </div>
@@ -69,7 +72,7 @@ export default function Stepsbanner() {
           </div>
           <div className="stepself blue">
             <div className="svgcont touristsvg">
-              <Touristsvg />
+              <Travelsvg />
               <div className="contcount">
                 <h1> 5 </h1>
               </div>
@@ -83,7 +86,7 @@ export default function Stepsbanner() {
           </div>
           <div className="stepself lightblue">
             <div className="svgcont touristsvg">
-              <Touristsvg />
+              <Financialsvg />
               <div className="contcount">
                 <h1> 6 </h1>
               </div>

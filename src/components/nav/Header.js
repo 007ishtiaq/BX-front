@@ -20,7 +20,7 @@ import { ReactComponent as Whatsappthin } from "../../images/social/whatsappthin
 import { ReactComponent as DownArrow } from "../../images/productpage/downbtn.svg";
 import ShippingModal from "../../components/modal/ShippingModal";
 import ShippingForm from "../../components/forms/ShippingForm";
-import { getUserAddress, saveUserAddress } from "../../functions/user";
+import { saveUserForm } from "../../functions/user";
 import { useFormik } from "formik";
 import { ApplyNowSchema } from "../../schemas";
 import { toast } from "react-hot-toast";
@@ -34,7 +34,6 @@ const Header = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [modalVisible, setModalVisible] = useState(false);
   const [noNetModal, setNoNetModal] = useState(false);
-  const [shipping, setShipping] = useState("");
 
   let dispatch = useDispatch();
   let { user } = useSelector((state) => ({ ...state }));
@@ -63,7 +62,7 @@ const Header = () => {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
+    { name: "About", path: "/aboutus" },
     {
       name: "Destinations",
       subNav: [
@@ -118,15 +117,16 @@ const Header = () => {
     onSubmit: async (values, action) => {
       if (navigator.onLine) {
         try {
-          console.log("values we have", values);
-          // saveUserAddress(user.token, values)
-          //   .then((res) => {
-          //     if (res.data.ok) {
-          //       toast.success("Address saved");
-          //       setModalVisible(false);
-          //     }
-          //   })
-          //   .catch((err) => console.log("cart save err", err));
+          // console.log("values we have", values);
+          saveUserForm(values)
+            .then((res) => {
+              // console.log("form sent");
+              if (res.data.ok) {
+                toast.success("Form Submitted");
+                setModalVisible(false);
+              }
+            })
+            .catch((err) => console.log("Form Submitted Error", err));
         } catch (error) {
           console.error(error);
           setModalVisible(false);
@@ -140,11 +140,6 @@ const Header = () => {
   });
 
   const handlecancel = () => {
-    if (user && user.token) {
-      getUserAddress(user.token).then((a) => {
-        setValues({ ...initialValues, ...a.data });
-      });
-    }
     setModalVisible(false);
   };
 
