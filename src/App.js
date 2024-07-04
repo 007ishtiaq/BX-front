@@ -19,6 +19,8 @@ const Register = lazy(() => import("./pages/auth/Register"));
 const Home = lazy(() => import("./pages/Home"));
 const Sweden = lazy(() => import("./pages/destination/Sweden"));
 const Australia = lazy(() => import("./pages/destination/Australia"));
+const UK = lazy(() => import("./pages/destination/UnitedKingdom"));
+const Belgium = lazy(() => import("./pages/destination/Belgium"));
 const Header = lazy(() => import("./components/nav/Header"));
 const NotFound = lazy(() => import("./pages/NotFound/NotFound"));
 
@@ -228,6 +230,8 @@ const App = () => {
             <Route exact path="/" component={Home} />
             <Route exact path="/Destinations/sweden" component={Sweden} />
             <Route exact path="/Destinations/australia" component={Australia} />
+            <Route exact path="/Destinations/United-Kingdom" component={UK} />
+            <Route exact path="/Destinations/Belgium" component={Belgium} />
             {/* <Route exact path="/country/?country=:slug" component={Destination} /> */}
 
             {/* <Route exact path="/product/:slug" component={Product} /> */}

@@ -1,17 +1,7 @@
 import React, { useState, useEffect } from "react";
-import sweden from "../../images/destination/sweden/sweden.webp";
+import belgium from "../../images/destination/belgium/belgium.jpg";
 import lecture from "../../images/destination/sweden/lecture.png";
 import programs from "../../images/destination/sweden/programs.png";
-import uni1 from "../../images/destination/sweden/unis/uni1.png";
-import uni2 from "../../images/destination/sweden/unis/uni2.png";
-import uni3 from "../../images/destination/sweden/unis/uni3.png";
-import uni4 from "../../images/destination/sweden/unis/uni4.png";
-import uni5 from "../../images/destination/sweden/unis/uni5.png";
-import uni6 from "../../images/destination/sweden/unis/uni6.png";
-import uni7 from "../../images/destination/sweden/unis/uni7.png";
-import uni8 from "../../images/destination/sweden/unis/uni8.png";
-import uni9 from "../../images/destination/sweden/unis/uni9.png";
-import uni10 from "../../images/destination/sweden/unis/uni10.png";
 // import { getRelatedStaticText } from "../../functions/staticText";
 import "./Destination.css";
 import { Link } from "react-router-dom";
@@ -45,12 +35,12 @@ export default function Destination() {
                     <div className="topdestcont">
                       <img
                         className="bigbannerimg"
-                        src={sweden}
+                        src={belgium}
                         alt={"123123"}
                         onLoad={() => setImageLoaded(true)}
                         style={{ display: imageLoaded ? "block" : "none" }}
                       />
-                      <div className="destname">Sweden</div>
+                      <div className="destname">Belgium</div>
                     </div>
                     {!imageLoaded && (
                       <Skeleton
@@ -64,7 +54,7 @@ export default function Destination() {
                     )}
                   </Link>
                 )}
-                <div className="uniscont">
+                {/* <div className="uniscont">
                   <div className="uniself">
                     <img className="uniimg" src={uni1} alt="" />
                   </div>
@@ -95,46 +85,47 @@ export default function Destination() {
                   <div className="uniself">
                     <img className="uniimg" src={uni10} alt="" />
                   </div>
-                </div>
+                </div> */}
                 <div className="destcontentcont">
                   <div className="destmainheading">
-                    Study in Sweden for Pakistani Students
+                    Study in Belgium for Pakistani Students
                   </div>
                   <div className="destsubdata">
-                    Sweden is one of the world’s top leaders which has been
-                    providing quality education to students from all around the
-                    globe. Study in Sweden for Pakistani students is based on
-                    one’s own self development. This also includes an
-                    individual’s freedom and their responsibilities. One can
-                    study in Sweden by checking about different universities and
-                    what their admission criteria is. Then one should check what
-                    courses are being offered by the universities which they
-                    have selected. One should check their documents because this
-                    thing is really important for Pakistani students if they
-                    want to study abroad. A number of scholarships that are
-                    being offered also help a variety of students who are unable
-                    to pay their dues. A large number of Pakistani students are
-                    studying in Sweden and their number is increasing day by
-                    day. Students who are enrolled in different courses are also
-                    given an opportunity to work. The working hours are not
-                    fixed for students but studies should be the first priority
-                    of every student. Sweden is a great place even if one wants
-                    to start his career. A number of innovative companies are
-                    also appointing different students. This is also beneficial
-                    for students as they are able to pay their dues by working
-                    in these companies. Creating equal opportunities for all so
-                    one doesn’t feels left out is the top most priority of
-                    educational institutions in Sweden. Helping students with
-                    their course work and creating such an environment in which
-                    students can interact with one another is top most
-                    priorities of universities in Sweden. In this regard
-                    presentations are also given on different topics and this
-                    has really helped students to better understand their
-                    courses. Sweden has gained recognition worldwide and is
-                    still welcoming students to register in latest courses which
-                    are being offered by them.
+                    BELGIUM: Studying in Belgium provides a dynamic academic and
+                    cultural journey. Recognized for its top-tier educational
+                    institutions, Belgium hosts a diverse array of universities
+                    and colleges, many offering programs in English, catering to
+                    global students. Whether you're captivated by Brussels'
+                    historical avenues, Leuven's vibrant student atmosphere, or
+                    Ghent's picturesque allure, Belgium's cities serve as ideal
+                    settings for academic pursuits. Beyond classrooms, Belgium's
+                    central European position facilitates exploration of
+                    neighboring nations, enriching experiences with diverse
+                    cultures and landscapes. Indulge in Belgian delicacies like
+                    chocolates and waffles, and immerse yourself in the nation's
+                    celebrated art and architecture, ensuring an unforgettable
+                    educational adventure. Education in Belgium extends a
+                    welcoming environment for international students, fostering
+                    both academic and personal growth. Accessible through
+                    Flemish and French-speaking systems, higher education offers
+                    a variety of English-taught master's and doctoral programs.
+                    Undergraduates typically demonstrate proficiency in Dutch or
+                    French, though preparatory language courses support
+                    non-native speakers. Graduate studies feature English
+                    instruction across disciplines such as business,
+                    engineering, humanities, and sciences, attracting a global
+                    student body for cross-cultural exchange. Belgium offers
+                    scholarships and financial aid, easing the financial burden,
+                    alongside tailored support services like orientation,
+                    language assistance, and cultural integration. Located
+                    centrally in Europe, Belgium facilitates travel and
+                    exploration, enabling students to immerse in the continent's
+                    cultural richness and varied landscapes. Belgium's education
+                    system integrates academic excellence, cultural diversity,
+                    and comprehensive support, appealing to seekers of
+                    transformative educational experiences.
                   </div>
-                  <div className="destrow">
+                  {/* <div className="destrow">
                     <div className="destleft">
                       <div className="destheading">
                         Lectures and examinations
@@ -162,8 +153,8 @@ export default function Destination() {
                         alt=""
                       />
                     </div>
-                  </div>
-                  <div className="destrow">
+                  </div> */}
+                  {/* <div className="destrow">
                     <div className="destrightwide">
                       <img
                         className="bigbannerimg destsideimg"
@@ -195,7 +186,7 @@ export default function Destination() {
                         PhD programmes for more details.
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

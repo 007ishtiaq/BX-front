@@ -5,9 +5,9 @@ import classes from "./Slider.module.css";
 import { getRelatedBanners } from "../../../functions/banner";
 import { Link } from "react-router-dom";
 import MainSliderSkull from "../../Skeletons/MainSliderSkull";
-import banner1 from "../../../images/silderbanner/banner1.png";
-import banner2 from "../../../images/silderbanner/banner2.png";
-import banner3 from "../../../images/silderbanner/banner3.png";
+import banner1 from "../../../images/silderbanner/banner1.webp";
+import banner2 from "../../../images/silderbanner/banner2.webp";
+import banner3 from "../../../images/silderbanner/banner3.webp";
 
 const Slider = () => {
   const [index, setIndex] = useState(4);

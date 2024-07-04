@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import "./Countriesbanner.css";
 import sweden from "../../images/democountryimgs/sweden.webp";
-import finland from "../../images/democountryimgs/finland.png";
-import belgium from "../../images/democountryimgs/belgium.jpg";
+import finland from "../../images/democountryimgs/finland.webp";
+import belgium from "../../images/democountryimgs/belgium.webp";
 import denmark from "../../images/democountryimgs/denmark.webp";
-import australia from "../../images/democountryimgs/australia.jpg";
-import france from "../../images/democountryimgs/france.jpg";
-import uk from "../../images/democountryimgs/uk.jpg";
-import cyprus from "../../images/democountryimgs/cyprus.png";
-import ireland from "../../images/democountryimgs/ireland.png";
+import australia from "../../images/democountryimgs/australia.webp";
+import france from "../../images/democountryimgs/france.webp";
+import uk from "../../images/democountryimgs/uk.webp";
+import cyprus from "../../images/democountryimgs/cyprus.webp";
+import ireland from "../../images/democountryimgs/ireland.webp";
 
 const cardData = [
   {
@@ -16,63 +16,63 @@ const cardData = [
     botNamePre: "Sweden",
     botNamePost: "Sweden",
     description:
-      "A fascinating intellectual and cultural experience can be had while studying in Germany. German institutions are well-known for...",
+      "Studying in Sweden offers world class education, innovative teaching methods, and vibrant student life, surrounded by stunning nature and a focus on sustainability and equality.",
   },
   {
     imgSrc: australia,
     botNamePre: "Australia",
     botNamePost: "Australia",
     description:
-      "France offers a rich cultural heritage and an excellent academic environment. French universities are renowned for their quality of education...",
+      "Studying in Australia offers world-class education, diverse cultural experiences, and stunning landscapes, making it an attractive destination for international students seeking quality and adventure.",
   },
   {
     imgSrc: uk,
     botNamePre: "United Kingdom",
     botNamePost: "United Kingdom",
     description:
-      "France offers a rich cultural heritage and an excellent academic environment. French universities are renowned for their quality of education...",
+      "Studying in the UK offers prestigious universities, diverse cultural experiences, top-notch research opportunities, and a vibrant student life, enriching both academic and personal growth.",
   },
   {
     imgSrc: denmark,
     botNamePre: "Denmark",
     botNamePost: "Denmark",
     description:
-      "France offers a rich cultural heritage and an excellent academic environment. French universities are renowned for their quality of education...",
+      "Denmark's study programs blend innovative problem solving, collaborative learning, and a focus on sustainability, providing a unique, globally connected, and student friendly academic environment.",
   },
   {
     imgSrc: finland, // replace with actual image paths as needed
     botNamePre: "Finland",
     botNamePost: "Finland",
     description:
-      "A fascinating intellectual and cultural experience can be had while studying in Germany. German institutions are well-known for...",
+      "Studying in Finland offers a world class education, innovative teaching methods, stunning natural landscapes, and a vibrant, inclusive culture that fosters creativity and critical thinking.",
   },
   {
     imgSrc: ireland,
     botNamePre: "Ireland",
     botNamePost: "Ireland",
     description:
-      "France offers a rich cultural heritage and an excellent academic environment. French universities are renowned for their quality of education...",
+      "Studying in Ireland offers rich cultural immersion, world class education, and vibrant student life, all set against breathtaking landscapes and a welcoming, innovative community.",
   },
   {
     imgSrc: france,
     botNamePre: "France",
     botNamePost: "France",
     description:
-      "France offers a rich cultural heritage and an excellent academic environment. French universities are renowned for their quality of education...",
+      "France beckons with its rich artistic heritage, prestigious universities, and innovative research opportunities. Experience a blend of academic excellence and cultural splendor in this captivating European destination.",
   },
   {
     imgSrc: belgium,
     botNamePre: "Belgium",
     botNamePost: "Belgium",
     description:
-      "France offers a rich cultural heritage and an excellent academic environment. French universities are renowned for their quality of education...",
+      "Belgium's study system emphasizes practical learning, encourages international collaboration, and offers diverse, specialized programs in fields like art, science, and technology, fostering global perspectives and career readiness.",
   },
   {
     imgSrc: cyprus,
     botNamePre: "Cyprus",
     botNamePost: "Cyprus",
     description:
-      "France offers a rich cultural heritage and an excellent academic environment. French universities are renowned for their quality of education...",
+      "Studying in European Cyprus offers a blend of Mediterranean charm, quality education, multicultural experiences, and vibrant student life, fostering global perspectives and career opportunities.",
   },
 ];
 

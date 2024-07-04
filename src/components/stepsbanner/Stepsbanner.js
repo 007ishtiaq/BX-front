@@ -22,10 +22,9 @@ export default function Stepsbanner() {
             </div>
             <h1 className="heading">Counselling</h1>
             <p className="detailscont">
-              Applying for studying abroad is a huge decision which is why we do
-              not limit our counselling decision which is why we do not limit
-              our counselling decision which is why we do not limit our
-              counselling
+              Navigating the decision to study abroad is transformative. Our
+              counseling embraces your uniqueness, crafting a phenomenal path
+              forward.
             </p>
           </div>
           <div className="stepself orange">
@@ -37,23 +36,21 @@ export default function Stepsbanner() {
             </div>
             <h1 className="heading">Admission Guidance</h1>
             <p className="detailscont">
-              Applying for studying abroad is a huge decision which is why we do
-              not limit our counselling decision which is why we do not limit
-              our counselling..
+              Crafting your unique narrative, we elevate your application by
+              emphasizing your distinct strengths and passions.
             </p>
           </div>
           <div className="stepself green">
             <div className="svgcont touristsvg">
-              <Universitysvg />
+              <Universitysvg className="unisvg" />
               <div className="contcount">
                 <h1> 3 </h1>
               </div>
             </div>
             <h1 className="heading">University Selection</h1>
             <p className="detailscont">
-              Applying for studying abroad is a huge decision which is why we do
-              not limit our counselling decision which is why we do not limit
-              our counselling..
+              Selecting a university is like sculpting dreams: each choice
+              shapes your future, unlocking boundless possibilities.
             </p>
           </div>
           <div className="stepself pink">
@@ -65,9 +62,8 @@ export default function Stepsbanner() {
             </div>
             <h1 className="heading">Visa Application Assistance</h1>
             <p className="detailscont">
-              Applying for studying abroad is a huge decision which is why we do
-              not limit our counselling decision which is why we do not limit
-              our counselling..
+              Unlock seamless global journeys with our bespoke visa concierge:
+              from meticulous forms to financial fluency, your gateway awaits.
             </p>
           </div>
           <div className="stepself blue">
@@ -79,9 +75,8 @@ export default function Stepsbanner() {
             </div>
             <h1 className="heading">Travel Assistance</h1>
             <p className="detailscont">
-              Applying for studying abroad is a huge decision which is why we do
-              not limit our counselling decision which is why we do not limit
-              our counselling..
+              Transform your journey: Seamlessly schedule flights months ahead,
+              ensuring perfect departure dates with unparalleled precision.
             </p>
           </div>
           <div className="stepself lightblue">
@@ -93,9 +88,8 @@ export default function Stepsbanner() {
             </div>
             <h1 className="heading">Financial Aid & Scholarship Guidance</h1>
             <p className="detailscont">
-              Applying for studying abroad is a huge decision which is why we do
-              not limit our counselling decision which is why we do not limit
-              our counselling..
+              Unlock your path to success with personalized strategies for
+              scholarships, bursaries, and loans tailored just for you.
             </p>
           </div>
         </div>
