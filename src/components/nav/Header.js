@@ -6,7 +6,6 @@ import { Detector } from "react-detect-offline";
 import { useDispatch, useSelector } from "react-redux";
 import { ReactComponent as Logotextblack } from "../../images/headersvgs/logotextblack.svg";
 import { getRelatedStaticText } from "../../functions/staticText";
-import BurdermenuSmall from "../SliderDiv/categoriesPanal/BurdermenuSmall";
 import "../SliderDiv/SliderDiv.css";
 import { ReactComponent as Adminsvg } from "../../images/acnav/admin.svg";
 import { ReactComponent as Callsvg } from "../../images/contactUs/calloutlined.svg";
@@ -148,12 +147,12 @@ const Header = () => {
       <div className="headermain">
         <div className="top-header">
           <div className="newsleft">
-            <div className="helperlinkcont">
+            <div className="helperlinkcont topemail">
               <Mailsvg className="mailsvgcont" />
               <p className="top_tag_Center">Info@Studyguideint.com</p>
             </div>
             <div className="seprator">{"|"}</div>
-            <div className="helperlinkcont">
+            <div className="helperlinkcont toptiming">
               <Clocksvg />
               <p className="top_tag_Right">10:00 AM To 6:00 PM | Sunday Off</p>
             </div>
@@ -177,7 +176,7 @@ const Header = () => {
             <Link to="#" className="helperlinkcont">
               <Instagramsvg />
             </Link>
-            <Link to="#" className="helperlinkcont">
+            <Link to="#" className="helperlinkcont linkedinsvg">
               <Linkedinsvg />
             </Link>
             <a
@@ -194,7 +193,6 @@ const Header = () => {
         <div id="Mainheader" className="middlemainheader">
           <div className="middle-header">
             <div className="binder">
-              {windowWidth <= 700 && <BurdermenuSmall />}
               <Link to="/">
                 <div className="logodiv">
                   <div className="logo-txtsize">
@@ -205,6 +203,38 @@ const Header = () => {
                   </div>
                 </div>
               </Link>
+              <div className="sencondapplybtn">
+                {user && user.role === "admin" ? (
+                  <Link
+                    to="/AdminPanel?page=AdminDashboard"
+                    className="accountlistlinks"
+                  >
+                    <div className="acsvg">
+                      <Adminsvg />
+                    </div>
+                    Admin Dashboard
+                  </Link>
+                ) : (
+                  <>
+                    <ShippingModal
+                      onModalok={handleSubmit}
+                      onModalcancel={handlecancel}
+                      setModalVisible={setModalVisible}
+                      modalVisible={modalVisible}
+                      values={values}
+                      btnClasses={"apllyBtn"}
+                    >
+                      <ShippingForm
+                        values={values}
+                        errors={errors}
+                        touched={touched}
+                        handleBlur={handleBlur}
+                        handleChange={handleChange}
+                      />
+                    </ShippingModal>
+                  </>
+                )}
+              </div>
             </div>
 
             <div className="middleheaderrightside">
@@ -217,7 +247,7 @@ const Header = () => {
                         location.pathname === item.path ? "active" : ""
                       }
                     >
-                      <Link to={item.path}>
+                      <Link to={item.path} className={`${item.name + index}`}>
                         {item.name}
                         {item.subNav && (
                           <DownArrow className="down-arrow-icon" />
@@ -243,7 +273,7 @@ const Header = () => {
                   ))}
                 </ul>
               </div>
-              <div className="">
+              <div className="mainapplybtn">
                 {user && user.role === "admin" ? (
                   <Link
                     to="/AdminPanel?page=AdminDashboard"

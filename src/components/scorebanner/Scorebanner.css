@@ -69,3 +69,16 @@
 .scoretxt {
   font-size: 1.5rem;
 }
+
+/* ***************************************
+**************Responsiveness***********
+*************************************** */
+@media (max-width: 450px) {
+  .scorecardcont {
+    flex-direction: column;
+  }
+  .scorecardleft,
+  .scorecardright {
+    width: 100%;
+  }
+}

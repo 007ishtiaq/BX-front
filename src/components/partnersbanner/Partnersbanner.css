@@ -140,3 +140,15 @@
   width: 100%; /* Adjust as needed */
   display: block;
 }
+
+/* ***************************************
+**************Responsiveness***********
+*************************************** */
+@media (max-width: 450px) {
+  .partnercont {
+    flex-direction: column;
+  }
+  .partnerright {
+    max-width: 100%;
+  }
+}

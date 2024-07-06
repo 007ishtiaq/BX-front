@@ -131,9 +131,6 @@
 .middlemainheader.sticky .logo-svgsize svg {
   width: 3.3rem;
 }
-.middlemainheader.sticky .logo-txtsize svg {
-  width: 8rem;
-}
 .middlemainheader.sticky .search-form {
   height: 3.5rem;
   border-radius: 0.4rem;
@@ -182,6 +179,10 @@
 .binder {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+.sencondapplybtn {
+  display: none;
 }
 .hamburger {
   margin-top: 0.5rem;
@@ -374,8 +375,8 @@
   justify-content: space-between;
 }
 .noauthsvg {
-  width: 19px;
-  height: 19px;
+  width: 1.9rem;
+  height: 1.9rem;
   transition: 0.6s;
 }
 .noauthsvg svg {
@@ -556,16 +557,16 @@
 /* ------------- new nav styling -------- */
 .centernavbar li {
   display: inline-block;
-  font-size: 15px;
+  font-size: 1.5rem;
 }
 
 .centernavbar li a {
   position: relative;
   color: #6d6d6d;
   font-family: "Poppins";
-  font-size: 16px;
+  font-size: 1.6rem;
   text-decoration: none;
-  padding: 14px 13px;
+  padding: 1.4rem 1.3rem;
   transition: all 0.3s ease-in-out;
 }
 
@@ -578,9 +579,9 @@
 .centernavbar li a::after {
   content: "";
   width: 0%;
-  height: 3px;
+  height: 0.3rem;
   position: absolute;
-  bottom: 5px;
+  bottom: 0.5rem;
   left: 50%;
   background: var(--org-primary);
   transform: translateX(-50%);
@@ -594,7 +595,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 16px;
+  margin-top: 1.6rem;
 }
 .apllyBtn {
   display: inline-block;
@@ -607,8 +608,8 @@
   background-color: #1456a3;
   cursor: pointer;
   text-decoration: none;
-  border-radius: 3px;
-  padding: 8px 20px;
+  border-radius: 0.3rem;
+  padding: 0.8rem 2rem;
   color: #fff;
   font-size: 1.5rem;
   position: relative;
@@ -662,7 +663,7 @@
   width: 100%;
   max-width: 118.4rem;
   margin: 0 auto;
-  height: 24px;
+  height: 2.4rem;
   text-align: left;
   color: var(--grydark-topbar-text);
   background-color: #ffffff;
@@ -681,12 +682,12 @@
 }
 
 .catenav * {
-  margin: 4px 2px;
+  margin: 0.4rem 0.2rem;
   position: relative;
 }
 .catenav li {
-  padding: 0 3px;
-  border-radius: 4px;
+  padding: 0 0.3rem;
+  border-radius: 0.4rem;
   user-select: none;
   cursor: pointer;
   transition: all 0.2s linear;
@@ -767,6 +768,7 @@
   margin-left: 5px; /* Adjust spacing as needed */
   width: 10px; /* Adjust size as needed */
   height: 10px; /* Adjust size as needed */
+  fill: #6d6d6d;
 }
 
 .subnav {
@@ -776,12 +778,16 @@
 li:hover > .subnav {
   display: block; /* Show subnav on hover */
 }
-
 /* ***************************************
 **************Responsiveness***********
 *************************************** */
 
 @media (max-width: 1145px) {
+  .newsleft .seprator,
+  .newsleft .topemail,
+  .newsleft .toptiming {
+    display: none;
+  }
   .noauth .noauthbig {
     display: none;
   }
@@ -802,31 +808,40 @@ li:hover > .subnav {
     justify-self: end;
   }
 }
+/* 1198 */
 @media (max-width: 75em) {
-  .middle-header {
-    padding: 1.7rem 1.5rem;
-  }
-  .middlemainheader.sticky .middle-header {
-    padding: 1.1rem 1.5rem;
-  }
   .accountlistdiv {
     left: -11.5rem;
   }
 }
+@media (max-width: 1000px) {
+  .middle-header {
+    padding: 0.7rem 0.5rem;
+  }
+  .centernavbar li a {
+    padding: 0.8rem 0.8rem;
+    font-size: 1.4rem;
+  }
+  .logo-txtsize svg {
+    width: 5rem;
+  }
+  .logo-sampletxt {
+    font-size: 1.4rem;
+  }
+  .apllyBtn {
+    padding: 0.5rem 1rem;
+  }
+}
 @media (max-width: 850px) {
+  .centernavbar li a {
+    padding: 0.6rem 0.6rem;
+    font-size: 1.3rem;
+  }
   .middle-header {
     gap: 0;
   }
-  .middlemainheader.sticky .noauthsvg {
-    width: 20px;
-    height: 20px;
-  }
-  .newsright {
-    display: none;
-  }
-  .newsleft {
-    justify-content: center;
-    max-width: 100%;
+  .down-arrow-icon {
+    margin-left: 2px;
   }
 }
 @media (max-width: 50em) {
@@ -834,39 +849,46 @@ li:hover > .subnav {
     font-size: 55.5%;
   }
 }
+
 @media (max-width: 43.75em) {
   html {
     font-size: 50.5%;
   }
 }
-@media (max-width: 700px) {
-  .hamburger {
-    display: block;
-  }
-  #accounthoverdiv {
-    display: none;
-  }
-  .authis {
-    grid-template-columns: 4fr 1fr;
-  }
-}
 
 @media (max-width: 650px) {
-  .logo-svgsize svg {
-    width: 3.3rem;
+  .middle-header {
+    flex-direction: column;
   }
-  .logo-txtsize svg {
-    width: 14rem;
+  .binder {
+    align-self: start;
+    width: 100%;
+  }
+  .middleheaderrightside {
+    justify-content: space-between;
+    width: 98%;
+  }
+  .middleheadercenterside {
+    margin-top: 0.6rem;
+  }
+  .middleheadercenterside ul {
+    margin-bottom: 0;
+  }
+  .centernavbar li a {
+    font-size: 1.43rem;
+  }
+  .logo-sampletxt {
+    font-size: 1.6rem;
   }
   .dynamictextdiv {
     font-size: var(--fontsize-eemedium);
     margin-left: 0;
   }
-  .cartsvg svg {
-    width: 2.5rem;
+  .mainapplybtn {
+    display: none;
   }
-  .middle-header {
-    padding: 1.7rem 1rem;
+  .sencondapplybtn {
+    display: block;
   }
 }
 
@@ -894,15 +916,19 @@ li:hover > .subnav {
     font-size: var(--fontsize-emedium);
     padding: 0.3rem 1.8rem;
   }
-  .logo-svgsize svg {
-    width: 3rem;
-  }
-  .logo-txtsize svg {
-    width: 13rem;
-  }
 }
 
 @media (max-width: 450px) {
+  .wpthinsvg,
+  .linkedinsvg {
+    display: none;
+  }
+  .newsright {
+    max-width: 21%;
+  }
+  .newsleft {
+    max-width: 79%;
+  }
   .search-form {
     grid-row: 2;
     grid-column: span 4;
@@ -937,7 +963,7 @@ li:hover > .subnav {
     padding: 0.3rem 2rem;
   }
   .headermain {
-    height: 14rem;
+    height: 12rem;
   }
   .dynamictextdiv {
     min-width: auto;
@@ -946,16 +972,31 @@ li:hover > .subnav {
   #carthoverdiv {
     width: 4rem;
   }
-  /* .newsleft,
-  .newsright {
-    display: none;
-  } */
+
   .newscenter {
     width: 100%;
     max-width: 100%;
   }
   .dynamictextdiv {
     margin-right: 0;
+  }
+  .middleheadercenterside {
+    width: 100%;
+  }
+  .centernavbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  /* .Destinations2 {
+    display: flex;
+    align-items: center;
+  } */
+  .logo-txtsize svg {
+    width: 6rem;
+  }
+  .logo-sampletxt {
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 338px) {
