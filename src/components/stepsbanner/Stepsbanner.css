@@ -111,3 +111,14 @@
 .stepself:hover .detailscont {
   color: white;
 }
+
+/* ***************************************
+**************Responsiveness***********
+*************************************** */
+@media (max-width: 450px) {
+  .stepscont {
+    grid-gap: 1rem;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+}

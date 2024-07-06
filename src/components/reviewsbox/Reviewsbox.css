@@ -75,3 +75,14 @@
 .varifiedcont.thisvarifiedcont {
   padding: 1rem 0;
 }
+
+/* ***************************************
+**************Responsiveness***********
+*************************************** */
+@media (max-width: 450px) {
+  .mainreviewscont {
+    grid-gap: 1rem;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}

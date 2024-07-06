@@ -319,3 +319,13 @@ figure.snip0016 a {
   position: absolute;
   color: #ffffff;
 }
+/* ***************************************
+**************Responsiveness***********
+*************************************** */
+@media (max-width: 450px) {
+  .countrymaincont {
+    grid-gap: 1rem;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+}

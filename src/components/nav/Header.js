@@ -176,7 +176,7 @@ const Header = () => {
             <Link to="#" className="helperlinkcont">
               <Instagramsvg />
             </Link>
-            <Link to="#" className="helperlinkcont linkedinsvg">
+            <Link to="#" className="helperlinkcont linkedinsvg toplinkedinsvg">
               <Linkedinsvg />
             </Link>
             <a
