@@ -82,6 +82,9 @@ const ContactUs = lazy(() => import("./pages/contactUs/ContactUs"));
 const ContactFormSingle = lazy(() =>
   import("./pages/admin/activities/ContactFormSingle")
 );
+const ApplyFormSingle = lazy(() =>
+  import("./pages/admin/activities/ApplyFormSingle")
+);
 const HelpCenter = lazy(() => import("./pages/helpCenter/HelpCenter"));
 const PrivacyPolicy = lazy(() => import("./pages/policies/PrivacyPolicy"));
 const CookiePolicy = lazy(() => import("./pages/policies/CookiePolicy"));
@@ -358,6 +361,11 @@ const App = () => {
               exact
               path="/admin/contact/:id"
               component={ContactFormSingle}
+            />
+            <AdminRoute
+              exact
+              path="/admin/form/:id"
+              component={ApplyFormSingle}
             />
             <Route exact path="*" component={NotFound} />
             <Route component={NotFound} />

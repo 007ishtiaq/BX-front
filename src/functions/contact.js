@@ -22,6 +22,22 @@ export const getContactform = async (id, authtoken) =>
       authtoken,
     },
   });
+export const getApplyform = async (id, authtoken) =>
+  await axios.get(`${process.env.REACT_APP_API}/applyForm/${id}`, {
+    headers: {
+      authtoken,
+    },
+  });
+export const setFormReplied = async (formId, authtoken) =>
+  await axios.put(
+    `${process.env.REACT_APP_API}/applyForm/replied`,
+    { formId },
+    {
+      headers: {
+        authtoken,
+      },
+    }
+  );
 export const setReplied = async (formId, authtoken) =>
   await axios.put(
     `${process.env.REACT_APP_API}/contactForm/replied`,

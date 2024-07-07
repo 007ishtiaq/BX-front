@@ -85,10 +85,8 @@ export default function AdminsideNavcopy({ currentActive }) {
             Submitted Comments
           </li>
         </Link>
-        <Link to="/AdminPanel?page=SubmittedQuestions">
-          <li class="manageacli clsremove SubmittedQuestions">
-            Submitted Questions
-          </li>
+        <Link to="/AdminPanel?page=SubmittedForms">
+          <li class="manageacli clsremove SubmittedForms">Submitted Forms</li>
         </Link>
         <Link to="/AdminPanel?page=OptinEmails">
           <li class="manageacli clsremove OptinEmails">Opt-In Emails</li>
