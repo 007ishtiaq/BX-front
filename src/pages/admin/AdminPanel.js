@@ -22,7 +22,7 @@ import PasswordReset from "./passwordreset/PasswordReset";
 import Allactivites from "./activities/Allactivites";
 import ContactForms from "./activities/ContactForms";
 import SubmittedComments from "./activities/SubmittedComments";
-import SubmittedQuestions from "./activities/SubmittedQuestions";
+import SubmittedForms from "./activities/SubmittedForms";
 import OptinEmails from "./activities/OptinEmails";
 import Transectiontable from "./transectiontable/Transectiontable";
 
@@ -60,7 +60,7 @@ export default function AdminPanel() {
           {query.get("page") === "Allactivites" && <Allactivites />}
           {query.get("page") === "ContactForms" && <ContactForms />}
           {query.get("page") === "SubmittedComments" && <SubmittedComments />}
-          {query.get("page") === "SubmittedQuestions" && <SubmittedQuestions />}
+          {query.get("page") === "SubmittedForms" && <SubmittedForms />}
           {query.get("page") === "OptinEmails" && <OptinEmails />}
           {query.get("page") === "Transections" && <Transectiontable />}
         </div>

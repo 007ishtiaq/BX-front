@@ -9,6 +9,12 @@ export const getContactforms = async (authtoken) =>
       authtoken,
     },
   });
+export const getApplyforms = async (authtoken) =>
+  await axios.get(`${process.env.REACT_APP_API}/applyForms`, {
+    headers: {
+      authtoken,
+    },
+  });
 
 export const getContactform = async (id, authtoken) =>
   await axios.get(`${process.env.REACT_APP_API}/contactForm/${id}`, {

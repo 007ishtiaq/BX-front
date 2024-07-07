@@ -157,12 +157,19 @@ const Header = () => {
               <p className="top_tag_Right">10:00 AM To 6:00 PM | Sunday Off</p>
             </div>
             <div className="seprator">{"|"}</div>
-            <div className="helperlinkcont">
-              <Callsvg /> <Whatsappthin className="wpthinsvg" />
-              <p className="top_tag_Right">
-                +92 322 5005810, +92 321 0378899, +92 300 8478889
-              </p>
-            </div>
+            <a
+              href={`https://api.whatsapp.com/send?phone=00923455005810`}
+              className="helperlinkcont"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="helperlinkcont">
+                <Callsvg /> <Whatsappthin className="wpthinsvg" />
+                <p className="top_tag_Right">
+                  +92 322 5005810, +92 321 0378899, +92 300 8478889
+                </p>
+              </div>
+            </a>
           </div>
           <div className="newsright">
             <a
@@ -173,9 +180,14 @@ const Header = () => {
             >
               <Facebooksvg />
             </a>
-            <Link to="#" className="helperlinkcont">
+            <a
+              href="https://www.instagram.com/stud_yguideinternational?igsh=aHBlYWNiNHlkaW1i"
+              className="helperlinkcont"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Instagramsvg />
-            </Link>
+            </a>
             <Link to="#" className="helperlinkcont linkedinsvg toplinkedinsvg">
               <Linkedinsvg />
             </Link>
@@ -187,6 +199,17 @@ const Header = () => {
             >
               <Whatsappsvg />
             </a>
+            {user && user.role === "admin" && (
+              <Link
+                to="/AdminPanel?page=AdminDashboard"
+                className="accountlistlinks"
+              >
+                <div className="acsvg">
+                  <Adminsvg />
+                </div>
+                Admin
+              </Link>
+            )}
           </div>
         </div>
 
@@ -204,36 +227,22 @@ const Header = () => {
                 </div>
               </Link>
               <div className="sencondapplybtn">
-                {user && user.role === "admin" ? (
-                  <Link
-                    to="/AdminPanel?page=AdminDashboard"
-                    className="accountlistlinks"
-                  >
-                    <div className="acsvg">
-                      <Adminsvg />
-                    </div>
-                    Admin Dashboard
-                  </Link>
-                ) : (
-                  <>
-                    <ShippingModal
-                      onModalok={handleSubmit}
-                      onModalcancel={handlecancel}
-                      setModalVisible={setModalVisible}
-                      modalVisible={modalVisible}
-                      values={values}
-                      btnClasses={"apllyBtn"}
-                    >
-                      <ShippingForm
-                        values={values}
-                        errors={errors}
-                        touched={touched}
-                        handleBlur={handleBlur}
-                        handleChange={handleChange}
-                      />
-                    </ShippingModal>
-                  </>
-                )}
+                <ShippingModal
+                  onModalok={handleSubmit}
+                  onModalcancel={handlecancel}
+                  setModalVisible={setModalVisible}
+                  modalVisible={modalVisible}
+                  values={values}
+                  btnClasses={"apllyBtn"}
+                >
+                  <ShippingForm
+                    values={values}
+                    errors={errors}
+                    touched={touched}
+                    handleBlur={handleBlur}
+                    handleChange={handleChange}
+                  />
+                </ShippingModal>
               </div>
             </div>
 
@@ -274,36 +283,22 @@ const Header = () => {
                 </ul>
               </div>
               <div className="mainapplybtn">
-                {user && user.role === "admin" ? (
-                  <Link
-                    to="/AdminPanel?page=AdminDashboard"
-                    className="accountlistlinks"
-                  >
-                    <div className="acsvg">
-                      <Adminsvg />
-                    </div>
-                    Admin Dashboard
-                  </Link>
-                ) : (
-                  <>
-                    <ShippingModal
-                      onModalok={handleSubmit}
-                      onModalcancel={handlecancel}
-                      setModalVisible={setModalVisible}
-                      modalVisible={modalVisible}
-                      values={values}
-                      btnClasses={"apllyBtn"}
-                    >
-                      <ShippingForm
-                        values={values}
-                        errors={errors}
-                        touched={touched}
-                        handleBlur={handleBlur}
-                        handleChange={handleChange}
-                      />
-                    </ShippingModal>
-                  </>
-                )}
+                <ShippingModal
+                  onModalok={handleSubmit}
+                  onModalcancel={handlecancel}
+                  setModalVisible={setModalVisible}
+                  modalVisible={modalVisible}
+                  values={values}
+                  btnClasses={"apllyBtn"}
+                >
+                  <ShippingForm
+                    values={values}
+                    errors={errors}
+                    touched={touched}
+                    handleBlur={handleBlur}
+                    handleChange={handleChange}
+                  />
+                </ShippingModal>
               </div>
             </div>
           </div>

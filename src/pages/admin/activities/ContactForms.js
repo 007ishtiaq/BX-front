@@ -30,7 +30,7 @@ export default function ContactForms() {
               <th class="ordli">Email</th>
               <th class="ordli">Text Massage</th>
               <th class="ordli">Attachment</th>
-              <th class="ordli">Replied</th>
+              <th class="ordli">Reply</th>
             </tr>
           </thead>
           <tbody>
@@ -43,10 +43,12 @@ export default function ContactForms() {
                 <td class="ordli">{contact.subject}</td>
                 <td class="ordli">{contact.email}</td>
                 <td class="ordli">{contact.text}</td>
-                <td class="ordli">{contact.image ? "Yes" : "No"}</td>
+                <td class="ordli">
+                  {contact.image ? "Attachment" : "No Attachment"}
+                </td>
                 <td class="ordli">
                   <Link to={`/admin/contact/${contact._id}`}>
-                    <div>{contact.isReplied ? "Yes" : "No"}</div>
+                    <div>{contact.isReplied ? "Replied" : "Pending"}</div>
                   </Link>
                 </td>
               </tr>

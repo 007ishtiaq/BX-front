@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import "./contactus.css";
-import Contactimg from "../../images/contactUs/contactimg.jpg";
+import Contactimg from "../../images/contactUs/contactimg.webp";
 import { ReactComponent as Callsvg } from "../../images/contactUs/calloutlined.svg";
 import { ReactComponent as Mailsvg } from "../../images/contactUs/mail.svg";
 import { ReactComponent as Locationsvg } from "../../images/contactUs/location.svg";

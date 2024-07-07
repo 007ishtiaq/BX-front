@@ -3,7 +3,7 @@ import "./Ourteam.css";
 import person1 from "../../images/team/1.png";
 import person2 from "../../images/team/2.jpg";
 import person3 from "../../images/team/3.jpg";
-import visionimg from "../../images/vision/visionimg.jpeg";
+import visionimg from "../../images/vision/visionimg.webp";
 
 export default function Ourteam() {
   return (

@@ -12,7 +12,7 @@
 .categorynavcont {
   width: 20.6rem;
   height: auto;
-  border-radius: 0.4rem;
+  /* border-radius: 0.4rem; */
   background-color: #fff;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
   overflow: hidden;
@@ -66,7 +66,7 @@
 
 .slidercenterdiv {
   flex-grow: 1;
-  border-radius: 0.4rem;
+  /* border-radius: 0.4rem; */
   height: 51rem;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
   background-color: rgb(224, 224, 224);
@@ -77,7 +77,7 @@
 }
 .banner1,
 .banner2 {
-  border-radius: 0.4rem;
+  /* border-radius: 0.4rem; */
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
   background-color: rgb(228, 228, 228);
   color: white;
