@@ -1,23 +1,13 @@
 import React, { useState, useEffect } from "react";
-import sweden from "../../images/destination/sweden/sweden.webp";
+import france from "../../images/destination/france/france.jpg";
 import lecture from "../../images/destination/sweden/lecture.png";
 import programs from "../../images/destination/sweden/programs.png";
-import uni1 from "../../images/destination/sweden/unis/uni1.png";
-import uni2 from "../../images/destination/sweden/unis/uni2.png";
-import uni3 from "../../images/destination/sweden/unis/uni3.png";
-import uni4 from "../../images/destination/sweden/unis/uni4.png";
-import uni5 from "../../images/destination/sweden/unis/uni5.png";
-import uni6 from "../../images/destination/sweden/unis/uni6.png";
-import uni7 from "../../images/destination/sweden/unis/uni7.png";
-import uni8 from "../../images/destination/sweden/unis/uni8.png";
-import uni9 from "../../images/destination/sweden/unis/uni9.png";
-import uni10 from "../../images/destination/sweden/unis/uni10.png";
 // import { getRelatedStaticText } from "../../functions/staticText";
 import "./Destination.css";
 import { Link } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
 
-export default function Destination() {
+export default function France() {
   const [loading, setLoading] = useState(false);
   const [alldestinations, setAlldestinations] = useState([]);
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -45,12 +35,12 @@ export default function Destination() {
                     <div className="topdestcont">
                       <img
                         className="bigbannerimg"
-                        src={sweden}
+                        src={france}
                         alt={"123123"}
                         onLoad={() => setImageLoaded(true)}
                         style={{ display: imageLoaded ? "block" : "none" }}
                       />
-                      <div className="destname">Sweden</div>
+                      <div className="destname">France</div>
                     </div>
                     {!imageLoaded && (
                       <Skeleton
@@ -64,7 +54,7 @@ export default function Destination() {
                     )}
                   </Link>
                 )}
-                <div className="uniscont">
+                {/* <div className="uniscont">
                   <div className="uniself">
                     <img className="uniimg" src={uni1} alt="" />
                   </div>
@@ -95,79 +85,72 @@ export default function Destination() {
                   <div className="uniself">
                     <img className="uniimg" src={uni10} alt="" />
                   </div>
-                </div>
+                </div> */}
                 <div className="destcontentcont">
                   <div className="destmainheading">
-                    Study in Sweden for Pakistani Students
+                    Study in France for Pakistani Students
                   </div>
                   <div className="destsubdata">
-                    Renowned degrees in Sweden have traditionally been in the
-                    humanities, although there is now a governmental push to
-                    enhance the prominence of science education. Undergraduate
-                    courses are typically delivered in both English and Swedish.
-                    For master's programs, which draw a significant number of
-                    international students, there are over 450 courses offered
-                    exclusively in English. The academic year spans 40 weeks,
-                    divided into two semesters: the first from mid-August to
-                    mid-January, and the second from mid-January to June.
-                    Admission to undergraduate programs requires proof of
-                    secondary education completion. The top universities often
-                    select students based on their academic performance. Degree
-                    Programs in Sweden: Swedish universities offer degrees
-                    according to the European standard, including bachelor's,
-                    master's, and PhD programs. - *Bachelor's Programs:* These
-                    are undergraduate courses pursued after upper secondary
-                    school, typically lasting three years and requiring 180 ECTS
-                    credits. - *Master's Programs:* These build on bachelor's
-                    studies, lasting one to two years, with 60 to 120 ECTS
-                    credits. - *PhD Programs:* These are research-intensive and
-                    involve several years of work toward a dissertation, varying
-                    by university. Programs vs. Courses: A degree program
-                    consists of several courses within a specific field leading
-                    to a degree. Courses, the fundamental units of programs, can
-                    also be taken individually. Enrolling in a course alone
-                    registers you only for that course, while enrolling in a
-                    program commits you to multiple courses throughout the
-                    program's duration. Examples: - A two-year master's program
-                    may include four courses per semester, each worth 7.5 ECTS
-                    credits, totaling 120 ECTS credits. - A one-year master's
-                    program might involve one 30 ECTS credit course per
-                    semester, totaling 60 ECTS credits. - Enrolling in a
-                    30-credit course registers you only for that course.
-                    Academic Calendar: The Swedish academic year is split into
-                    two semesters: - *Autumn Semester:* Late August to
-                    mid-January, with a short break in December. - *Spring
-                    Semester:* Mid-January to early June. Course Structure:
-                    Full-time studies approximate a 40-hour week, with few
-                    weekly lectures or seminars. Most time is spent on reading,
-                    group projects, and assignments. Students often take one
-                    course at a time over several weeks, with exams following
-                    each course. Some programs may have concurrent courses with
-                    semester-end exams. Lecture and Examination Format: Courses
-                    include lectures, seminars, and lab sessions. Seminar groups
-                    are small, while lectures may be large. Active participation
-                    is expected to develop critical thinking and collaboration.
-                    Extensive reading and preparation are required. Exams may be
-                    written, oral, lab-based, group work, or projects. Most
-                    programs conclude with a thesis or project. Study in Sweden
-                    for International Students: Sweden is a global leader in
-                    quality education, attracting students worldwide. The
-                    education system emphasizes personal development, freedom,
-                    and responsibility. Prospective students should research
-                    universities and admission criteria, and ensure their
-                    documents are in order. Numerous scholarships are available
-                    to support students financially. Many Pakistani students
-                    study in Sweden, a number that continues to grow. Students
-                    are allowed to work, though their studies should remain the
-                    priority. Sweden offers career opportunities in innovative
-                    companies, helping students to finance their education.
-                    Universities prioritize equal opportunities, student
-                    interaction, and a supportive environment. Presentations and
-                    interactive sessions enhance understanding, contributing to
-                    Sweden's global educational reputation and continuous
-                    attraction of new students.
+                    Studying in France presents a uniquely enriching educational
+                    journey within one of the world's foremost centers of
+                    culture and intellect. Renowned for its esteemed
+                    universities, historic landmarks, and dynamic arts scene,
+                    France magnetizes students globally seeking to expand their
+                    academic vistas. Whether pursuing undergraduate, graduate,
+                    or language immersion programs, students benefit from
+                    top-tier education delivered by esteemed institutions.
+                    France's cultural tapestry extends far beyond academia,
+                    offering myriad avenues for exploration. From iconic museums
+                    like the Louvre to quaint cafes lining cobblestone streets,
+                    France's rich heritage beckons exploration and discovery.
+                    With a diverse student body, robust support services, and a
+                    warm embrace of cultural diversity, studying in France
+                    fosters not just academic prowess but also personal growth
+                    and lifelong intercultural exchange. Education Landscape in
+                    France France has a longstanding tradition of hosting
+                    international students, boasting a globally recognized
+                    education system celebrated for its quality and
+                    accessibility. Here’s a glimpse into the education framework
+                    in France for international scholars: Universities France
+                    features numerous public universities offering diverse
+                    courses across disciplines. Admission criteria typically
+                    include a secondary school diploma for undergraduates and a
+                    bachelor's degree for master’s candidates. Many programs are
+                    available in English, particularly at the graduate and
+                    doctoral levels, ensuring accessibility for international
+                    students. Tuition fees are notably competitive, especially
+                    at public institutions compared to global standards. Private
+                    Institutions Private universities in France offer
+                    specialized programs spanning business, arts, and
+                    technology. Tuition fees at private institutions generally
+                    surpass those of public universities. Admission Procedures
+                    International applicants can apply directly through
+                    university portals. Certain programs may necessitate
+                    standardized test scores like the SAT or GRE, particularly
+                    at the master’s or doctoral level. Language proficiency
+                    tests such as TOEFL or IELTS are often mandatory for
+                    non-native English speakers. For programs taught in French,
+                    proficiency is evaluated through exams such as DELF or DALF.
+                    Scholarships and Financial Aid France provides a range of
+                    scholarships and financial aid options for international
+                    students, including the prestigious Eiffel Excellence
+                    Scholarship, Erasmus+ grants, and university-specific
+                    scholarships. Bilateral agreements with many countries
+                    further expand funding opportunities through academic
+                    exchange programs. Student Life and Assistance International
+                    students benefit from comprehensive support services,
+                    encompassing orientation, language training, and guidance on
+                    visa and residency protocols. France’s vibrant student
+                    communities, found in universities and cities alike, offer
+                    diverse clubs, societies, and cultural events. France’s
+                    cultural richness, culinary delights, and scenic landscapes
+                    provide ample opportunities for leisure and exploration.
+                    Overall, France offers an inclusive and nurturing
+                    environment for international students, blending top-notch
+                    education, diverse cultural encounters, and robust support
+                    networks to enrich their academic and personal journeys.
                   </div>
-                  <div className="destrow destrowone">
+                  {/* <div className="destrow destrowone">
                     <div className="destleft">
                       <div className="destheading">
                         Lectures and examinations
@@ -228,7 +211,7 @@ export default function Destination() {
                         PhD programmes for more details.
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

@@ -1,23 +1,13 @@
 import React, { useState, useEffect } from "react";
-import sweden from "../../images/destination/sweden/sweden.webp";
+import finland from "../../images/destination/finland/finland.jpg";
 import lecture from "../../images/destination/sweden/lecture.png";
 import programs from "../../images/destination/sweden/programs.png";
-import uni1 from "../../images/destination/sweden/unis/uni1.png";
-import uni2 from "../../images/destination/sweden/unis/uni2.png";
-import uni3 from "../../images/destination/sweden/unis/uni3.png";
-import uni4 from "../../images/destination/sweden/unis/uni4.png";
-import uni5 from "../../images/destination/sweden/unis/uni5.png";
-import uni6 from "../../images/destination/sweden/unis/uni6.png";
-import uni7 from "../../images/destination/sweden/unis/uni7.png";
-import uni8 from "../../images/destination/sweden/unis/uni8.png";
-import uni9 from "../../images/destination/sweden/unis/uni9.png";
-import uni10 from "../../images/destination/sweden/unis/uni10.png";
 // import { getRelatedStaticText } from "../../functions/staticText";
 import "./Destination.css";
 import { Link } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
 
-export default function Destination() {
+export default function Finland() {
   const [loading, setLoading] = useState(false);
   const [alldestinations, setAlldestinations] = useState([]);
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -45,12 +35,12 @@ export default function Destination() {
                     <div className="topdestcont">
                       <img
                         className="bigbannerimg"
-                        src={sweden}
+                        src={finland}
                         alt={"123123"}
                         onLoad={() => setImageLoaded(true)}
                         style={{ display: imageLoaded ? "block" : "none" }}
                       />
-                      <div className="destname">Sweden</div>
+                      <div className="destname">Finland</div>
                     </div>
                     {!imageLoaded && (
                       <Skeleton
@@ -64,7 +54,7 @@ export default function Destination() {
                     )}
                   </Link>
                 )}
-                <div className="uniscont">
+                {/* <div className="uniscont">
                   <div className="uniself">
                     <img className="uniimg" src={uni1} alt="" />
                   </div>
@@ -95,79 +85,67 @@ export default function Destination() {
                   <div className="uniself">
                     <img className="uniimg" src={uni10} alt="" />
                   </div>
-                </div>
+                </div> */}
                 <div className="destcontentcont">
                   <div className="destmainheading">
-                    Study in Sweden for Pakistani Students
+                    Study in Finland for Pakistani Students
                   </div>
                   <div className="destsubdata">
-                    Renowned degrees in Sweden have traditionally been in the
-                    humanities, although there is now a governmental push to
-                    enhance the prominence of science education. Undergraduate
-                    courses are typically delivered in both English and Swedish.
-                    For master's programs, which draw a significant number of
-                    international students, there are over 450 courses offered
-                    exclusively in English. The academic year spans 40 weeks,
-                    divided into two semesters: the first from mid-August to
-                    mid-January, and the second from mid-January to June.
-                    Admission to undergraduate programs requires proof of
-                    secondary education completion. The top universities often
-                    select students based on their academic performance. Degree
-                    Programs in Sweden: Swedish universities offer degrees
-                    according to the European standard, including bachelor's,
-                    master's, and PhD programs. - *Bachelor's Programs:* These
-                    are undergraduate courses pursued after upper secondary
-                    school, typically lasting three years and requiring 180 ECTS
-                    credits. - *Master's Programs:* These build on bachelor's
-                    studies, lasting one to two years, with 60 to 120 ECTS
-                    credits. - *PhD Programs:* These are research-intensive and
-                    involve several years of work toward a dissertation, varying
-                    by university. Programs vs. Courses: A degree program
-                    consists of several courses within a specific field leading
-                    to a degree. Courses, the fundamental units of programs, can
-                    also be taken individually. Enrolling in a course alone
-                    registers you only for that course, while enrolling in a
-                    program commits you to multiple courses throughout the
-                    program's duration. Examples: - A two-year master's program
-                    may include four courses per semester, each worth 7.5 ECTS
-                    credits, totaling 120 ECTS credits. - A one-year master's
-                    program might involve one 30 ECTS credit course per
-                    semester, totaling 60 ECTS credits. - Enrolling in a
-                    30-credit course registers you only for that course.
-                    Academic Calendar: The Swedish academic year is split into
-                    two semesters: - *Autumn Semester:* Late August to
-                    mid-January, with a short break in December. - *Spring
-                    Semester:* Mid-January to early June. Course Structure:
-                    Full-time studies approximate a 40-hour week, with few
-                    weekly lectures or seminars. Most time is spent on reading,
-                    group projects, and assignments. Students often take one
-                    course at a time over several weeks, with exams following
-                    each course. Some programs may have concurrent courses with
-                    semester-end exams. Lecture and Examination Format: Courses
-                    include lectures, seminars, and lab sessions. Seminar groups
-                    are small, while lectures may be large. Active participation
-                    is expected to develop critical thinking and collaboration.
-                    Extensive reading and preparation are required. Exams may be
-                    written, oral, lab-based, group work, or projects. Most
-                    programs conclude with a thesis or project. Study in Sweden
-                    for International Students: Sweden is a global leader in
-                    quality education, attracting students worldwide. The
-                    education system emphasizes personal development, freedom,
-                    and responsibility. Prospective students should research
-                    universities and admission criteria, and ensure their
-                    documents are in order. Numerous scholarships are available
-                    to support students financially. Many Pakistani students
-                    study in Sweden, a number that continues to grow. Students
-                    are allowed to work, though their studies should remain the
-                    priority. Sweden offers career opportunities in innovative
-                    companies, helping students to finance their education.
-                    Universities prioritize equal opportunities, student
-                    interaction, and a supportive environment. Presentations and
-                    interactive sessions enhance understanding, contributing to
-                    Sweden's global educational reputation and continuous
-                    attraction of new students.
+                    Studying in Finland presents a distinctive fusion of
+                    academic distinction, ingenuity, and natural allure.
+                    Renowned globally for its stellar education system, Finland
+                    consistently ranks among the top in international
+                    educational standings. Finnish institutions like the
+                    University of Helsinki and Aalto University offer a broad
+                    spectrum of English-taught programs, drawing students from
+                    every corner of the globe. Beyond academia, Finland’s
+                    unspoiled landscapes—abounding with countless lakes, dense
+                    forests, and the enchanting Northern Lights—provide an
+                    inspiring canvas for personal growth and exploration.
+                    Finland's educational philosophy underscores creativity,
+                    critical thinking, and collaborative learning, fostering a
+                    dynamic educational milieu. With a strong emphasis on
+                    research and innovation, students engage in pioneering
+                    projects alongside leading experts in their fields. Whether
+                    immersing oneself in Finland’s rich cultural tapestry,
+                    savoring Helsinki’s vibrant urban life, or venturing into
+                    the wilds of Lapland, studying in Finland guarantees a
+                    transformative journey marked by academic excellence and
+                    indelible experiences. Finland's Education System Finland
+                    extends a warm welcome to international students through its
+                    inclusive, high-quality education system distinguished by
+                    innovation and student-centered pedagogy. Universities and
+                    universities of applied sciences offer a wide array of
+                    degree programs, many conducted in English, tailored to meet
+                    international students' needs. At the undergraduate level,
+                    international students can pursue bachelor’s degrees across
+                    diverse disciplines such as business, engineering, natural
+                    sciences, arts, and humanities. Finnish universities
+                    emphasize hands-on learning, integrating practical projects,
+                    internships, and industry collaborations into their
+                    curricula. For graduate studies, Finland provides a plethora
+                    of master’s programs designed to deepen students’ expertise
+                    in their chosen fields. These programs frequently
+                    incorporate research opportunities, enabling students to
+                    contribute to cutting-edge projects under the mentorship of
+                    faculty who are leaders in their fields. One distinguishing
+                    feature of Finland's education system is its commitment to
+                    equity and accessibility. International students typically
+                    have access to the same scholarships, grants, and financial
+                    aid options as Finnish students, enhancing affordability.
+                    Moreover, Finland’s secure and multicultural environment
+                    fosters a supportive atmosphere for international students
+                    to thrive. Universities offer comprehensive support
+                    services, including orientation programs, language courses,
+                    and counseling, to assist international students in
+                    acclimating to Finnish life and achieving academic success.
+                    In summary, Finland’s education system for international
+                    students blends academic excellence, innovation, and robust
+                    support, making it an attractive choice for those seeking a
+                    high-quality educational experience enriched by cultural
+                    immersion and personal growth.
                   </div>
-                  <div className="destrow destrowone">
+                  {/* <div className="destrow destrowone">
                     <div className="destleft">
                       <div className="destheading">
                         Lectures and examinations
@@ -228,7 +206,7 @@ export default function Destination() {
                         PhD programmes for more details.
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

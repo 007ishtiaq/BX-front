@@ -1,8 +1,11 @@
 import React from "react";
 import "./Ourteam.css";
-import person1 from "../../images/team/1.png";
+import person1 from "../../images/team/1.jpeg";
 import person2 from "../../images/team/2.jpg";
 import person3 from "../../images/team/3.jpg";
+import person4 from "../../images/team/4.jpeg";
+import person6 from "../../images/team/6.jpeg";
+import person7 from "../../images/team/7.png";
 import visionimg from "../../images/vision/visionimg.webp";
 
 export default function Ourteam() {
@@ -29,25 +32,61 @@ export default function Ourteam() {
             creating accessible, innovative study resources that empower
             learners worldwide.
           </p>
+          <div className="teammaincont">
+            <div className="teammainrow teammainrowone">
+              <div className="teamcol teamcolmain">
+                <div class="team-col">
+                  <img src={person1} alt="" />
+                </div>
+                <div className="teamdetails">
+                  <p className="teamdesi">Mentor</p>
+                  <p className="teamname">Mr Siddique Minhas</p>
+                </div>
+              </div>
+              <div className="teamstatement">
+                <span>Our Mentor:</span>
+                <p>
+                  At Study Guide International, our success is built upon the
+                  extraordinary guidance of our esteemed mentor, Mr. Siddique
+                  Minhas. His unparalleled expertise and unwavering commitment
+                  have been the cornerstone of our mission, helping countless
+                  students realize their dreams of studying abroad. We are
+                  nothing without his visionary leadership. Mr. Minhas's
+                  mentorship is the driving force behind our meticulous
+                  approach, ensuring each student receives the personalized
+                  attention and expert advice necessary to navigate the
+                  complexities of international education with confidence.
+                </p>
+              </div>
+            </div>
+            <div className="teammainrow teammainrowtwo">
+              <div className="teamcol teamcolmain">
+                <div class="team-col">
+                  <img src={person3} alt="" />
+                </div>
+                <div className="teamdetails">
+                  <p className="teamdesi">CEO</p>
+                  <p className="teamname">Mr Hassan Zaman Khan</p>
+                </div>
+              </div>
+              <div className="teamstatement">
+                <span>CEO's Message:</span>
+                <p>
+                  Starting the journey to study abroad is more than filling out
+                  an application. At Study Guide International, we know each
+                  student has unique needs. Whether aiming to study English in
+                  the UK or Chemical Engineering in the US, we are here to guide
+                  you. From proficiency tests to crafting strong applications,
+                  we streamline the entire process. Our commitment ensures every
+                  detail is meticulously managed for a compelling application.
+                  As the CEO of Study Guide International, I am dedicated to
+                  your success. Let us help turn your dreams into reality. Warm
+                  regards, Hassan Zaman Khan
+                </p>
+              </div>
+            </div>
+          </div>
           <div class="teamrow">
-            <div className="teamcol">
-              <div class="team-col">
-                <img src={person1} alt="" />
-              </div>
-              <div className="teamdetails">
-                <p className="teamdesi">Mentor</p>
-                <p className="teamname">Mr Siddique Minhas</p>
-              </div>
-            </div>
-            <div className="teamcol">
-              <div class="team-col">
-                <img src={person3} alt="" />
-              </div>
-              <div className="teamdetails">
-                <p className="teamdesi">CEO</p>
-                <p className="teamname">Mr Hassan Zaman Khan</p>
-              </div>
-            </div>
             <div className="teamcol">
               <div class="team-col">
                 <img src={person2} alt="" />
@@ -59,7 +98,7 @@ export default function Ourteam() {
             </div>
             <div className="teamcol">
               <div class="team-col">
-                <img src={person1} alt="" />
+                <img src={person4} alt="" />
               </div>
               <div className="teamdetails">
                 <p className="teamdesi"> </p>
@@ -70,16 +109,7 @@ export default function Ourteam() {
           <div class="teamrow">
             <div className="teamcol">
               <div class="team-col">
-                <img src={person1} alt="" />
-              </div>
-              <div className="teamdetails">
-                <p className="teamdesi">Marketing Manager </p>
-                <p className="teamname">Mr Mudassar Ali</p>
-              </div>
-            </div>
-            <div className="teamcol">
-              <div class="team-col">
-                <img src={person1} alt="" />
+                <img src={person7} alt="" />
               </div>
               <div className="teamdetails">
                 <p className="teamdesi">Student Counsellor</p>
@@ -88,7 +118,7 @@ export default function Ourteam() {
             </div>
             <div className="teamcol">
               <div class="team-col">
-                <img src={person1} alt="" />
+                <img src={person6} alt="" />
               </div>
               <div className="teamdetails">
                 <p className="teamdesi">Student Counsellor</p>
@@ -97,7 +127,7 @@ export default function Ourteam() {
             </div>
             <div className="teamcol">
               <div class="team-col">
-                <img src={person1} alt="" />
+                <img src={person7} alt="" />
               </div>
               <div className="teamdetails">
                 <p className="teamdesi">Office Assistant</p>

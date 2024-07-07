@@ -2,22 +2,12 @@ import React, { useState, useEffect } from "react";
 import sweden from "../../images/destination/sweden/sweden.webp";
 import lecture from "../../images/destination/sweden/lecture.png";
 import programs from "../../images/destination/sweden/programs.png";
-import uni1 from "../../images/destination/sweden/unis/uni1.png";
-import uni2 from "../../images/destination/sweden/unis/uni2.png";
-import uni3 from "../../images/destination/sweden/unis/uni3.png";
-import uni4 from "../../images/destination/sweden/unis/uni4.png";
-import uni5 from "../../images/destination/sweden/unis/uni5.png";
-import uni6 from "../../images/destination/sweden/unis/uni6.png";
-import uni7 from "../../images/destination/sweden/unis/uni7.png";
-import uni8 from "../../images/destination/sweden/unis/uni8.png";
-import uni9 from "../../images/destination/sweden/unis/uni9.png";
-import uni10 from "../../images/destination/sweden/unis/uni10.png";
 // import { getRelatedStaticText } from "../../functions/staticText";
 import "./Destination.css";
 import { Link } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
 
-export default function Destination() {
+export default function Cyprus() {
   const [loading, setLoading] = useState(false);
   const [alldestinations, setAlldestinations] = useState([]);
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -50,7 +40,7 @@ export default function Destination() {
                         onLoad={() => setImageLoaded(true)}
                         style={{ display: imageLoaded ? "block" : "none" }}
                       />
-                      <div className="destname">Sweden</div>
+                      <div className="destname">Cyprus</div>
                     </div>
                     {!imageLoaded && (
                       <Skeleton
@@ -64,7 +54,7 @@ export default function Destination() {
                     )}
                   </Link>
                 )}
-                <div className="uniscont">
+                {/* <div className="uniscont">
                   <div className="uniself">
                     <img className="uniimg" src={uni1} alt="" />
                   </div>
@@ -95,79 +85,50 @@ export default function Destination() {
                   <div className="uniself">
                     <img className="uniimg" src={uni10} alt="" />
                   </div>
-                </div>
+                </div> */}
                 <div className="destcontentcont">
                   <div className="destmainheading">
-                    Study in Sweden for Pakistani Students
+                    Study in Cyprus for Pakistani Students
                   </div>
                   <div className="destsubdata">
-                    Renowned degrees in Sweden have traditionally been in the
-                    humanities, although there is now a governmental push to
-                    enhance the prominence of science education. Undergraduate
-                    courses are typically delivered in both English and Swedish.
-                    For master's programs, which draw a significant number of
-                    international students, there are over 450 courses offered
-                    exclusively in English. The academic year spans 40 weeks,
-                    divided into two semesters: the first from mid-August to
-                    mid-January, and the second from mid-January to June.
-                    Admission to undergraduate programs requires proof of
-                    secondary education completion. The top universities often
-                    select students based on their academic performance. Degree
-                    Programs in Sweden: Swedish universities offer degrees
-                    according to the European standard, including bachelor's,
-                    master's, and PhD programs. - *Bachelor's Programs:* These
-                    are undergraduate courses pursued after upper secondary
-                    school, typically lasting three years and requiring 180 ECTS
-                    credits. - *Master's Programs:* These build on bachelor's
-                    studies, lasting one to two years, with 60 to 120 ECTS
-                    credits. - *PhD Programs:* These are research-intensive and
-                    involve several years of work toward a dissertation, varying
-                    by university. Programs vs. Courses: A degree program
-                    consists of several courses within a specific field leading
-                    to a degree. Courses, the fundamental units of programs, can
-                    also be taken individually. Enrolling in a course alone
-                    registers you only for that course, while enrolling in a
-                    program commits you to multiple courses throughout the
-                    program's duration. Examples: - A two-year master's program
-                    may include four courses per semester, each worth 7.5 ECTS
-                    credits, totaling 120 ECTS credits. - A one-year master's
-                    program might involve one 30 ECTS credit course per
-                    semester, totaling 60 ECTS credits. - Enrolling in a
-                    30-credit course registers you only for that course.
-                    Academic Calendar: The Swedish academic year is split into
-                    two semesters: - *Autumn Semester:* Late August to
-                    mid-January, with a short break in December. - *Spring
-                    Semester:* Mid-January to early June. Course Structure:
-                    Full-time studies approximate a 40-hour week, with few
-                    weekly lectures or seminars. Most time is spent on reading,
-                    group projects, and assignments. Students often take one
-                    course at a time over several weeks, with exams following
-                    each course. Some programs may have concurrent courses with
-                    semester-end exams. Lecture and Examination Format: Courses
-                    include lectures, seminars, and lab sessions. Seminar groups
-                    are small, while lectures may be large. Active participation
-                    is expected to develop critical thinking and collaboration.
-                    Extensive reading and preparation are required. Exams may be
-                    written, oral, lab-based, group work, or projects. Most
-                    programs conclude with a thesis or project. Study in Sweden
-                    for International Students: Sweden is a global leader in
-                    quality education, attracting students worldwide. The
-                    education system emphasizes personal development, freedom,
-                    and responsibility. Prospective students should research
-                    universities and admission criteria, and ensure their
-                    documents are in order. Numerous scholarships are available
-                    to support students financially. Many Pakistani students
-                    study in Sweden, a number that continues to grow. Students
-                    are allowed to work, though their studies should remain the
-                    priority. Sweden offers career opportunities in innovative
-                    companies, helping students to finance their education.
-                    Universities prioritize equal opportunities, student
-                    interaction, and a supportive environment. Presentations and
-                    interactive sessions enhance understanding, contributing to
-                    Sweden's global educational reputation and continuous
-                    attraction of new students.
+                    Studying on the island of Cyprus offers a unique blend of
+                    academic excellence and cultural immersion. Renowned for its
+                    quality education system, Cyprus boasts a variety of
+                    universities and colleges, many of which offer programs in
+                    English, accommodating international students. Whether
+                    you're enchanted by the historic streets of Nicosia, the
+                    lively student scene in Limassol, or the coastal charm of
+                    Larnaca, Cyprus's cities provide an ideal backdrop for
+                    academic pursuits. Beyond academics, Cyprus's strategic
+                    location in the Eastern Mediterranean allows for easy
+                    exploration of neighboring countries, enriching your
+                    experience with diverse cultures and landscapes. From
+                    savoring Cypriot cuisine and wines to exploring the island's
+                    rich history and archaeological sites, studying on Cyprus
+                    promises an enriching adventure filled with academic growth
+                    and cultural discovery. Cyprus's education system is
+                    welcoming to international students, offering opportunities
+                    for academic and personal development. Universities provide
+                    programs in English across various disciplines, attracting
+                    students from around the globe and fostering a multicultural
+                    environment. For undergraduate studies, proficiency in
+                    English is typically required, though some universities
+                    offer language support programs. At the graduate level,
+                    numerous English-taught programs are available, including
+                    fields such as business, engineering, humanities, and
+                    sciences, ensuring a diverse and stimulating academic
+                    experience. Furthermore, Cyprus offers scholarships and
+                    financial aid to international students, easing the
+                    financial burden of studying abroad. Support services such
+                    as orientation programs, language assistance, and cultural
+                    integration activities are also available, ensuring a smooth
+                    transition and enjoyable stay on the island. Overall,
+                    studying on Cyprus offers a unique blend of academic rigor,
+                    cultural diversity, and supportive infrastructure, making it
+                    an attractive destination for those seeking a transformative
+                    educational experience in the Eastern Mediterranean.
                   </div>
-                  <div className="destrow destrowone">
+                  {/* <div className="destrow destrowone">
                     <div className="destleft">
                       <div className="destheading">
                         Lectures and examinations
@@ -228,7 +189,7 @@ export default function Destination() {
                         PhD programmes for more details.
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

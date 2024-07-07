@@ -20,6 +20,9 @@
 .teamcol {
   width: 20%;
 }
+.teamcol.teamcolmain {
+  width: 25%;
+}
 .teamrow {
   margin-top: 5%;
   display: flex;
@@ -56,5 +59,31 @@
 }
 .teamname {
   font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.teammaincont {
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  width: 100%;
+}
+.teammainrow {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 5rem;
+}
+.teamstatement {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 50%;
+}
+.teamstatement span {
+  color: var(--org-primary);
+  font-size: 1.4rem;
   font-weight: 500;
 }

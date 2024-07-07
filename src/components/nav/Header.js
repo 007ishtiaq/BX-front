@@ -188,9 +188,14 @@ const Header = () => {
             >
               <Instagramsvg />
             </a>
-            <Link to="#" className="helperlinkcont linkedinsvg toplinkedinsvg">
+            <a
+              href={`https://www.linkedin.com/in/study-guide-05a10b318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app`}
+              className="helperlinkcont"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Linkedinsvg />
-            </Link>
+            </a>
             <a
               href={`https://api.whatsapp.com/send?phone=00923455005810`}
               className="helperlinkcont"

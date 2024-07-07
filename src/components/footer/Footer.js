@@ -76,7 +76,8 @@ export default function Footer() {
         '<svg                     class="linkedinsvg"                     xmlns="http://www.w3.org/2000/svg"                     viewBox="0 0 448 512"                   >                     <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />                   </svg>',
       slug: 'lesssvg-class"linkedinsvg"-xmlns"http:www.w3.org2000svg"-viewbox"0-0-448-512"-greater-lesspath-d"m100.28-448h7.4v148.9h92.88zm53.79-108.1c24.09-108.1-0-83.5-0-53.8a53.79-53.79-0-0-1-107.58-0c0-29.7-24.1-54.3-53.79-54.3zm447.9-448h-92.68v302.4c0-34.7-.7-79.2-48.29-79.2-48.29-0-55.69-37.7-55.69-76.7v448h-92.78v148.9h89.08v40.8h1.3c12.4-23.5-42.69-48.3-87.88-48.3-94-0-111.28-61.9-111.28-142.3v448z"-greater-lesssvggreater',
       info2: "linkedin",
-      info3: "https://www.linkedin.com/",
+      info3:
+        "https://www.linkedin.com/in/study-guide-05a10b318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       createdAt: "2024-06-23T06:31:04.925Z",
       updatedAt: "2024-06-23T06:31:04.925Z",
       __v: 0,

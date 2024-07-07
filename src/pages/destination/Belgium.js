@@ -91,8 +91,8 @@ export default function Destination() {
                     Study in Belgium for Pakistani Students
                   </div>
                   <div className="destsubdata">
-                    BELGIUM: Studying in Belgium provides a dynamic academic and
-                    cultural journey. Recognized for its top-tier educational
+                    Studying in Belgium provides a dynamic academic and cultural
+                    journey. Recognized for its top-tier educational
                     institutions, Belgium hosts a diverse array of universities
                     and colleges, many offering programs in English, catering to
                     global students. Whether you're captivated by Brussels'

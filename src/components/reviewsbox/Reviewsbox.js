@@ -13,7 +13,7 @@ export default function Reviewsbox() {
         <div className="mainreviewcont">
           <h1 className="mainreviewheading"> Customers Reviews</h1>
           <div className="ratingcont">
-            <span className="reviewsscore">4.8</span> Out of 5 based on 6397
+            <span className="reviewsscore">4.8</span> Out of 5 based on 4562
             reviews
           </div>
           <div className="mainreviewscont">
@@ -45,9 +45,11 @@ export default function Reviewsbox() {
                   </div>
 
                   <div class="reviewtxt thisreviewtxt">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                    sed impedit vitae odit nam. Voluptates ullam fsdfsd
-                    sfdsfdsf.
+                    Study Guide International made my visa application process
+                    stress-free. Their team was always available to assist me,
+                    and they provided clear instructions every step of the way.
+                    I highly recommend their services to anyone looking to study
+                    abroad!
                   </div>
 
                   <div class="varifiedcont thisvarifiedcont">
@@ -85,9 +87,11 @@ export default function Reviewsbox() {
                   </div>
 
                   <div class="reviewtxt thisreviewtxt">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                    sed impedit vitae odit nam. Voluptates ullam fsdfsd
-                    sfdsfdsf.
+                    Navigating the visa process can be daunting, but Study Guide
+                    International made it seem easy. Their attention to detail
+                    and personalized approach ensured that my application was
+                    flawless. I received my visa without any issues and am now
+                    studying in Canada!
                   </div>
 
                   <div class="varifiedcont thisvarifiedcont">
@@ -125,9 +129,11 @@ export default function Reviewsbox() {
                   </div>
 
                   <div class="reviewtxt thisreviewtxt">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                    sed impedit vitae odit nam. Voluptates ullam fsdfsd
-                    sfdsfdsf.
+                    Choosing Study Guide International was the best decision I
+                    made for my study abroad plans. Their team was
+                    knowledgeable, supportive, and always available to answer my
+                    questions. They handled my visa application perfectly, and I
+                    received my visa in record time.
                   </div>
 
                   <div class="varifiedcont thisvarifiedcont">
@@ -165,9 +171,11 @@ export default function Reviewsbox() {
                   </div>
 
                   <div class="reviewtxt thisreviewtxt">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                    sed impedit vitae odit nam. Voluptates ullam fsdfsd
-                    sfdsfdsf.
+                    I am incredibly grateful to Study Guide International for
+                    their outstanding service. They guided me through the
+                    complex visa process with ease and professionalism. Their
+                    support was instrumental in securing my visa, and I highly
+                    recommend.
                   </div>
 
                   <div class="varifiedcont thisvarifiedcont">

@@ -120,7 +120,7 @@ export default function Destination() {
                     snapshot of the educational landscape for international
                     students in Australia:
                   </div>
-                  <div className="destrow">
+                  <div className="destrow destrowone">
                     <div className="destleft">
                       <div className="destheading">
                         Lectures and examinations
@@ -159,7 +159,7 @@ export default function Destination() {
                       />
                     </div>
                   </div>
-                  <div className="destrow">
+                  <div className="destrow destrowtwo">
                     <div className="destrightwide">
                       <img
                         className="bigbannerimg destsideimg"
