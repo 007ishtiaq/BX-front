@@ -165,9 +165,27 @@ const Header = () => {
             >
               <div className="helperlinkcont">
                 <Callsvg /> <Whatsappthin className="wpthinsvg" />
-                <p className="top_tag_Right">
-                  +92 322 5005810, +92 321 0378899, +92 300 8478889
-                </p>
+                <p className="top_tag_Right">+92 322 5005810,</p>
+              </div>
+            </a>
+            <a
+              href={`https://api.whatsapp.com/send?phone=00923210378899`}
+              className="helperlinkcont"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="helperlinkcont">
+                <p className="top_tag_Right">+92 321 0378899,</p>
+              </div>
+            </a>
+            <a
+              href={`https://api.whatsapp.com/send?phone=00923008478889`}
+              className="helperlinkcont"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="helperlinkcont">
+                <p className="top_tag_Right">+92 300 8478889</p>
               </div>
             </a>
           </div>

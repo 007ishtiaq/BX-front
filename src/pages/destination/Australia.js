@@ -50,7 +50,7 @@ export default function Destination() {
                         onLoad={() => setImageLoaded(true)}
                         style={{ display: imageLoaded ? "block" : "none" }}
                       />
-                      <div className="destname">Ausralia</div>
+                      <div className="destname">Australia</div>
                     </div>
                     {!imageLoaded && (
                       <Skeleton
