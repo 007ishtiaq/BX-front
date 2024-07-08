@@ -2,7 +2,7 @@ import React from "react";
 import "./Ourteam.css";
 import person1 from "../../images/team/1.jpeg";
 import person2 from "../../images/team/2.jpg";
-import person3 from "../../images/team/3.jpg";
+import person3 from "../../images/team/3.png";
 import person4 from "../../images/team/4.jpeg";
 import person6 from "../../images/team/6.jpeg";
 import person7 from "../../images/team/7.png";
@@ -80,8 +80,7 @@ export default function Ourteam() {
                   we streamline the entire process. Our commitment ensures every
                   detail is meticulously managed for a compelling application.
                   As the CEO of Study Guide International, I am dedicated to
-                  your success. Let us help turn your dreams into reality. Warm
-                  regards, Hassan Zaman Khan
+                  your success. Let us help turn your dreams into reality.
                 </p>
               </div>
             </div>

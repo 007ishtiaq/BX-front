@@ -87,3 +87,53 @@
   font-size: 1.4rem;
   font-weight: 500;
 }
+
+/*****************************************
+**************Responsiveness***********
+*************************************** */
+
+@media (max-width: 450px) {
+  .aboutcont {
+    padding: 0rem 1rem;
+  }
+  .mainteamcont {
+    padding: 1rem;
+  }
+  .visiontextside p {
+    font-size: 1.2rem;
+  }
+  .mainteamcont > p {
+    font-size: 1.4rem;
+  }
+  .teamcol.teamcolmain {
+    width: 45%;
+  }
+  .teammainrow {
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+  .teamstatement {
+    width: 100%;
+  }
+  .teamstatement p {
+    text-align: center;
+    align-self: center;
+  }
+  .teamrow {
+    margin-top: 1%;
+    gap: 2rem;
+  }
+  .teamcol {
+    width: 30%;
+  }
+  .teammainrowtwo {
+    margin: 5rem 0 0rem;
+  }
+  .teamrow {
+    margin: 1rem 0rem;
+  }
+  .teamcol {
+    margin: 0 1rem;
+  }
+}
