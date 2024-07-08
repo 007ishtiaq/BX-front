@@ -190,7 +190,7 @@ const Header = () => {
             </a>
             <a
               href={`https://www.linkedin.com/in/study-guide-05a10b318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app`}
-              className="helperlinkcont"
+              className="helperlinkcont toplinkedinsvg"
               target="_blank"
               rel="noopener noreferrer"
             >
