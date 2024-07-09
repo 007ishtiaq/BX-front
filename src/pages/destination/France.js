@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import france from "../../images/destination/france/france.jpg";
+import flag from "../../images/destination/france/flag.png";
 import lecture from "../../images/destination/sweden/lecture.png";
 import programs from "../../images/destination/sweden/programs.png";
 // import { getRelatedStaticText } from "../../functions/staticText";
@@ -40,7 +41,12 @@ export default function France() {
                         onLoad={() => setImageLoaded(true)}
                         style={{ display: imageLoaded ? "block" : "none" }}
                       />
-                      <div className="destname">France</div>
+                      <div className="destname">
+                        <span>
+                          <img src={flag} alt="" />
+                        </span>{" "}
+                        France
+                      </div>
                     </div>
                     {!imageLoaded && (
                       <Skeleton

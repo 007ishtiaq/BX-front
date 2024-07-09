@@ -10,6 +10,10 @@
   bottom: 10%;
   text-shadow: 2px 2px black;
 }
+.destname img {
+  width: 6rem;
+  height: auto;
+}
 
 .bigbannerimg {
   width: 100%;

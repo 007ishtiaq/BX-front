@@ -12,6 +12,7 @@ import uni7 from "../../images/destination/sweden/unis/uni7.png";
 import uni8 from "../../images/destination/sweden/unis/uni8.png";
 import uni9 from "../../images/destination/sweden/unis/uni9.png";
 import uni10 from "../../images/destination/sweden/unis/uni10.png";
+import flag from "../../images/destination/sweden/flag.png";
 // import { getRelatedStaticText } from "../../functions/staticText";
 import "./Destination.css";
 import { Link } from "react-router-dom";
@@ -50,7 +51,12 @@ export default function Destination() {
                         onLoad={() => setImageLoaded(true)}
                         style={{ display: imageLoaded ? "block" : "none" }}
                       />
-                      <div className="destname">Sweden</div>
+                      <div className="destname">
+                        <span>
+                          <img src={flag} alt="" />
+                        </span>{" "}
+                        Sweden
+                      </div>
                     </div>
                     {!imageLoaded && (
                       <Skeleton

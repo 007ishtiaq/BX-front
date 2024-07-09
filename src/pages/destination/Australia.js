@@ -13,6 +13,7 @@ import programs from "../../images/destination/sweden/programs.png";
 // import uni9 from "../../images/destination/sweden/unis/uni9.png";
 // import uni10 from "../../images/destination/sweden/unis/uni10.png";
 // import { getRelatedStaticText } from "../../functions/staticText";
+import flag from "../../images/destination/australia/flag.jpg";
 import "./Destination.css";
 import { Link } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
@@ -50,7 +51,12 @@ export default function Destination() {
                         onLoad={() => setImageLoaded(true)}
                         style={{ display: imageLoaded ? "block" : "none" }}
                       />
-                      <div className="destname">Australia</div>
+                      <div className="destname">
+                        <span>
+                          <img src={flag} alt="" />
+                        </span>{" "}
+                        Australia
+                      </div>
                     </div>
                     {!imageLoaded && (
                       <Skeleton

@@ -18,6 +18,7 @@ import uni13 from "../../images/destination/uk/unis/uni13.png";
 import uni14 from "../../images/destination/uk/unis/uni14.png";
 import uni15 from "../../images/destination/uk/unis/uni15.png";
 import uni16 from "../../images/destination/uk/unis/uni16.png";
+import flag from "../../images/destination/uk/flag.png";
 // import { getRelatedStaticText } from "../../functions/staticText";
 import "./Destination.css";
 import { Link } from "react-router-dom";
@@ -56,7 +57,12 @@ export default function UnitedKingdom() {
                         onLoad={() => setImageLoaded(true)}
                         style={{ display: imageLoaded ? "block" : "none" }}
                       />
-                      <div className="destname">United Kingdom</div>
+                      <div className="destname">
+                        <span>
+                          <img src={flag} alt="" />
+                        </span>{" "}
+                        United Kingdom
+                      </div>
                     </div>
                     {!imageLoaded && (
                       <Skeleton

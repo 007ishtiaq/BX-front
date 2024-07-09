@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import sweden from "../../images/destination/sweden/sweden.webp";
+import flag from "../../images/destination/cyprus/flag.webp";
 import lecture from "../../images/destination/sweden/lecture.png";
 import programs from "../../images/destination/sweden/programs.png";
 // import { getRelatedStaticText } from "../../functions/staticText";
@@ -40,7 +41,12 @@ export default function Cyprus() {
                         onLoad={() => setImageLoaded(true)}
                         style={{ display: imageLoaded ? "block" : "none" }}
                       />
-                      <div className="destname">Cyprus</div>
+                      <div className="destname">
+                        <span>
+                          <img src={flag} alt="" />
+                        </span>{" "}
+                        Cyprus
+                      </div>
                     </div>
                     {!imageLoaded && (
                       <Skeleton
