@@ -26,6 +26,9 @@ const Finland = lazy(() => import("./pages/destination/Finland"));
 const Ireland = lazy(() => import("./pages/destination/Ireland"));
 const France = lazy(() => import("./pages/destination/France"));
 const Cyprus = lazy(() => import("./pages/destination/Cyprus"));
+const SuccessStories = lazy(() =>
+  import("./pages/successstories/SuccessStories")
+);
 const Header = lazy(() => import("./components/nav/Header"));
 const NotFound = lazy(() => import("./pages/NotFound/NotFound"));
 
@@ -245,6 +248,7 @@ const App = () => {
             <Route exact path="/Destinations/Ireland" component={Ireland} />
             <Route exact path="/Destinations/France" component={France} />
             <Route exact path="/Destinations/Cyprus" component={Cyprus} />
+            <Route exact path="/Stories" component={SuccessStories} />
             {/* <Route exact path="/country/?country=:slug" component={Destination} /> */}
 
             {/* <Route exact path="/product/:slug" component={Product} /> */}

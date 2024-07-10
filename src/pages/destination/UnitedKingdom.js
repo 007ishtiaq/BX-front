@@ -131,96 +131,114 @@ export default function UnitedKingdom() {
                     Study in Knited Kingdom for Pakistani Students
                   </div>
                   <div className="destsubdata">
-                    ### Esteemed and Time-Honored System UK qualifications are
-                    globally esteemed, reflecting the nation's rich educational
-                    heritage. As one of the oldest educational systems, it
-                    offers a robust foundation in essential skills needed to
-                    thrive in the competitive global market. ### Global
-                    Influence Graduates from UK institutions have made
-                    significant impacts worldwide. Notable alumni include: -
-                    *Bill Clinton* (former President of the USA) - *Wole
-                    Soyinka* (Nobel laureate in Literature) - *Imran Khan*
-                    (cricket legend and Prime Minister of Pakistan) These
-                    individuals highlight the global influence and prestige
-                    associated with UK education. ### Diverse Specializations UK
-                    educational institutions offer a vast array of
-                    specializations, ensuring that students can find courses
-                    that align with their true interests, aspirations, and
-                    passions. Whether you're interested in arts, sciences,
-                    engineering, business, or humanities, there is a program
-                    tailored to your needs. ### Innovative Learning Environment
-                    UK institutions promote critical, creative, and independent
+                    UK qualifications are globally esteemed, reflecting the
+                    nation's rich educational heritage. As one of the oldest
+                    educational systems, it offers a robust foundation in
+                    essential skills needed to thrive in the competitive global
+                    market. <br />
+                    <span> Global Influence: </span> Graduates from UK
+                    institutions have made significant impacts worldwide.
+                    Notable alumni include: <span>Bill Clinton</span> (former
+                    President of the USA)<span> Wole Soyinka </span>(Nobel
+                    laureate in Literature)
+                    <span> Imran Khan</span> (cricket legend and Prime Minister
+                    of Pakistan) These individuals highlight the global
+                    influence and prestige associated with UK education.
+                    <br />
+                    <span>Diverse Specializations</span> UK educational
+                    institutions offer a vast array of specializations, ensuring
+                    that students can find courses that align with their true
+                    interests, aspirations, and passions. Whether you're
+                    interested in arts, sciences, engineering, business, or
+                    humanities, there is a program tailored to your needs.{" "}
+                    <br />
+                    <span> Innovative Learning Environment</span> UK
+                    institutions promote critical, creative, and independent
                     thinking through diverse teaching and assessment methods.
                     Students are encouraged to utilize the knowledge they
                     acquire to inspire original ideas and innovative solutions.
                     This approach prepares graduates to think effectively and
-                    independently, qualities highly valued by employers. ###
-                    Financial Accessibility UK education offers excellent value
-                    through: - *Early realization of earning potential*: Shorter
+                    independently, qualities highly valued by employers. <br />
+                    <span> Financial Accessibility</span> UK education offers
+                    excellent value through: <br />
+                    <span>Early realization of earning potential:</span> Shorter
                     program durations mean students can enter the workforce
-                    sooner. - *Numerous scholarships and bursaries*: Many UK
+                    sooner. <br />
+                    <span>Numerous scholarships and bursaries:</span> Many UK
                     institutions offer financial aid to help offset the cost of
-                    education. - *Nearly free healthcare*: Students benefit from
-                    the National Health Service (NHS). - *Student discounts*:
-                    Through the National Union of Students (NUS), students
-                    receive discounts on various goods and services. ###
-                    Multicultural Experience The UK is a cosmopolitan and
-                    inclusive society, hosting various ethnic groups and
-                    nationalities. This diversity enriches students'
+                    education. <br />
+                    <span>Nearly free healthcare:</span>
+                    Students benefit from the National Health Service (NHS).
+                    <br />
+                    <span>Student discounts:</span> Through the National Union
+                    of Students (NUS), students receive discounts on various
+                    goods and services. <br />
+                    <span> Multicultural Experience</span> The UK is a
+                    cosmopolitan and inclusive society, hosting various ethnic
+                    groups and nationalities. This diversity enriches students'
                     understanding of different cultures and perspectives. Living
                     and studying in such an environment prepares students to
-                    operate in a globalized world. ### Program Duration UK
-                    programs are typically shorter than those in other
-                    countries, allowing students to complete their studies and
-                    begin their careers more quickly: - *Undergraduate*: 3 years
-                    - *Postgraduate*: 1 year ### UK Education System ####
-                    Undergraduate: - *Entry Requirements*: - 13 years of
-                    education required for direct entry. - Specific grade
-                    requirements vary by field: - 65% and above for humanities.
-                    - 70-80% and above for science, commerce, and engineering. -
-                    Additional qualifications or experience may be considered. -
-                    Must be 18 years old by the start of the program. ####
-                    Postgraduate: - *Entry Requirements*: - 16 years of
-                    education required for direct entry. - Generally, a 60% and
+                    operate in a globalized world. <br />
+                    <span>Program Duration</span> UK programs are typically
+                    shorter than those in other countries, allowing students to
+                    complete their studies and begin their careers more quickly:{" "}
+                    <span>Undergraduate:</span> 3 years
+                    <span>Postgraduate:</span> 1 year <br />
+                    <span>UK Education System</span> <br />
+                    <br />
+                    <span>Undergraduate:</span> *Entry Requirements*: 13 years
+                    of education required for direct entry. - Specific grade
+                    requirements vary by field: 65% and above for humanities.
+                    70-80% and above for science, commerce, and engineering.
+                    Additional qualifications or experience may be considered.
+                    Must be 18 years old by the start of the program.
+                    <br />
+                    <span>Postgraduate:</span> *Entry Requirements*: 16 years of
+                    education required for direct entry. Generally, a 60% and
                     above score in the first degree is required, though some
-                    institutions accept 55% and above. - GMAT scores (500-650)
-                    may be needed for management programs. - Relevant work
-                    experience (1-3 years) is often required for MBA programs,
-                    with some universities setting a minimum entry age of 25.
-                    ### English Proficiency - *IELTS*: Minimum score of 6.5 for
-                    postgraduate studies, 6.0 for undergraduate studies. -
+                    institutions accept 55% and above. GMAT scores (500-650) may
+                    be needed for management programs. Relevant work experience
+                    (1-3 years) is often required for MBA programs, with some
+                    universities setting a minimum entry age of 25.
+                    <br />
+                    <span>English Proficiency</span> *IELTS*: Minimum score of
+                    6.5 for postgraduate studies, 6.0 for undergraduate studies.
                     *TOEFL*: Minimum score of 237 for postgraduate studies, 223
-                    for undergraduate studies. - Some exemptions are possible
+                    for undergraduate studies. Some exemptions are possible
                     based on the university's assessment of the candidate's
-                    English skills. ### Application Process #### Undergraduate:
-                    - *Application Method*: - Applications are made through UCAS
-                    (Universities and Colleges Admissions Service). - Up to 6
-                    universities can be applied to on one application. -
-                    *Special Programs*: - *Sandwich Programs*: Combine periods
-                    of study with time spent in industry, extending the course
-                    duration to 4 years. - *Foundation Programs*: One-year
-                    programs designed as an alternative route for students to
-                    bridge the gap between their qualifications and the
-                    requirements for a degree program. #### Postgraduate: -
-                    *Application Method*: - Application forms are available at
-                    various offices. - Some universities charge an application
-                    fee. - It's recommended to apply at least 6-8 months in
-                    advance, especially for popular universities. - *Required
-                    Documents*: - Attested copies of academic transcripts (O/A
-                    levels, X/XII, and bachelor's degree). - At least two
-                    academic reference letters from professors. - One work
-                    recommendation (if applicable). - Statement of Purpose. -
-                    Curriculum Vitae/Resume. - IELTS/TOEFL score reports (if
-                    required). - Portfolio (for art and design courses). -
-                    Additional certificates and achievements (state/national
-                    level, extracurricular activities). ### Student Visas
+                    English skills. <br />
+                    <span>Application Process</span> <br />
+                    <span> Undergraduate:</span>
+                    *Application Method*: Applications are made through UCAS
+                    (Universities and Colleges Admissions Service). Up to 6
+                    universities can be applied to on one application. *Special
+                    Programs*: *Sandwich Programs*: Combine periods of study
+                    with time spent in industry, extending the course duration
+                    to 4 years. *Foundation Programs*: One-year programs
+                    designed as an alternative route for students to bridge the
+                    gap between their qualifications and the requirements for a
+                    degree program. <br />
+                    <span> Postgraduate:</span> *Application Method*:
+                    Application forms are available at various offices. Some
+                    universities charge an application fee. It's recommended to
+                    apply at least 6-8 months in advance, especially for popular
+                    universities. *Required Documents*: Attested copies of
+                    academic transcripts (O/A levels, X/XII, and bachelor's
+                    degree). At least two academic reference letters from
+                    professors. One work recommendation (if applicable).
+                    Statement of Purpose. Curriculum Vitae/Resume. IELTS/TOEFL
+                    score reports (if required). Portfolio (for art and design
+                    courses). Additional certificates and achievements
+                    (state/national level, extracurricular activities). <br />
+                    <span> Student Visas</span>
                     Obtaining a student visa is generally straightforward.
                     Applicants from Pakistan must provide a Confirmation of
                     Acceptance for Studies (CAS) from a UK university and
                     evidence of financial support for tuition and living costs.
                     Dedicated visa counselors assist with the process. The visa
                     typically covers the entire course duration and permits
-                    multiple entries. ### Employment Opportunities Students at
+                    multiple entries. <br />
+                    <span> Employment Opportunities</span> Students at
                     government colleges/universities can work up to 20 hours per
                     week during term time and full-time during vacations. This
                     opportunity allows students to gain valuable work experience

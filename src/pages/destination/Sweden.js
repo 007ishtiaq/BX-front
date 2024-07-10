@@ -114,21 +114,26 @@ export default function Destination() {
                     For master's programs, which draw a significant number of
                     international students, there are over 450 courses offered
                     exclusively in English. The academic year spans 40 weeks,
-                    divided into two semesters: the first from mid-August to
+                    divided into two semesters, the first from mid-August to
                     mid-January, and the second from mid-January to June.
                     Admission to undergraduate programs requires proof of
                     secondary education completion. The top universities often
                     select students based on their academic performance. Degree
-                    Programs in Sweden: Swedish universities offer degrees
+                    Programs in Sweden, Swedish universities offer degrees
                     according to the European standard, including bachelor's,
-                    master's, and PhD programs. - *Bachelor's Programs:* These
-                    are undergraduate courses pursued after upper secondary
-                    school, typically lasting three years and requiring 180 ECTS
-                    credits. - *Master's Programs:* These build on bachelor's
+                    master's, and PhD programs. <br />
+                    <span> Bachelor's Programs: </span> These are undergraduate
+                    courses pursued after upper secondary school, typically
+                    lasting three years and requiring 180 ECTS credits.
+                    <br />
+                    <span> Master's Programs: </span> These build on bachelor's
                     studies, lasting one to two years, with 60 to 120 ECTS
-                    credits. - *PhD Programs:* These are research-intensive and
-                    involve several years of work toward a dissertation, varying
-                    by university. Programs vs. Courses: A degree program
+                    credits.
+                    <br />
+                    <span> PhD Programs: </span> These are research-intensive
+                    and involve several years of work toward a dissertation,
+                    varying by university. <br />
+                    <span> Programs vs. Courses: </span> A degree program
                     consists of several courses within a specific field leading
                     to a degree. Courses, the fundamental units of programs, can
                     also be taken individually. Enrolling in a course alone
@@ -140,38 +145,45 @@ export default function Destination() {
                     program might involve one 30 ECTS credit course per
                     semester, totaling 60 ECTS credits. - Enrolling in a
                     30-credit course registers you only for that course.
-                    Academic Calendar: The Swedish academic year is split into
-                    two semesters: - *Autumn Semester:* Late August to
-                    mid-January, with a short break in December. - *Spring
-                    Semester:* Mid-January to early June. Course Structure:
-                    Full-time studies approximate a 40-hour week, with few
-                    weekly lectures or seminars. Most time is spent on reading,
-                    group projects, and assignments. Students often take one
-                    course at a time over several weeks, with exams following
-                    each course. Some programs may have concurrent courses with
-                    semester-end exams. Lecture and Examination Format: Courses
-                    include lectures, seminars, and lab sessions. Seminar groups
-                    are small, while lectures may be large. Active participation
-                    is expected to develop critical thinking and collaboration.
-                    Extensive reading and preparation are required. Exams may be
-                    written, oral, lab-based, group work, or projects. Most
-                    programs conclude with a thesis or project. Study in Sweden
-                    for International Students: Sweden is a global leader in
-                    quality education, attracting students worldwide. The
-                    education system emphasizes personal development, freedom,
-                    and responsibility. Prospective students should research
-                    universities and admission criteria, and ensure their
-                    documents are in order. Numerous scholarships are available
-                    to support students financially. Many Pakistani students
-                    study in Sweden, a number that continues to grow. Students
-                    are allowed to work, though their studies should remain the
-                    priority. Sweden offers career opportunities in innovative
-                    companies, helping students to finance their education.
-                    Universities prioritize equal opportunities, student
-                    interaction, and a supportive environment. Presentations and
-                    interactive sessions enhance understanding, contributing to
-                    Sweden's global educational reputation and continuous
-                    attraction of new students.
+                    <br />
+                    <span>Academic Calendar: </span> The Swedish academic year
+                    is split into two semesters: <br />
+                    <span>Autumn Semester:</span> Late August to mid-January,
+                    with a short break in December.
+                    <br />
+                    <span> Spring Semester:</span> Mid-January to early June.
+                    Course Structure: Full-time studies approximate a 40-hour
+                    week, with few weekly lectures or seminars. Most time is
+                    spent on reading, group projects, and assignments. Students
+                    often take one course at a time over several weeks, with
+                    exams following each course. Some programs may have
+                    concurrent courses with semester-end exams. Lecture and
+                    <br />
+                    <span>Examination Format: </span> Courses include lectures,
+                    seminars, and lab sessions. Seminar groups are small, while
+                    lectures may be large. Active participation is expected to
+                    develop critical thinking and collaboration. Extensive
+                    reading and preparation are required. Exams may be written,
+                    oral, lab-based, group work, or projects. Most programs
+                    conclude with a thesis or project. <br />
+                    <span>
+                      Study in Sweden for International Students:
+                    </span>{" "}
+                    Sweden is a global leader in quality education, attracting
+                    students worldwide. The education system emphasizes personal
+                    development, freedom, and responsibility. Prospective
+                    students should research universities and admission
+                    criteria, and ensure their documents are in order. Numerous
+                    scholarships are available to support students financially.
+                    Many Pakistani students study in Sweden, a number that
+                    continues to grow. Students are allowed to work, though
+                    their studies should remain the priority. Sweden offers
+                    career opportunities in innovative companies, helping
+                    students to finance their education. Universities prioritize
+                    equal opportunities, student interaction, and a supportive
+                    environment. Presentations and interactive sessions enhance
+                    understanding, contributing to Sweden's global educational
+                    reputation and continuous attraction of new students.
                   </div>
                   <div className="destrow destrowone">
                     <div className="destleft">
