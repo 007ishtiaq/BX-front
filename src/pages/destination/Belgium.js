@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import belgium from "../../images/destination/belgium/belgium.jpg";
+import belgium from "../../images/destination/belgium/belgium.webp";
 import flag from "../../images/destination/belgium/flag.png";
 import lecture from "../../images/destination/sweden/lecture.png";
 import programs from "../../images/destination/sweden/programs.png";

@@ -39,8 +39,20 @@
   border: 2px solid #b9b9b9;
 }
 .story img {
-  height: 85%;
+  /* height: 85%; */
 }
 .story:hover {
   border: 2px solid #080808;
+}
+
+/* ***************************************
+**************Responsiveness***********
+*************************************** */
+@media (max-width: 450px) {
+  .storiescont {
+    margin: 0;
+  }
+  .story {
+    width: 26rem;
+  }
 }
