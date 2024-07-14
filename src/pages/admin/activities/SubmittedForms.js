@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getApplyforms } from "../../../functions/contact";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import "./ContactForm.css";
 
 export default function SubmittedForms() {
   const [forms, setForms] = useState([]);
@@ -27,9 +28,9 @@ export default function SubmittedForms() {
               <th class="ordli">Submitted At</th>
               <th class="ordli">Full Name</th>
               <th class="ordli">Phone Num</th>
-              <th class="ordli">Email</th>
-              <th class="ordli">Qualification</th>
-              <th class="ordli">ApplyingForVisaType</th>
+              <th class="ordli condi">Email</th>
+              <th class="ordli condi">Qualification</th>
+              <th class="ordli condi">ApplyingForVisaType</th>
               <th class="ordli">Reply</th>
             </tr>
           </thead>
@@ -41,9 +42,9 @@ export default function SubmittedForms() {
                 </td>
                 <td class="ordli">{form.Name}</td>
                 <td class="ordli">{form.PhoneNum}</td>
-                <td class="ordli">{form.Email}</td>
-                <td class="ordli">{form.Qualification}</td>
-                <td class="ordli">{form.ApplyingForVisaType}</td>
+                <td class="ordli condi">{form.Email}</td>
+                <td class="ordli condi">{form.Qualification}</td>
+                <td class="ordli condi">{form.ApplyingForVisaType}</td>
                 <td class="ordli">
                   <Link to={`/admin/form/${form._id}`}>
                     <div>{form.isReplied ? "Replied" : "Pending"}</div>

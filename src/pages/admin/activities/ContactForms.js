@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getContactforms } from "../../../functions/contact";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import "./ContactForm.css";
 
 export default function ContactForms() {
   const [contactforms, setContactforms] = useState([]);
@@ -26,10 +27,10 @@ export default function ContactForms() {
             <tr>
               <th class="ordli">Submitted At</th>
               <th class="ordli">Full Name</th>
-              <th class="ordli">Subject</th>
+              <th class="ordli condi">Subject</th>
               <th class="ordli">Email</th>
-              <th class="ordli">Text Massage</th>
-              <th class="ordli">Attachment</th>
+              <th class="ordli condi">Text Massage</th>
+              <th class="ordli condi">Attachment</th>
               <th class="ordli">Reply</th>
             </tr>
           </thead>
@@ -40,10 +41,10 @@ export default function ContactForms() {
                   {new Date(contact.createdAt).toLocaleString()}
                 </td>
                 <td class="ordli">{contact.fullname}</td>
-                <td class="ordli">{contact.subject}</td>
+                <td class="ordli condi">{contact.subject}</td>
                 <td class="ordli">{contact.email}</td>
-                <td class="ordli">{contact.text}</td>
-                <td class="ordli">
+                <td class="ordli condi">{contact.text}</td>
+                <td class="ordli condi">
                   {contact.image ? "Attachment" : "No Attachment"}
                 </td>
                 <td class="ordli">

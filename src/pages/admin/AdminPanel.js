@@ -27,6 +27,7 @@ import OptinEmails from "./activities/OptinEmails";
 import Transectiontable from "./transectiontable/Transectiontable";
 
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
+import AdminSmallNav from "../../components/nav/AdminSmallNav";
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
@@ -38,6 +39,7 @@ export default function AdminPanel() {
     <div class="manageacmaincont">
       <div class="manageaccont">
         <AdminsideNav />
+        <AdminSmallNav />
         <div class="navrightside">
           {query.get("page") === "AdminDashboard" && <AdminDashboard />}
           {query.get("page") === "OrderstoDispatch" && <OrderstoDispatch />}
