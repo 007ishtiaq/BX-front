@@ -535,14 +535,6 @@
   justify-content: center;
 }
 
-.acsvg svg {
-  width: 2rem;
-  height: auto;
-  display: block;
-  margin-right: 0.5rem;
-  fill: black;
-}
-
 .cartbtndiv {
   display: flex;
   align-items: center;
@@ -761,6 +753,33 @@
 
 .netnotifier.notconnected {
   background: rgb(209, 2, 2);
+}
+
+/* admin side buttons styling */
+.apllyBtn.btnadmin {
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+}
+.apllyBtn.btnadmin .acsvg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.apllyBtn.btnadmin .acsvg:hover {
+  color: white;
+}
+.acsvg svg {
+  width: 2rem;
+  height: auto;
+  display: block;
+  margin-right: 0.2rem;
+}
+.acsvg.logoutsvg svg {
+  width: 1.7rem;
+  height: auto;
+  display: block;
+  margin-right: 0.2rem;
 }
 
 /* ----styling for down error----- */

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
-import { Link, useLocation } from "react-router-dom";
+import firebase from "firebase/app"; // Import only the core Firebase module
+import { Link, useLocation, useHistory } from "react-router-dom";
 import "firebase/auth"; // Import the Firebase Authentication module
 import { Detector } from "react-detect-offline";
 import { useDispatch, useSelector } from "react-redux";
@@ -17,6 +18,7 @@ import { ReactComponent as Linkedinsvg } from "../../images/social/linked_in.svg
 import { ReactComponent as Whatsappsvg } from "../../images/social/Whatsapp.svg";
 import { ReactComponent as Whatsappthin } from "../../images/social/whatsappthin.svg";
 import { ReactComponent as DownArrow } from "../../images/productpage/downbtn.svg";
+import { LogoutOutlined } from "@ant-design/icons";
 import ShippingModal from "../../components/modal/ShippingModal";
 import ShippingForm from "../../components/forms/ShippingForm";
 import { saveUserForm } from "../../functions/user";
@@ -31,9 +33,11 @@ const Header = () => {
   const [netconnection, setNetconnection] = useState(true);
   const [hideOnlineText, setHideOnlineText] = useState(true);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [modalVisible, setModalVisible] = useState(false);
+  const [mainModalVisible, setMainModalVisible] = useState(false);
+  const [secondModalVisible, setSecondModalVisible] = useState(false);
   const [noNetModal, setNoNetModal] = useState(false);
 
+  const history = useHistory();
   let dispatch = useDispatch();
   let { user } = useSelector((state) => ({ ...state }));
   let location = useLocation();
@@ -122,24 +126,42 @@ const Header = () => {
               // console.log("form sent");
               if (res.data.ok) {
                 toast.success("Form Submitted");
-                setModalVisible(false);
+                setMainModalVisible(false);
+                setSecondModalVisible(false);
+                action.resetForm();
               }
             })
             .catch((err) => console.log("Form Submitted Error", err));
         } catch (error) {
           console.error(error);
-          setModalVisible(false);
+          setMainModalVisible(false);
+          setSecondModalVisible(false);
           // Handle errors if necessary
         }
       } else {
-        setModalVisible(false);
+        setMainModalVisible(false);
+        setSecondModalVisible(false);
         setNoNetModal(true);
       }
     },
   });
 
   const handlecancel = () => {
-    setModalVisible(false);
+    setMainModalVisible(false);
+    setSecondModalVisible(false);
+  };
+
+  const logout = () => {
+    firebase.auth().signOut();
+    dispatch({
+      type: "LOGOUT",
+      payload: null,
+    });
+    dispatch({
+      type: "CLEAR_WISHLIST",
+      payload: null,
+    });
+    history.push("/login");
   };
 
   return (
@@ -222,17 +244,6 @@ const Header = () => {
             >
               <Whatsappsvg />
             </a>
-            {user && user.role === "admin" && (
-              <Link
-                to="/AdminPanel?page=AdminDashboard"
-                className="accountlistlinks"
-              >
-                <div className="acsvg">
-                  <Adminsvg />
-                </div>
-                Admin
-              </Link>
-            )}
           </div>
         </div>
 
@@ -247,14 +258,33 @@ const Header = () => {
                   <div className="logo-sampletxt">
                     Study Guide International
                   </div>
+                  {user && user.role === "admin" && (
+                    <>
+                      <Link
+                        to="/AdminPanel?page=AdminDashboard"
+                        className="apllyBtn btnadmin"
+                      >
+                        <div className="acsvg">
+                          <Adminsvg />
+                          <span>Admin</span>
+                        </div>
+                      </Link>
+                      <button onClick={logout} className="apllyBtn btnadmin">
+                        <div className="acsvg logoutsvg">
+                          <LogoutOutlined />
+                          <span>Logout</span>
+                        </div>
+                      </button>
+                    </>
+                  )}
                 </div>
               </Link>
               <div className="sencondapplybtn">
                 <ShippingModal
                   onModalok={handleSubmit}
                   onModalcancel={handlecancel}
-                  setModalVisible={setModalVisible}
-                  modalVisible={modalVisible}
+                  setModalVisible={setSecondModalVisible}
+                  modalVisible={secondModalVisible}
                   values={values}
                   btnClasses={"apllyBtn"}
                 >
@@ -309,8 +339,8 @@ const Header = () => {
                 <ShippingModal
                   onModalok={handleSubmit}
                   onModalcancel={handlecancel}
-                  setModalVisible={setModalVisible}
-                  modalVisible={modalVisible}
+                  setModalVisible={setMainModalVisible}
+                  modalVisible={mainModalVisible}
                   values={values}
                   btnClasses={"apllyBtn"}
                 >

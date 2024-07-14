@@ -282,13 +282,13 @@ const App = () => {
             /> */}
             {/* <Route exact path="/CookiePolicy" component={CookiePolicy} /> */}
 
-            <Route exact path="/admin" component={Login} />
-            {/* <Route exact path="/register" component={Register} /> */}
-            {/* <Route
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/register" component={Register} />
+            <Route
               exact
               path="/register/complete"
               component={RegisterComplete}
-            /> */}
+            />
             {/* <Route exact path="/forgot/password" component={ForgotPassword} /> */}
 
             {/* User protected Routes */}

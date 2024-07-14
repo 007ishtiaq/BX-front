@@ -18,8 +18,6 @@ import { ReactComponent as Likesvg } from "../../images/productpage/like.svg";
 import { ReactComponent as Likedsvg } from "../../images/productpage/liked.svg";
 import { ReactComponent as Noimage } from "../../images/productpage/noimage.svg";
 import StarRating from "react-star-ratings";
-import ShippingModal from "../modal/ShippingModal";
-import ShippingForm from "../../components/forms/ShippingForm";
 import Mystars from "../ratingstars/Mystars";
 import { useFormik } from "formik";
 import { UserAddressAndContactSchema } from "../../schemas";
@@ -608,22 +606,6 @@ export default function ProductInfo({ product, similarProduct }) {
                   <Skeleton width={170} count={2} />
                 )}
               </div>
-              <ShippingModal
-                onModalok={handleSubmit}
-                onModalcancel={handlecancel}
-                setModalVisible={setModalVisible}
-                modalVisible={modalVisible}
-                values={values}
-                btnClasses={"mybtn btnsecond changebtnsize"}
-              >
-                <ShippingForm
-                  values={values}
-                  errors={errors}
-                  touched={touched}
-                  handleBlur={handleBlur}
-                  handleChange={handleChange}
-                />
-              </ShippingModal>
             </div>
           </div>
           <div className="shippingchargescont">

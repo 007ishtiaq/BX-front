@@ -104,6 +104,7 @@ export default function ContactUs() {
     onSubmit: async (values, action) => {
       if (navigator.onLine) {
         setLoading(true);
+        // console.log(values);
         submitContact({ contactForm: values, image })
           .then((res) => {
             setLoading(false);

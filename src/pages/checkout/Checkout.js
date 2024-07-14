@@ -19,7 +19,6 @@ import { ReactComponent as Verifiedsvg } from "../../images/cart/verified.svg";
 import PaymentsForm from "../../components/forms/paymentsForm/PaymentsForm";
 import { useFormik } from "formik";
 import { UserAddressAndContactSchema } from "../../schemas";
-import ShippingForm from "../../components/forms/ShippingForm";
 import { Tooltip } from "antd";
 import NoNetModal from "../../components/NoNetModal/NoNetModal";
 import Resizer from "react-image-file-resizer";
@@ -345,22 +344,6 @@ const Checkout = ({ history }) => {
           <div class="shippingreviewcont">
             <div className="adrhead">
               <div class="shippingtitle">Shipping Address</div>
-              <ShippingModal
-                onModalok={handleSubmit}
-                onModalcancel={handlecancel}
-                setModalVisible={setModalVisible}
-                modalVisible={modalVisible}
-                values={values}
-                btnClasses={"mybtn btnsecond changebtnsize checkoutpagemodal"}
-              >
-                <ShippingForm
-                  values={values}
-                  errors={errors}
-                  touched={touched}
-                  handleBlur={handleBlur}
-                  handleChange={handleChange}
-                />
-              </ShippingModal>
             </div>
             <div class="shippingsubcont">
               <div class="shippingcol">

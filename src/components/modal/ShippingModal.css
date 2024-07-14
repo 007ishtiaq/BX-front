@@ -11,7 +11,6 @@
 .changebtnsize .textchange {
   padding: 0.3rem 1.2rem;
 }
-/* css for product info page */
 .prodsidesvg {
   padding: 0.4rem 1.8rem;
 }
@@ -46,6 +45,7 @@
 .adrbookpagemodal .btnsvg svg {
   fill: white;
 }
+
 /*****************************************
 **************Responsiveness***********
 *************************************** */

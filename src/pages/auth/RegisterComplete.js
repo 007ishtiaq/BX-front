@@ -5,8 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { createOrUpdateUser } from "../../functions/auth";
 import Spinner from "../../components/Spinner/Spinner";
 import Smallspinner from "../../components/Spinner/Smallspinner";
-import { ReactComponent as Logosvg } from "../../images/headersvgs/logosign.svg";
-import { ReactComponent as Logotextblack } from "../../images/headersvgs/logotextblack.svg";
+import { ReactComponent as Logosvg } from "../../images/headersvgs/logotexttrans.svg";
 import "./Login.css";
 import { useFormik } from "formik";
 import { registercompleteSchema } from "../../schemas";
@@ -129,7 +128,7 @@ const RegisterComplete = ({ history }) => {
                   </div>
                 )}
               </div>
-              <div class="welcometxt">Welcome to Appliance Bazar</div>
+              <div class="welcometxt">Welcome to Study Guide International</div>
               <div class="guidetxt">Create your Password</div>
               <form onSubmit={handleSubmit} className="submitionform">
                 <div class="logininputcont">
@@ -198,21 +197,6 @@ const RegisterComplete = ({ history }) => {
               setNoNetModal={setNoNetModal}
               handleRetry={handleSubmit}
             ></NoNetModal>
-
-            <div class="loginfooter">
-              <div class="loginfootertxt">
-                For further support, you may visit the Help Center or contact
-                our customer service team.
-              </div>
-              <div class="loginfooterlogocont">
-                <div class="loginfooterlogosvg">
-                  <Logosvg />
-                </div>
-                <div class="loginfooterlogotxt">
-                  <Logotextblack />
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
