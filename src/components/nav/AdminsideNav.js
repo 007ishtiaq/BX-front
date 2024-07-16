@@ -122,6 +122,9 @@ export default function AdminsideNav() {
         Create Category
       </Link>
       <ul class="manageacul">
+        <Link to="/AdminPanel?page=StoriesCreate">
+          <li class="manageacli clsremove StoriesCreate">Stories Create</li>
+        </Link>
         <Link to="/AdminPanel?page=SubCreate">
           <li class="manageacli clsremove SubCreate">Sub Level 1</li>
         </Link>

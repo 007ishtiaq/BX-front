@@ -229,11 +229,11 @@ a:hover {
 }
 
 button:disabled {
-  background-color: #ffbb7e;
+  background-color: #7e87ff;
   cursor: no-drop;
 }
 button:hover:disabled {
-  background-color: #ffbb7e;
+  background-color: #7e87ff;
   cursor: no-drop;
 }
 .googlebtn:disabled {

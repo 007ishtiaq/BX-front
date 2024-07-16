@@ -28,6 +28,7 @@ import Transectiontable from "./transectiontable/Transectiontable";
 
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 import AdminSmallNav from "../../components/nav/AdminSmallNav";
+import Stories from "./stories/Stories";
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
@@ -50,6 +51,7 @@ export default function AdminPanel() {
           {query.get("page") === "ProductCreate" && <ProductCreate />}
           {query.get("page") === "FlashSale" && <FlashSale />}
           {query.get("page") === "CategoryCreate" && <CategoryCreate />}
+          {query.get("page") === "StoriesCreate" && <Stories />}
           {query.get("page") === "SubCreate" && <SubCreate />}
           {query.get("page") === "Sub2Create" && <Sub2Create />}
           {query.get("page") === "BrandCreate" && <BrandCreate />}

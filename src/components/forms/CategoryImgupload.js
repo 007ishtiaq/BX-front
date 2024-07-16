@@ -25,7 +25,7 @@ const CategoryImgupload = ({
         720,
         720,
         "WebP",
-        50,
+        100,
         0,
         (uri) => {
           // console.log(uri);
@@ -73,18 +73,20 @@ const CategoryImgupload = ({
         )
       )}
 
-      <div className="">
-        <label className={`mybtn btnprimary ${btnclasses}`}>
-          Choose File
-          <input
-            type="file"
-            hidden
-            disabled={image}
-            accept="images/*"
-            onChange={fileUploadAndResize}
-          />
-        </label>
-      </div>
+      {!image && (
+        <div className="">
+          <label className={`mybtn btnprimary ${btnclasses}`}>
+            Choose File
+            <input
+              type="file"
+              hidden
+              disabled={image}
+              accept="images/*"
+              onChange={fileUploadAndResize}
+            />
+          </label>
+        </div>
+      )}
     </>
   );
 };
