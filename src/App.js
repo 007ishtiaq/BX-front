@@ -50,53 +50,6 @@ const ApplyFormSingle = lazy(() =>
   import("./pages/admin/activities/ApplyFormSingle")
 );
 
-const UserRoute = lazy(() => import("./components/routes/UserRoute"));
-const AdminDashboard = lazy(() =>
-  import("./pages/admin/AdminDashboard/AdminDashboard")
-);
-const OrderDetail = lazy(() =>
-  import("./pages/admin/AdminDashboard/OrderDetail")
-);
-const CategoryCreate = lazy(() =>
-  import("./pages/admin/category/CategoryCreate")
-);
-const CategoryUpdate = lazy(() =>
-  import("./pages/admin/category/CategoryUpdate")
-);
-const BrandUpdate = lazy(() => import("./pages/admin/brand/BrandUpdate"));
-const BannerCreate = lazy(() =>
-  import("./pages/admin/Slider&Banners/BannerCreate")
-);
-const SubCreate = lazy(() => import("./pages/admin/sub/SubCreate"));
-const SubUpdate = lazy(() => import("./pages/admin/sub/SubUpdate"));
-const Sub2Create = lazy(() => import("./pages/admin/sub2/Sub2Create"));
-const Sub2Update = lazy(() => import("./pages/admin/sub2/Sub2Update"));
-const ProductCreate = lazy(() => import("./pages/admin/product/ProductCreate"));
-const AllProducts = lazy(() => import("./pages/admin/product/AllProducts"));
-const ProductUpdate = lazy(() => import("./pages/admin/product/ProductUpdate"));
-const Product = lazy(() => import("./pages/Product"));
-const CategoryHome = lazy(() => import("./pages/category/CategoryHome"));
-const FlashHome = lazy(() => import("./pages/flashsale/FlashHome"));
-const SubHome = lazy(() => import("./pages/sub/SubHome"));
-const Shop = lazy(() => import("./pages/shop/Shop"));
-
-const HelpCenter = lazy(() => import("./pages/helpCenter/HelpCenter"));
-const PrivacyPolicy = lazy(() => import("./pages/policies/PrivacyPolicy"));
-const CookiePolicy = lazy(() => import("./pages/policies/CookiePolicy"));
-const ReturnandRefundPolicy = lazy(() =>
-  import("./pages/policies/ReturnandRefundPolicy")
-);
-const TermsAndConditions = lazy(() =>
-  import("./pages/policies/TermsAndConditions")
-);
-const Thankyou = lazy(() => import("./pages/Thankyou/Thankyou"));
-const CreateCouponPage = lazy(() =>
-  import("./pages/admin/coupon/CreateCouponPage")
-);
-const CreateShippingPage = lazy(() =>
-  import("./pages/admin/shipping/CreateShippingPage")
-);
-
 const App = () => {
   const [noNetModalshow, setNoNetModalshow] = useState(false);
 
@@ -235,36 +188,9 @@ const App = () => {
             <Route exact path="/Destinations/France" component={France} />
             <Route exact path="/Destinations/Cyprus" component={Cyprus} />
             <Route exact path="/Stories" component={SuccessStories} />
-            {/* <Route exact path="/country/?country=:slug" component={Destination} /> */}
 
-            {/* <Route exact path="/product/:slug" component={Product} /> */}
-            {/* <Route exact path="/shop" component={Shop} /> */}
-            {/* <Route exact path="/category" component={CategoryHome} /> */}
-            {/* <Route
-              exact
-              path="/category?category=:slug"
-              component={CategoryHome}
-            /> */}
-            {/* <Route exact path="/Flashsale" component={FlashHome} /> */}
-
-            {/* <Route exact path="/sub/:slug" component={SubHome} /> */}
-
-            {/* <Route exact path="/HelpCenter" component={HelpCenter} /> */}
-            {/* <Route exact path="/HelpCenter?page=:page" component={HelpCenter} /> */}
             <Route exact path="/aboutus" component={AboutUs} />
             <Route exact path="/ContactUs" component={ContactUs} />
-            {/* <Route exact path="/PrivacyPolicy" component={PrivacyPolicy} /> */}
-            {/* <Route
-              exact
-              path="/ReturnandRefundPolicy"
-              component={ReturnandRefundPolicy}
-            /> */}
-            {/* <Route
-              exact
-              path="/TermsAndConditions"
-              component={TermsAndConditions}
-            /> */}
-            {/* <Route exact path="/CookiePolicy" component={CookiePolicy} /> */}
 
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
@@ -275,14 +201,6 @@ const App = () => {
             />
             {/* <Route exact path="/forgot/password" component={ForgotPassword} /> */}
 
-            {/* User protected Routes */}
-
-            {/* <UserRoute
-              exact
-              path="/OrderPlaced/:orderId"
-              component={Thankyou}
-            /> */}
-
             {/* Admin protected Routes */}
 
             <AdminRoute exact path="/AdminPanel" component={AdminPanel} />
@@ -291,17 +209,7 @@ const App = () => {
               path="/AdminPanel?page=:page"
               component={AdminPanel}
             />
-            {/* <AdminRoute exact path="/admin/order/:id" component={OrderDetail} /> */}
-            {/* <AdminRoute
-              exact
-              path="/admin/category/:slug"
-              component={CategoryUpdate}
-            /> */}
-            {/* <AdminRoute
-              exact
-              path="/admin/brand/:slug"
-              component={BrandUpdate}
-            /> */}
+
             <AdminRoute
               exact
               path="/admin/banner/:slug"
@@ -312,23 +220,7 @@ const App = () => {
               path="/admin/statictext/:slug"
               component={StaticTextupdate}
             />
-            {/* <AdminRoute exact path="/admin/sub/:slug" component={SubUpdate} />
-            <AdminRoute exact path="/admin/sub2/:slug" component={Sub2Update} />
-            <AdminRoute
-              exact
-              path="/admin/product/:slug"
-              component={ProductUpdate}
-            /> */}
-            {/* <AdminRoute
-              exact
-              path="/admin/coupon"
-              component={CreateCouponPage}
-            />
-            <AdminRoute
-              exact
-              path="/admin/shipping"
-              component={CreateShippingPage}
-            /> */}
+
             <AdminRoute
               exact
               path="/admin/contact/:id"
