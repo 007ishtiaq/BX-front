@@ -207,11 +207,11 @@ a:hover {
   transition: 0s;
 }
 .disablebtn {
-  background-color: #ffbb7e;
+  background-color: #7e87ff;
   cursor: no-drop;
 }
 .disablebtn:hover {
-  background-color: #ffbb7e;
+  background-color: #7e87ff;
 }
 .disablebtn:focus:active:after {
   opacity: 0;

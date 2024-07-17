@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { getSalesdata } from "../../../functions/admin";
 import classes from "./AdminDashboard.module.css";
-import Chart from "../../../components/Chart/Chart";
 import { toast } from "react-hot-toast";
 
 const AdminDashboard = () => {
@@ -63,8 +62,6 @@ const AdminDashboard = () => {
             </h2>
           </div>
         </div>
-
-        {Yeardata && <Chart data={Yeardata} />}
       </div>
     </div>
   );

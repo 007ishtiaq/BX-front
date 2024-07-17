@@ -101,7 +101,7 @@
   font-size: 15px;
   font-weight: 600;
   color: white;
-  background-color: #ff7800;
+  background-color: #1456a3;
   border: 0;
   padding: 0.6rem 2rem;
   margin: 0 0.2rem;
@@ -110,10 +110,10 @@
 }
 
 .submitbtn:hover {
-  background-color: #ff9000;
+  background-color: #196dcc;
 }
 .submitbtn:active {
-  background-color: #ff5a00;
+  background-color: #114886;
 }
 .submitbtn:after {
   content: "";
