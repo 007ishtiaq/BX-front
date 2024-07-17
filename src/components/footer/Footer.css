@@ -137,7 +137,7 @@ footer {
 }
 .center-footer {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 0.9fr 1.1fr;
   align-items: center;
   width: 100%;
   color: var(--dark-gray);
@@ -237,6 +237,7 @@ footer {
 
 .col-li {
   font-size: var(--fontsize-eemedium);
+  display: flex;
   font-weight: 400;
   color: var(--dark-gray);
   padding: 0.2rem 0;
@@ -256,6 +257,19 @@ footer {
 .footer-colum {
   padding-left: 2rem;
   align-self: start;
+}
+.col-li .mailsvgcont {
+  width: 2rem;
+  height: auto;
+  display: inline-block;
+  margin-right: 0.6rem;
+  fill: var(--dark-gray);
+}
+.col-li:hover .mailsvgcont {
+  fill: var(--org-primary);
+}
+.helperlinkcont .col-li {
+  color: var(--dark-gray);
 }
 /* ------footer below area------ */
 

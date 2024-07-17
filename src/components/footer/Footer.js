@@ -8,7 +8,9 @@ import { getRelatedStaticText } from "../../functions/staticText";
 import { useFormik } from "formik";
 import { optinSchema } from "../../schemas";
 import { ReactComponent as Logotexttrans } from "../../images/headersvgs/logotexttrans.svg";
-import { ReactComponent as Footerdemotxt } from "../../images/headersvgs/footerdemotxt.svg";
+import { ReactComponent as Callsvg } from "../../images/contactUs/calloutlined.svg";
+import { ReactComponent as Whatsappthin } from "../../images/social/whatsappthin.svg";
+import { ReactComponent as Mailsvg } from "../../images/contactUs/mail.svg";
 
 export default function Footer() {
   const [footertag, setFootertag] = useState([
@@ -220,50 +222,51 @@ export default function Footer() {
               <div class="col-ul">
                 <ul>
                   <li>
-                    <Link to="#" class="col-li">
-                      Our Team
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="#" class="col-li">
-                      Courses
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="#" class="col-li">
-                      Career
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="#" class="col-li">
+                    <Link to="/aboutus" class="col-li">
                       About us
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link to="/Stories" class="col-li">
+                      Success Stories
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/ContactUs" class="col-li">
+                      Contact us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/Destinations/sweden" class="col-li">
+                      Sweden
                     </Link>
                   </li>
                 </ul>
               </div>
             </div>
             <div class="footer-colum">
-              <div class="col-heading">Help & Support</div>
+              <div class="col-heading">Destinations</div>
               <div class="col-ul">
                 <ul>
                   <li>
-                    <Link to="#" class="col-li">
-                      Our Team
+                    <Link to="/Destinations/United-Kingdom" class="col-li">
+                      United Kingdom
                     </Link>
                   </li>
                   <li>
-                    <Link to="#" class="col-li">
-                      Apply Now
+                    <Link to="/Destinations/Australia" class="col-li">
+                      Australia
                     </Link>
                   </li>
                   <li>
-                    <Link to="#" class="col-li">
-                      Success Stories
+                    <Link to="/Destinations/France" class="col-li">
+                      France
                     </Link>
                   </li>
                   <li>
-                    <Link to="#" class="col-li">
-                      Contact us
+                    <Link to="/Destinations/Denmark" class="col-li">
+                      Denmark
                     </Link>
                   </li>
                 </ul>
@@ -275,23 +278,48 @@ export default function Footer() {
               <div class="col-ul">
                 <ul>
                   <li>
-                    <Link to="/aboutus" class="col-li">
-                      About Us
-                    </Link>
+                    <a
+                      href={`https://api.whatsapp.com/send?phone=00923455005810`}
+                      className="helperlinkcont"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <div className="helperlinkcont">
+                        <Callsvg /> <Whatsappthin className="wpthinsvg" />
+                        <p className="col-li">+92 322 5005810</p>
+                      </div>
+                    </a>
                   </li>
                   <li>
-                    <Link to="/TermsAndConditions" class="col-li">
-                      Terms & Conditions
-                    </Link>
+                    <a
+                      href={`https://api.whatsapp.com/send?phone=00923210378899`}
+                      className="helperlinkcont"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <div className="helperlinkcont">
+                        <Callsvg /> <Whatsappthin className="wpthinsvg" />
+                        <p className="col-li">+92 321 0378899</p>
+                      </div>
+                    </a>
                   </li>
                   <li>
-                    <Link to="/PrivacyPolicy" class="col-li">
-                      Privacy Policy
-                    </Link>
+                    <a
+                      href={`https://api.whatsapp.com/send?phone=00923455005810`}
+                      className="helperlinkcont"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <div className="helperlinkcont">
+                        <Callsvg /> <Whatsappthin className="wpthinsvg" />
+                        <p className="col-li">+92 300 8478889</p>
+                      </div>
+                    </a>
                   </li>
                   <li>
                     <Link to="/CookiePolicy" class="col-li">
-                      Cookie Policy
+                      <Mailsvg className="mailsvgcont" />
+                      Info@Studyguideint.com
                     </Link>
                   </li>
                 </ul>
