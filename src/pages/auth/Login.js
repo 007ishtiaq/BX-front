@@ -49,7 +49,7 @@ const Login = ({ history }) => {
       history.push(intended.from);
     } else {
       if (res.data.role === "admin") {
-        history.push("/AdminPanel?page=AdminDashboard");
+        history.push("/AdminPanel?page=SubmittedForms");
       } else {
         history.push("/");
       }

@@ -3,7 +3,10 @@
   max-width: 535px;
   margin: 1.5rem auto;
 }
-
+.logininput p {
+  color: red;
+  font-size: 1.2rem;
+}
 .logincont {
   display: flex;
   flex-direction: column;

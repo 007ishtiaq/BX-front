@@ -47,7 +47,7 @@ export default function ApplyFormSingle({ match }) {
   return (
     <div class="manageacmaincont">
       <div class="manageaccont">
-        <AdminsideNavcopy currentActive="ContactForms" />
+        <AdminsideNavcopy currentActive="SubmittedForms" />
         <div class="navrightside">
           <div className="formhead">
             <p>Form</p>

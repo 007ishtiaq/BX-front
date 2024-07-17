@@ -51,31 +51,23 @@ export default function AdminsideNav() {
           </div>
         </div>
       )}
+
       <Link
-        to="/AdminPanel?page=AdminDashboard"
-        class="manageacheading clsremove AdminDashboard"
+        to="/AdminPanel?page=SubmittedForms"
+        class="manageacheading clsremove SubmittedForms"
       >
-        Admin Dashboard
+        Submitted Forms
       </Link>
 
       <ul class="manageacul">
         <Link to="/AdminPanel?page=ContactForms">
           <li class="manageacli clsremove ContactForms">Contact Forms</li>
         </Link>
-
-        <Link to="/AdminPanel?page=SubmittedForms">
-          <li class="manageacli clsremove SubmittedForms">Submitted Forms</li>
-        </Link>
         <Link to="/AdminPanel?page=OptinEmails">
           <li class="manageacli clsremove OptinEmails">Opt-In Emails</li>
         </Link>
       </ul>
 
-      <ul class="manageacul">
-        <Link to="/AdminPanel?page=StoriesCreate">
-          <li class="manageacli clsremove StoriesCreate">Stories Create</li>
-        </Link>
-      </ul>
       <Link
         to="/AdminPanel?page=BannerCreate"
         class="manageacheading clsremove BannerCreate"
@@ -83,6 +75,9 @@ export default function AdminsideNav() {
         Create Banner
       </Link>
       <ul class="manageacul">
+        <Link to="/AdminPanel?page=StoriesCreate">
+          <li class="manageacli clsremove StoriesCreate">Add Story Banner</li>
+        </Link>
         <Link to="/AdminPanel?page=StaticText">
           <li class="manageacli clsremove StaticText">Static Text & Promo</li>
         </Link>

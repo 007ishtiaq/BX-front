@@ -30,7 +30,7 @@ export default function SubmittedForms() {
               <th class="ordli">Phone Num</th>
               <th class="ordli condi">Email</th>
               <th class="ordli condi">Qualification</th>
-              <th class="ordli condi">ApplyingForVisaType</th>
+              <th class="ordli condi">Visa Type</th>
               <th class="ordli">Reply</th>
             </tr>
           </thead>

@@ -261,7 +261,7 @@ const Header = () => {
                   {user && user.role === "admin" && (
                     <>
                       <Link
-                        to="/AdminPanel?page=AdminDashboard"
+                        to="/AdminPanel?page=SubmittedForms"
                         className="apllyBtn btnadmin"
                       >
                         <div className="acsvg">

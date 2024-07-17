@@ -1,14 +1,12 @@
 import React from "react";
 import "../user/ManageMyAcccount.css";
 import AdminsideNav from "../../components/nav/AdminsideNav";
-import AdminDashboard from "./AdminDashboard/AdminDashboard";
 import BannerCreate from "./Slider&Banners/BannerCreate";
 import StaticText from "./statictext/StaticText";
 import PasswordReset from "./passwordreset/PasswordReset";
 import ContactForms from "./activities/ContactForms";
 import SubmittedForms from "./activities/SubmittedForms";
 import OptinEmails from "./activities/OptinEmails";
-
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 import AdminSmallNav from "../../components/nav/AdminSmallNav";
 import Stories from "./stories/Stories";
@@ -25,14 +23,13 @@ export default function AdminPanel() {
         <AdminsideNav />
         <AdminSmallNav />
         <div class="navrightside">
-          {query.get("page") === "AdminDashboard" && <AdminDashboard />}
-          {query.get("page") === "StoriesCreate" && <Stories />}
+          {query.get("page") === "SubmittedForms" && <SubmittedForms />}
+          {query.get("page") === "ContactForms" && <ContactForms />}
+          {query.get("page") === "OptinEmails" && <OptinEmails />}
           {query.get("page") === "BannerCreate" && <BannerCreate />}
           {query.get("page") === "StaticText" && <StaticText />}
+          {query.get("page") === "StoriesCreate" && <Stories />}
           {query.get("page") === "PasswordReset" && <PasswordReset />}
-          {query.get("page") === "ContactForms" && <ContactForms />}
-          {query.get("page") === "SubmittedForms" && <SubmittedForms />}
-          {query.get("page") === "OptinEmails" && <OptinEmails />}
         </div>
       </div>
     </div>
