@@ -31,24 +31,26 @@ const SuccessStories = lazy(() =>
 );
 const Header = lazy(() => import("./components/nav/Header"));
 const NotFound = lazy(() => import("./pages/NotFound/NotFound"));
-
 const RegisterComplete = lazy(() => import("./pages/auth/RegisterComplete"));
 const ForgotPassword = lazy(() => import("./pages/auth/ForgotPassword"));
-const ManageMyAccount = lazy(() => import("./pages/user/ManageMyAccount"));
-const AdminPanel = lazy(() => import("./pages/admin/AdminPanel"));
-const OrderDetails = lazy(() =>
-  import("./pages/user/OrderDetails/OrderDetails")
-);
-const ItemCancel = lazy(() => import("./pages/user/ItemAction/ItemCancel"));
-const ItemReturn = lazy(() => import("./pages/user/ItemAction/ItemReturn"));
-const RequestSubmitted = lazy(() =>
-  import("./pages/user/ItemAction/RequestSubmitted")
-);
-const UserReviews = lazy(() => import("./pages/user/UserReviews/MyReviews"));
-const UserWishlist = lazy(() => import("./pages/user/UserWishlist/MyWishlist"));
-const UserRoute = lazy(() => import("./components/routes/UserRoute"));
 const AdminRoute = lazy(() => import("./components/routes/AdminRoute"));
-const Password = lazy(() => import("./pages/user/Password"));
+const AdminPanel = lazy(() => import("./pages/admin/AdminPanel"));
+const BannerUpdate = lazy(() =>
+  import("./pages/admin/Slider&Banners/BannerUpdate")
+);
+const StaticTextupdate = lazy(() =>
+  import("./pages/admin/statictext/StaticTextupdate")
+);
+const AboutUs = lazy(() => import("./pages/AboutUs/AboutUs"));
+const ContactUs = lazy(() => import("./pages/contactUs/ContactUs"));
+const ContactFormSingle = lazy(() =>
+  import("./pages/admin/activities/ContactFormSingle")
+);
+const ApplyFormSingle = lazy(() =>
+  import("./pages/admin/activities/ApplyFormSingle")
+);
+
+const UserRoute = lazy(() => import("./components/routes/UserRoute"));
 const AdminDashboard = lazy(() =>
   import("./pages/admin/AdminDashboard/AdminDashboard")
 );
@@ -65,12 +67,6 @@ const BrandUpdate = lazy(() => import("./pages/admin/brand/BrandUpdate"));
 const BannerCreate = lazy(() =>
   import("./pages/admin/Slider&Banners/BannerCreate")
 );
-const BannerUpdate = lazy(() =>
-  import("./pages/admin/Slider&Banners/BannerUpdate")
-);
-const StaticTextupdate = lazy(() =>
-  import("./pages/admin/statictext/StaticTextupdate")
-);
 const SubCreate = lazy(() => import("./pages/admin/sub/SubCreate"));
 const SubUpdate = lazy(() => import("./pages/admin/sub/SubUpdate"));
 const Sub2Create = lazy(() => import("./pages/admin/sub2/Sub2Create"));
@@ -80,19 +76,10 @@ const AllProducts = lazy(() => import("./pages/admin/product/AllProducts"));
 const ProductUpdate = lazy(() => import("./pages/admin/product/ProductUpdate"));
 const Product = lazy(() => import("./pages/Product"));
 const CategoryHome = lazy(() => import("./pages/category/CategoryHome"));
-const BrandsHome = lazy(() => import("./pages/brands/BrandsHome"));
 const FlashHome = lazy(() => import("./pages/flashsale/FlashHome"));
 const SubHome = lazy(() => import("./pages/sub/SubHome"));
 const Shop = lazy(() => import("./pages/shop/Shop"));
-const Cart = lazy(() => import("./pages/cart/Cart"));
-const AboutUs = lazy(() => import("./pages/AboutUs/AboutUs"));
-const ContactUs = lazy(() => import("./pages/contactUs/ContactUs"));
-const ContactFormSingle = lazy(() =>
-  import("./pages/admin/activities/ContactFormSingle")
-);
-const ApplyFormSingle = lazy(() =>
-  import("./pages/admin/activities/ApplyFormSingle")
-);
+
 const HelpCenter = lazy(() => import("./pages/helpCenter/HelpCenter"));
 const PrivacyPolicy = lazy(() => import("./pages/policies/PrivacyPolicy"));
 const CookiePolicy = lazy(() => import("./pages/policies/CookiePolicy"));
@@ -102,7 +89,6 @@ const ReturnandRefundPolicy = lazy(() =>
 const TermsAndConditions = lazy(() =>
   import("./pages/policies/TermsAndConditions")
 );
-const Checkout = lazy(() => import("./pages/checkout/Checkout"));
 const Thankyou = lazy(() => import("./pages/Thankyou/Thankyou"));
 const CreateCouponPage = lazy(() =>
   import("./pages/admin/coupon/CreateCouponPage")
@@ -253,7 +239,6 @@ const App = () => {
 
             {/* <Route exact path="/product/:slug" component={Product} /> */}
             {/* <Route exact path="/shop" component={Shop} /> */}
-            {/* <Route exact path="/cart" component={Cart} /> */}
             {/* <Route exact path="/category" component={CategoryHome} /> */}
             {/* <Route
               exact
@@ -261,8 +246,7 @@ const App = () => {
               component={CategoryHome}
             /> */}
             {/* <Route exact path="/Flashsale" component={FlashHome} /> */}
-            {/* <Route exact path="/brand/" component={BrandsHome} /> */}
-            {/* <Route exact path="/brand/?brand=:slug" component={BrandsHome} /> */}
+
             {/* <Route exact path="/sub/:slug" component={SubHome} /> */}
 
             {/* <Route exact path="/HelpCenter" component={HelpCenter} /> */}
@@ -293,37 +277,11 @@ const App = () => {
 
             {/* User protected Routes */}
 
-            {/* <UserRoute exact path="/checkout" component={Checkout} /> */}
             {/* <UserRoute
               exact
               path="/OrderPlaced/:orderId"
               component={Thankyou}
             /> */}
-            {/* <UserRoute exact path="/ManageMyAc" component={ManageMyAccount} /> */}
-            {/* <UserRoute
-              exact
-              path="/ManageMyAc?page=:page"
-              component={ManageMyAccount}
-            /> */}
-            {/* <UserRoute exact path="/user/password" component={Password} /> */}
-            {/* <UserRoute exact path="/order/:id" component={OrderDetails} /> */}
-            {/* <UserRoute
-              exact
-              path="/order/:id/itemCancel/:itemid"
-              component={ItemCancel}
-            /> */}
-            {/* <UserRoute
-              exact
-              path="/order/:id/itemReturn/:itemid"
-              component={ItemReturn}
-            /> */}
-            {/* <UserRoute
-              exact
-              path="/Request/:requestType/RequestNum/:requestNum"
-              component={RequestSubmitted}
-            /> */}
-            {/* <UserRoute exact path="/user/userreviews" component={UserReviews} />
-          <UserRoute exact path="/user/userwishlist" component={UserWishlist} /> */}
 
             {/* Admin protected Routes */}
 
@@ -333,17 +291,17 @@ const App = () => {
               path="/AdminPanel?page=:page"
               component={AdminPanel}
             />
-            <AdminRoute exact path="/admin/order/:id" component={OrderDetail} />
-            <AdminRoute
+            {/* <AdminRoute exact path="/admin/order/:id" component={OrderDetail} /> */}
+            {/* <AdminRoute
               exact
               path="/admin/category/:slug"
               component={CategoryUpdate}
-            />
-            <AdminRoute
+            /> */}
+            {/* <AdminRoute
               exact
               path="/admin/brand/:slug"
               component={BrandUpdate}
-            />
+            /> */}
             <AdminRoute
               exact
               path="/admin/banner/:slug"
@@ -354,14 +312,14 @@ const App = () => {
               path="/admin/statictext/:slug"
               component={StaticTextupdate}
             />
-            <AdminRoute exact path="/admin/sub/:slug" component={SubUpdate} />
+            {/* <AdminRoute exact path="/admin/sub/:slug" component={SubUpdate} />
             <AdminRoute exact path="/admin/sub2/:slug" component={Sub2Update} />
             <AdminRoute
               exact
               path="/admin/product/:slug"
               component={ProductUpdate}
-            />
-            <AdminRoute
+            /> */}
+            {/* <AdminRoute
               exact
               path="/admin/coupon"
               component={CreateCouponPage}
@@ -370,7 +328,7 @@ const App = () => {
               exact
               path="/admin/shipping"
               component={CreateShippingPage}
-            />
+            /> */}
             <AdminRoute
               exact
               path="/admin/contact/:id"
