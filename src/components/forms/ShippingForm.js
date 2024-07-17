@@ -22,7 +22,7 @@ export default function ShippingForm(props) {
             <input
               id="full-name"
               type="text"
-              placeholder="Full Name*"
+              placeholder="Full Name* (required)"
               name="Name"
               value={values.Name}
               onChange={handleChange}
@@ -40,7 +40,7 @@ export default function ShippingForm(props) {
               name="PhoneNum"
               id="PhoneNum"
               type="text"
-              placeholder="Phone Number*"
+              placeholder="Phone Number* (required)"
               value={values.PhoneNum}
               onBlur={handleBlur}
               onChange={handleChange}
@@ -56,7 +56,7 @@ export default function ShippingForm(props) {
               name="Email"
               id="Email"
               type="text"
-              placeholder="Email Address*"
+              placeholder="Email Address* (required)"
               value={values.Email}
               onBlur={handleBlur}
               onChange={handleChange}
@@ -108,7 +108,7 @@ export default function ShippingForm(props) {
               name="Address"
               id="Address"
               type="text"
-              placeholder="Complete Address*"
+              placeholder="Complete Address* (required)"
               value={values.Address}
               onBlur={handleBlur}
               onChange={handleChange}
@@ -125,7 +125,7 @@ export default function ShippingForm(props) {
               name="Qualification"
               id="Qualification"
               type="text"
-              placeholder="Qualification*"
+              placeholder="Qualification"
               value={values.Qualification}
               onBlur={handleBlur}
               onChange={handleChange}
@@ -141,7 +141,7 @@ export default function ShippingForm(props) {
               name="Institution"
               id="Institution"
               type="text"
-              placeholder="Institution*"
+              placeholder="Institution"
               value={values.Institution}
               onBlur={handleBlur}
               onChange={handleChange}
@@ -157,7 +157,7 @@ export default function ShippingForm(props) {
               name="CGPA"
               id="CGPA"
               type="text"
-              placeholder="CGPA*"
+              placeholder="CGPA"
               value={values.CGPA}
               onBlur={handleBlur}
               onChange={handleChange}
@@ -174,7 +174,7 @@ export default function ShippingForm(props) {
               name="PassingYear"
               id="PassingYear"
               type="text"
-              placeholder="Passing Year*"
+              placeholder="Passing Year"
               value={values.PassingYear}
               onBlur={handleBlur}
               onChange={handleChange}
@@ -256,37 +256,41 @@ export default function ShippingForm(props) {
             ) : null} */}
           </div>
 
-          <div className="singleinput">
-            <label htmlFor="TestName">Which Test?</label>
-            <select
-              name="TestName"
-              id="TestName"
-              value={values.TestName}
-              onBlur={handleBlur}
-              onChange={handleChange}
-            >
-              <option value="" label="Select a test" />
-              <option value="IELTS" label="IELTS" />
-              <option value="TOEFL" label="TOEFL" />
-              <option value="PTE" label="PTE" />
-              <option value="ESOL" label="ESOL" />
-              <option value="UKVI" label="UKVI" />
-            </select>
-          </div>
+          {values.EnglishLanguageTest === "Yes" && (
+            <div className="singleinput">
+              <label htmlFor="TestName">Which Test?</label>
+              <select
+                name="TestName"
+                id="TestName"
+                value={values.TestName}
+                onBlur={handleBlur}
+                onChange={handleChange}
+              >
+                <option value="" label="Select a test" />
+                <option value="IELTS" label="IELTS" />
+                <option value="TOEFL" label="TOEFL" />
+                <option value="PTE" label="PTE" />
+                <option value="ESOL" label="ESOL" />
+                <option value="UKVI" label="UKVI" />
+              </select>
+            </div>
+          )}
 
-          <div class="singleinput">
-            <label for="TestMarks">Overall Marks:</label>
-            <input
-              type="text"
-              placeholder="Obtained Marks (optional)"
-              name="TestMarks"
-              id="TestMarks"
-              value={values.TestMarks}
-              onBlur={handleBlur}
-              onChange={handleChange}
-              autoComplete="off"
-            />
-          </div>
+          {values.EnglishLanguageTest === "Yes" && (
+            <div class="singleinput">
+              <label for="TestMarks">Overall Marks:</label>
+              <input
+                type="text"
+                placeholder="Obtained Marks (optional)"
+                name="TestMarks"
+                id="TestMarks"
+                value={values.TestMarks}
+                onBlur={handleBlur}
+                onChange={handleChange}
+                autoComplete="off"
+              />
+            </div>
+          )}
 
           <div className="singleinput">
             <label> Estimated Budget:</label>
