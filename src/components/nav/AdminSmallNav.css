@@ -36,4 +36,8 @@
   .navrightside {
     min-height: 40rem;
   }
+  .adminspan,
+  .logoutspan {
+    display: none;
+  }
 }

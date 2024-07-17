@@ -266,13 +266,13 @@ const Header = () => {
                       >
                         <div className="acsvg">
                           <Adminsvg />
-                          <span>Admin</span>
+                          <span className="adminspan">Admin</span>
                         </div>
                       </Link>
                       <button onClick={logout} className="apllyBtn btnadmin">
                         <div className="acsvg logoutsvg">
                           <LogoutOutlined />
-                          <span>Logout</span>
+                          <span className="logoutspan">Logout</span>
                         </div>
                       </button>
                     </>

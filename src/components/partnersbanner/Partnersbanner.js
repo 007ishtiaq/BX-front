@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Partnersbanner.css";
-import uni1 from "../../images/partnerdiv/1.jpeg";
-import uni2 from "../../images/partnerdiv/2.jpeg";
+import uni1 from "../../images/partnerdiv/1.webp";
+import uni2 from "../../images/partnerdiv/2.webp";
 import uni3 from "../../images/partnerdiv/3.webp";
 import uni4 from "../../images/partnerdiv/4.webp";
-import uni5 from "../../images/partnerdiv/5.jpeg";
-import uni6 from "../../images/partnerdiv/6.jpeg";
+import uni5 from "../../images/partnerdiv/5.webp";
+import uni6 from "../../images/partnerdiv/6.webp";
 import uni7 from "../../images/partnerdiv/7.webp";
 import uni8 from "../../images/partnerdiv/8.webp";
 import uni9 from "../../images/partnerdiv/9.webp";

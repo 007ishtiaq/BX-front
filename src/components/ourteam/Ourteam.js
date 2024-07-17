@@ -1,10 +1,10 @@
 import React from "react";
 import "./Ourteam.css";
-import person1 from "../../images/team/1.jpeg";
-import person2 from "../../images/team/2.jpg";
-import person3 from "../../images/team/3.png";
-import person4 from "../../images/team/4.jpeg";
-import person6 from "../../images/team/6.jpeg";
+import person1 from "../../images/team/1.webp";
+import person2 from "../../images/team/2.webp";
+import person3 from "../../images/team/3.webp";
+import person4 from "../../images/team/4.webp";
+import person6 from "../../images/team/6.webp";
 import person7 from "../../images/team/7.png";
 import visionimg from "../../images/vision/visionimg.webp";
 
