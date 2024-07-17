@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ausralia from "../../images/destination/australia/australia.webp";
-import lecture from "../../images/destination/sweden/lecture.png";
-import programs from "../../images/destination/sweden/programs.png";
+import lecture from "../../images/destination/sweden/lecture.webp";
+import programs from "../../images/destination/sweden/programs.webp";
 // import uni1 from "../../images/destination/sweden/unis/uni1.png";
 // import uni2 from "../../images/destination/sweden/unis/uni2.png";
 // import uni3 from "../../images/destination/sweden/unis/uni3.png";

@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import finland from "../../images/destination/finland/finland.webp";
-import flag from "../../images/destination/finland/flag.png";
-import lecture from "../../images/destination/sweden/lecture.png";
-import programs from "../../images/destination/sweden/programs.png";
+import flag from "../../images/destination/finland/flag.webp";
 // import { getRelatedStaticText } from "../../functions/staticText";
 import "./Destination.css";
 import { Link } from "react-router-dom";
