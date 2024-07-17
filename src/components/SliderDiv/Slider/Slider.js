@@ -142,28 +142,26 @@ const Slider = () => {
           </div>
 
           {banners.map((slide, i) => (
-            <Link to={banners[index].link} key={slide._id}>
-              <div
-                key={slide._id}
-                className={
-                  i === index
-                    ? [classes.item, classes.anim].join(" ")
-                    : classes.item
-                }
-              >
-                <img
-                  src={slide.image.url}
-                  alt="slideItem"
-                  onLoad={() => setImageLoaded(true)}
-                  style={{ display: imageLoaded ? "block" : "none" }}
+            <div
+              key={slide._id}
+              className={
+                i === index
+                  ? [classes.item, classes.anim].join(" ")
+                  : classes.item
+              }
+            >
+              <img
+                src={slide.image.url}
+                alt="slideItem"
+                onLoad={() => setImageLoaded(true)}
+                style={{ display: imageLoaded ? "block" : "none" }}
+              />
+              {!imageLoaded && (
+                <MainSliderSkull
+                  style={{ display: imageLoaded ? "none" : "inline-block" }}
                 />
-                {!imageLoaded && (
-                  <MainSliderSkull
-                    style={{ display: imageLoaded ? "none" : "inline-block" }}
-                  />
-                )}
-              </div>
-            </Link>
+              )}
+            </div>
           ))}
 
           <div className={classes.left} onClick={() => clickhandler("left")}>

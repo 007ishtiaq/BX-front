@@ -12,6 +12,12 @@ import uni9 from "../../images/partnerdiv/9.webp";
 import uni10 from "../../images/partnerdiv/10.webp";
 import uni11 from "../../images/partnerdiv/11.webp";
 import uni12 from "../../images/partnerdiv/12.webp";
+import ShippingModal from "../../components/modal/ShippingModal";
+import ShippingForm from "../../components/forms/ShippingForm";
+import { saveUserForm } from "../../functions/user";
+import { useFormik } from "formik";
+import { ApplyNowSchema } from "../../schemas";
+import { toast } from "react-hot-toast";
 
 const images = [
   uni1,
@@ -32,6 +38,9 @@ const delay = 2000;
 export default function Partnersbanner() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [mainModalVisible, setMainModalVisible] = useState(false);
+  const [noNetModal, setNoNetModal] = useState(false);
+
   const intervalRef = useRef(null);
 
   const nextImage = () => {
@@ -58,6 +67,69 @@ export default function Partnersbanner() {
     }
   }, [isTransitioning]);
 
+  // ------apply form working------
+
+  const initialValues = {
+    Name: "",
+    PhoneNum: "",
+    Email: "",
+    Gender: "",
+    Address: "",
+    Qualification: "",
+    Institution: "",
+    CGPA: "",
+    PassingYear: "",
+    CountryInterestedIn: "",
+    ApplyingForVisaType: "",
+    EnglishLanguageTest: "",
+    TestName: "",
+    TestMarks: "",
+    EstimatedBudget: "",
+    AnyQuery: "",
+  };
+
+  const {
+    values,
+    errors,
+    touched,
+    isSubmitting,
+    handleBlur,
+    handleChange,
+    handleSubmit,
+    setValues,
+  } = useFormik({
+    initialValues: initialValues,
+    validationSchema: ApplyNowSchema,
+    onSubmit: async (values, action) => {
+      if (navigator.onLine) {
+        try {
+          // console.log("values we have", values);
+          saveUserForm(values)
+            .then((res) => {
+              // console.log("form sent");
+              if (res.data.ok) {
+                toast.success("Form Submitted");
+                setMainModalVisible(false);
+                action.resetForm();
+              }
+            })
+            .catch((err) => console.log("Form Submitted Error", err));
+        } catch (error) {
+          console.error(error);
+          setMainModalVisible(false);
+          // Handle errors if necessary
+        }
+      } else {
+        setMainModalVisible(false);
+        setNoNetModal(true);
+      }
+    },
+  });
+
+  const handlecancel = () => {
+    setMainModalVisible(false);
+  };
+
   return (
     <div className="cardcontainer">
       <div className="insidecont contentcont partnercont">
@@ -68,7 +140,22 @@ export default function Partnersbanner() {
             You can list your partners or instructors brands here to show off
             your site's reputation.
           </div>
-          <button className="actionbtn">Apply Now</button>
+          <ShippingModal
+            onModalok={handleSubmit}
+            onModalcancel={handlecancel}
+            setModalVisible={setMainModalVisible}
+            modalVisible={mainModalVisible}
+            values={values}
+            btnClasses={"apllyBtn"}
+          >
+            <ShippingForm
+              values={values}
+              errors={errors}
+              touched={touched}
+              handleBlur={handleBlur}
+              handleChange={handleChange}
+            />
+          </ShippingModal>
         </div>
         <div className="partnerleft">
           <button className="carousel-btn left" onClick={prevImage}>
