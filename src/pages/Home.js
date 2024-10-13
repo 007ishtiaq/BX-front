@@ -11,6 +11,7 @@ import Scorebanner from "../components/scorebanner/Scorebanner";
 import MegaSlide from "../components/megaslide/MegaSlide";
 import Trustbox from "../components/trustbox/Trustbox";
 import Peoplelove from "../components/peoplelove/Peoplelove";
+import Workintro from "../components/workintro/Workintro";
 
 const Home = () => {
   // const [banners, setBanners] = useState([]);
@@ -43,10 +44,11 @@ const Home = () => {
         {/* <MegaBanner loading={loading} banner={banners[0]} /> */}
         <Trustbox />
         <Scorebanner />
+        <Partnersbanner />
         <CategoriesCard />
         <CommonProductsCont WidthIdea={"Fullwidth"} />
+        <Workintro />
         <Peoplelove />
-        <Partnersbanner />
         <Reviewsbox />
       </div>
     </>

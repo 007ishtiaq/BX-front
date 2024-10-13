@@ -1,0 +1,31 @@
+.workingimgcont {
+  display: flex;
+  justify-content: center;
+  width: 86%;
+  padding-bottom: 3rem;
+}
+.workingimgsub {
+  width: 40%;
+}
+
+.workingimg img {
+  box-shadow: 0 24px 64px -24px rgba(44.00000000000002, 58, 4.000000000000002, 0.4);
+  width: 100%;
+  height: auto;
+  border-radius: 16px 16px 16px 16px;
+}
+.workingimg {
+  margin: 1.5rem 1rem;
+}
+.workingimg3 {
+  margin-top: 4rem;
+}
+.partnercont.workcont {
+  padding-top: 2rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 0;
+}
+.partnerright.workcontright {
+  max-width: 42%;
+}

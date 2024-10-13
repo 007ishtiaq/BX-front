@@ -118,8 +118,8 @@ export default function Partnersbanner() {
           <div className="aboveheading">OUR PREMIUM PARTNERS</div>
           <div className="heading">Trusted By The World</div>
           <div className="subdata">
-            You can list your partners or instructors brands here to show off
-            your site's reputation.
+            Here are the trusted partners we’ve collaborated with, delivering
+            quality packaging solutions together.
           </div>
           <ShippingModal
             onModalok={handleSubmit}
