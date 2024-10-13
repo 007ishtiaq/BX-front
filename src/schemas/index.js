@@ -8,6 +8,9 @@ export const loginSchema = Yup.object({
 
 // schema for Resgister complete
 export const registercompleteSchema = Yup.object({
+  name: Yup.string()
+    .min(2, "Please provide your complete name")
+    .required("Please enter your name"),
   email: Yup.string().email().required("Please enter your email"),
   password: Yup.string().min(6).required("Please enter your password"),
   confim_password: Yup.string()
@@ -18,6 +21,11 @@ export const registercompleteSchema = Yup.object({
 // same schema for regitration & forgot passward email
 export const registerSchema = Yup.object({
   email: Yup.string().email().required("Please enter your email"),
+});
+
+// schema for OTP verification
+export const otpSchema = Yup.object({
+  otp: Yup.number().required("Please provide OTP"),
 });
 
 // same schema for regitration & forgot passward email
@@ -140,7 +148,7 @@ export const UserAddressAndContactSchema = Yup.object({
     .min(2, "Name must be long")
     .required("Please enter your name"),
   Contact: Yup.string()
-    .min(9, "Contact must be valid")
+    .min(5, "Contact must be valid")
     .required("Please enter contact details"),
   Address: Yup.string()
     .min(2, "Address must be long")
@@ -150,6 +158,7 @@ export const UserAddressAndContactSchema = Yup.object({
     .min(2, "Province must be long")
     .required("Please Enter Province, exp 'Punjab'*"),
 });
+
 // User Address+Contact book schema
 export const ApplyNowSchema = Yup.object({
   Name: Yup.string()

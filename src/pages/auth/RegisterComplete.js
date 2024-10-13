@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import { auth } from "../../firebase";
 import { toast } from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
-import { createOrUpdateUser } from "../../functions/auth";
+import { createOrUpdateUser, infoOTP } from "../../functions/auth";
 import Spinner from "../../components/Spinner/Spinner";
 import Smallspinner from "../../components/Spinner/Smallspinner";
-import { ReactComponent as Logosvg } from "../../images/headersvgs/logotexttrans.svg";
+import { ReactComponent as Logosvg } from "../../images/headersvgs/logosign.svg";
+import { ReactComponent as Logotextblack } from "../../images/headersvgs/logotextblack.svg";
 import "./Login.css";
 import { useFormik } from "formik";
 import { registercompleteSchema } from "../../schemas";
@@ -33,6 +34,7 @@ const RegisterComplete = ({ history }) => {
   // ---------formik usage--------
 
   let initialValues = {
+    name: "",
     email: "",
     password: "",
     confim_password: "",
@@ -54,44 +56,67 @@ const RegisterComplete = ({ history }) => {
       if (navigator.onLine) {
         setLoading(true);
         try {
-          const result = await auth.signInWithEmailLink(
-            values.email,
-            window.location.href
-          );
-          //   console.log("RESULT", result);
-          if (result.user.emailVerified) {
-            // remove user email fom local storage
-            window.localStorage.removeItem("emailForRegistration");
-            // get user id token
-            let user = auth.currentUser;
-            await user.updatePassword(values.password);
-            const idTokenResult = await user.getIdTokenResult();
+          const { name, email, password } = values;
 
-            createOrUpdateUser(idTokenResult.token)
-              .then((res) => {
-                dispatch({
-                  type: "LOGGED_IN_USER",
-                  payload: {
-                    name: res.data.name,
-                    email: res.data.email,
-                    token: idTokenResult.token,
-                    role: res.data.role,
-                    _id: res.data._id,
-                  },
+          // Get OTP information before proceeding
+          const otpResponse = await infoOTP(email);
+
+          // console.log("otpResponse", otpResponse.data.otpRecord.isVerified);
+
+          // Check if OTP is verified
+          if (otpResponse.data.otpRecord.isVerified) {
+            // Proceed with user registration if OTP is verified
+            const result = await auth.createUserWithEmailAndPassword(
+              email,
+              password
+            );
+
+            if (result) {
+              // Remove user email from local storage
+              window.localStorage.removeItem("emailForRegistration");
+
+              // Get user ID token
+              let user = auth.currentUser;
+              const idTokenResult = await user.getIdTokenResult();
+
+              createOrUpdateUser(idTokenResult.token)
+                .then((res) => {
+                  dispatch({
+                    type: "LOGGED_IN_USER",
+                    payload: {
+                      name: name,
+                      email: res.data.email,
+                      token: idTokenResult.token,
+                      role: res.data.role,
+                      _id: res.data._id,
+                    },
+                  });
+                })
+                .catch((error) => {
+                  console.error("Error updating user in mongodb:", error);
                 });
-              })
-              .catch();
 
-            // redirect
-            action.resetForm();
-            history.push("/");
+              // Reset form and redirect
+              action.resetForm();
+              history.push("/");
+              setLoading(false);
+            }
+          } else {
+            // OTP verification failed
             setLoading(false);
+            toast.error("OTP verification failed. Please try again.");
           }
         } catch (error) {
-          // console.log(error);
           setLoading(false);
-          toast.error("No Internet Connection");
-          setNoNetModal(true);
+          console.error("Error completing registration:", error);
+          if (
+            error.message ===
+            "The email address is already in use by another account."
+          ) {
+            toast.error("User Already Registered");
+          } else {
+            toast.error("Error completing registration.");
+          }
         }
       } else {
         setNoNetModal(true);
@@ -100,11 +125,16 @@ const RegisterComplete = ({ history }) => {
   });
 
   useEffect(() => {
+    if (!window.localStorage.getItem("emailForRegistration")) history.push("/");
     // Retrieve email from local storage
     const storedEmail = window.localStorage.getItem("emailForRegistration");
     // Set the email value using setValues
     setValues((prevValues) => ({ ...prevValues, email: storedEmail }));
   }, []);
+
+  useEffect(() => {
+    if (user && user.token) history.push("/");
+  }, [user, history]);
 
   return (
     <div className="container">
@@ -128,10 +158,26 @@ const RegisterComplete = ({ history }) => {
                   </div>
                 )}
               </div>
-              <div class="welcometxt">Welcome to Study Guide International</div>
+              <div class="welcometxt">Welcome to Appliance Bazar</div>
               <div class="guidetxt">Create your Password</div>
               <form onSubmit={handleSubmit} className="submitionform">
                 <div class="logininputcont">
+                  <div class="logininput">
+                    <label for="email">Name</label>
+                    <input
+                      name="name"
+                      id="name"
+                      type="text"
+                      value={values.name}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      placeholder="Your Name"
+                      autoComplete="off"
+                    />
+                    {errors.name && touched.name ? (
+                      <p className="errorstate">{errors.name}</p>
+                    ) : null}
+                  </div>
                   <div class="logininput">
                     <label for="email">Email</label>
                     <input
@@ -181,6 +227,7 @@ const RegisterComplete = ({ history }) => {
                     type="submit"
                     disabled={
                       values.password.length < 6 ||
+                      !values.name ||
                       !values.email ||
                       !values.confim_password ||
                       isSubmitting
@@ -197,6 +244,21 @@ const RegisterComplete = ({ history }) => {
               setNoNetModal={setNoNetModal}
               handleRetry={handleSubmit}
             ></NoNetModal>
+
+            <div class="loginfooter">
+              <div class="loginfootertxt">
+                For further support, you may visit the Help Center or contact
+                our customer service team.
+              </div>
+              <div class="loginfooterlogocont">
+                <div class="loginfooterlogosvg">
+                  <Logosvg />
+                </div>
+                <div class="loginfooterlogotxt">
+                  <Logotextblack />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

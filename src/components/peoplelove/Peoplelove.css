@@ -1,0 +1,56 @@
+.peoplesubcont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: initial;
+  flex-basis: auto;
+  flex-grow: 1;
+  flex-shrink: 1;
+  align-self: auto;
+  padding: 1rem 2rem;
+  /* width: 368px; */
+}
+.peoplesub {
+  margin: 2rem 1.5rem;
+  padding: 40px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e7ecee;
+  border-radius: 1.2rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  width: 30%;
+  position: relative;
+  min-height: 1px;
+}
+.peoplesub:hover {
+  border-color: #6852f4;
+  box-shadow: 0 40px 80px -16px rgba(0, 0, 0, 0.16);
+}
+.peoplesubtxtcont {
+  display: block;
+  text-align: left;
+}
+
+.peoplesubtxtcont svg {
+  width: 8rem;
+  height: auto;
+  display: block;
+  fill: #3d3dff;
+}
+
+.peoplesubtxtcont .heading {
+  font-size: 2rem;
+  /* color: var(--org-primary); */
+  font-weight: 600;
+}
+.peoplesubtxtcont .detailscont {
+  font-size: 1.4rem;
+  font-weight: 400;
+
+  color: var(--dark-gray);
+}
+.peoplesubtxtcont .vtypesvgsize {
+  width: 5rem;
+  margin-bottom: 2rem;
+}

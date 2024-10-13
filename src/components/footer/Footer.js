@@ -7,10 +7,11 @@ import { createOptinEmail } from "../../functions/optinEmail";
 import { getRelatedStaticText } from "../../functions/staticText";
 import { useFormik } from "formik";
 import { optinSchema } from "../../schemas";
-import { ReactComponent as Logotexttrans } from "../../images/headersvgs/logotexttrans.svg";
+import { ReactComponent as Logotexttrans } from "../../images/headersvgs/logotextblack.svg";
 import { ReactComponent as Callsvg } from "../../images/contactUs/calloutlined.svg";
 import { ReactComponent as Whatsappthin } from "../../images/social/whatsappthin.svg";
 import { ReactComponent as Mailsvg } from "../../images/contactUs/mail.svg";
+import optinbgimg from "../../images/optinbg.png";
 
 export default function Footer() {
   const [footertag, setFootertag] = useState([
@@ -160,7 +161,7 @@ export default function Footer() {
       <div class="optinouter">
         <div class="newsletter">
           <form class="optin-form" onSubmit={handleSubmit}>
-            <h3>Get Free Counselling via Email!</h3>
+            <h3>Let’s your Product look nice by packaging.</h3>
             <div className="optinformcont">
               <div class="footerrow">
                 <input
@@ -193,7 +194,7 @@ export default function Footer() {
             <div class="footer-logo-side">
               <div class="footer-logo">
                 <Logotexttrans />
-                <div class="footerdemotxt">Study Guide International</div>
+                <div class="footerdemotxt">Sharp Edge Packaging</div>
               </div>
               <div class="footer-site-desc">
                 <p>{footertag && footertag.length > 0 && footertag[0].info1}</p>

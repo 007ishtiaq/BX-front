@@ -40,9 +40,11 @@ export default function CommonProductsCont({ WidthIdea }) {
   return (
     <div class="cardcontainer">
       <div class="insidecont">
-        <div class="mainhead colorhead">
-          <div class="colorheading">Featured Products</div>
-          <div class="colormoredark">SEE MORE</div>
+        <div className="commonhead">
+          <p>
+            Wholesale printed custom boxes <br /> at
+            <span> discounted price.</span>
+          </p>
         </div>
         <div class="contentcont">
           <div class="productsarea">

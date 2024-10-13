@@ -37,7 +37,7 @@ const ShippingModal = ({
   return (
     <>
       <button onClick={handleModal} className={btnClasses}>
-        <span>Apply Now</span>
+        <span>Request Quote</span>
       </button>
 
       <Modal

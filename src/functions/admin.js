@@ -155,3 +155,46 @@ export const deleteEntry = async (id, authtoken) =>
       authtoken,
     },
   });
+
+export const createAdminReview = async (data, authtoken) =>
+  await axios.post(
+    `${process.env.REACT_APP_API}/admin/add-review`,
+    { data },
+    {
+      headers: {
+        authtoken,
+      },
+    }
+  );
+
+export const getAdminReviews = async (query, authtoken) =>
+  await axios.post(
+    `${process.env.REACT_APP_API}/admin/product-reviews`,
+    { query },
+    {
+      headers: {
+        authtoken,
+      },
+    }
+  );
+
+export const deleteReview = async (reviewId, authtoken) =>
+  await axios.put(
+    `${process.env.REACT_APP_API}/admin/delete-review`,
+    { reviewId },
+    {
+      headers: {
+        authtoken,
+      },
+    }
+  );
+export const deleteReviewImages = async (publicIds, authtoken) =>
+  await axios.post(
+    `${process.env.REACT_APP_API}/removebulkimage`, // Update the endpoint
+    { public_ids: publicIds }, // Send array of public_ids to backend
+    {
+      headers: {
+        authtoken,
+      },
+    }
+  );

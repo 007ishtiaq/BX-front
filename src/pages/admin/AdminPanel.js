@@ -1,6 +1,15 @@
 import React from "react";
 import "../user/ManageMyAcccount.css";
 import AdminsideNav from "../../components/nav/AdminsideNav";
+import AllProducts from "./product/AllProducts";
+import ProductCreate from "./product/ProductCreate";
+import FlashSale from "./product/FlashSale";
+import AddReview from "./product/AddReview";
+import CategoryCreate from "./category/CategoryCreate";
+import SubCreate from "./sub/SubCreate";
+// import Sub2Create from "./sub2/Sub2Create";
+import BrandCreate from "./brand/BrandCreate";
+import ColorCreate from "./color/ColorCreate";
 import BannerCreate from "./Slider&Banners/BannerCreate";
 import StaticText from "./statictext/StaticText";
 import PasswordReset from "./passwordreset/PasswordReset";
@@ -23,6 +32,15 @@ export default function AdminPanel() {
         <AdminsideNav />
         <AdminSmallNav />
         <div class="navrightside">
+          {query.get("page") === "AllProducts" && <AllProducts />}
+          {query.get("page") === "ProductCreate" && <ProductCreate />}
+          {query.get("page") === "FlashSale" && <FlashSale />}
+          {query.get("page") === "AddReview" && <AddReview />}
+          {query.get("page") === "CategoryCreate" && <CategoryCreate />}
+          {query.get("page") === "SubCreate" && <SubCreate />}
+          {/* {query.get("page") === "Sub2Create" && <Sub2Create />} */}
+          {query.get("page") === "BrandCreate" && <BrandCreate />}
+          {query.get("page") === "ColorCreate" && <ColorCreate />}
           {query.get("page") === "SubmittedForms" && <SubmittedForms />}
           {query.get("page") === "ContactForms" && <ContactForms />}
           {query.get("page") === "OptinEmails" && <OptinEmails />}

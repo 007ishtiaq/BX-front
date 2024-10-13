@@ -46,3 +46,19 @@ export const currentAdmin = async (authtoken) => {
     }
   );
 };
+
+export const SendOTP = async (email) => {
+  return await axios.post(`${process.env.REACT_APP_API}/send-otp`, { email });
+};
+
+export const verifyOTP = async (values) => {
+  return await axios.post(`${process.env.REACT_APP_API}/verify-otp`, {
+    values,
+  });
+};
+
+export const infoOTP = async (email) => {
+  return await axios.post(`${process.env.REACT_APP_API}/otpinfo`, {
+    email,
+  });
+};

@@ -44,9 +44,15 @@ export default function CategoriesCard({ slug }) {
   return (
     <div class="cardcontainer">
       <div class="insidecont">
+        <div className="commonheadcate">
+          <p>
+            Browse custom boxes by
+            <span> Category</span>
+          </p>
+        </div>
         {loading ? (
           <div class="contentcont categorycont">
-            <CategoryBannerSkull clone={12} />
+            <CategoryBannerSkull clone={10} />
           </div>
         ) : (
           <div class="contentcont categorycont">

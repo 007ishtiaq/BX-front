@@ -16,6 +16,18 @@
   background-color: #6c757d; /* Example secondary color */
   color: white;
 }
+.filterproright {
+  display: flex;
+  flex-direction: column;
+}
+
+.searchpagi {
+  margin: 0 0.5rem;
+  border-top: 0.1rem solid var(--gry-topbar);
+}
+.searchpagi .previewpagination {
+  margin-right: 2rem;
+}
 /* -----------search filter left side------ */
 
 .searchfilterleft {
@@ -212,6 +224,7 @@ input[type="range"]::-moz-range-thumb {
   -moz-appearance: none;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
 }
+
 /* -------------copied from color div css for stockout item-------------- */
 .addtocartbtn.stockout {
   background-color: #ffbb7e;
@@ -395,6 +408,13 @@ input[type="range"]::-moz-range-thumb {
   align-items: center;
   padding: 0.5rem;
   font-size: 1.2rem;
+  background-color: #f1f1f1;
+}
+.clearfilter.filteractive {
+  background-color: #ffbebe;
+}
+.clearfilter.filteractive:hover {
+  background-color: #ff9898;
 }
 .clearsvgcont {
   width: 2rem;

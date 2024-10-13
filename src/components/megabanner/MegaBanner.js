@@ -13,7 +13,7 @@ export default function MegaBanner({ banner, loading }) {
           <div class="productsarea">
             {loading ? (
               <div className="Skeletonsize">
-                <Skeleton className="Skeletonsize" count={1} />
+                <Skeleton className="Skeletonsize " count={1} />
               </div>
             ) : (
               <Link to="#">

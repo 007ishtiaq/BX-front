@@ -8,7 +8,13 @@ export const createProduct = async (product, authtoken) =>
   });
 
 export const getProductsByCount = async (count) =>
-  await axios.get(`${process.env.REACT_APP_API}/products/${count}`);
+  await axios.get(`${process.env.REACT_APP_API}/productsByCount/${count}`);
+
+export const getProductsByPage = async (data) =>
+  await axios.post(`${process.env.REACT_APP_API}/productsByPage`, data);
+
+export const fetchProductsByFilter = async (data) =>
+  await axios.post(`${process.env.REACT_APP_API}/search/filters`, data);
 
 export const removeProduct = async (slug, authtoken) =>
   await axios.delete(`${process.env.REACT_APP_API}/product/${slug}`, {
@@ -44,10 +50,9 @@ export const updateProduct = async (slug, product, authtoken) =>
 //     order,
 //     page,
 //   });
-export const getReviews = async (productslug, page) =>
+export const getReviews = async (data) =>
   await axios.post(`${process.env.REACT_APP_API}/reviews`, {
-    productslug,
-    page,
+    data,
   });
 
 // export const getFlashproducts = async () =>
@@ -78,8 +83,8 @@ export const productStar = async (productId, reviewinfo, authtoken) =>
     }
   );
 
-export const getRatedproducts = async (authtoken) =>
-  await axios.get(`${process.env.REACT_APP_API}/ratedAll`, {
+export const getRatedproducts = async (data, authtoken) =>
+  await axios.post(`${process.env.REACT_APP_API}/ratedAll`, data, {
     headers: {
       authtoken,
     },
@@ -92,9 +97,6 @@ export const getSimilar = async (productSlug) =>
 
 // export const getRelated = async (productId) =>
 //   await axios.get(`${process.env.REACT_APP_API}/product/related/${productId}`);
-
-export const fetchProductsByFilter = async (arg) =>
-  await axios.post(`${process.env.REACT_APP_API}/search/filters`, arg);
 
 export const getHighestPrice = async () =>
   await axios.get(`${process.env.REACT_APP_API}/search/highestprice`);

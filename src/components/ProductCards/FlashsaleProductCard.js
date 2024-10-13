@@ -5,7 +5,6 @@ import { useDispatch } from "react-redux";
 import _ from "lodash";
 import Laptop from "../../images/laptop.png";
 import { Card } from "antd";
-import { showAverage } from "../../functions/rating";
 import { toast } from "react-hot-toast";
 import Skeleton from "react-loading-skeleton";
 
@@ -154,13 +153,7 @@ const FlashsaleProductCard = ({
           {onSale === "Yes" ? (
             <div class="remaincount-side">{quantity} items left</div>
           ) : (
-            <div className="ratingstarsp">
-              {product && product.ratings && product.ratings.length > 0 ? (
-                showAverage(product)
-              ) : (
-                <div className="">No rating yet</div>
-              )}
-            </div>
+            <div className="ratingstarsp"></div>
           )}
 
           <button

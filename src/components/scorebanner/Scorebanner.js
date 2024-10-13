@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Scorebanner.css";
-import cornerstyle from "../../images/scorebanner/cornerstyle.png";
-import subjectimg from "../../images/scorebanner/subject.png";
+import subjectimg from "../../images/scorebanner/subject.jpg";
 import ShippingModal from "../../components/modal/ShippingModal";
 import ShippingForm from "../../components/forms/ShippingForm";
 import { saveUserForm } from "../../functions/user";
@@ -85,32 +84,24 @@ export default function Scorebanner() {
           <div className="scorecardleft">
             <div className="scorecont">
               <div className="scorecircle">
-                <div className="scoreself">1000 +</div>
-                <div className="scoretxt">
-                  We Have Worked <br /> With Clients
-                </div>
+                <div className="scoreself">5000 +</div>
+                <div className="scoretxt">Worked With Clients</div>
               </div>
               <div className="scorecircle">
-                <div className="scoreself">99 %</div>
-                <div className="scoretxt">
-                  Successfull Visa <br /> Process Rate
-                </div>
+                <div className="scoreself">4.8</div>
+                <div className="scoretxt">Client Rate</div>
               </div>
               <div className="scorecircle">
-                <div className="scoreself">30 Days</div>
-                <div className="scoretxt">
-                  Application Approval <br /> Time We Follow
-                </div>
+                <div className="scoreself">6M+</div>
+                <div className="scoretxt">Package Realese</div>
               </div>
             </div>
             <div className="scorecontent">
               <p className="scoreheading">
-                Top rated by Students & immigration firms with{" "}
-                <span>100% success rate.</span>
+                Top-rated by leading companies and firms with a{" "}
+                <span>100% satisfaction rate.</span>
               </p>
-              <p className="scoresub">
-                Get free Study Abroad Assessment today!
-              </p>
+              <p className="scoresub">Get a quote for your Brand Now!</p>
               <div className="actionbtncont">
                 <ShippingModal
                   onModalok={handleSubmit}
@@ -118,7 +109,7 @@ export default function Scorebanner() {
                   setModalVisible={setMainModalVisible}
                   modalVisible={mainModalVisible}
                   values={values}
-                  btnClasses={"apllyBtn"}
+                  btnClasses={"apllyBtn btnwide"}
                 >
                   <ShippingForm
                     values={values}
@@ -132,7 +123,6 @@ export default function Scorebanner() {
             </div>
           </div>
           <div className="scorecardright">
-            <img className="cornerstyle" src={cornerstyle} alt="" />
             <img src={subjectimg} alt="" />
           </div>
         </div>

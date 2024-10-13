@@ -11,7 +11,6 @@ function useQuery() {
 }
 
 export default function AdminsideNav() {
-  const [userName, setUserName] = useState("");
   // const [currentActive, setCurrentActive] = useState("");
 
   const { user } = useSelector((state) => ({ ...state }));
@@ -28,18 +27,10 @@ export default function AdminsideNav() {
     default_active.classList.add("active");
   }, [query.get("page")]);
 
-  useEffect(() => {
-    if (user && user.token) {
-      getUserProfile(user.token).then((a) => {
-        setUserName(a.data.Name.substring(0, 12));
-      });
-    }
-  }, [user]);
-
   return (
     <div class="navleftside">
       <div class="namecont">
-        <p>Hello, {userName}</p>
+        <p>Hello, Admin</p>
       </div>
       {user && user.role === "admin" && (
         <div class="varifiedinfocont">
@@ -51,6 +42,44 @@ export default function AdminsideNav() {
           </div>
         </div>
       )}
+
+      <Link
+        to="/AdminPanel?page=AllProducts"
+        class="manageacheading clsremove AllProducts"
+      >
+        All products
+      </Link>
+      <ul class="manageacul">
+        <Link to="/AdminPanel?page=ProductCreate">
+          <li class="manageacli clsremove ProductCreate">Create Product</li>
+        </Link>
+        <Link to="/AdminPanel?page=FlashSale">
+          <li class="manageacli clsremove FlashSale">Flash sale</li>
+        </Link>
+        <Link to="/AdminPanel?page=AddReview">
+          <li class="manageacli clsremove AddReview">Add Review</li>
+        </Link>
+      </ul>
+      <Link
+        to="/AdminPanel?page=CategoryCreate"
+        class="manageacheading clsremove CategoryCreate"
+      >
+        Create Category
+      </Link>
+      <ul class="manageacul">
+        <Link to="/AdminPanel?page=SubCreate">
+          <li class="manageacli clsremove SubCreate">Sub Level 1</li>
+        </Link>
+        <Link to="/AdminPanel?page=Sub2Create">
+          <li class="manageacli clsremove Sub2Create">Sub Level 2</li>
+        </Link>
+        <Link to="/AdminPanel?page=BrandCreate">
+          <li class="manageacli clsremove BrandCreate">Create Brands</li>
+        </Link>
+        <Link to="/AdminPanel?page=ColorCreate">
+          <li class="manageacli clsremove ColorCreate">Create Colors</li>
+        </Link>
+      </ul>
 
       <Link
         to="/AdminPanel?page=SubmittedForms"

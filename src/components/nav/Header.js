@@ -65,22 +65,51 @@ const Header = () => {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "About", path: "/aboutus" },
     {
-      name: "Destinations",
+      name: "Custom Boxes",
       subNav: [
-        { name: "Sweden", path: "/Destinations/sweden" },
-        { name: "Australia", path: "/Destinations/Australia" },
-        { name: "United Kingdom", path: "/Destinations/United-Kingdom" },
-        { name: "Denmark", path: "/Destinations/Denmark" },
-        { name: "Finland", path: "/Destinations/Finland" },
-        { name: "Ireland", path: "/Destinations/Ireland" },
-        { name: "France", path: "/Destinations/France" },
-        { name: "Belgium", path: "/Destinations/Belgium" },
-        { name: "Cyprus", path: "/Destinations/Cyprus" },
+        {
+          name: "Eco Friendly Packaging",
+          path: "/category/?category=eco-friendly-boxes",
+        },
+        {
+          name: "Beverage and Food Packaging",
+          path: "/category/?category=food-and-beverage",
+        },
+        {
+          name: "Custom Gift Packaging",
+          path: "/category/?category=gift-boxes",
+        },
+        {
+          name: "Metalized Packaging",
+          path: "/category/?category=metalized-boxes",
+        },
+        {
+          name: "Business Card Boxes",
+          path: "/category/?category=business-card-boxes",
+        },
+        {
+          name: "Retail Packaging",
+          path: "/category/?category=book-boxes",
+        },
+        {
+          name: "Cardboard Dispenser",
+          path: "/category/?category=cardboard-dispenser",
+        },
+        {
+          name: "Retail Product Boxes",
+          path: "/category/?category=retail-product-boxes",
+        },
+        { name: "Paper Boxes", path: "/category/?category=paper-boxes" },
+        {
+          name: "Invitation Card Boxes",
+          path: "/category/?category=invitation-card-boxes",
+        },
+        { name: "View All", path: "/shop" },
       ],
     },
-    { name: "Success Stories", path: "/Stories" },
+    { name: "Box by Designs", path: "/shop" },
+    { name: "About", path: "/aboutus" },
     { name: "Contact Us", path: "/ContactUs" },
   ];
 
@@ -171,12 +200,7 @@ const Header = () => {
           <div className="newsleft">
             <div className="helperlinkcont topemail">
               <Mailsvg className="mailsvgcont" />
-              <p className="top_tag_Center">Info@Studyguideint.com</p>
-            </div>
-            <div className="seprator">{"|"}</div>
-            <div className="helperlinkcont toptiming">
-              <Clocksvg />
-              <p className="top_tag_Right">10:00 AM To 6:00 PM | Sunday Off</p>
+              <p className="top_tag_Center">Info@Sharpedgepackaging.com</p>
             </div>
             <div className="seprator">{"|"}</div>
             <a
@@ -187,29 +211,19 @@ const Header = () => {
             >
               <div className="helperlinkcont">
                 <Callsvg /> <Whatsappthin className="wpthinsvg" />
-                <p className="top_tag_Right">+92 322 5005810,</p>
+                <p className="top_tag_Right">+1 832 564132589</p>
               </div>
             </a>
-            <a
+            {/* <a
               href={`https://api.whatsapp.com/send?phone=00923210378899`}
               className="helperlinkcont"
               target="_blank"
               rel="noopener noreferrer"
             >
               <div className="helperlinkcont">
-                <p className="top_tag_Right">+92 321 0378899,</p>
+                <p className="top_tag_Right">+1 897 1235487,</p>
               </div>
-            </a>
-            <a
-              href={`https://api.whatsapp.com/send?phone=00923008478889`}
-              className="helperlinkcont"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="helperlinkcont">
-                <p className="top_tag_Right">+92 300 8478889</p>
-              </div>
-            </a>
+            </a> */}
           </div>
           <div className="newsright">
             <a
@@ -255,9 +269,7 @@ const Header = () => {
                   <div className="logo-txtsize">
                     <Logotextblack />
                   </div>
-                  <div className="logo-sampletxt">
-                    Study Guide International
-                  </div>
+                  <div className="logo-sampletxt">Sharp Edge Packaging</div>
                   {user && user.role === "admin" && (
                     <>
                       <Link

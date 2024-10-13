@@ -17,6 +17,7 @@ import Pixel from "./components/pixel/Pixel";
 // using lazy
 const Login = lazy(() => import("./pages/auth/Login"));
 const Register = lazy(() => import("./pages/auth/Register"));
+const OtpVerification = lazy(() => import("./pages/auth/OtpVerification"));
 const Home = lazy(() => import("./pages/Home"));
 const Sweden = lazy(() => import("./pages/destination/Sweden"));
 const Australia = lazy(() => import("./pages/destination/Australia"));
@@ -27,8 +28,12 @@ const Finland = lazy(() => import("./pages/destination/Finland"));
 const Ireland = lazy(() => import("./pages/destination/Ireland"));
 const France = lazy(() => import("./pages/destination/France"));
 const Cyprus = lazy(() => import("./pages/destination/Cyprus"));
+const ProductUpdate = lazy(() => import("./pages/admin/product/ProductUpdate"));
 const SuccessStories = lazy(() =>
   import("./pages/successstories/SuccessStories")
+);
+const CategoryUpdate = lazy(() =>
+  import("./pages/admin/category/CategoryUpdate")
 );
 const Header = lazy(() => import("./components/nav/Header"));
 const NotFound = lazy(() => import("./pages/NotFound/NotFound"));
@@ -39,9 +44,11 @@ const AdminPanel = lazy(() => import("./pages/admin/AdminPanel"));
 const BannerUpdate = lazy(() =>
   import("./pages/admin/Slider&Banners/BannerUpdate")
 );
+const CategoryHome = lazy(() => import("./pages/category/CategoryHome"));
 const StaticTextupdate = lazy(() =>
   import("./pages/admin/statictext/StaticTextupdate")
 );
+const Shop = lazy(() => import("./pages/shop/Shop"));
 const AboutUs = lazy(() => import("./pages/AboutUs/AboutUs"));
 const ContactUs = lazy(() => import("./pages/contactUs/ContactUs"));
 const ContactFormSingle = lazy(() =>
@@ -190,17 +197,25 @@ const App = () => {
             <Route exact path="/Destinations/France" component={France} />
             <Route exact path="/Destinations/Cyprus" component={Cyprus} />
             <Route exact path="/Stories" component={SuccessStories} />
+            <Route exact path="/category" component={CategoryHome} />
+            <Route
+              exact
+              path="/category?category=:slug"
+              component={CategoryHome}
+            />
 
             <Route exact path="/aboutus" component={AboutUs} />
             <Route exact path="/ContactUs" component={ContactUs} />
 
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
+            <Route exact path="/otpVerification" component={OtpVerification} />
             <Route
               exact
               path="/register/complete"
               component={RegisterComplete}
             />
+            <Route exact path="/shop" component={Shop} />
             {/* <Route exact path="/forgot/password" component={ForgotPassword} /> */}
 
             {/* Admin protected Routes */}
@@ -211,7 +226,11 @@ const App = () => {
               path="/AdminPanel?page=:page"
               component={AdminPanel}
             />
-
+            <AdminRoute
+              exact
+              path="/admin/category/:slug"
+              component={CategoryUpdate}
+            />
             <AdminRoute
               exact
               path="/admin/banner/:slug"
@@ -222,7 +241,11 @@ const App = () => {
               path="/admin/statictext/:slug"
               component={StaticTextupdate}
             />
-
+            <AdminRoute
+              exact
+              path="/admin/product/:slug"
+              component={ProductUpdate}
+            />
             <AdminRoute
               exact
               path="/admin/contact/:id"

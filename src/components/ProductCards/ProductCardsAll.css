@@ -286,6 +286,17 @@
   margin-left: 0.6rem;
 }
 
+.commonhead {
+  padding: 2rem 2.5rem 1rem;
+  text-align: center;
+  font-size: 3rem;
+  color: black;
+  font-weight: 600;
+  background-color: white;
+}
+.commonhead span {
+  color: var(--org-primary);
+}
 /*****************************************
 ***********Responsiveness**************
 *************************************** */

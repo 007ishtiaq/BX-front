@@ -6,7 +6,6 @@ const { Option } = Select;
 const ProductCreateForm = ({
   handleSubmit,
   handleChange,
-  setValues,
   values,
   handleCatagoryChange,
   handleSubChange,
@@ -15,6 +14,9 @@ const ProductCreateForm = ({
   handleSub2Change,
   attributes,
   addAttribute,
+  addDesAttribute,
+  desattributes,
+  handleDesAttributeChange,
 }) => {
   const {
     art,
@@ -22,9 +24,9 @@ const ProductCreateForm = ({
     description,
     price,
     disprice,
+    shippingcharges,
     categories,
     category,
-    shipping,
     quantity,
     weight,
     images,
@@ -39,7 +41,7 @@ const ProductCreateForm = ({
   return (
     <form onSubmit={handleSubmit}>
       <div className="form-group">
-        <label>Article Number</label>
+        <label>Article Number (Required) </label>
         <input
           type="number"
           className="form-control"
@@ -49,7 +51,7 @@ const ProductCreateForm = ({
         />
       </div>
       <div className="form-group">
-        <label>Title</label>
+        <label>Title (Required) </label>
         <input
           type="text"
           className="form-control"
@@ -70,8 +72,46 @@ const ProductCreateForm = ({
         />
       </div>
 
+      {desattributes.map((desattr, index) => {
+        // Get the current key and value from the object
+        const currentKey = Object.keys(desattr)[0] || "";
+        const currentValue = Object.values(desattr)[0] || "";
+
+        return (
+          <div key={index} className="form-group">
+            <label>Key</label>
+            <input
+              type="text"
+              className="form-control"
+              value={currentKey}
+              onChange={(e) =>
+                handleDesAttributeChange(index, e.target.value, currentValue)
+              }
+            />
+
+            <label>Value</label>
+            <input
+              type="text"
+              className="form-control"
+              value={currentValue}
+              onChange={(e) =>
+                handleDesAttributeChange(index, currentKey, e.target.value)
+              }
+            />
+          </div>
+        );
+      })}
+
+      <button
+        type="button"
+        className="btn btn-outline-secondary"
+        onClick={addDesAttribute}
+      >
+        Add Description Attribute
+      </button>
+
       <div className="form-group">
-        <label>Price</label>
+        <label>Price [ 1 or ~] (required) </label>
         <input
           type="number"
           name="price"
@@ -81,7 +121,10 @@ const ProductCreateForm = ({
         />
       </div>
       <div className="form-group">
-        <label>Discount Price (optional)</label>
+        <label>
+          Discount Price [0 or ~] (required for FLASH or FREE ) (optional for
+          COMMON)
+        </label>
         <input
           type="number"
           name="disprice"
@@ -90,21 +133,21 @@ const ProductCreateForm = ({
           onChange={handleChange}
         />
       </div>
+      <div className="form-group">
+        <label>
+          Shipping Cahrges (shipping level 1) [0 for free item] (optional)
+        </label>
+        <input
+          type="number"
+          name="shippingcharges"
+          className="form-control"
+          value={shippingcharges}
+          onChange={handleChange}
+        />
+      </div>
 
       <div className="form-group">
-        <label>Shipping</label>
-        <select
-          name="shipping"
-          className="form-control"
-          onChange={handleChange}
-        >
-          <option>Please select</option>
-          <option value="No">No</option>
-          <option value="Yes">Yes</option>
-        </select>
-      </div>
-      <div className="form-group">
-        <label>Weight</label>
+        <label>Weight (shipping level 2) (Required for shipping)</label>
         <input
           type="number"
           name="weight"
@@ -115,7 +158,7 @@ const ProductCreateForm = ({
       </div>
 
       <div className="form-group">
-        <label>Quantity</label>
+        <label>Quantity (for flashsale scarcity)</label>
         <input
           type="number"
           name="quantity"
@@ -126,7 +169,7 @@ const ProductCreateForm = ({
       </div>
 
       <div className="form-group">
-        <label>Color</label>
+        <label>Color (Required)</label>
         <select name="color" className="form-control" onChange={handleChange}>
           <option>Please select</option>
           {colors.map((c) => (
@@ -138,7 +181,7 @@ const ProductCreateForm = ({
       </div>
 
       <div className="form-group">
-        <label>Brand</label>
+        <label>Brand (Required) [Should be the Same for similer/color]</label>
         <select name="brand" className="form-control" onChange={handleChange}>
           <option>Please select</option>
           {brands.map((b) => (
@@ -150,7 +193,7 @@ const ProductCreateForm = ({
       </div>
 
       <div className="form-group">
-        <label>Category</label>
+        <label>Category (Required)</label>
         <select
           name="category"
           className="form-control"
@@ -220,7 +263,7 @@ const ProductCreateForm = ({
       )}
 
       <div className="form-group">
-        <label>On Sale ?</label>
+        <label>On Sale ? (if onsale or FREE item then Required)</label>
         <select name="onSale" className="form-control" onChange={handleChange}>
           <option>Please select</option>
           <option value="No">No</option>
@@ -230,7 +273,7 @@ const ProductCreateForm = ({
 
       {values.onSale === "Yes" && (
         <div className="form-group">
-          <label>Sale Time & Date</label>
+          <label>Sale Time & Date (Exp: 08:26 am 13 sep 2024) </label>
           <input
             type="text"
             name="saleTime"

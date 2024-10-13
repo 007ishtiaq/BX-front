@@ -3,16 +3,18 @@ import Sliderdiv from "../components/SliderDiv/Sliderdiv";
 import MegaBanner from "../components/megabanner/MegaBanner";
 import { Online } from "react-detect-offline";
 import { getRelatedBanners } from "../functions/banner";
-import Countriesbanner from "../components/countriesbanner/Countriesbanner";
+import CategoriesCard from "../components/categoriesCard/CategoriesCard";
+import CommonProductsCont from "../components/CommonProductsCont/CommonProductsCont";
 import Partnersbanner from "../components/partnersbanner/Partnersbanner";
-import Visatypes from "../components/visatypes/Visatypes";
 import Reviewsbox from "../components/reviewsbox/Reviewsbox";
 import Scorebanner from "../components/scorebanner/Scorebanner";
-import Stepsbanner from "../components/stepsbanner/Stepsbanner";
+import MegaSlide from "../components/megaslide/MegaSlide";
+import Trustbox from "../components/trustbox/Trustbox";
+import Peoplelove from "../components/peoplelove/Peoplelove";
 
 const Home = () => {
   // const [banners, setBanners] = useState([]);
-  // const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);p
 
   // useEffect(() => {
   //   if (navigator.onLine) {
@@ -35,14 +37,16 @@ const Home = () => {
 
   return (
     <>
-      <Sliderdiv />
+      {/* <Sliderdiv /> */}
+      <MegaSlide />
       <div className="centercont">
         {/* <MegaBanner loading={loading} banner={banners[0]} /> */}
-        <Partnersbanner />
+        <Trustbox />
         <Scorebanner />
-        <Visatypes />
-        <Countriesbanner />
-        <Stepsbanner />
+        <CategoriesCard />
+        <CommonProductsCont WidthIdea={"Fullwidth"} />
+        <Peoplelove />
+        <Partnersbanner />
         <Reviewsbox />
       </div>
     </>

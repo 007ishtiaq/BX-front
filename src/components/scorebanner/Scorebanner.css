@@ -5,13 +5,13 @@
   display: flex;
 }
 .scorecardleft {
-  width: 62%;
+  width: 58%;
   padding: 2rem;
   background-color: #231f20;
   color: white;
 }
 .scorecardright {
-  width: 38%;
+  width: 42%;
   position: relative;
   background-color: #231f20;
 }
@@ -20,7 +20,7 @@
   left: -14rem;
 }
 .scorecardright img {
-  width: 100%;
+  width: 101%;
   height: 100%;
 }
 .scorecontent {
@@ -69,7 +69,9 @@
 .scoretxt {
   font-size: 1.5rem;
 }
-
+.btnwide {
+  width: 15rem;
+}
 /* ***************************************
 **************Responsiveness***********
 *************************************** */

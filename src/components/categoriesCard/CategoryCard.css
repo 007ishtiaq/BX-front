@@ -16,7 +16,8 @@
 .catenameside {
   width: 100%;
   padding: 0.8rem;
-  font-size: var(--fontsize-eemedium);
+  font-size: 1.5rem;
+  font-weight: 600;
   color: black;
   display: block;
   text-align: center;
@@ -27,7 +28,20 @@
   background-color: var(--org-primary);
   padding: 0.1rem;
 }
-
+.itemcolum.active .catenameside {
+  color: white;
+}
+.commonheadcate {
+  padding: 2rem 2.5rem 1rem;
+  text-align: center;
+  font-size: 2.2rem;
+  color: black;
+  font-weight: 600;
+  background-color: white;
+}
+.commonheadcate span {
+  color: var(--org-primary);
+}
 /*****************************************
 **************Responsiveness***********
 *************************************** */

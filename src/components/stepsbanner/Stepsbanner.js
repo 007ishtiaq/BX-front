@@ -20,7 +20,7 @@ export default function Stepsbanner() {
                 <h1> 1 </h1>
               </div>
             </div>
-            <h1 className="heading">Counselling</h1>
+            <h1 className="heading">Food Packaging</h1>
             <p className="detailscont">
               Navigating the decision to study abroad is transformative. Our
               counseling embraces your uniqueness, crafting a phenomenal path
@@ -34,7 +34,7 @@ export default function Stepsbanner() {
                 <h1> 2 </h1>
               </div>
             </div>
-            <h1 className="heading">Admission Guidance</h1>
+            <h1 className="heading">Beverage Packaging</h1>
             <p className="detailscont">
               Crafting your unique narrative, we elevate your application by
               emphasizing your distinct strengths and passions.
@@ -47,7 +47,7 @@ export default function Stepsbanner() {
                 <h1> 3 </h1>
               </div>
             </div>
-            <h1 className="heading">University Selection</h1>
+            <h1 className="heading">Health & Beauty Packaging</h1>
             <p className="detailscont">
               Selecting a university is like sculpting dreams: each choice
               shapes your future, unlocking boundless possibilities.
@@ -60,7 +60,7 @@ export default function Stepsbanner() {
                 <h1> 4 </h1>
               </div>
             </div>
-            <h1 className="heading">Visa Application Assistance</h1>
+            <h1 className="heading">Cosmetics Packaging</h1>
             <p className="detailscont">
               Unlock seamless global journeys with our bespoke visa concierge:
               from meticulous forms to financial fluency, your gateway awaits.
@@ -73,7 +73,7 @@ export default function Stepsbanner() {
                 <h1> 5 </h1>
               </div>
             </div>
-            <h1 className="heading">Travel Assistance</h1>
+            <h1 className="heading">Decorating and Labeling</h1>
             <p className="detailscont">
               Transform your journey: Seamlessly schedule flights months ahead,
               ensuring perfect departure dates with unparalleled precision.
@@ -86,7 +86,7 @@ export default function Stepsbanner() {
                 <h1> 6 </h1>
               </div>
             </div>
-            <h1 className="heading">Financial Aid & Scholarship Guidance</h1>
+            <h1 className="heading">Brochure & Envelope Printing</h1>
             <p className="detailscont">
               Unlock your path to success with personalized strategies for
               scholarships, bursaries, and loans tailored just for you.
