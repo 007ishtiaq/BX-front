@@ -17,14 +17,14 @@ const shake = keyframes`
 const Button = styled.a`
   position: fixed;
   z-index: 1000;
-  bottom: 110px;
-  right: 20px;
+  bottom: 90px;
+  right: 24px;
   padding: 0.8rem;
   background-color: #25d366;
   color: white;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;

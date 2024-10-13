@@ -12,6 +12,7 @@ import "./loader.css";
 import ScrollToTop from "./components/Scroll/ScrollToTop";
 import GoToTop from "./components/Scroll/GoToTop";
 import Whatsappbtn from "./components/whatsappbtn/Whatsappbtn";
+import Livechat from "./components/livechat/Livechat";
 import Pixel from "./components/pixel/Pixel";
 
 // using lazy
@@ -183,6 +184,7 @@ const App = () => {
           <Toaster />
           <GoToTop />
           <Whatsappbtn />
+          <Livechat />
           <Switch>
             {/* common unprotected Routes */}
 

@@ -1,0 +1,27 @@
+:root {
+  --tawk-header-background-color: #00008a50 !important; /* Update the header background color */
+  --tawk-header-background-color-alpha: #00008a50 !important; /* Header background with alpha */
+  --tawk-header-text-color: #ffffff !important; /* Header text color */
+  --tawk-header-override-padding-top: 1rem !important; /* Override top padding */
+  --tawk-footer-override-padding-bottom: 0 !important; /* Footer padding */
+}
+
+.tawk-chat-bubble code,
+.tawk-chat-bubble pre {
+  border-color: #00000040 !important; /* Border color for code bubbles */
+  background-color: #00000020 !important; /* Background color for code bubbles */
+}
+
+.tawk-visitor-chat-bubble {
+  background: #e54566 !important; /* Visitor chat bubble background color */
+  color: #333333 !important; /* Visitor chat bubble text color */
+}
+
+.tawk-agent-chat-bubble {
+  background: #00008a !important; /* Agent chat bubble background color */
+  color: #ffffff !important; /* Agent chat bubble text color */
+}
+
+.tawk-agent-chat-bubble-dots {
+  background: #00008a !important; /* Agent chat bubble dots background color */
+}
