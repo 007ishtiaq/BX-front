@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
-import { getApplyform, setFormReplied } from "../../../functions/contact";
+import { getQuoteRequest, setRequestReplied } from "../../../functions/contact";
 import { toast } from "react-hot-toast";
 import AdminsideNavcopy from "../../../components/nav/AdminsideNavcopy";
 import Switch from "../../../components/Switch/Switch";
 import "./ContactFormSingle.css";
 
 export default function ApplyFormSingle({ match }) {
-  const [form, setForm] = useState([]);
+  const [request, setRequest] = useState([]);
   const [isReplied, setIsReplied] = useState(false);
 
   const { user } = useSelector((state) => ({ ...state }));
@@ -15,14 +15,14 @@ export default function ApplyFormSingle({ match }) {
   const { id } = match.params;
 
   useEffect(() => {
-    loadApplyform();
+    loadQuoteRequest();
   }, [id, isReplied]);
 
-  const loadApplyform = () =>
-    getApplyform(id, user.token)
+  const loadQuoteRequest = () =>
+    getQuoteRequest(id, user.token)
       .then((res) => {
         // console.log(JSON.stringify(res.data, null, 4));
-        setForm(res.data);
+        setRequest(res.data);
         if (res.data) {
           setIsReplied(res.data.isReplied);
         }
@@ -32,8 +32,8 @@ export default function ApplyFormSingle({ match }) {
         toast.error(error.response.status === 401 && "Unauthrised");
       });
 
-  const setformReplied = () => {
-    setFormReplied(form._id, user.token)
+  const setrequestReplied = () => {
+    setRequestReplied(request._id, user.token)
       .then((res) => {
         // console.log(res.data);
         setIsReplied(res.data.isReplied);
@@ -44,100 +44,85 @@ export default function ApplyFormSingle({ match }) {
         console.error(error);
       });
   };
+
   return (
     <div class="manageacmaincont">
       <div class="manageaccont">
         <AdminsideNavcopy currentActive="SubmittedForms" />
         <div class="navrightside">
           <div className="formhead">
-            <p>Form</p>
+            <p>Quote Request</p>
           </div>
           <div className="formsub">
             <p>
               {" "}
               <span className="cformheading"> Submitted At: </span>{" "}
-              {new Date(form.createdAt).toLocaleString()}{" "}
+              {new Date(request.createdAt).toLocaleString()}{" "}
             </p>
             <p>
               {" "}
-              <span className="cformheading"> Full Name </span> {form.Name}{" "}
+              <span className="cformheading"> Full Name </span> {request.Name}{" "}
             </p>
             <p>
               {" "}
               <span className="cformheading"> Phone Number </span>{" "}
-              {form.PhoneNum}{" "}
+              {request.PhoneNum}{" "}
             </p>
             <p>
               {" "}
-              <span className="cformheading"> Email </span> {form.Email}{" "}
+              <span className="cformheading"> Email Address </span>{" "}
+              {request.Email}{" "}
             </p>
             <p>
               {" "}
-              <span className="cformheading"> Gender </span> {form.Gender}{" "}
+              <span className="cformheading"> Product Type </span>{" "}
+              {request.ProductType}{" "}
             </p>
             <p>
               {" "}
-              <span className="cformheading"> Address </span> {form.Address}{" "}
+              <span className="cformheading"> Required Quantity </span>{" "}
+              {request.Quantity}{" "}
             </p>
             <p>
               {" "}
-              <span className="cformheading"> Qualification </span>{" "}
-              {form.Qualification}{" "}
+              <span className="cformheading"> Units of Measurement </span>{" "}
+              {request.Units}{" "}
             </p>
             <p>
               {" "}
-              <span className="cformheading"> Institution </span>{" "}
-              {form.Institution}{" "}
+              <span className="cformheading"> Height </span> {request.Height}{" "}
             </p>
             <p>
               {" "}
-              <span className="cformheading"> Passing Year: </span>{" "}
-              {form.PassingYear}{" "}
+              <span className="cformheading"> Width </span> {request.Width}{" "}
             </p>
             <p>
               {" "}
-              <span className="cformheading">
-                {" "}
-                Country Interested In:{" "}
-              </span>{" "}
-              {form.CountryInterestedIn}{" "}
+              <span className="cformheading"> Depth </span> {request.Depth}{" "}
             </p>
             <p>
               {" "}
-              <span className="cformheading"> EnglishLanguageTestr: </span>{" "}
-              {form.EnglishLanguageTest}{" "}
+              <span className="cformheading"> Use of Colors </span>{" "}
+              {request.Colors}{" "}
             </p>
             <p>
               {" "}
-              <span className="cformheading"> TestName: </span> {form.TestName}{" "}
+              <span className="cformheading"> Use of Sheet Type </span>{" "}
+              {request.Width}{" "}
             </p>
             <p>
               {" "}
-              <span className="cformheading"> TestMarks: </span>{" "}
-              {form.TestMarks}{" "}
+              <span className="cformheading"> Product Details </span>{" "}
+              {request.Details}{" "}
             </p>
             <p>
               {" "}
-              <span className="cformheading"> EstimatedBudget: </span>{" "}
-              {form.EstimatedBudget}{" "}
-            </p>
-            <p>
-              {" "}
-              <span className="cformheading"> AnyQuery: </span> {form.AnyQuery}{" "}
+              <span className="cformheading"> Width </span> {request.Width}{" "}
             </p>
 
-            {/* <p>
-              {" "}
-              <span className="cformheading"> Image </span>{" "}
-              {form.image ? (
-                <img class="cformimg" src={form.image.url} alt={form.email} />
-              ) : (
-                "No attachment"
-              )}{" "}
-            </p> */}
             <span className="actionswitchcform">
               Reply Status:
-              <Switch checked={isReplied} handlechange={setformReplied} />
+              <Switch checked={isReplied} handlechange={setrequestReplied} />
             </span>
           </div>
         </div>

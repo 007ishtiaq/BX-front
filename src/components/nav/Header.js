@@ -150,7 +150,9 @@ const Header = () => {
             .then((res) => {
               // console.log("form sent");
               if (res.data.ok) {
-                toast.success("Form Submitted");
+                toast.success(
+                  "Request submitted! We will redirect you shortly."
+                );
                 setMainModalVisible(false);
                 setSecondModalVisible(false);
                 action.resetForm();

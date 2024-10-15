@@ -145,15 +145,16 @@ export default function ProductInfo({
     onSubmit: async (values, action) => {
       if (navigator.onLine) {
         try {
-          requestUserQuote(user.token, values)
+          requestUserQuote(values)
             .then((res) => {
               if (res.data.ok) {
                 toast.success(
                   "Request submitted! We will redirect you shortly."
                 );
+                action.resetForm();
               }
             })
-            .catch((err) => console.log("cart save err", err));
+            .catch((err) => console.log("Request submittion err", err));
         } catch (error) {
           console.error(error);
           // Handle errors if necessary

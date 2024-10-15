@@ -59,6 +59,27 @@
   fill: red;
 }
 
+.pticksvg {
+  display: inline-block;
+}
+.pticksvg svg {
+  width: 16px;
+  margin-left: 10px;
+  height: auto;
+  fill: green;
+  display: block;
+}
+.pcrosssvg {
+  display: inline-block;
+}
+.pcrosssvg svg {
+  width: 13px;
+  margin-left: 10px;
+  height: auto;
+  fill: red;
+  display: block;
+}
+
 /* ***************************************
 **************Responsiveness***********
 *************************************** */

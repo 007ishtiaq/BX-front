@@ -25,16 +25,10 @@ export const emptyUserCart = async (authtoken) =>
     },
   });
 
-export const requestUserQuote = async (authtoken, values) =>
-  await axios.post(
-    `${process.env.REACT_APP_API}/user/quoteRequest`,
-    { values },
-    {
-      headers: {
-        authtoken,
-      },
-    }
-  );
+export const requestUserQuote = async (values) =>
+  await axios.post(`${process.env.REACT_APP_API}/user/quoteRequest`, {
+    values,
+  });
 export const saveUserForm = async (values) =>
   await axios.post(`${process.env.REACT_APP_API}/user/form`, { values });
 
