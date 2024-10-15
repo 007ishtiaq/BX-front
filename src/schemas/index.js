@@ -143,20 +143,45 @@ export const UserAddressSchema = Yup.object({
     .required("Please Enter Province, exp 'Punjab'*"),
 });
 // User Address+Contact book schema
-export const UserAddressAndContactSchema = Yup.object({
+export const UserQuoteSchema = Yup.object({
+  ProductType: Yup.string()
+    .oneOf(
+      ["Sweden", "Australia", "United-Kingdom", "Denmark", "Finland"],
+      "Invalid Product"
+    )
+    .required("Please select one of these options"),
+  Quantity: Yup.number()
+    .typeError("Quantity must be a number")
+    .required("Please provide quantity"),
+  Units: Yup.string()
+    .oneOf(["Inches", "CM", "MM"], "Invalid Unit")
+    .required("Please select one of these options"),
+  Height: Yup.number()
+    .typeError("Height must be a number")
+    .required("Please provide height"),
+  Width: Yup.number()
+    .typeError("Width must be a number")
+    .required("Please provide width"),
+  Depth: Yup.number()
+    .typeError("Depth must be a number")
+    .required("Please provide depth"),
+  Colors: Yup.string()
+    .oneOf(["1-color", "2-color", "3-color", "4-color"], "Invalid Color")
+    .required("Please select one of these options"),
+  SheetType: Yup.string()
+    .oneOf(
+      ["cardboard-stock", "kraft-stock", "corrugated-stock", "rigid-stock"],
+      "Invalid sheet type"
+    )
+    .required("Please select one of these options"),
   Name: Yup.string()
     .min(2, "Name must be long")
     .required("Please enter your name"),
-  Contact: Yup.string()
-    .min(5, "Contact must be valid")
+  PhoneNum: Yup.string()
+    .matches(/^\d+$/, "Contact must be a valid number")
+    .min(5, "Contact must be at least 5 digits")
     .required("Please enter contact details"),
-  Address: Yup.string()
-    .min(2, "Address must be long")
-    .required("Shipping Address Required*"),
-  City: Yup.string().min(2, "City must be long").required("City Required*"),
-  Province: Yup.string()
-    .min(2, "Province must be long")
-    .required("Please Enter Province, exp 'Punjab'*"),
+  Email: Yup.string().email().required("Please enter your email"),
 });
 
 // User Address+Contact book schema

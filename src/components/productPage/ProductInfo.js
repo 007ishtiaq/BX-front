@@ -9,17 +9,14 @@ import _ from "lodash";
 import { useSelector, useDispatch } from "react-redux";
 // import { useHistory } from "react-router-dom";
 import { requestUserQuote, getUserAddress } from "../../functions/user";
-
 import ProductsSlider from "../productsSlidable/productSlider/ProductsSlider";
 import Img from "../Image";
 import { ReactComponent as Noimage } from "../../images/productpage/noimage.svg";
-import ShippingModal from "../modal/ShippingModal";
 import ShippingForm from "../../components/forms/ShippingForm";
 import Mystars from "../ratingstars/Mystars";
 import { useFormik } from "formik";
-import { UserAddressAndContactSchema } from "../../schemas";
+import { UserQuoteSchema } from "../../schemas";
 import Skeleton from "react-loading-skeleton";
-import Countdown from "../countdown/Countdown";
 
 export default function ProductInfo({
   product,
@@ -119,13 +116,18 @@ export default function ProductInfo({
   // ---------formik usage--------
 
   const initialValues = {
+    ProductType: "",
+    Quantity: "",
+    Units: "",
+    Height: "",
+    Width: "",
+    Depth: "",
+    Colors: "",
+    SheetType: "",
     Name: "",
-    Contact: "",
-    Address: "",
-    City: "",
-    Province: "",
-    Area: "",
-    LandMark: "",
+    PhoneNum: "",
+    Email: "",
+    Details: "",
   };
 
   const {
@@ -139,7 +141,7 @@ export default function ProductInfo({
     setValues,
   } = useFormik({
     initialValues: initialValues,
-    validationSchema: UserAddressAndContactSchema,
+    validationSchema: UserQuoteSchema,
     onSubmit: async (values, action) => {
       if (navigator.onLine) {
         try {

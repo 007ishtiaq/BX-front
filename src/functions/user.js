@@ -27,7 +27,7 @@ export const emptyUserCart = async (authtoken) =>
 
 export const requestUserQuote = async (authtoken, values) =>
   await axios.post(
-    `${process.env.REACT_APP_API}/user/address`,
+    `${process.env.REACT_APP_API}/user/quoteRequest`,
     { values },
     {
       headers: {
