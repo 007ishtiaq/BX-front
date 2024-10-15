@@ -20,12 +20,9 @@
 .formsubcont {
   margin: 0 1rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
-}
-.formsubcont > div {
-  padding: 9px;
-  width: 45%;
+  gap: 0 1rem;
 }
 .singleinput {
   display: flex;
@@ -45,7 +42,7 @@
   color: black;
 }
 .singleinput select {
-  padding: 9px;
+  padding: 7px;
   margin-bottom: 9px;
   border: 1px solid gray;
   border-radius: 4px;
@@ -60,9 +57,32 @@
   margin-bottom: 10px;
   color: black;
 }
+/* ---for normal size form--- */
 .formsubcont div.inputfullwidth {
-  width: 95%;
+  width: 93%;
 }
+.formsubcont > div {
+  padding: 5px;
+  width: 46%;
+}
+.formsubcont div.inputsmallwidth {
+  width: 22.5%;
+}
+/* ---for small size side form--- */
+.formsubcont div.sideinputfull {
+  width: 100%;
+}
+.formsubcont div.sideinputhalf {
+  width: 48%;
+}
+.formsubcont.sideformsubcont {
+  margin: 0;
+  margin-top: 1rem;
+}
+.formsubcont.sideformsubcont > div {
+  padding: 3px;
+}
+
 .formbelowcont {
   margin: 30px 50px;
 }
@@ -104,7 +124,7 @@
   width: 100% !important;
 }
 .ant-modal-body {
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 1rem !important;
 }
 .ant-modal-footer {
   display: flex;

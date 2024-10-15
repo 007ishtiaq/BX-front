@@ -30,6 +30,7 @@ const Ireland = lazy(() => import("./pages/destination/Ireland"));
 const France = lazy(() => import("./pages/destination/France"));
 const Cyprus = lazy(() => import("./pages/destination/Cyprus"));
 const ProductUpdate = lazy(() => import("./pages/admin/product/ProductUpdate"));
+const Product = lazy(() => import("./pages/Product"));
 const SuccessStories = lazy(() =>
   import("./pages/successstories/SuccessStories")
 );
@@ -199,6 +200,7 @@ const App = () => {
             <Route exact path="/Destinations/France" component={France} />
             <Route exact path="/Destinations/Cyprus" component={Cyprus} />
             <Route exact path="/Stories" component={SuccessStories} />
+            <Route exact path="/product/:slug" component={Product} />
             <Route exact path="/category" component={CategoryHome} />
             <Route
               exact

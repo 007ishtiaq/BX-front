@@ -93,7 +93,7 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  padding: 0.4rem 0.8rem 0.8rem;
+  padding: 1.4rem;
   width: 100%;
   user-select: none;
 }
@@ -156,9 +156,17 @@
   margin: 0.9rem 0;
   -webkit-line-clamp: 3;
 }
-.n-side.n-withdis.n-more span {
+.n-side span {
   margin: 0.1rem 0;
   -webkit-line-clamp: 3;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.nsub-side {
+  margin-top: 0.3rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--org-primary);
 }
 .Shipippingdiv {
   display: flex;

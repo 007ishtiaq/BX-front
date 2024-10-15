@@ -125,57 +125,12 @@ const FlashsaleProductCard = ({
         )}
       </Link>
       <div class="textpart">
-        {disprice ? (
-          <>
-            <div class="Pricediv">
-              <div class="dis p-side">
-                PKR <span>{disprice}</span>.00
-              </div>
-              <div class="d-persontage">
-                -{(100 - (disprice / price) * 100).toFixed(0)}%
-              </div>
-            </div>
-            <div class="dis-side">PKR {price.toFixed(2)}</div>
-          </>
-        ) : (
-          <div class="p-side common-p-side">
-            PKR <span>{price}</span>.00
-          </div>
-        )}
-        <div
-          className={`n-side ${onSale !== "Yes" && "n-more"} ${
-            disprice && "n-withdis"
-          }`}
-        >
+        <div className={`n-side`}>
           <span>{title}</span>
         </div>
-        <div class="remaincount">
-          {onSale === "Yes" ? (
-            <div class="remaincount-side">{quantity} items left</div>
-          ) : (
-            <div className="ratingstarsp"></div>
-          )}
-
-          <button
-            onClick={handleAddToCart}
-            disabled={product.quantity < 1}
-            className={`addtocartbtn ${product.quantity < 1 && "stockout"}`}
-          >
-            Add to cart
-          </button>
+        <div className={`nsub-side`}>
+          <span>Explore</span>
         </div>
-        {onSale === "Yes" && quantity > 0 && (
-          <div class="stock-count">
-            <div
-              style={{
-                backgroundImage: `linear-gradient(to right, #b81a0a ${
-                  100 - (sold / (sold + quantity)) * 100
-                }%, #c7c7cd ${100 - (sold / (sold + quantity)) * 100}%)`,
-              }}
-              class="meter"
-            ></div>
-          </div>
-        )}
       </div>
     </div>
   );
