@@ -42,7 +42,12 @@ export default function AdminsideNav() {
           </div>
         </div>
       )}
-
+      <Link
+        to="/AdminPanel?page=SubmittedForms"
+        class="manageacheading clsremove SubmittedForms"
+      >
+        Submitted Requests
+      </Link>
       <Link
         to="/AdminPanel?page=AllProducts"
         class="manageacheading clsremove AllProducts"
@@ -80,13 +85,6 @@ export default function AdminsideNav() {
           <li class="manageacli clsremove ColorCreate">Create Colors</li>
         </Link>
       </ul>
-
-      <Link
-        to="/AdminPanel?page=SubmittedForms"
-        class="manageacheading clsremove SubmittedForms"
-      >
-        Submitted Forms
-      </Link>
 
       <ul class="manageacul">
         <Link to="/AdminPanel?page=ContactForms">

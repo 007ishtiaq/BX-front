@@ -82,6 +82,10 @@
 .manageacheading.active .Downerrowsvg {
   fill: white;
 }
+.ordli a {
+  color: var(--org-primary);
+  font-weight: 500;
+}
 /* ***************************************
 **************Responsiveness***********
 *************************************** */

@@ -97,7 +97,7 @@
   margin-right: 0.7rem;
 }
 .prostars {
-  fill: var(--org-primary);
+  fill: #ff6600;
   width: 1.5rem;
 }
 .star-full {

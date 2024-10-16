@@ -6,9 +6,8 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 2rem;
-
   display: grid;
-  grid-template-columns: 35fr 25fr 35fr;
+  grid-template-columns: 1fr 1fr;
   gap: 5rem;
   justify-items: center;
   /* justify-content: space-between; */
@@ -75,7 +74,7 @@
   margin: 0 0 1.1rem 0;
 }
 .avgstars {
-  fill: var(--org-primary);
+  fill: #ff6600;
   width: 3.5rem;
 }
 .avgstar-half {

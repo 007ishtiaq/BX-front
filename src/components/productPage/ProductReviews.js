@@ -151,45 +151,6 @@ export default function ProductReviews({
                 ></Mystars>
                 <div class="ratingcount"> {reviewsCount} Ratings</div>
               </div>
-              <div class="postnewriew">
-                <div class="postheading">Review this product</div>
-                <div class="postsub">
-                  Share your thoughts with other customers
-                </div>
-                <RatingModal
-                  onModalok={onModalok}
-                  setModalVisible={setModalVisible}
-                  modalVisible={modalVisible}
-                >
-                  <StarRating
-                    name={product._id}
-                    numberOfStars={5}
-                    rating={star}
-                    changeRating={onStarClick}
-                    isSelectable={true}
-                    starRatedColor="#ff7800"
-                  />
-                  <textarea
-                    id="comment"
-                    className="commenttxtbox"
-                    value={comment}
-                    onChange={(e) => {
-                      if (e.target.value.length > commentLimit) {
-                        toast.error("Character limit exceeded.");
-                        return;
-                      }
-                      setComment(e.target.value);
-                      setProductIdforreview(product._id);
-                    }}
-                    rows="7"
-                    maxlength={801} // Add character limit
-                  />
-                  {/* Display remaining character count */}
-                  <p>{commentLimit - comment.length} characters remaining</p>
-                </RatingModal>
-                ,
-                {/* <button class="postbtn">Write a customer review </button> */}
-              </div>
             </div>
 
             <hr />

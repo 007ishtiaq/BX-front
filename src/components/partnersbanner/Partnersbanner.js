@@ -8,9 +8,9 @@ import uni5 from "../../images/partnerdiv/5.png";
 
 import ShippingModal from "../../components/modal/ShippingModal";
 import ShippingForm from "../../components/forms/ShippingForm";
-import { saveUserForm } from "../../functions/user";
+import { requestUserQuote } from "../../functions/user";
 import { useFormik } from "formik";
-import { ApplyNowSchema } from "../../schemas";
+import { UserQuoteSchema } from "../../schemas";
 import { toast } from "react-hot-toast";
 
 const images = [uni1, uni2, uni3, uni4, uni5];
@@ -51,22 +51,18 @@ export default function Partnersbanner() {
   // ------apply form working------
 
   const initialValues = {
+    ProductType: "",
+    Quantity: "",
+    Units: "",
+    Height: "",
+    Width: "",
+    Depth: "",
+    Colors: "",
+    SheetType: "",
     Name: "",
     PhoneNum: "",
     Email: "",
-    Gender: "",
-    Address: "",
-    Qualification: "",
-    Institution: "",
-    CGPA: "",
-    PassingYear: "",
-    CountryInterestedIn: "",
-    ApplyingForVisaType: "",
-    EnglishLanguageTest: "",
-    TestName: "",
-    TestMarks: "",
-    EstimatedBudget: "",
-    AnyQuery: "",
+    Details: "",
   };
 
   const {
@@ -80,16 +76,18 @@ export default function Partnersbanner() {
     setValues,
   } = useFormik({
     initialValues: initialValues,
-    validationSchema: ApplyNowSchema,
+    validationSchema: UserQuoteSchema,
     onSubmit: async (values, action) => {
       if (navigator.onLine) {
         try {
           // console.log("values we have", values);
-          saveUserForm(values)
+          requestUserQuote(values)
             .then((res) => {
               // console.log("form sent");
               if (res.data.ok) {
-                toast.success("Form Submitted");
+                toast.success(
+                  "Request submitted! We will redirect you shortly."
+                );
                 setMainModalVisible(false);
                 action.resetForm();
               }
