@@ -62,7 +62,7 @@ const ProductCreateForm = ({
       </div>
 
       <div className="form-group">
-        <label>Description</label>
+        <label>Description (limit is 517)</label>
         <input
           type="text"
           name="description"

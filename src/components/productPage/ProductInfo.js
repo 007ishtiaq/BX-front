@@ -266,10 +266,14 @@ export default function ProductInfo({
           <div className="desc_ul">
             {title ? (
               <ul>
-                <li className="desc_li">
-                  <div className="li_head">Brand</div>
-                  <div className="li_sub">{brand}</div>
-                </li>
+                {product.desattributes &&
+                  product.desattributes.map((desattr, index) => (
+                    <li key={index} className="desc_li">
+                      <div className="li_head">{Object.keys(desattr)[0]}</div>
+                      <div className="li_sub">{Object.values(desattr)[0]}</div>
+                    </li>
+                  ))}
+
                 {category && (
                   <li className="desc_li">
                     <div className="li_head">Category</div>
@@ -280,36 +284,6 @@ export default function ProductInfo({
                     </div>
                   </li>
                 )}
-                {attributes.map((attribute) => (
-                  <React.Fragment key={attribute._id}>
-                    {attribute.subs && (
-                      <li className="desc_li">
-                        <div className="li_head">Section</div>
-                        <div className="li_sub">
-                          <Link
-                            to={`/shop?${attribute.subs.name.replace(
-                              /\s+/g,
-                              ""
-                            )}`}
-                          >
-                            {attribute.subs.name}
-                          </Link>
-                        </div>
-                        {/* <div className="li_sub">
-                          {attribute.subs2.map((s2) => (
-                            <Link
-                              key={s2._id}
-                              to={`/shop?${s2.name.replace(/\s+/g, "")}`}
-                            >
-                              <span className="featurename">{s2.name}</span>
-                            </Link>
-                          ))}
-                        </div> */}
-                      </li>
-                    )}
-                  </React.Fragment>
-                ))}
-
                 <li className="desc_li">
                   <div className="li_head">Color</div>
                   <div className="li_sub">{color}</div>
@@ -325,6 +299,12 @@ export default function ProductInfo({
               <Skeleton width={150} count={2} />
             )}
           </div>
+          <div className="desc_ul">
+            <p className="">{`${
+              product.description && product.description.substring(0, 517)
+            }...`}</p>
+          </div>
+
           {similarProduct.length > 0 && (
             <div className="similer">
               <hr />
