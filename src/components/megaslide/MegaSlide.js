@@ -7,6 +7,7 @@ import { requestUserQuote } from "../../functions/user";
 import { useFormik } from "formik";
 import { UserQuoteSchema } from "../../schemas";
 import { toast } from "react-hot-toast";
+import { Link } from "react-router-dom";
 
 export default function MegaSlide() {
   const [mainModalVisible, setMainModalVisible] = useState(false);
@@ -105,7 +106,9 @@ export default function MegaSlide() {
               handleChange={handleChange}
             />
           </ShippingModal>
-          <button className="apllyBtn shopBtn">Explore</button>
+          <Link to="/shop">
+            <button className="apllyBtn shopBtn">Explore</button>
+          </Link>
         </div>
       </div>
       <div className="megaslideright">

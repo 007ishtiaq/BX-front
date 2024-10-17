@@ -46,6 +46,7 @@ export default function CommonProductsCont({ WidthIdea }) {
             <span> discounted price.</span>
           </p>
         </div>
+
         <div class="contentcont">
           <div class="productsarea">
             {loading ? (

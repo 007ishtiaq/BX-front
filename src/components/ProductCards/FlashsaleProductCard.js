@@ -14,8 +14,7 @@ const FlashsaleProductCard = ({
   FlashSalesCont,
   WidthIdea,
 }) => {
-  const { title, slug, price, quantity, sold, images, disprice, onSale } =
-    product;
+  const { title, slug, images } = product;
 
   const [imageLoaded, setImageLoaded] = useState(false);
 
@@ -45,54 +44,6 @@ const FlashsaleProductCard = ({
 
     // Default case if none of the conditions are met
     return {};
-  };
-
-  const handleAddToCart = () => {
-    if (product.quantity < 1) {
-      toast.error("Out of Stock");
-      return;
-    }
-    // create cart array
-    let cart = [];
-    if (typeof window !== "undefined") {
-      // if cart is in local storage GET it
-      if (localStorage.getItem("cart")) {
-        cart = JSON.parse(localStorage.getItem("cart"));
-      }
-
-      if (cart.length) {
-        let foundItem = cart.find((item) => {
-          return item._id === product._id;
-        });
-        if (foundItem) {
-          toast.success("Item Already in Cart");
-        } else {
-          cart.push({
-            ...product,
-            count: 1,
-          });
-          toast.success("Added to Cart");
-        }
-      } else {
-        cart.push({
-          ...product,
-          count: 1,
-        });
-        toast.success("Added to Cart");
-      }
-
-      // remove duplicates
-      let unique = _.uniqWith(cart, _.isEqual);
-      // save to local storage
-      // console.log('unique', unique)
-      localStorage.setItem("cart", JSON.stringify(unique));
-
-      // add to reeux state
-      dispatch({
-        type: "ADD_TO_CART",
-        payload: unique,
-      });
-    }
   };
 
   return (

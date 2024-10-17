@@ -17,10 +17,13 @@ import Mystars from "../ratingstars/Mystars";
 import { useFormik } from "formik";
 import { UserQuoteSchema } from "../../schemas";
 import Skeleton from "react-loading-skeleton";
+import ProductCardSkull from "../../components/Skeletons/ProductCardSkull";
+import FlashsaleProductCard from "../ProductCards/FlashsaleProductCard";
 
 export default function ProductInfo({
   product,
   similarProduct,
+  relatedProduct,
   avgRating,
   reviewsCount,
 }) {
@@ -43,6 +46,7 @@ export default function ProductInfo({
   } = product;
 
   const [qty, setQty] = useState(1);
+  const [loading, setLoading] = useState(false);
 
   // redux
   const { user } = useSelector((state) => ({ ...state }));
@@ -178,71 +182,72 @@ export default function ProductInfo({
 
   return (
     <div className="productcontainer">
-      <div className="leftproinfo">
-        <div className="productcontleft">
-          {images && images.length ? (
-            <Carousel
-              showArrows={true}
-              autoPlay
-              infiniteLoop
-              className="mycarosel"
-            >
-              {images &&
-                images.map((i) => <img src={i.url} key={i.public_id} />)}
-            </Carousel>
-          ) : (
-            <div className="noimagecont">
-              <Noimage></Noimage>
-            </div>
-          )}
-        </div>
-
-        <div className="productcontcenter">
-          <div className="titlepart">
-            <div className="productname namesize">
-              {title ? title : <Skeleton count={2} />}
-            </div>
-          </div>
-          <div className="publicremarkcont">
-            <div className="publicremark">
-              {avgRating ? (
-                // showAverage(product)
-                <div>
-                  <Mystars
-                    rating={avgRating}
-                    containerclass={"prostarsspan"}
-                    StarFullclass={"prostars"}
-                    StarHalfclass={"prostars star-half"}
-                    StarEmptyclass={"prostars star-empty"}
-                  ></Mystars>
-                  <span class="prototalavg">{avgRating}</span>
-                </div>
-              ) : (
-                <div className="">
-                  <Mystars
-                    rating={0}
-                    containerclass={"prostarsspan"}
-                    StarFullclass={"prostars"}
-                    StarHalfclass={"prostars star-half"}
-                    StarEmptyclass={"prostars star-empty"}
-                  ></Mystars>
-                </div>
-              )}
-              <div className="">
-                {title ? (
-                  avgRating ? (
-                    <>
-                      <span className="">{reviewsCount} </span>
-                      <span>Review(s)</span>
-                    </>
-                  ) : (
-                    <div className="">0 Reviews</div>
-                  )
-                ) : (
-                  <Skeleton width={80} count={1} />
-                )}
+      <div className="productcontleftmain">
+        <div className="leftproinfo">
+          <div className="productcontleft">
+            {images && images.length ? (
+              <Carousel
+                showArrows={true}
+                autoPlay
+                infiniteLoop
+                className="mycarosel"
+              >
+                {images &&
+                  images.map((i) => <img src={i.url} key={i.public_id} />)}
+              </Carousel>
+            ) : (
+              <div className="noimagecont">
+                <Noimage></Noimage>
               </div>
-              {/* <div className="orderscont">
+            )}
+          </div>
+
+          <div className="productcontcenter">
+            <div className="titlepart">
+              <div className="productname namesize">
+                {title ? title : <Skeleton count={2} />}
+              </div>
+            </div>
+            <div className="publicremarkcont">
+              <div className="publicremark">
+                {avgRating ? (
+                  // showAverage(product)
+                  <div>
+                    <Mystars
+                      rating={avgRating}
+                      containerclass={"prostarsspan"}
+                      StarFullclass={"prostars"}
+                      StarHalfclass={"prostars star-half"}
+                      StarEmptyclass={"prostars star-empty"}
+                    ></Mystars>
+                    <span class="prototalavg">{avgRating}</span>
+                  </div>
+                ) : (
+                  <div className="">
+                    <Mystars
+                      rating={0}
+                      containerclass={"prostarsspan"}
+                      StarFullclass={"prostars"}
+                      StarHalfclass={"prostars star-half"}
+                      StarEmptyclass={"prostars star-empty"}
+                    ></Mystars>
+                  </div>
+                )}
+                <div className="">
+                  {title ? (
+                    avgRating ? (
+                      <>
+                        <span className="">{reviewsCount} </span>
+                        <span>Review(s)</span>
+                      </>
+                    ) : (
+                      <div className="">0 Reviews</div>
+                    )
+                  ) : (
+                    <Skeleton width={80} count={1} />
+                  )}
+                </div>
+                {/* <div className="orderscont">
                 {product && product.sold && product.sold > 0 ? (
                   <>
                     <span> {product.sold}+ </span>
@@ -252,80 +257,91 @@ export default function ProductInfo({
                   ""
                 )}
               </div> */}
-            </div>
-            {title ? (
-              <div className="artnum">
-                <p> Article No: {art}</p>
               </div>
-            ) : (
-              <Skeleton width={65} height={18} count={1} />
-            )}
-          </div>
-
-          <hr />
-          <div className="desc_ul">
-            {title ? (
-              <ul>
-                {product.desattributes &&
-                  product.desattributes.map((desattr, index) => (
-                    <li key={index} className="desc_li">
-                      <div className="li_head">{Object.keys(desattr)[0]}</div>
-                      <div className="li_sub">{Object.values(desattr)[0]}</div>
-                    </li>
-                  ))}
-
-                {category && (
-                  <li className="desc_li">
-                    <div className="li_head">Category</div>
-                    <div className="li_sub">
-                      <Link to={`/category/?category=${category.slug}`}>
-                        {category.name}
-                      </Link>
-                    </div>
-                  </li>
-                )}
-                <li className="desc_li">
-                  <div className="li_head">Color</div>
-                  <div className="li_sub">{color}</div>
-                </li>
-                {shippingcharges === 0 && (
-                  <li className="desc_li">
-                    <div className="li_head">Shipping</div>
-                    <div className="li_sub">Free Shipping*</div>
-                  </li>
-                )}
-              </ul>
-            ) : (
-              <Skeleton width={150} count={2} />
-            )}
-          </div>
-          <div className="desc_ul">
-            <p className="">{`${
-              product.description && product.description.substring(0, 517)
-            }...`}</p>
-          </div>
-
-          {similarProduct.length > 0 && (
-            <div className="similer">
-              <hr />
-              <p>Available Colors</p>
-              <ProductsSlider
-                containerwidth={481}
-                elementwidth={100}
-                step={200}
-              >
-                {similarProduct.map((p, i) => (
-                  <Img
-                    className="similerImg"
-                    key={i}
-                    onClick={() => history.push(`/product/${p.slug}`)}
-                    src={p.img.url}
-                    alt={p.title}
-                  />
-                ))}
-              </ProductsSlider>
+              {title ? (
+                <div className="artnum">
+                  <p> Article No: {art}</p>
+                </div>
+              ) : (
+                <Skeleton width={65} height={18} count={1} />
+              )}
             </div>
-          )}
+
+            <hr />
+            <div className="desc_ul">
+              {title ? (
+                <ul>
+                  {product.desattributes &&
+                    product.desattributes.map((desattr, index) => (
+                      <li key={index} className="desc_li">
+                        <div className="li_head">{Object.keys(desattr)[0]}</div>
+                        <div className="li_sub">
+                          {Object.values(desattr)[0]}
+                        </div>
+                      </li>
+                    ))}
+
+                  {category && (
+                    <li className="desc_li">
+                      <div className="li_head">Category</div>
+                      <div className="li_sub">
+                        <Link to={`/category/?category=${category.slug}`}>
+                          {category.name}
+                        </Link>
+                      </div>
+                    </li>
+                  )}
+                  <li className="desc_li">
+                    <div className="li_head">Color</div>
+                    <div className="li_sub">{color}</div>
+                  </li>
+                  {shippingcharges === 0 && (
+                    <li className="desc_li">
+                      <div className="li_head">Shipping</div>
+                      <div className="li_sub">Free Shipping*</div>
+                    </li>
+                  )}
+                </ul>
+              ) : (
+                <Skeleton width={150} count={2} />
+              )}
+            </div>
+
+            {relatedProduct.length > 0 && (
+              <div className="similer">
+                <hr />
+                <p>Related Products</p>
+                <ProductsSlider
+                  containerwidth={481}
+                  elementwidth={100}
+                  step={200}
+                >
+                  {relatedProduct.map((p, i) => (
+                    <Img
+                      className="similerImg"
+                      key={i}
+                      onClick={() => history.push(`/product/${p.slug}`)}
+                      src={p.images[0].url}
+                      alt={p.title}
+                    />
+                  ))}
+                </ProductsSlider>
+              </div>
+            )}
+          </div>
+        </div>
+        <div className="productinfobelow">
+          <div class="prodownsub">
+            <div class="headingcont">Product Description</div>
+            <hr />
+            <div class="desccontent">
+              <div class="desccontentpara">
+                {/* <strong>About this item: </strong> */}
+                {/* <br /> */}
+                <p className="">{`${product.description}`}</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

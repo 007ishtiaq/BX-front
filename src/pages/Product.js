@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   getProduct,
-  getSimilar,
-  // getRelated,
+  // getSimilar,
+  getRelated,
   productStar,
 } from "../functions/product";
 import { toast } from "react-hot-toast";
@@ -18,6 +18,7 @@ import ProductReviews from "../components/productPage/ProductReviews";
 const Product = ({ match, history }) => {
   const [product, setProduct] = useState({});
   const [similarProduct, setSimilarProduct] = useState([]);
+  const [related, setRelated] = useState([]);
   const [reviews, setReviews] = useState([]);
   const [avgRating, setAvgRating] = useState(0);
   const [reviewsCount, setReviewsCount] = useState(0);
@@ -58,10 +59,10 @@ const Product = ({ match, history }) => {
           setProduct(res.data);
 
           // load Similar + color
-          getSimilar(res.data.slug).then((res) => setSimilarProduct(res.data));
+          // getSimilar(res.data.slug).then((res) => setSimilarProduct(res.data));
 
           // load related
-          // getRelated(res.data._id).then((res) => setRelated(res.data));
+          getRelated(res.data._id).then((res) => setRelated(res.data));
         })
         .catch((error) => {
           if (error.response && error.response.status === 404) {
@@ -110,10 +111,10 @@ const Product = ({ match, history }) => {
       <ProductInfo
         product={product}
         similarProduct={similarProduct}
+        relatedProduct={related}
         avgRating={avgRating}
         reviewsCount={reviewsCount}
       />
-      <ProductDescription product={product} />
       <ProductServices />
       {/* <ProductQnA /> */}
       <ProductReviews
