@@ -379,6 +379,7 @@ hr {
 .similerImg {
   max-width: 7rem;
   margin: 0.4rem;
+  cursor: pointer;
 }
 .prodtimer {
   display: flex;

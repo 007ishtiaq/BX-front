@@ -11,7 +11,12 @@
   background-color: var(--org-primary); /* Example primary color */
   color: white;
 }
-
+.clearfilter.filteractive {
+  background-color: #ffbebe;
+}
+.clearfilter.filteractive:hover {
+  background-color: #ff9898;
+}
 .badge-secondary {
   background-color: #6c757d; /* Example secondary color */
   color: white;
