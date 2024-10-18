@@ -3,6 +3,7 @@ import Sliderdiv from "../components/SliderDiv/Sliderdiv";
 import MegaBanner from "../components/megabanner/MegaBanner";
 import { Online } from "react-detect-offline";
 import { getRelatedBanners } from "../functions/banner";
+import ProductsGroup from "../components/productsSlidable/productGroup/ProductsGroup";
 import CategoriesCard from "../components/categoriesCard/CategoriesCard";
 import CommonProductsCont from "../components/CommonProductsCont/CommonProductsCont";
 import Partnersbanner from "../components/partnersbanner/Partnersbanner";
@@ -46,6 +47,7 @@ const Home = () => {
         <Scorebanner />
         <Partnersbanner />
         <CategoriesCard />
+        <ProductsGroup />
         <CommonProductsCont WidthIdea={"Fullwidth"} />
         <Workintro />
         <Peoplelove />

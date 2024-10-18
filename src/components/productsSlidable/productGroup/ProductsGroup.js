@@ -1,25 +1,51 @@
 import React, { useEffect, useState } from "react";
 import FlashsaleProductCard from "../../ProductCards/FlashsaleProductCard";
 import ProductsSlider from "../productSlider/ProductsSlider";
-// import Countdown from "../../countdown/Countdown";
-import ProductCountdowns from "../../countdown/ProductCountdowns";
-import { getcurrentFlash } from "../../../functions/product";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import ProductCardSkull from "../../Skeletons/ProductCardSkull";
+import { getCategory } from "../../../functions/category";
+import { toast } from "react-hot-toast";
+import { Online } from "react-detect-offline";
 
 const ProductsGroup = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-
   const [contwidth, setContwidth] = useState(0);
   const [elementwidth, setElementwidth] = useState(0);
+  const dispatch = useDispatch();
+
+  let slug = "eco-friendly-boxes";
 
   useEffect(() => {
-    getcurrentFlash().then((p) => {
-      setLoading(false);
-      setProducts(p.data);
-    });
-  }, []);
+    if (navigator.onLine) {
+      loadCategoryproducts();
+    } else {
+      dispatch({
+        type: "SET_NETMODAL_VISIBLE",
+        payload: true,
+      });
+    }
+  }, [navigator.onLine, Online]);
+
+  const loadCategoryproducts = () => {
+    getCategory(slug)
+      .then((res) => {
+        setProducts(res.data.products);
+        setLoading(false);
+      })
+      .catch((error) => {
+        if (error.response && error.response.status === 404) {
+          toast.error(error.response.data.error);
+          // console.error("Brand not found:", error);
+        } else {
+          // Handle other errors
+          toast.error("Error fetching category");
+          console.error("Error fetching category:", error);
+          setLoading(false);
+        }
+      });
+  };
 
   useEffect(() => {
     const proarea = document.querySelector(".productsarea");
@@ -48,13 +74,9 @@ const ProductsGroup = () => {
       <div class="cardcontainer">
         <div class="insidecont">
           <div class="mainhead flashhead">
-            <div class="colorheading">Flash Sales</div>
-            <ProductCountdowns
-              products={products}
-              getcurrentFlash={getcurrentFlash}
-            />
+            <div class="colorheading">Boxes By Designs</div>
 
-            <Link to={`/Flashsale`}>
+            <Link to={`/shop`}>
               <div class="colormore">SEE MORE</div>
             </Link>
           </div>
