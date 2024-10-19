@@ -9,17 +9,7 @@ import { showAverage } from "../../../functions/rating";
 import { toast } from "react-hot-toast";
 
 const Product = ({ product, contWidth }) => {
-  const {
-    title,
-    slug,
-    price,
-    shipping,
-    quantity,
-    sold,
-    images,
-    disprice,
-    onSale,
-  } = product;
+  const { title, slug, shipping, quantity, sold, images, onSale } = product;
 
   const dispatch = useDispatch();
 
@@ -114,23 +104,6 @@ const Product = ({ product, contWidth }) => {
         )}
       </Link>
       <div class="textpart">
-        {disprice ? (
-          <>
-            <div class="Pricediv">
-              <div class="dis p-side">
-                PKR <span>{disprice}</span>.00
-              </div>
-              <div class="d-persontage">
-                -{(100 - (disprice / price) * 100).toFixed(0)}%
-              </div>
-            </div>
-            <div class="dis-side">PKR {price.toFixed(2)}</div>
-          </>
-        ) : (
-          <div class="p-side common-p-side">
-            PKR <span>{price}</span>.00
-          </div>
-        )}
         <div class="n-side">
           {" "}
           <span>{title}</span>

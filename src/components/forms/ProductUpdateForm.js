@@ -30,8 +30,7 @@ const ProductUpdateForm = ({
     art,
     title,
     description,
-    price,
-    disprice,
+
     shippingcharges,
     category,
     quantity,
@@ -67,7 +66,7 @@ const ProductUpdateForm = ({
       </div>
 
       <div className="form-group">
-        <label>Description (limit is 517)</label>
+        <label>Description</label>
         <input
           type="text"
           name="description"
@@ -115,26 +114,6 @@ const ProductUpdateForm = ({
         Add Description Attribute
       </button>
 
-      <div className="form-group">
-        <label>Price [0 or ~] (required)</label>
-        <input
-          type="number"
-          name="price"
-          className="form-control"
-          value={price}
-          onChange={handleChange}
-        />
-      </div>
-      <div className="form-group">
-        <label>Discount Price (if flashsale then required) (optional)</label>
-        <input
-          type="number"
-          name="disprice"
-          className="form-control"
-          value={disprice}
-          onChange={handleChange}
-        />
-      </div>
       <div className="form-group">
         <label>
           Shipping Cahrges (shipping level 1) [0 for free item] (optional)

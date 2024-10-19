@@ -16,8 +16,6 @@ const initialState = {
   art: "",
   title: "",
   description: "",
-  price: "",
-  disprice: "",
   shippingcharges: "",
   category: "",
   shipping: "",

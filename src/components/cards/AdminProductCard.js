@@ -18,18 +18,8 @@ const AdminProductCard = ({
   WidthIdea,
   handleRemove,
 }) => {
-  const {
-    _id,
-    title,
-    slug,
-    price,
-    quantity,
-    sold,
-    images,
-    shippingcharges,
-    disprice,
-    onSale,
-  } = product;
+  const { _id, title, slug, quantity, sold, images, shippingcharges, onSale } =
+    product;
 
   const [imageLoaded, setImageLoaded] = useState(false);
 
@@ -89,46 +79,7 @@ const AdminProductCard = ({
         )}
       </Link>
       <div class="textpart">
-        {disprice !== null ? (
-          <>
-            <div class="Pricediv">
-              <div class="dis p-side">
-                {disprice !== 0 ? (
-                  <>
-                    <span>$ {Math.floor(disprice)}</span>.
-                    {disprice.toFixed(2).split(".")[1]}
-                  </>
-                ) : (
-                  <span>$ FREE</span>
-                )}
-              </div>
-              <div className="dis p-side shippinginfoadmin">
-                +{shippingcharges}
-              </div>
-              <div class="d-persontage">
-                -{(100 - (disprice / price) * 100).toFixed(0)}%
-              </div>
-            </div>
-            <div class="dis-side">$ {price.toFixed(2)}</div>
-          </>
-        ) : (
-          <div class="p-side common-p-side">
-            {price && (
-              <>
-                <>
-                  <span>$ {Math.floor(price)}</span>.
-                  {price.toFixed(2).split(".")[1]}
-                </>
-                <span className="shippinginfoadmin">+{shippingcharges}</span>
-              </>
-            )}
-          </div>
-        )}
-        <div
-          className={`n-side ${onSale !== "Yes" && "n-more"} ${
-            disprice && "n-withdis"
-          }`}
-        >
+        <div className={`n-side`}>
           <span>{title}</span>
         </div>
         <div class="remaincount adminprodcard">

@@ -27,23 +27,7 @@ export default function ProductInfo({
   avgRating,
   reviewsCount,
 }) {
-  const {
-    art,
-    title,
-    slug,
-    images,
-    description,
-    disprice,
-    shippingcharges,
-    price,
-    brand,
-    color,
-    category,
-    attributes,
-    quantity,
-    sold,
-    onSale,
-  } = product;
+  const { art, title, images, shippingcharges, color, category } = product;
 
   const [qty, setQty] = useState(1);
   const [loading, setLoading] = useState(false);
@@ -53,69 +37,6 @@ export default function ProductInfo({
 
   const history = useHistory();
   const dispatch = useDispatch();
-
-  const handleAddToCart = () => {
-    if (product.quantity < 1) {
-      toast.error("Out of Stock");
-      return;
-    }
-
-    // create cart array
-    let cart = [];
-    if (typeof window !== "undefined") {
-      // if cart is in local storage GET it
-      if (localStorage.getItem("cart")) {
-        cart = JSON.parse(localStorage.getItem("cart"));
-      }
-
-      if (cart.length) {
-        let foundItem = cart.find((item) => {
-          return item._id === product._id;
-        });
-        if (foundItem) {
-          cart.map((prod, i) => {
-            if (prod._id == product._id) {
-              cart[i].count = qty;
-              toast.success("Added to Cart");
-            }
-          });
-        } else {
-          cart.push({
-            ...product,
-            count: qty,
-          });
-          toast.success("Added to Cart");
-        }
-      } else {
-        cart.push({
-          ...product,
-          count: qty,
-        });
-        toast.success("Added to Cart");
-      }
-
-      // remove duplicates
-      let unique = _.uniqWith(cart, _.isEqual);
-      // save to local storage
-      // console.log('unique', unique)
-      localStorage.setItem("cart", JSON.stringify(unique));
-
-      // add to reeux state
-      dispatch({
-        type: "ADD_TO_CART",
-        payload: unique,
-      });
-    }
-  };
-
-  const handleBuynow = () => {
-    if (product.quantity < 1) {
-      toast.error("Out of Stock");
-      return;
-    }
-    handleAddToCart();
-    history.push("/cart");
-  };
 
   // ---------formik usage--------
 
