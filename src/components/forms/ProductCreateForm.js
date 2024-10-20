@@ -92,9 +92,7 @@ const ProductCreateForm = ({
       </button>
 
       <div className="form-group">
-        <label>
-          Shipping Cahrges (shipping level 1) [0 for free item] (optional)
-        </label>
+        <label>Shipping Cahrges[0 for free item]</label>
         <input
           type="number"
           name="shippingcharges"

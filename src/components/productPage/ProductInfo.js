@@ -27,10 +27,7 @@ export default function ProductInfo({
   avgRating,
   reviewsCount,
 }) {
-  const { art, title, images, shippingcharges, color, category } = product;
-
-  const [qty, setQty] = useState(1);
-  const [loading, setLoading] = useState(false);
+  const { art, title, images, shippingcharges, category } = product;
 
   // redux
   const { user } = useSelector((state) => ({ ...state }));
@@ -212,10 +209,6 @@ export default function ProductInfo({
                       </div>
                     </li>
                   )}
-                  <li className="desc_li">
-                    <div className="li_head">Color</div>
-                    <div className="li_sub">{color}</div>
-                  </li>
                   {shippingcharges === 0 && (
                     <li className="desc_li">
                       <div className="li_head">Shipping</div>

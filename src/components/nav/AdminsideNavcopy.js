@@ -38,6 +38,14 @@ export default function AdminsideNavcopy({ currentActive }) {
       >
         Submitted Requests
       </Link>
+      <ul class="manageacul">
+        <Link to="/AdminPanel?page=ContactForms">
+          <li class="manageacli clsremove ContactForms">Contact Forms</li>
+        </Link>
+        <Link to="/AdminPanel?page=OptinEmails">
+          <li class="manageacli clsremove OptinEmails">Opt-In Emails</li>
+        </Link>
+      </ul>
       <Link
         to="/AdminPanel?page=AllProducts"
         class="manageacheading clsremove AllProducts"
@@ -48,14 +56,10 @@ export default function AdminsideNavcopy({ currentActive }) {
         <Link to="/AdminPanel?page=ProductCreate">
           <li class="manageacli clsremove ProductCreate">Create Product</li>
         </Link>
-        <Link to="/AdminPanel?page=FlashSale">
-          <li class="manageacli clsremove FlashSale">Flash sale</li>
-        </Link>
         <Link to="/AdminPanel?page=AddReview">
           <li class="manageacli clsremove AddReview">Add Review</li>
         </Link>
       </ul>
-
       <Link
         to="/AdminPanel?page=CategoryCreate"
         class="manageacheading clsremove CategoryCreate"
@@ -63,44 +67,16 @@ export default function AdminsideNavcopy({ currentActive }) {
         Create Category
       </Link>
       <ul class="manageacul">
-        <Link to="/AdminPanel?page=SubCreate">
-          <li class="manageacli clsremove SubCreate">Sub Level 1</li>
-        </Link>
-        <Link to="/AdminPanel?page=Sub2Create">
-          <li class="manageacli clsremove Sub2Create">Sub Level 2</li>
-        </Link>
         <Link to="/AdminPanel?page=BrandCreate">
-          <li class="manageacli clsremove BrandCreate">Create Brands</li>
+          <li class="manageacli clsremove BrandCreate">Create Material Type</li>
         </Link>
-        <Link to="/AdminPanel?page=ColorCreate">
-          <li class="manageacli clsremove ColorCreate">Create Colors</li>
-        </Link>
-      </ul>
-
-      <ul class="manageacul">
-        <Link to="/AdminPanel?page=ContactForms">
-          <li class="manageacli clsremove ContactForms">Contact Forms</li>
-        </Link>
-        <Link to="/AdminPanel?page=OptinEmails">
-          <li class="manageacli clsremove OptinEmails">Opt-In Emails</li>
-        </Link>
-      </ul>
-
-      <Link
-        to="/AdminPanel?page=BannerCreate"
-        class="manageacheading clsremove BannerCreate"
-      >
-        Create Banner
-      </Link>
-      <ul class="manageacul">
-        <Link to="/AdminPanel?page=StoriesCreate">
-          <li class="manageacli clsremove StoriesCreate">Add Story Banner</li>
+        <Link to="/AdminPanel?page=BannerCreate">
+          <li class="manageacli clsremove BannerCreate">Create Banner</li>
         </Link>
         <Link to="/AdminPanel?page=StaticText">
           <li class="manageacli clsremove StaticText">Static Text & Promo</li>
         </Link>
       </ul>
-
       <Link
         to="/AdminPanel?page=PasswordReset"
         class="manageacheading clsremove PasswordReset"
