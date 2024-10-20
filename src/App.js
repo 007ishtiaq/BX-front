@@ -2,7 +2,6 @@ import React, { useEffect, lazy, Suspense, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { Toaster } from "react-hot-toast";
-import { getWishlist } from "./functions/user";
 import { currentUser } from "./functions/auth";
 import Footer from "./components/footer/Footer";
 import NoNetModal from "./components/NoNetModal/NoNetModal";
@@ -129,12 +128,6 @@ const App = () => {
                 role: res.data.role,
                 _id: res.data._id,
               },
-            });
-
-            const wishlistRes = await getWishlist(idTokenResult.token);
-            dispatch({
-              type: "USER_WISHLIST",
-              payload: wishlistRes.data.wishlist,
             });
           } catch (err) {
             console.log(err);

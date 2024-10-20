@@ -18,8 +18,7 @@ const AdminProductCard = ({
   WidthIdea,
   handleRemove,
 }) => {
-  const { _id, title, slug, quantity, sold, images, shippingcharges, onSale } =
-    product;
+  const { _id, title, slug, images } = product;
 
   const [imageLoaded, setImageLoaded] = useState(false);
 
@@ -83,17 +82,6 @@ const AdminProductCard = ({
           <span>{title}</span>
         </div>
         <div class="remaincount adminprodcard">
-          {onSale === "Yes" ? (
-            <div class="remaincount-side">{quantity} items left</div>
-          ) : (
-            <div className="ratingstarsp">
-              {product && product.ratings && product.ratings.length > 0 ? (
-                showAverage(product)
-              ) : (
-                <div className="">No rating yet</div>
-              )}
-            </div>
-          )}
           <div className="actionbtns">
             <div className="smallsvgbtncont">
               <Link to={`/AdminPanel?page=AddReview&productID=${_id}`}>
@@ -115,18 +103,6 @@ const AdminProductCard = ({
             </div>
           </div>
         </div>
-        {onSale === "Yes" && quantity > 0 && (
-          <div class="stock-count">
-            <div
-              style={{
-                backgroundImage: `linear-gradient(to right, #b81a0a ${
-                  100 - (sold / (sold + quantity)) * 100
-                }%, #c7c7cd ${100 - (sold / (sold + quantity)) * 100}%)`,
-              }}
-              class="meter"
-            ></div>
-          </div>
-        )}
       </div>
     </div>
   );
