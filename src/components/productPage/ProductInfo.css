@@ -138,11 +138,11 @@ hr {
   text-decoration: line-through;
 }
 .desc_ul {
-  margin: 2rem 0;
+  margin-top: 1.5rem;
 }
 .desc_ul ul {
   list-style: none;
-  max-width: 95%;
+  max-width: 100%;
   margin: 0 auto;
 }
 .desc_li {
@@ -152,7 +152,10 @@ hr {
 }
 .li_head {
   font-weight: 600;
-  padding: 0.1rem 2.2rem 0.1rem 0;
+  padding: 0 0.5rem;
+}
+.li_sub {
+  padding: 0 0.5rem;
 }
 .li_sub a {
   color: #7260ff;
@@ -519,7 +522,6 @@ hr {
   border-radius: 0.4rem;
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%);
   padding: 1rem 1.5rem;
-  margin-bottom: 2rem;
 }
 .headingcont {
   font-size: 1.6rem;

@@ -1,10 +1,10 @@
 .megaslidecont {
   width: 100%;
-  height: 530px;
+  /* height: 530px; */
   /* background-color: #e2ecff; */
   display: flex;
   flex-direction: row;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 
   /* background-color: #1825a6; */
   background-image: url(../../images/slidebg.png);
@@ -73,4 +73,80 @@
 .megaslideright img {
   width: 70%;
   height: 100%;
+}
+
+/* ***************************************
+**************Responsiveness***********
+*************************************** */
+
+@media (max-width: 900px) {
+  .headspan1,
+  .headspan2 {
+    font-size: 5rem;
+  }
+  .headspan3 {
+    font-size: 2rem;
+  }
+  .mshead p {
+    line-height: 6rem;
+  }
+  .subp {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 700px) {
+  .megaslideleft {
+    padding: 4rem 4rem;
+  }
+  .megaslideright {
+    width: 50%;
+  }
+  .megaslideright {
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+  }
+}
+@media (max-width: 550px) {
+  .megaslideleft {
+    padding: 4rem 3rem;
+  }
+  .headspan1,
+  .headspan2 {
+    font-size: 3.5rem;
+  }
+  .headspan3 {
+    font-size: 1.5rem;
+  }
+  .mshead p {
+    line-height: 4rem;
+  }
+  .megaslideright {
+    width: 40%;
+  }
+  .megaslideleft {
+    width: 60%;
+  }
+  .megaslideright img {
+    width: 90%;
+  }
+}
+@media (max-width: 460px) {
+  .headspan1,
+  .headspan2 {
+    font-size: 2.5rem;
+  }
+
+  .mshead p {
+    line-height: 3rem;
+  }
+  .megaslideleft {
+    padding: 2rem 2rem;
+  }
+  .megaslideright {
+    padding: 0;
+  }
+  .msctacont button {
+    margin: 0 0.4rem;
+  }
 }

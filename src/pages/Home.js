@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Sliderdiv from "../components/SliderDiv/Sliderdiv";
-import MegaBanner from "../components/megabanner/MegaBanner";
 import { Online } from "react-detect-offline";
 import { getRelatedBanners } from "../functions/banner";
 import ProductsGroup from "../components/productsSlidable/productGroup/ProductsGroup";
@@ -42,15 +41,14 @@ const Home = () => {
       {/* <Sliderdiv /> */}
       <MegaSlide />
       <div className="centercont">
-        {/* <MegaBanner loading={loading} banner={banners[0]} /> */}
         <Trustbox />
         <Scorebanner />
         <Partnersbanner />
         <CategoriesCard />
         <ProductsGroup />
         <CommonProductsCont WidthIdea={"Fullwidth"} />
-        <Workintro />
-        <Peoplelove />
+        {/* <Workintro /> */}
+        {/* <Peoplelove /> */}
         <Reviewsbox />
       </div>
     </>

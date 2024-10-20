@@ -68,7 +68,9 @@ export default function AdminsideNavcopy({ currentActive }) {
       </Link>
       <ul class="manageacul">
         <Link to="/AdminPanel?page=BrandCreate">
-          <li class="manageacli clsremove BrandCreate">Create Material Type</li>
+          <li class="manageacli clsremove BrandCreate">
+            Create Industory Type
+          </li>
         </Link>
         <Link to="/AdminPanel?page=BannerCreate">
           <li class="manageacli clsremove BannerCreate">Create Banner</li>

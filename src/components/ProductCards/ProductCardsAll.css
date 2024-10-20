@@ -390,6 +390,9 @@
   .timetxt {
     font-size: 1.5rem;
   }
+  .commonhead {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 400px) {

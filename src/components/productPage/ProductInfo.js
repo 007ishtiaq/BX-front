@@ -189,31 +189,36 @@ export default function ProductInfo({
             <div className="desc_ul">
               {title ? (
                 <ul>
-                  {product.desattributes &&
-                    product.desattributes.map((desattr, index) => (
-                      <li key={index} className="desc_li">
-                        <div className="li_head">{Object.keys(desattr)[0]}</div>
-                        <div className="li_sub">
-                          {Object.values(desattr)[0]}
-                        </div>
-                      </li>
-                    ))}
-
-                  {category && (
-                    <li className="desc_li">
-                      <div className="li_head">Category</div>
-                      <div className="li_sub">
-                        <Link to={`/category/?category=${category.slug}`}>
-                          {category.name}
-                        </Link>
-                      </div>
-                    </li>
-                  )}
-                  {shippingcharges === 0 && (
-                    <li className="desc_li">
-                      <div className="li_head">Shipping</div>
-                      <div className="li_sub">Free Shipping*</div>
-                    </li>
+                  {product.desattributes && (
+                    <table
+                      border="1"
+                      cellPadding="10"
+                      cellSpacing="0"
+                      style={{
+                        borderColor: "#0000003b",
+                        borderCollapse: "collapse",
+                      }}
+                    >
+                      <thead>
+                        <tr>
+                          {/* Use colSpan to make the "Specifications" header span both columns */}
+                          <th
+                            colSpan="2"
+                            style={{ padding: "0.5rem", textAlign: "center" }}
+                          >
+                            Specifications
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {product.desattributes.map((item, index) => (
+                          <tr key={index}>
+                            <td className="li_head">{Object.keys(item)[0]}</td>
+                            <td className="li_sub">{Object.values(item)[0]}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
                   )}
                 </ul>
               ) : (

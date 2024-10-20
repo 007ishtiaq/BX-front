@@ -119,7 +119,7 @@ const BrandCreate = () => {
       {loading ? (
         <h4 className="text-danger">Loading..</h4>
       ) : (
-        <h4>Create Brand</h4>
+        <h4>Create Industory Type</h4>
       )}
       <div className="p-3">
         <CategoryImgupload

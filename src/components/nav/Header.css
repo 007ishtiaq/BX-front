@@ -806,11 +806,6 @@ li:hover > .subnav {
 *************************************** */
 
 @media (max-width: 1145px) {
-  .newsleft .seprator,
-  .newsleft .topemail,
-  .newsleft .toptiming {
-    display: none;
-  }
   .noauth .noauthbig {
     display: none;
   }
@@ -945,6 +940,15 @@ li:hover > .subnav {
   .wpthinsvg,
   .toplinkedinsvg {
     display: none;
+  }
+  .newsleft > div {
+    margin: 0rem;
+  }
+  .newsleft .seprator {
+    margin: 0 0.5rem;
+  }
+  .centernavbar li a {
+    font-size: 1.32rem;
   }
   .newsright {
     max-width: 21%;

@@ -4,16 +4,6 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding: 1rem 3rem 3rem;
 }
-.vtypesheadingcont {
-  padding: 2rem 2.5rem 1rem;
-  text-align: center;
-  font-size: 2.3rem;
-  color: black;
-  font-weight: 600;
-}
-.vtypesheadingcont span {
-  color: var(--org-primary);
-}
 
 .vtypesself {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);

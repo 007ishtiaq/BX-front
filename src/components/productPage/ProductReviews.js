@@ -257,33 +257,6 @@ export default function ProductReviews({
               Customers who have bought this product have not <br class="br" />{" "}
               yet posted comments
             </div>
-            <div class="emptyreviewtxt">
-              <RatingModal
-                onModalok={onModalok}
-                setModalVisible={setModalVisible}
-                modalVisible={modalVisible}
-              >
-                <StarRating
-                  name={product._id}
-                  numberOfStars={5}
-                  rating={star}
-                  changeRating={onStarClick}
-                  isSelectable={true}
-                  starRatedColor="#ff7800"
-                />
-                <textarea
-                  id="comment"
-                  className="commenttxtbox"
-                  value={comment}
-                  onChange={(e) => {
-                    setComment(e.target.value);
-                    setProductIdforreview(product._id);
-                  }}
-                  cols="63"
-                  rows="7"
-                />
-              </RatingModal>
-            </div>
           </div>
         )}
       </div>

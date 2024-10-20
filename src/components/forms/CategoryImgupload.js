@@ -4,6 +4,7 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 import { Avatar, Badge } from "antd";
 import Skeleton from "react-loading-skeleton";
+import { toast } from "react-hot-toast";
 
 const CategoryImgupload = ({
   image,
@@ -45,6 +46,7 @@ const CategoryImgupload = ({
             })
             .catch((err) => {
               setLoading(false);
+              toast.error(err.response.data.error);
               console.log("CLOUDINARY UPLOAD ERR", err);
             });
         },

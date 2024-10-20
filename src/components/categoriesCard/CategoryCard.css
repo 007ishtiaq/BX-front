@@ -93,6 +93,14 @@
   .categorycont .itemcolum {
     width: calc(24% - 0.4rem);
   }
+  .catenameside {
+    padding: 0.3rem;
+    font-weight: 500;
+    font-size: 1.3rem;
+  }
+  .commonheadcate {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 361px) {

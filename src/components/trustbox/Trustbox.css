@@ -68,7 +68,7 @@
 } */
 .block-icon .title {
   text-transform: uppercase;
-  font-size: 1em;
+  font-size: 1.5rem;
   font-weight: bold;
   margin: 0 0 1.5rem 0;
 }
@@ -80,7 +80,7 @@
 }
 .trustsvgcont {
   width: 100%;
-  height: 10rem;
+  /* height: 10rem; */
   display: block;
 }
 .trustsvgcont svg {
@@ -90,4 +90,105 @@
 }
 .trustsvgcont .trustsvg {
   width: 6.5rem;
+}
+.vtypesheadingcont {
+  padding: 2rem 2.5rem 1rem;
+  text-align: center;
+  font-size: 2.3rem;
+  color: black;
+  font-weight: 600;
+}
+.vtypesheadingcont span {
+  color: var(--org-primary);
+}
+/* ***************************************
+**************Responsiveness***********
+*************************************** */
+
+@media (max-width: 940px) {
+  .trustsubcont {
+    padding: 0;
+  }
+  .trustsub {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  .block-icon .text {
+    font-size: 1.5rem;
+  }
+  .block-icon .block-center {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 780px) {
+  .trustsvgcont svg {
+    margin: 0;
+    width: 6rem;
+    height: auto;
+  }
+  .trustsvgcont .trustsvg {
+    margin: 0;
+    width: 4rem;
+  }
+  .block-icon .title {
+    margin: 0.5rem;
+  }
+}
+@media (max-width: 610px) {
+  .block-icon .title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .block-icon:before {
+    top: 2rem;
+    left: 2rem;
+    right: 2rem;
+    bottom: 2rem;
+  }
+  .block-icon .text {
+    font-size: 1.2rem;
+  }
+  .trustsvgcont svg {
+    width: 6rem;
+  }
+}
+@media (max-width: 450px) {
+  .trustsub {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+  .block-icon .block-center {
+    width: 100%;
+  }
+  .trustsvgcont svg {
+    width: 5rem;
+  }
+  .trustsvgcont .trustsvg {
+    margin: 0;
+    width: 3rem;
+  }
+  .block-icon .text {
+    font-size: 1rem;
+  }
+  .block-icon:before {
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+  .vtypesheadingcont {
+    font-size: 1.8rem;
+  }
+  .trusthead2 {
+    font-weight: 500;
+  }
+  .trustsubcont {
+    padding-bottom: 2rem;
+  }
 }
