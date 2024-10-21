@@ -321,7 +321,10 @@
   border: 1px solid #ccc; /* Optional border */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow for better aesthetics */
 }
-
+.productreviewbottom {
+  display: flex;
+  justify-content: flex-end;
+}
 /* --------pagination styling is on common stylings------- */
 
 /*****************************************
@@ -404,10 +407,15 @@
   }
   .starstatus {
     grid-column: span 3;
-    grid-row: span 1;
+    grid-row: span 2;
   }
   .staravgcont {
-    grid-row: 2;
+    grid-column: span 3;
+    grid-row: 1;
+    margin-bottom: 2rem;
+  }
+  .creviewcont {
+    width: 100%;
   }
   .reviewbarcont {
     padding: 0rem 4rem;

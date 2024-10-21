@@ -62,7 +62,7 @@ thead th {
 *************************************** */
 @media (max-width: 980px) {
   .prodowncont {
-    margin: 0rem auto;
+    margin: 1rem auto;
     padding: 0 1.5rem;
   }
 }
@@ -78,7 +78,7 @@ thead th {
 }
 @media (max-width: 600px) {
   .desccontent {
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
 }
 @media (max-width: 500px) {

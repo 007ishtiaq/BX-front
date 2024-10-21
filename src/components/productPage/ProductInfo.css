@@ -14,6 +14,11 @@
 .featurename {
   margin-left: 1.5rem;
 }
+.publicremark > div {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
 /* ----------product container left side-------- */
 
 .productcontleftmain {
@@ -380,12 +385,20 @@ hr {
   border: 1px solid #ededed;
 }
 .similerImg {
-  max-width: 7rem;
+  max-width: 8rem;
   margin: 0.4rem;
   cursor: pointer;
 }
 .prodtimer {
   display: flex;
+}
+.similer
+  .ProductsSlider_itemsSlider__3mnRV
+  .ProductsSlider_rightIconContainer__2HbNe,
+.similer
+  .ProductsSlider_itemsSlider__3mnRV
+  .ProductsSlider_leftIconContainer__US-cF {
+  top: 27%;
 }
 /* -----styling for flash timer container------ */
 .flashtimercont {
@@ -566,12 +579,13 @@ strong {
 thead th {
   font-weight: 600;
 }
+
 /*****************************************
 **************Description Responsiveness***********
 *************************************** */
 @media (max-width: 980px) {
   .prodowncont {
-    margin: 0rem auto;
+    margin: 1rem auto;
     padding: 0 1.5rem;
   }
 }
@@ -587,7 +601,7 @@ thead th {
 }
 @media (max-width: 600px) {
   .desccontent {
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
 }
 @media (max-width: 500px) {
@@ -647,13 +661,15 @@ thead th {
   .productcontright {
     border-radius: 0 0 0.4rem 0.4rem;
   }
-  .rightprice {
-    display: none;
-  }
+
   .productcontright {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
-    gap: 2rem;
+    gap: 1rem;
+  }
+
+  .formsubcont div.sideinputhalf {
+    width: 49.2%;
   }
   .infobelowleft {
     padding: 0 1rem;
@@ -673,6 +689,15 @@ thead th {
   }
   .productcontright {
     padding: 1rem 2rem;
+  }
+}
+@media (max-width: 560px) {
+  .formsubcont {
+    justify-content: space-between;
+  }
+  .formsubcont div.sideinputhalf {
+    width: 48%;
+    /* padding: 0.3rem 0; */
   }
 }
 @media (max-width: 500px) {
@@ -725,11 +750,24 @@ thead th {
   .changebtnsize {
     padding: 0.2rem 0.6rem;
   }
+  .similer > p {
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+    padding-top: 2rem;
+  }
 }
 @media (max-width: 400px) {
   .mycarosel {
     width: 70%;
     margin: 0 auto;
+  }
+  .buynowbtn {
+    padding: 0.8rem 0;
+    font-size: 1.8rem;
+  }
+  .singleinput input::placeholder {
+    font-size: 1.3rem;
   }
 }
 @media (max-width: 340px) {

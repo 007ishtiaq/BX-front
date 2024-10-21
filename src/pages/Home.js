@@ -47,8 +47,8 @@ const Home = () => {
         <CategoriesCard />
         <ProductsGroup />
         <CommonProductsCont WidthIdea={"Fullwidth"} />
-        {/* <Workintro /> */}
-        {/* <Peoplelove /> */}
+        <Workintro />
+        <Peoplelove />
         <Reviewsbox />
       </div>
     </>

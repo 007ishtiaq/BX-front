@@ -154,10 +154,10 @@
   }
 }
 @media (max-width: 450px) {
-  .formsubcont {
-    flex-direction: column;
-  }
   .formsubcont > div {
     width: 100%;
+  }
+  .singleinput input::placeholder {
+    font-size: 1.8rem;
   }
 }

@@ -19,6 +19,7 @@ import { UserQuoteSchema } from "../../schemas";
 import Skeleton from "react-loading-skeleton";
 import ProductCardSkull from "../../components/Skeletons/ProductCardSkull";
 import FlashsaleProductCard from "../ProductCards/FlashsaleProductCard";
+import ProductCarousel from "../productCarousel/ProductCarousel";
 
 export default function ProductInfo({
   product,
@@ -103,7 +104,7 @@ export default function ProductInfo({
       <div className="productcontleftmain">
         <div className="leftproinfo">
           <div className="productcontleft">
-            {images && images.length ? (
+            {/* {images && images.length ? (
               <Carousel
                 showArrows={true}
                 autoPlay
@@ -113,6 +114,13 @@ export default function ProductInfo({
                 {images &&
                   images.map((i) => <img src={i.url} key={i.public_id} />)}
               </Carousel>
+            ) : (
+              <div className="noimagecont">
+                <Noimage></Noimage>
+              </div>
+            )} */}
+            {images && images.length ? (
+              <ProductCarousel images={images} />
             ) : (
               <div className="noimagecont">
                 <Noimage></Noimage>
@@ -155,7 +163,7 @@ export default function ProductInfo({
                   {title ? (
                     avgRating ? (
                       <>
-                        <span className="">{reviewsCount} </span>
+                        <span className="prostarsspan">{reviewsCount} </span>
                         <span>Review(s)</span>
                       </>
                     ) : (
@@ -197,6 +205,7 @@ export default function ProductInfo({
                       style={{
                         borderColor: "#0000003b",
                         borderCollapse: "collapse",
+                        width: "100%",
                       }}
                     >
                       <thead>
@@ -228,7 +237,6 @@ export default function ProductInfo({
 
             {relatedProduct.length > 0 && (
               <div className="similer">
-                <hr />
                 <p>Related Products</p>
                 <ProductsSlider
                   containerwidth={481}
