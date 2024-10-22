@@ -948,7 +948,8 @@ li:hover > .subnav {
     margin: 0 0.5rem;
   }
   .centernavbar li a {
-    font-size: 1.32rem;
+    font-size: 1.5rem;
+    font-weight: 500;
   }
   .newsright {
     max-width: 21%;
@@ -1024,6 +1025,10 @@ li:hover > .subnav {
   }
   .logo-sampletxt {
     font-size: 1.5rem;
+  }
+  .About4,
+  .Labels3 {
+    display: none !important;
   }
 }
 @media (max-width: 338px) {

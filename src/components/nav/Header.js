@@ -109,8 +109,12 @@ const Header = () => {
       ],
     },
     { name: "Box by Designs", path: "/shop" },
+    {
+      name: "Product Labels",
+      path: "/category/?category=retail-product-boxes",
+    },
     { name: "About", path: "/aboutus" },
-    { name: "Contact Us", path: "/ContactUs" },
+    { name: "Contact", path: "/ContactUs" },
   ];
 
   // ------apply form working------
@@ -315,9 +319,8 @@ const Header = () => {
                   {navItems.map((item, index) => (
                     <li
                       key={index}
-                      className={
-                        location.pathname === item.path ? "active" : ""
-                      }
+                      className={`${item.name + index} 
+                        ${location.pathname === item.path ? "active" : ""}`}
                     >
                       <Link to={item.path} className={`${item.name + index}`}>
                         {item.name}
