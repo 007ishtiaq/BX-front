@@ -1,11 +1,81 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Workintro.css";
 import img1 from "../../images/workintro/1.png";
 import img2 from "../../images/workintro/2.png";
 import img3 from "../../images/workintro/3.png";
 import img4 from "../../images/workintro/4.png";
+import ShippingModal from "../../components/modal/ShippingModal";
+import ShippingForm from "../../components/forms/ShippingForm";
+import { requestUserQuote } from "../../functions/user";
+import { useFormik } from "formik";
+import { UserQuoteSchema } from "../../schemas";
+import { toast } from "react-hot-toast";
 
 export default function Workintro() {
+  const [mainModalVisible, setMainModalVisible] = useState(false);
+  const [noNetModal, setNoNetModal] = useState(false);
+
+  // ------apply form working------
+
+  const initialValues = {
+    ProductType: "",
+    Quantity: "",
+    Units: "",
+    Height: "",
+    Width: "",
+    Depth: "",
+    Colors: "",
+    SheetType: "",
+    Name: "",
+    PhoneNum: "",
+    Email: "",
+    Details: "",
+  };
+
+  const {
+    values,
+    errors,
+    touched,
+    isSubmitting,
+    handleBlur,
+    handleChange,
+    handleSubmit,
+    setValues,
+  } = useFormik({
+    initialValues: initialValues,
+    validationSchema: UserQuoteSchema,
+    onSubmit: async (values, action) => {
+      if (navigator.onLine) {
+        try {
+          // console.log("values we have", values);
+          requestUserQuote(values)
+            .then((res) => {
+              // console.log("form sent");
+              if (res.data.ok) {
+                toast.success(
+                  "Request submitted! We will redirect you shortly."
+                );
+                setMainModalVisible(false);
+                action.resetForm();
+              }
+            })
+            .catch((err) => console.log("Form Submitted Error", err));
+        } catch (error) {
+          console.error(error);
+          setMainModalVisible(false);
+          // Handle errors if necessary
+        }
+      } else {
+        setMainModalVisible(false);
+        setNoNetModal(true);
+      }
+    },
+  });
+
+  const handlecancel = () => {
+    setMainModalVisible(false);
+  };
+
   return (
     <div className="cardcontainer">
       <div className="insidecont contentcont partnercont workcont">
@@ -25,9 +95,26 @@ export default function Workintro() {
               packaging requirements.
             </p>
           </div>
-          <div>button here</div>
+          <div className="workbtncont">
+            <ShippingModal
+              onModalok={handleSubmit}
+              onModalcancel={handlecancel}
+              setModalVisible={setMainModalVisible}
+              modalVisible={mainModalVisible}
+              values={values}
+              btnClasses={"apllyBtn"}
+            >
+              <ShippingForm
+                values={values}
+                errors={errors}
+                touched={touched}
+                handleBlur={handleBlur}
+                handleChange={handleChange}
+              />
+            </ShippingModal>
+          </div>
         </div>
-        <div className="partnerleft">
+        <div className="partnerleft workinfoleft">
           <div className="workingimgcont">
             <div className="workingimgsub">
               <div className="workingimg">

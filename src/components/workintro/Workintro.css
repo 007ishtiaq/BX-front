@@ -29,3 +29,51 @@
 .partnerright.workcontright {
   max-width: 42%;
 }
+.workbtncont {
+  margin-top: 3rem;
+}
+/* ***************************************
+**************Responsiveness***********
+*************************************** */
+
+@media (max-width: 1000px) {
+  .workinfoleft {
+    width: 50%;
+  }
+  .partnerright.workcontright {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 850px) {
+  .workinfoleft {
+    width: 45%;
+  }
+  .partnerright.workcontright {
+    max-width: 55%;
+  }
+  .workbtncont {
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 750px) {
+  .workingimgcont {
+    width: 100%;
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 630px) {
+  .partnercont.workcont {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .workinfoleft {
+    width: 100%;
+  }
+  .partnerright.workcontright {
+    max-width: 100%;
+  }
+  .workingimgcont {
+    padding-bottom: 3rem;
+  }
+}

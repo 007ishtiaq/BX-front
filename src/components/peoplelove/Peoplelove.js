@@ -11,7 +11,7 @@ export default function Peoplelove() {
   return (
     <div className="cardcontainer">
       <div className="insidecont contentcont">
-        <div className="vtypesheadingcont">
+        <div className="vtypesheadingcont peoplelovecont">
           <div className="trustboxheadcont">
             <p className="trusthead1">
               Why people <span>loves</span> us

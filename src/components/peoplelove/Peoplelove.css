@@ -55,3 +55,52 @@
   width: 5rem;
   margin-bottom: 2rem;
 }
+/* ***************************************
+**************Responsiveness***********
+*************************************** */
+
+@media (max-width: 1000px) {
+  .vtypesheadingcont.peoplelovecont {
+    padding: 2rem 0rem 1rem;
+  }
+  .peoplesub {
+    padding: 1.8rem 1.3rem;
+    margin: 1.5rem;
+  }
+}
+@media (max-width: 850px) {
+  .peoplesubcont {
+    padding: 1rem;
+  }
+  .peoplesub {
+    margin: 1rem;
+  }
+  .peoplesubcont {
+    justify-content: center;
+  }
+  .peoplesub {
+    width: calc(100% / 3 - 2rem);
+  }
+}
+@media (max-width: 750px) {
+  .peoplesub {
+    width: calc(100% / 2 - 2rem);
+  }
+}
+@media (max-width: 500px) {
+  .peoplesubtxtcont .vtypesvgsize {
+    width: 4rem;
+    margin-bottom: 1.5rem;
+  }
+  .peoplesubtxtcont .heading {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 430px) {
+  .peoplesubtxtcont .heading {
+    font-size: 1.6rem;
+  }
+  .peoplesubcont {
+    padding: 1rem 0;
+  }
+}
