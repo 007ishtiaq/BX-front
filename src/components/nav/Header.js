@@ -7,6 +7,7 @@ import { Detector } from "react-detect-offline";
 import { useDispatch, useSelector } from "react-redux";
 import { ReactComponent as Logotextblack } from "../../images/headersvgs/logotextblack.svg";
 import { getRelatedStaticText } from "../../functions/staticText";
+import BurdermenuSmall from "../SliderDiv/categoriesPanal/BurdermenuSmall";
 import "../SliderDiv/SliderDiv.css";
 import { ReactComponent as Adminsvg } from "../../images/acnav/admin.svg";
 import { ReactComponent as Callsvg } from "../../images/contactUs/calloutlined.svg";
@@ -266,6 +267,8 @@ const Header = () => {
         <div id="Mainheader" className="middlemainheader">
           <div className="middle-header">
             <div className="binder">
+              {windowWidth <= 700 && <BurdermenuSmall />}
+
               <Link to="/">
                 <div className="logodiv">
                   <div className="logo-txtsize">

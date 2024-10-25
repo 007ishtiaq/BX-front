@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import "./searchstyle.css";
 import "../../components/ProductCards/ProductCardsAll.css";
 import _ from "lodash";
@@ -20,6 +21,9 @@ const Shop = () => {
   const [productsCount, setProductsCount] = useState(0);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 700); // Determine if screen width is greater than 700px
 
+  const { mobileSideNav } = useSelector((state) => ({ ...state }));
+  const dispatch = useDispatch();
+
   useEffect(() => {
     const proarea = document.querySelector(".productsarea");
     const contwidth = proarea.clientWidth;
@@ -38,10 +42,18 @@ const Shop = () => {
   }, []);
 
   const toggle = () => {
-    setFilterDrawervisible(!FilterDrawervisible);
+    // setFilterDrawervisible(!FilterDrawervisible);
+    dispatch({
+      type: "SET_SIDENAV_VISIBLE",
+      payload: true,
+    });
   };
   const close = () => {
-    setFilterDrawervisible(false);
+    // setFilterDrawervisible(false);
+    dispatch({
+      type: "SET_SIDENAV_VISIBLE",
+      payload: false,
+    });
   };
 
   // Calculate start and end of the current page range
@@ -71,13 +83,10 @@ const Shop = () => {
               <p>
                 Filter Based on <span>Category</span> | <span>Brand</span> |{" "}
                 <span>Color</span>
+                {JSON.stringify(mobileSideNav)}
               </p>
             </div>
-            <SideDrawer
-              Open={FilterDrawervisible}
-              close={close}
-              Drawer="Filter"
-            >
+            <SideDrawer Open={mobileSideNav} close={close} Drawer="Filter">
               <SearchFilter
                 products={products}
                 setProducts={setProducts}
