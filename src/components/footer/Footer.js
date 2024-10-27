@@ -71,23 +71,9 @@ export default function Footer() {
       __v: 0,
     },
     {
-      _id: "6677c12868337be7bf9c7d9c",
-      identity: "footerSocialLink",
-      serialNum: 3,
-      info1:
-        '<svg                     class="linkedinsvg"                     xmlns="http://www.w3.org/2000/svg"                     viewBox="0 0 448 512"                   >                     <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />                   </svg>',
-      slug: 'lesssvg-class"linkedinsvg"-xmlns"http:www.w3.org2000svg"-viewbox"0-0-448-512"-greater-lesspath-d"m100.28-448h7.4v148.9h92.88zm53.79-108.1c24.09-108.1-0-83.5-0-53.8a53.79-53.79-0-0-1-107.58-0c0-29.7-24.1-54.3-53.79-54.3zm447.9-448h-92.68v302.4c0-34.7-.7-79.2-48.29-79.2-48.29-0-55.69-37.7-55.69-76.7v448h-92.78v148.9h89.08v40.8h1.3c12.4-23.5-42.69-48.3-87.88-48.3-94-0-111.28-61.9-111.28-142.3v448z"-greater-lesssvggreater',
-      info2: "linkedin",
-      info3:
-        "https://www.linkedin.com/in/dsvdsv-05a10b318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      createdAt: "2024-06-23T06:31:04.925Z",
-      updatedAt: "2024-06-23T06:31:04.925Z",
-      __v: 0,
-    },
-    {
       _id: "6677c1ac68337be7bf9c7dba",
       identity: "footerSocialLink",
-      serialNum: 4,
+      serialNum: 3,
       info1:
         '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 256 256" enable-background="new 0 0 256 256" xml:space="preserve"><g><g><path fill="" d="M130.1,10c-64,0-115.9,51.5-115.9,115c0,21.7,6.1,42,16.6,59.4L10,246l64.2-20.4c16.6,9.1,35.7,14.3,56,14.3c64,0,115.9-51.5,115.9-115C246,61.5,194.1,10,130.1,10L130.1,10z M187.7,168.6c-2.7,6.8-15.1,12.9-20.5,13.2c-5.4,0.3-5.6,4.2-35.2-8.6C102.4,160.3,84.6,129,83.2,127c-1.4-2-11.5-16.4-10.9-30.8c0.6-14.4,8.5-21.3,11.3-24.1c2.8-2.8,6-3.3,8-3.4c2.3,0,3.9-0.1,5.6,0c1.7,0.1,4.3-0.4,6.6,5.6c2.2,6,7.6,20.6,8.3,22.1c0.7,1.5,1.1,3.2,0,5.2c-1.1,1.9-1.6,3.1-3.1,4.8c-1.5,1.7-3.3,3.7-4.6,5c-1.5,1.4-3.2,2.9-1.5,5.9c1.6,3,7.2,12.8,15.7,20.9c10.9,10.4,20.3,13.9,23.2,15.4c2.9,1.6,4.6,1.4,6.4-0.5c1.8-1.9,7.7-8.3,9.8-11.2c2.1-2.9,4-2.3,6.7-1.2c2.7,1.1,16.9,8.7,19.8,10.3c2.9,1.6,4.8,2.4,5.5,3.6C190.7,156,190.5,161.9,187.7,168.6L187.7,168.6z"/></g></g></svg>',
       slug: 'lesssvg-xmlns"http:www.w3.org2000svg"-viewbox"0-0-576-512"greater-lesspath-d"m549.655-124.083c-6.281-23.65-24.787-42.276-48.284-48.597c458.781-64-288-64-288-64s117.22-64-74.629-75.486c-23.497-6.322-42.003-24.947-48.284-48.597-11.412-42.867-11.412-132.305-11.412-132.305s0-89.438-11.412-132.305c6.281-23.65-24.787-41.5-48.284-47.821c117.22-448-288-448-288-448s170.78-0-213.371-11.486c23.497-6.321-42.003-24.171-48.284-47.821-11.412-42.867-11.412-132.305-11.412-132.305s0-89.438-11.412-132.305zm-317.51-213.508v175.185l142.739-81.205-142.739-81.201z"-greater-lesssvggreater',
@@ -229,12 +215,12 @@ export default function Footer() {
               <div class="col-ul">
                 <ul>
                   <li>
-                    <Link to="/Destinations/United-Kingdom" class="col-li">
+                    <Link to="/sdvdsvdsvvd" class="col-li">
                       Box by Designs
                     </Link>
                   </li>
                   <li>
-                    <Link to="/Destinations/Australia" class="col-li">
+                    <Link to="/sdvdsvdsvvd" class="col-li">
                       Product Labels
                     </Link>
                   </li>
@@ -248,7 +234,7 @@ export default function Footer() {
                 <ul>
                   <li>
                     <a
-                      href={`https://api.whatsapp.com/send?phone=00923455005810`}
+                      href={`https://api.whatsapp.com/send?phone=5435345435435`}
                       className="helperlinkcont"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -260,7 +246,7 @@ export default function Footer() {
                     </a>
                   </li>
                   <li>
-                    <Link to="/CookiePolicy" class="col-li">
+                    <Link to="/avsdvdsvd" class="col-li">
                       <Mailsvg className="mailsvgcont" />
                       Info@Sharpedgepackaging.com
                     </Link>

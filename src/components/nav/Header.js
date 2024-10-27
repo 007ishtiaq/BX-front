@@ -15,7 +15,6 @@ import { ReactComponent as Mailsvg } from "../../images/contactUs/mail.svg";
 import { ReactComponent as Clocksvg } from "../../images/headersvgs/clock.svg";
 import { ReactComponent as Facebooksvg } from "../../images/social/facebook.svg";
 import { ReactComponent as Instagramsvg } from "../../images/social/instagram.svg";
-import { ReactComponent as Linkedinsvg } from "../../images/social/linked_in.svg";
 import { ReactComponent as Whatsappsvg } from "../../images/social/Whatsapp.svg";
 import { ReactComponent as Whatsappthin } from "../../images/social/whatsappthin.svg";
 import { ReactComponent as DownArrow } from "../../images/productpage/downbtn.svg";
@@ -244,14 +243,6 @@ const Header = () => {
               rel="noopener noreferrer"
             >
               <Instagramsvg />
-            </a>
-            <a
-              href={`https://www.linkedin.com/in/sdvdsvdsvdsv318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app`}
-              className="helperlinkcont toplinkedinsvg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Linkedinsvg />
             </a>
             <a
               href={`https://api.whatsapp.com/send?phone=3434636546546546`}
