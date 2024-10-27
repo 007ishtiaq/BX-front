@@ -24,7 +24,7 @@ export default function Reviewsbox() {
                     <Personsvg class="customersvg"></Personsvg>
                   </div>
                   <div class="cname">
-                    <p>Asad Ali</p>
+                    <p>Jessica Thompson</p>
                   </div>
                 </div>
                 <div class="creviewcont thiscreviewcont">
@@ -45,11 +45,11 @@ export default function Reviewsbox() {
                   </div>
 
                   <div class="reviewtxt thisreviewtxt">
-                    Study Guide International made my visa application process
-                    stress-free. Their team was always available to assist me,
-                    and they provided clear instructions every step of the way.
-                    I highly recommend their services to anyone looking to study
-                    abroad!
+                    Sharp Edge Packaging provided top-notch packaging solutions
+                    for our products. Their team was attentive, ensuring our
+                    packaging needs were met with precision. Each box was
+                    crafted to perfection, and we couldn't be happier with the
+                    results. I highly recommend them for any packaging needs!
                   </div>
 
                   <div class="varifiedcont thisvarifiedcont">
@@ -66,7 +66,7 @@ export default function Reviewsbox() {
                     <Personsvg class="customersvg"></Personsvg>
                   </div>
                   <div class="cname">
-                    <p>Kamran Ahmad</p>
+                    <p>David Miller</p>
                   </div>
                 </div>
                 <div class="creviewcont thiscreviewcont">
@@ -87,11 +87,11 @@ export default function Reviewsbox() {
                   </div>
 
                   <div class="reviewtxt thisreviewtxt">
-                    Navigating the visa process can be daunting, but Study Guide
-                    International made it seem easy. Their attention to detail
-                    and personalized approach ensured that my application was
-                    flawless. I received my visa without any issues and am now
-                    studying in Canada!
+                    Working with Sharp Edge Packaging made our packaging process
+                    seamless. Their attention to detail and commitment to
+                    quality exceeded our expectations. Every box delivered was
+                    durable and well-designed, giving our products a premium
+                    touch. Highly recommended for reliable packaging!
                   </div>
 
                   <div class="varifiedcont thisvarifiedcont">
@@ -108,7 +108,7 @@ export default function Reviewsbox() {
                     <Personsvg class="customersvg"></Personsvg>
                   </div>
                   <div class="cname">
-                    <p>Asif Khan</p>
+                    <p>Ashley Ramirez</p>
                   </div>
                 </div>
                 <div class="creviewcont thiscreviewcont">
@@ -129,11 +129,11 @@ export default function Reviewsbox() {
                   </div>
 
                   <div class="reviewtxt thisreviewtxt">
-                    Choosing Study Guide International was the best decision I
-                    made for my study abroad plans. Their team was
-                    knowledgeable, supportive, and always available to answer my
-                    questions. They handled my visa application perfectly, and I
-                    received my visa in record time.
+                    Sharp Edge Packaging transformed our packaging experience.
+                    They understood our requirements well and provided sturdy,
+                    eco-friendly boxes that align with our brand. Their service
+                    was timely, and communication was clear throughout. We’re
+                    delighted with the results and recommend them highly!
                   </div>
 
                   <div class="varifiedcont thisvarifiedcont">
@@ -150,7 +150,7 @@ export default function Reviewsbox() {
                     <Personsvg class="customersvg"></Personsvg>
                   </div>
                   <div class="cname">
-                    <p>Sohail Ahmad</p>
+                    <p>Sarah Collins</p>
                   </div>
                 </div>
                 <div class="creviewcont thiscreviewcont">
@@ -171,11 +171,11 @@ export default function Reviewsbox() {
                   </div>
 
                   <div class="reviewtxt thisreviewtxt">
-                    I am incredibly grateful to Study Guide International for
-                    their outstanding service. They guided me through the
-                    complex visa process with ease and professionalism. Their
-                    support was instrumental in securing my visa, and I highly
-                    recommend.
+                    The team at Sharp Edge Packaging went above and beyond to
+                    create packaging that truly represented our brand. They
+                    offered expert guidance, and the boxes were both durable and
+                    visually appealing. If you’re looking for exceptional
+                    packaging, Sharp Edge Packaging is the way to go!
                   </div>
 
                   <div class="varifiedcont thisvarifiedcont">

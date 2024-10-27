@@ -235,10 +235,10 @@
 }
 .reviewtxt {
   font-size: var(--fontsize-emedium);
-  max-height: 10rem;
+  max-height: 11rem;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   white-space: normal;
   text-overflow: ellipsis;

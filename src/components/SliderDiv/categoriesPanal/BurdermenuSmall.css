@@ -8,5 +8,6 @@
 @media (max-width: 700px) {
   .SmallDevices {
     display: block;
+    margin-left: 0.5rem;
   }
 }
