@@ -32,6 +32,9 @@
 .workbtncont {
   margin-top: 3rem;
 }
+.insidecont.aboutworkcont {
+  box-shadow: none;
+}
 /* ***************************************
 **************Responsiveness***********
 *************************************** */

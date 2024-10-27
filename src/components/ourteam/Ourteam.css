@@ -93,15 +93,20 @@
 *************************************** */
 
 @media (max-width: 450px) {
+  .aboutvisionimgcont {
+    flex-direction: column;
+  }
+  .visionimgside,
+  .visiontextside {
+    width: 100%;
+  }
   .aboutcont {
     padding: 0rem 1rem;
   }
   .mainteamcont {
     padding: 1rem;
   }
-  .visiontextside p {
-    font-size: 1.2rem;
-  }
+
   .mainteamcont > p {
     font-size: 1.4rem;
   }

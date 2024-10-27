@@ -25,7 +25,7 @@
   width: 100%;
   background-color: var(--org-primary);
   color: white;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 600;
   width: 60%;
   padding: 2rem;
@@ -85,7 +85,7 @@
     width: 6rem;
   }
   .visiontextside {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding: 1rem;
   }
 }

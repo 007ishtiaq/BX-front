@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Workintro.css";
+import "../../components/partnersbanner/Partnersbanner.css";
 import img1 from "../../images/workintro/1.png";
 import img2 from "../../images/workintro/2.png";
 import img3 from "../../images/workintro/3.png";
@@ -11,7 +12,7 @@ import { useFormik } from "formik";
 import { UserQuoteSchema } from "../../schemas";
 import { toast } from "react-hot-toast";
 
-export default function Workintro() {
+export default function Workintro({ aboutus }) {
   const [mainModalVisible, setMainModalVisible] = useState(false);
   const [noNetModal, setNoNetModal] = useState(false);
 
@@ -78,7 +79,11 @@ export default function Workintro() {
 
   return (
     <div className="cardcontainer">
-      <div className="insidecont contentcont partnercont workcont">
+      <div
+        className={`insidecont contentcont partnercont workcont ${
+          aboutus && "aboutworkcont"
+        }`}
+      >
         <div className="partnerright workcontright">
           <div className="aboveheading">About Us</div>
           <div className="heading">
