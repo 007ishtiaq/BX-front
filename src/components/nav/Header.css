@@ -57,7 +57,11 @@
 .helperlinkcont:hover p {
   color: var(--org-primary);
 }
-
+.binder2 {
+  display: flex;
+  align-items: center;
+  align-content: start;
+}
 /* -------top header > news left----- */
 .newsleft {
   display: flex;
@@ -908,6 +912,9 @@ li:hover > .subnav {
   .sencondapplybtn {
     display: block;
   }
+  .logo-txtsize svg {
+    width: 4.5rem;
+  }
 }
 
 @media (max-width: 590px) {
@@ -966,6 +973,18 @@ li:hover > .subnav {
   .middleheaderrightside {
     grid-column: span 2;
   }
+  .binder {
+    padding: 0.5rem 0;
+  }
+  .sticky .binder {
+    padding: 0;
+  }
+  .middlemainheader.sticky .logo-txtsize svg {
+    width: 4rem;
+  }
+  .logo-txtsize svg {
+    width: 4.5rem;
+  }
   .middle-header {
     padding: 1rem 1rem;
   }
@@ -1016,13 +1035,7 @@ li:hover > .subnav {
     justify-content: space-between;
     width: 100%;
   }
-  /* .Destinations2 {
-    display: flex;
-    align-items: center;
-  } */
-  .logo-txtsize svg {
-    width: 6rem;
-  }
+
   .logo-sampletxt {
     font-size: 1.5rem;
   }

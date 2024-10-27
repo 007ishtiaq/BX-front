@@ -9,6 +9,7 @@ import "../../pages/shop/searchstyle.css";
 import { getCategories } from "../../functions/category";
 import { getBrands } from "../../functions/brands";
 import { ReactComponent as Clearsvg } from "../../images/clear.svg";
+import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 
 const { SubMenu, ItemGroup } = Menu;
 
@@ -18,8 +19,13 @@ export default function SearchFilter({
   setPage,
   perPage,
   setProductsCount,
-  categoryslug,
 }) {
+  function useQuery() {
+    return new URLSearchParams(useLocation().search);
+  }
+  let query = useQuery();
+  let categoryslug = query.get("category");
+
   const [categories, setCategories] = useState([]); // to show the available list of categories
   const [category, setCategory] = useState(categoryslug || "");
   const [brands, setBrands] = useState([]); // to show the available list of brands
@@ -59,15 +65,16 @@ export default function SearchFilter({
   };
 
   useEffect(() => {
-    if (category) {
-      fetchProducts({ category: category });
+    if (categoryslug) {
+      setCategory(categoryslug);
+      fetchProducts({ category: categoryslug });
       //reset
       // setCategory("");
       setBrand("");
     } else {
       loadAllProducts();
     }
-  }, [page, text]);
+  }, [page, categoryslug]);
 
   useEffect(() => {
     setPage(1);
@@ -97,6 +104,10 @@ export default function SearchFilter({
       type: "SEARCH_QUERY",
       payload: { text: "" },
     });
+    dispatch({
+      type: "SET_SIDENAV_VISIBLE",
+      payload: false,
+    });
     // reset
     setBrand("");
     setCategory(e.target.value);
@@ -122,6 +133,10 @@ export default function SearchFilter({
     dispatch({
       type: "SEARCH_QUERY",
       payload: { text: "" },
+    });
+    dispatch({
+      type: "SET_SIDENAV_VISIBLE",
+      payload: false,
     });
     setCategory("");
     setBrand(e.target.value);
@@ -156,7 +171,7 @@ export default function SearchFilter({
         <SubMenu
           class="filtercont"
           key="1"
-          title={<div class="filterheading">CATEGORY</div>}
+          title={<div class="filterheading">Populer Box Designs</div>}
         >
           <div style={{ maringTop: "10px" }}>{showCategories()}</div>
         </SubMenu>
@@ -164,7 +179,7 @@ export default function SearchFilter({
         <SubMenu
           class="filtercont"
           key="2"
-          title={<div class="filterheading">BRAND</div>}
+          title={<div class="filterheading">Populer Industories</div>}
         >
           <div style={{ maringTop: "-10px" }}>{showBrands()}</div>
         </SubMenu>

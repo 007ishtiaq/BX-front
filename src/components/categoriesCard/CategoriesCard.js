@@ -52,7 +52,7 @@ export default function CategoriesCard({ slug }) {
         </div>
         {loading ? (
           <div class="contentcont categorycont">
-            <CategoryBannerSkull clone={10} />
+            <CategoryBannerSkull clone={12} />
           </div>
         ) : (
           <div class="contentcont categorycont">

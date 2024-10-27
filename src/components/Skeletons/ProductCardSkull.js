@@ -43,12 +43,7 @@ export default function ProductCardSkull({ clone, contWidth, FlashSalesCont }) {
           </div>
         </div>
         <div className="imgratecont">
-          <div className="whalf">
-            <Skeleton />
-          </div>
-          <div className="whalf">
-            <Skeleton />
-          </div>
+          <div className="whalf"></div>
         </div>
         <p class="prodnameside">
           <Skeleton />
@@ -58,9 +53,6 @@ export default function ProductCardSkull({ clone, contWidth, FlashSalesCont }) {
           </div>
         </p>
         <div className="imgratecont">
-          <div className="whalf">
-            <Skeleton />
-          </div>
           <div className="whalf">
             <Skeleton />
           </div>

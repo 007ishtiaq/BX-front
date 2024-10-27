@@ -174,7 +174,7 @@ export default function ProductReviews({
                             {`${
                               review.postedBy && review.posterName
                                 ? review.posterName
-                                : review.postedBy.name
+                                : "Unknown"
                             }`}{" "}
                           </p>
                         </div>

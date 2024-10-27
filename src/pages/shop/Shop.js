@@ -4,13 +4,11 @@ import "./searchstyle.css";
 import "../../components/ProductCards/ProductCardsAll.css";
 import _ from "lodash";
 import FlashsaleProductCard from "../../components/ProductCards/FlashsaleProductCard";
-import { ReactComponent as Filtersvg } from "../../images/filter.svg";
 import SearchFilter from "../../components/searchfilter/SearchFilter";
 import SideDrawer from "../../components/SideDrawer/SideDrawer";
 import NoItemFound from "../../components/cards/NoItemFound/NoItemFound";
 import { Pagination } from "antd";
 import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -42,12 +40,6 @@ const Shop = () => {
     };
   }, []);
 
-  function useQuery() {
-    return new URLSearchParams(useLocation().search);
-  }
-  let query = useQuery();
-  let categoryslug = query.get("category");
-
   const close = () => {
     // setFilterDrawervisible(false);
     dispatch({
@@ -72,7 +64,6 @@ const Shop = () => {
               setPage={setPage}
               perPage={perPage}
               setProductsCount={setProductsCount}
-              categoryslug={categoryslug}
             />
           </div>
         ) : (
@@ -84,7 +75,6 @@ const Shop = () => {
               setPage={setPage}
               perPage={perPage}
               setProductsCount={setProductsCount}
-              categoryslug={categoryslug}
             />
           </SideDrawer>
         )}

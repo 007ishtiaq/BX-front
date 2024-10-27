@@ -38,6 +38,10 @@ const NavItemes = () => {
   const currentPath = location.pathname + location.search;
 
   const handleMenuClick = (e) => {
+    dispatch({
+      type: "SET_SIDENAV_VISIBLE",
+      payload: false,
+    });
     history.push(e.key);
   };
 
@@ -66,7 +70,7 @@ const NavItemes = () => {
             }
           >
             {categories.map((c) => (
-              <Menu.Item key={`/category/?category=${c.slug}`}>
+              <Menu.Item key={`/shop/?category=${c._id}`}>
                 <div className="liitemcont">
                   <div className="navsvgcont">
                     <Squaresvg />

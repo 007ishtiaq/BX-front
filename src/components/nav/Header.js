@@ -26,6 +26,7 @@ import { useFormik } from "formik";
 import { UserQuoteSchema } from "../../schemas";
 import { toast } from "react-hot-toast";
 import NoNetModal from "../../components/NoNetModal/NoNetModal";
+import { getCategories } from "../../functions/category";
 
 const Header = () => {
   const [staticTexts, setStaticTexts] = useState([]);
@@ -36,6 +37,7 @@ const Header = () => {
   const [mainModalVisible, setMainModalVisible] = useState(false);
   const [secondModalVisible, setSecondModalVisible] = useState(false);
   const [noNetModal, setNoNetModal] = useState(false);
+  const [categories, setCategories] = useState([]);
 
   const history = useHistory();
   let dispatch = useDispatch();
@@ -55,6 +57,9 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
+    getCategories().then((c) => {
+      setCategories(c.data);
+    });
     getRelatedStaticText("topcouponbar").then((t) => setStaticTexts(t.data));
     getRelatedStaticText("contactpageinfo").then((t) => setContactinfo(t.data));
   }, []);
@@ -67,46 +72,7 @@ const Header = () => {
     { name: "Home", path: "/" },
     {
       name: "Custom Boxes",
-      subNav: [
-        {
-          name: "Eco Friendly Packaging",
-          path: "/category/?category=eco-friendly-boxes",
-        },
-        {
-          name: "Beverage and Food Packaging",
-          path: "/category/?category=food-and-beverage",
-        },
-        {
-          name: "Custom Gift Packaging",
-          path: "/category/?category=gift-boxes",
-        },
-        {
-          name: "Metalized Packaging",
-          path: "/category/?category=metalized-boxes",
-        },
-        {
-          name: "Business Card Boxes",
-          path: "/category/?category=business-card-boxes",
-        },
-        {
-          name: "Retail Packaging",
-          path: "/category/?category=book-boxes",
-        },
-        {
-          name: "Cardboard Dispenser",
-          path: "/category/?category=cardboard-dispenser",
-        },
-        {
-          name: "Retail Product Boxes",
-          path: "/category/?category=retail-product-boxes",
-        },
-        { name: "Paper Boxes", path: "/category/?category=paper-boxes" },
-        {
-          name: "Invitation Card Boxes",
-          path: "/category/?category=invitation-card-boxes",
-        },
-        { name: "View All", path: "/shop" },
-      ],
+      subNav: categories,
     },
     {
       name: "Box by Designs",
@@ -261,35 +227,37 @@ const Header = () => {
         <div id="Mainheader" className="middlemainheader">
           <div className="middle-header">
             <div className="binder">
-              {windowWidth <= 700 && <BurdermenuSmall />}
+              <div className="binder2">
+                {windowWidth <= 700 && <BurdermenuSmall />}
 
-              <Link to="/">
-                <div className="logodiv">
-                  <div className="logo-txtsize">
-                    <Logotextblack />
+                <Link to="/">
+                  <div className="logodiv">
+                    <div className="logo-txtsize">
+                      <Logotextblack />
+                    </div>
+                    <div className="logo-sampletxt">Sharp Edge Packaging</div>
+                    {user && user.role === "admin" && (
+                      <>
+                        <Link
+                          to="/AdminPanel?page=SubmittedForms"
+                          className="apllyBtn btnadmin"
+                        >
+                          <div className="acsvg">
+                            <Adminsvg />
+                            <span className="adminspan">Admin</span>
+                          </div>
+                        </Link>
+                        <button onClick={logout} className="apllyBtn btnadmin">
+                          <div className="acsvg logoutsvg">
+                            <LogoutOutlined />
+                            <span className="logoutspan">Logout</span>
+                          </div>
+                        </button>
+                      </>
+                    )}
                   </div>
-                  <div className="logo-sampletxt">Sharp Edge Packaging</div>
-                  {user && user.role === "admin" && (
-                    <>
-                      <Link
-                        to="/AdminPanel?page=SubmittedForms"
-                        className="apllyBtn btnadmin"
-                      >
-                        <div className="acsvg">
-                          <Adminsvg />
-                          <span className="adminspan">Admin</span>
-                        </div>
-                      </Link>
-                      <button onClick={logout} className="apllyBtn btnadmin">
-                        <div className="acsvg logoutsvg">
-                          <LogoutOutlined />
-                          <span className="logoutspan">Logout</span>
-                        </div>
-                      </button>
-                    </>
-                  )}
-                </div>
-              </Link>
+                </Link>
+              </div>
               <div className="sencondapplybtn">
                 <ShippingModal
                   onModalok={handleSubmit}
@@ -331,12 +299,14 @@ const Header = () => {
                             <li
                               key={subIndex}
                               className={
-                                location.pathname === subItem.path
+                                location.pathname === subItem.name
                                   ? "active"
                                   : ""
                               }
                             >
-                              <Link to={subItem.path}>{subItem.name}</Link>
+                              <Link to={`/shop/?category=${subItem._id}`}>
+                                {subItem.name}
+                              </Link>
                             </li>
                           ))}
                         </ul>
