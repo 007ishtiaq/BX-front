@@ -211,6 +211,7 @@ const App = () => {
               component={RegisterComplete}
             />
             <Route exact path="/shop" component={Shop} />
+            <Route exact path="/shop?category=:slug" component={Shop} />
             {/* <Route exact path="/forgot/password" component={ForgotPassword} /> */}
 
             {/* Admin protected Routes */}

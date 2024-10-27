@@ -18,9 +18,10 @@ export default function SearchFilter({
   setPage,
   perPage,
   setProductsCount,
+  categoryslug,
 }) {
   const [categories, setCategories] = useState([]); // to show the available list of categories
-  const [category, setCategory] = useState(""); // selected categories to search
+  const [category, setCategory] = useState(categoryslug || "");
   const [brands, setBrands] = useState([]); // to show the available list of brands
   const [brand, setBrand] = useState("");
 
@@ -58,10 +59,10 @@ export default function SearchFilter({
   };
 
   useEffect(() => {
-    if (text) {
-      fetchProducts({ query: text });
+    if (category) {
+      fetchProducts({ category: category });
       //reset
-      setCategory("");
+      // setCategory("");
       setBrand("");
     } else {
       loadAllProducts();

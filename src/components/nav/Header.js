@@ -108,7 +108,10 @@ const Header = () => {
         { name: "View All", path: "/shop" },
       ],
     },
-    { name: "Box by Designs", path: "/shop" },
+    {
+      name: "Box by Designs",
+      path: "/shop/?category=670955d0b56d57c109cb06b4",
+    },
     {
       name: "Product Labels",
       path: "/category/?category=retail-product-boxes",

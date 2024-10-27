@@ -10,6 +10,7 @@ import SideDrawer from "../../components/SideDrawer/SideDrawer";
 import NoItemFound from "../../components/cards/NoItemFound/NoItemFound";
 import { Pagination } from "antd";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -41,13 +42,12 @@ const Shop = () => {
     };
   }, []);
 
-  const toggle = () => {
-    // setFilterDrawervisible(!FilterDrawervisible);
-    dispatch({
-      type: "SET_SIDENAV_VISIBLE",
-      payload: true,
-    });
-  };
+  function useQuery() {
+    return new URLSearchParams(useLocation().search);
+  }
+  let query = useQuery();
+  let categoryslug = query.get("category");
+
   const close = () => {
     // setFilterDrawervisible(false);
     dispatch({
@@ -72,6 +72,7 @@ const Shop = () => {
               setPage={setPage}
               perPage={perPage}
               setProductsCount={setProductsCount}
+              categoryslug={categoryslug}
             />
           </div>
         ) : (
@@ -83,6 +84,7 @@ const Shop = () => {
               setPage={setPage}
               perPage={perPage}
               setProductsCount={setProductsCount}
+              categoryslug={categoryslug}
             />
           </SideDrawer>
         )}
