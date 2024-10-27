@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./MegaSlide.css";
-import bannerimage from "../../images/megabanner/1.png";
+import bannerimage from "../../images/megabanner/1.webp";
 import ShippingModal from "../../components/modal/ShippingModal";
 import ShippingForm from "../../components/forms/ShippingForm";
 import { requestUserQuote } from "../../functions/user";

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Scorebanner.css";
-import subjectimg from "../../images/scorebanner/subject.jpg";
+import subjectimg from "../../images/scorebanner/subject.webp";
 import ShippingModal from "../../components/modal/ShippingModal";
 import ShippingForm from "../../components/forms/ShippingForm";
 import { requestUserQuote } from "../../functions/user";

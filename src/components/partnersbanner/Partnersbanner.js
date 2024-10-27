@@ -1,10 +1,17 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Partnersbanner.css";
-import uni1 from "../../images/partnerdiv/1.png";
-import uni2 from "../../images/partnerdiv/2.png";
-import uni3 from "../../images/partnerdiv/3.png";
-import uni4 from "../../images/partnerdiv/4.png";
-import uni5 from "../../images/partnerdiv/5.png";
+import uni1 from "../../images/partnerdiv/1.webp";
+import uni2 from "../../images/partnerdiv/2.webp";
+import uni3 from "../../images/partnerdiv/3.webp";
+import uni4 from "../../images/partnerdiv/4.webp";
+import uni5 from "../../images/partnerdiv/5.webp";
+import uni6 from "../../images/partnerdiv/6.webp";
+import uni7 from "../../images/partnerdiv/7.webp";
+import uni8 from "../../images/partnerdiv/8.webp";
+import uni9 from "../../images/partnerdiv/9.webp";
+import uni10 from "../../images/partnerdiv/10.webp";
+import uni11 from "../../images/partnerdiv/11.webp";
+import uni12 from "../../images/partnerdiv/12.webp";
 
 import ShippingModal from "../../components/modal/ShippingModal";
 import ShippingForm from "../../components/forms/ShippingForm";
@@ -13,7 +20,20 @@ import { useFormik } from "formik";
 import { UserQuoteSchema } from "../../schemas";
 import { toast } from "react-hot-toast";
 
-const images = [uni1, uni2, uni3, uni4, uni5];
+const images = [
+  uni1,
+  uni2,
+  uni3,
+  uni4,
+  uni5,
+  uni6,
+  uni7,
+  uni8,
+  uni9,
+  uni10,
+  uni11,
+  uni12,
+];
 const delay = 2000;
 
 export default function Partnersbanner() {

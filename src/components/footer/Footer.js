@@ -20,8 +20,8 @@ export default function Footer() {
       identity: "footertag",
       serialNum: 1,
       info1:
-        "Let us help you yield your true academic potential for foreign education. To configure and discover an apt international enrolment strategy, get in touch!",
-      slug: "let-us-help-you-yield-your-true-academic-potential-for-foreign-education.-to-configure-and-discover-an-apt-international-enrolment-strategy-get-in-touch!",
+        "Delivering tailored box packaging solutions for every product, ensuring quality and innovation in every box.",
+      slug: "Delivering tailored box packaging solutions for every product, ensuring quality and innovation in every box.",
       info2: "",
       info3: "",
       createdAt: "2024-06-23T06:21:11.350Z",
@@ -32,8 +32,7 @@ export default function Footer() {
       _id: "6677c07f68337be7bf9c7d54",
       identity: "footertag",
       serialNum: 2,
-      info1:
-        "Copyright © 2023 Study Guide International, LLC. All rights reserved.",
+      info1: "Copyright © 2024 Sharp Edge Packaging, LLC. All rights reserved.",
       slug: "copyright-(c)-2023-Study-Guide-llc.-all-rights-reserved.",
       info2: "",
       info3: "",
@@ -52,7 +51,7 @@ export default function Footer() {
       slug: 'lesssvg-class"fbsvg"-xmlns"http:www.w3.org2000svg"-viewbox"0-0-320-512"-greater-lesspath-d"m279.14-288l14.22-92.66h-88.91v-60.13c0-25.35-12.42-50.06-52.24-50.06h40.42v6.26s260.43-0-225.36-0c-73.22-0-121.08-44.38-121.08-124.72v70.62h22.89v288h81.39v224h100.17v288z"-greater-lesssvggreater',
       info2: "facebook",
       info3:
-        "https://www.facebook.com/profile.php?id=100069348382258&mibextid=ZbWKwL",
+        "https://www.facebook.com/profile.php?id=10006da9348382258&mibextid=ZbWKwL",
       createdAt: "2024-06-23T06:31:40.831Z",
       updatedAt: "2024-06-23T06:31:40.831Z",
       __v: 0,
@@ -66,7 +65,7 @@ export default function Footer() {
       slug: 'lesssvg-xmlns"http:www.w3.org2000svg"-viewbox"0-0-512-512"greater-lesspath-d"m459.37-151.716c.325-4.548.325-9.097.325-13.645-0-138.72-105.583-298.558-298.558-298.558-59.452-0-114.68-17.219-161.137-47.106-8.447.974-16.568-1.299-25.34-1.299-49.055-0-94.213-16.568-130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772-6.498.974-12.995-1.624-19.818-1.624-9.421-0-18.843-1.3-27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969-7.797-30.214-12.67-47.431-13.319-28.264-18.843-46.781-51.005-46.781-87.391-0-19.492-5.197-37.36-14.294-52.954-51.655-63.675-129.3-105.258-216.365-109.807-1.624-7.797-2.599-15.918-2.599-24.04-0-57.828-46.782-104.934-104.934-104.934-30.213-0-57.502-12.67-76.67-33.137-23.715-4.548-46.456-13.32-66.599-25.34-7.798-24.366-24.366-44.833-46.132-57.827-21.117-2.273-41.584-8.122-60.426-16.243-14.292-20.791-32.161-39.308-52.628-54.253z"-greater-lesssvggreater',
       info2: "instagram",
       info3:
-        "https://www.instagram.com/stud_yguideinternational?igsh=aHBlYWNiNHlkaW1i",
+        "https://www.instagram.com/stud_yguideinternational?igsh=aHBlYWNiNHsadslkaW1i",
       createdAt: "2024-06-23T06:32:39.818Z",
       updatedAt: "2024-06-23T06:32:39.818Z",
       __v: 0,
@@ -80,7 +79,7 @@ export default function Footer() {
       slug: 'lesssvg-class"linkedinsvg"-xmlns"http:www.w3.org2000svg"-viewbox"0-0-448-512"-greater-lesspath-d"m100.28-448h7.4v148.9h92.88zm53.79-108.1c24.09-108.1-0-83.5-0-53.8a53.79-53.79-0-0-1-107.58-0c0-29.7-24.1-54.3-53.79-54.3zm447.9-448h-92.68v302.4c0-34.7-.7-79.2-48.29-79.2-48.29-0-55.69-37.7-55.69-76.7v448h-92.78v148.9h89.08v40.8h1.3c12.4-23.5-42.69-48.3-87.88-48.3-94-0-111.28-61.9-111.28-142.3v448z"-greater-lesssvggreater',
       info2: "linkedin",
       info3:
-        "https://www.linkedin.com/in/study-guide-05a10b318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        "https://www.linkedin.com/in/dsvdsv-05a10b318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       createdAt: "2024-06-23T06:31:04.925Z",
       updatedAt: "2024-06-23T06:31:04.925Z",
       __v: 0,
@@ -93,7 +92,7 @@ export default function Footer() {
         '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 256 256" enable-background="new 0 0 256 256" xml:space="preserve"><g><g><path fill="" d="M130.1,10c-64,0-115.9,51.5-115.9,115c0,21.7,6.1,42,16.6,59.4L10,246l64.2-20.4c16.6,9.1,35.7,14.3,56,14.3c64,0,115.9-51.5,115.9-115C246,61.5,194.1,10,130.1,10L130.1,10z M187.7,168.6c-2.7,6.8-15.1,12.9-20.5,13.2c-5.4,0.3-5.6,4.2-35.2-8.6C102.4,160.3,84.6,129,83.2,127c-1.4-2-11.5-16.4-10.9-30.8c0.6-14.4,8.5-21.3,11.3-24.1c2.8-2.8,6-3.3,8-3.4c2.3,0,3.9-0.1,5.6,0c1.7,0.1,4.3-0.4,6.6,5.6c2.2,6,7.6,20.6,8.3,22.1c0.7,1.5,1.1,3.2,0,5.2c-1.1,1.9-1.6,3.1-3.1,4.8c-1.5,1.7-3.3,3.7-4.6,5c-1.5,1.4-3.2,2.9-1.5,5.9c1.6,3,7.2,12.8,15.7,20.9c10.9,10.4,20.3,13.9,23.2,15.4c2.9,1.6,4.6,1.4,6.4-0.5c1.8-1.9,7.7-8.3,9.8-11.2c2.1-2.9,4-2.3,6.7-1.2c2.7,1.1,16.9,8.7,19.8,10.3c2.9,1.6,4.8,2.4,5.5,3.6C190.7,156,190.5,161.9,187.7,168.6L187.7,168.6z"/></g></g></svg>',
       slug: 'lesssvg-xmlns"http:www.w3.org2000svg"-viewbox"0-0-576-512"greater-lesspath-d"m549.655-124.083c-6.281-23.65-24.787-42.276-48.284-48.597c458.781-64-288-64-288-64s117.22-64-74.629-75.486c-23.497-6.322-42.003-24.947-48.284-48.597-11.412-42.867-11.412-132.305-11.412-132.305s0-89.438-11.412-132.305c6.281-23.65-24.787-41.5-48.284-47.821c117.22-448-288-448-288-448s170.78-0-213.371-11.486c23.497-6.321-42.003-24.171-48.284-47.821-11.412-42.867-11.412-132.305-11.412-132.305s0-89.438-11.412-132.305zm-317.51-213.508v175.185l142.739-81.205-142.739-81.201z"-greater-lesssvggreater',
       info2: "Whatsapp",
-      info3: "https://api.whatsapp.com/send?phone=00923455005810",
+      info3: "https://api.whatsapp.com/send?phone=6456546456546",
       createdAt: "2024-06-23T06:33:16.234Z",
       updatedAt: "2024-06-23T06:33:16.234Z",
       __v: 0,
@@ -101,17 +100,6 @@ export default function Footer() {
   ]);
 
   const dispatch = useDispatch();
-
-  // useEffect(() => {
-  //   getRelatedStaticText("footertag").then((t) => {
-  //     setFootertag(t.data);
-  //     console.log("footertag", t.data);
-  //   });
-  //   getRelatedStaticText("footerSocialLink").then((res) => {
-  //     console.log("footerSocialLink", res.data);
-  //     setSociallinks(res.data);
-  //   });
-  // }, []);
 
   const htmlToRender = (htmlString) => {
     return <div dangerouslySetInnerHTML={{ __html: htmlString }} />;
@@ -229,45 +217,25 @@ export default function Footer() {
                   </li>
 
                   <li>
-                    <Link to="/Stories" class="col-li">
-                      Success Stories
-                    </Link>
-                  </li>
-                  <li>
                     <Link to="/ContactUs" class="col-li">
                       Contact us
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/Destinations/sweden" class="col-li">
-                      Sweden
                     </Link>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class="footer-colum">
-              <div class="col-heading">Destinations</div>
+            <div class="footer-colum footercolumhide">
+              <div class="col-heading">Populer Categories</div>
               <div class="col-ul">
                 <ul>
                   <li>
                     <Link to="/Destinations/United-Kingdom" class="col-li">
-                      United Kingdom
+                      Box by Designs
                     </Link>
                   </li>
                   <li>
                     <Link to="/Destinations/Australia" class="col-li">
-                      Australia
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/Destinations/France" class="col-li">
-                      France
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/Destinations/Denmark" class="col-li">
-                      Denmark
+                      Product Labels
                     </Link>
                   </li>
                 </ul>
@@ -275,7 +243,7 @@ export default function Footer() {
             </div>
 
             <div class="footer-colum">
-              <div class="col-heading">Study Guide International</div>
+              <div class="col-heading">Sharp Edge Packaging</div>
               <div class="col-ul">
                 <ul>
                   <li>
@@ -287,40 +255,14 @@ export default function Footer() {
                     >
                       <div className="helperlinkcont">
                         <Callsvg /> <Whatsappthin className="wpthinsvg" />
-                        <p className="col-li">+92 322 5005810</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href={`https://api.whatsapp.com/send?phone=00923210378899`}
-                      className="helperlinkcont"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <div className="helperlinkcont">
-                        <Callsvg /> <Whatsappthin className="wpthinsvg" />
-                        <p className="col-li">+92 321 0378899</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href={`https://api.whatsapp.com/send?phone=00923455005810`}
-                      className="helperlinkcont"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <div className="helperlinkcont">
-                        <Callsvg /> <Whatsappthin className="wpthinsvg" />
-                        <p className="col-li">+92 300 8478889</p>
+                        <p className="col-li">+1 832 564132589</p>
                       </div>
                     </a>
                   </li>
                   <li>
                     <Link to="/CookiePolicy" class="col-li">
                       <Mailsvg className="mailsvgcont" />
-                      Info@Studyguideint.com
+                      Info@Sharpedgepackaging.com
                     </Link>
                   </li>
                 </ul>

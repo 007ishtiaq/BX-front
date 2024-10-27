@@ -2,9 +2,9 @@ import React from "react";
 import "./Trustbox.css";
 import "../visatypes/Visatypes.css";
 
-import img1 from "../../images/trustbox/1.jpg";
-import img2 from "../../images/trustbox/2.jpg";
-import img3 from "../../images/trustbox/3.jpg";
+import img1 from "../../images/trustbox/1.webp";
+import img2 from "../../images/trustbox/2.webp";
+import img3 from "../../images/trustbox/3.webp";
 import { ReactComponent as Freesvg } from "../../images/visatypes/free.svg";
 import { ReactComponent as Pricesvg } from "../../images/visatypes/price.svg";
 import { ReactComponent as Supportsvg } from "../../images/visatypes/support.svg";

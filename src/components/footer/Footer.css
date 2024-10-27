@@ -340,6 +340,24 @@ footer {
     font-size: 1.4rem;
   }
 }
+@media (max-width: 550px) {
+  .footer-colum.footercolumhide {
+    display: none;
+  }
+  .center-footer {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 3rem;
+  }
+  .footer-colum {
+    grid-row: 2;
+  }
+  .footer-logo-side {
+    grid-column: span 2;
+  }
+  .footer-logo-side {
+    padding: 0;
+  }
+}
 @media (max-width: 450px) {
   .optin-form {
     width: 100%;
