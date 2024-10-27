@@ -230,7 +230,7 @@ const Header = () => {
           </div>
           <div className="newsright">
             <a
-              href="https://www.facebook.com/profile.php?id=100069348382258&mibextid=ZbWKwL"
+              href="https://www.facebook.com/profile.php?id=10sdv00sdv6sdv9348382258&mibextid=ZbWKwL"
               className="helperlinkcont"
               target="_blank"
               rel="noopener noreferrer"
@@ -238,7 +238,7 @@ const Header = () => {
               <Facebooksvg />
             </a>
             <a
-              href="https://www.instagram.com/stud_yguideinternational?igsh=aHBlYWNiNHlkaW1i"
+              href="https://www.instagram.com/dvsdvdsvdsvnal?igsh=aHBlYWNiNHlkaW1i"
               className="helperlinkcont"
               target="_blank"
               rel="noopener noreferrer"
@@ -246,7 +246,7 @@ const Header = () => {
               <Instagramsvg />
             </a>
             <a
-              href={`https://www.linkedin.com/in/study-guide-05a10b318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app`}
+              href={`https://www.linkedin.com/in/sdvdsvdsvdsv318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app`}
               className="helperlinkcont toplinkedinsvg"
               target="_blank"
               rel="noopener noreferrer"
@@ -254,7 +254,7 @@ const Header = () => {
               <Linkedinsvg />
             </a>
             <a
-              href={`https://api.whatsapp.com/send?phone=00923455005810`}
+              href={`https://api.whatsapp.com/send?phone=3434636546546546`}
               className="helperlinkcont"
               target="_blank"
               rel="noopener noreferrer"
