@@ -21,61 +21,12 @@ export default function SideDrawer(props) {
           <div className="SideDrawerHeader">
             <div className="sidedrawertop">
               <div class="logodiv">
-                <div class="logo-txtsize">
+                <div className="logo-txtsize">
                   <Logotextblack />
                 </div>
+                <div className="logo-sampletxt">Sharp Edge Packaging</div>
               </div>
               <CloseOutlined onClick={props.close} className="clear" />
-            </div>
-            <div className="sidedrawergreet">
-              {user && user.name ? (
-                <>
-                  <div class="namecont">
-                    <p>Hello, {user && user.name && user && user.name}</p>
-                  </div>
-                  <div class="varifiedinfocont">
-                    <div class="varifiedinfo">
-                      <div class="personvarifiedsvg">
-                        <Tickchecksvg />
-                      </div>
-                      <div class="varifiedinfotext">Varified Account</div>
-                    </div>
-                  </div>
-                </>
-              ) : (
-                <div className="sidenavauthbtns">
-                  <div className="noauthcont noauthbig">
-                    <Link to="/login">
-                      <button className="noauthbtn">
-                        <div className="noauthsvg">
-                          <Personsvg />
-                        </div>
-                        <p> Sign In </p>
-                      </button>
-                    </Link>
-                    <Link to="/register">
-                      <button className="noauthbtn regisbtn">
-                        <div className="noauthsvg">
-                          <Personsvg />
-                        </div>
-                        <p> Register </p>
-                      </button>
-                    </Link>
-                  </div>
-                  <div className="noauthmediam">
-                    <div className="noauthcont">
-                      <Link to="/login">
-                        <button className="noauthbtn">
-                          <div className="noauthsvg">
-                            <Personsvg />
-                          </div>
-                          <p> Login </p>
-                        </button>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              )}
             </div>
           </div>
         )}

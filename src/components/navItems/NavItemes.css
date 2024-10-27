@@ -32,6 +32,14 @@
   align-items: center;
   transition: 0.5s;
 }
+.navsvgcont {
+  display: flex;
+  width: 2rem;
+}
+.navsvgcont svg {
+  width: 100%;
+  fill: gray;
+}
 /* ----antd menu styling and reseting  */
 .ant-menu {
   color: rgb(0 0 0 / 90%);
@@ -48,14 +56,23 @@
     rgba(0, 0, 0, 0.9)
   );
 }
-
+.ant-menu-sub.ant-menu-inline > .ant-menu-item,
+.ant-menu-sub.ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title {
+  height: 3.5rem !important;
+}
 .ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title {
-  height: 31px;
-  line-height: 31px;
+  height: 3.5rem !important;
+  line-height: 3rem !important;
 }
 .ant-menu-inline > .ant-menu-item {
-  height: 31px;
-  line-height: 31px;
+  height: 3.5rem !important;
+  line-height: 3rem !important;
+}
+.ant-menu-sub.ant-menu-inline > .ant-menu-item {
+  display: flex;
+  align-items: center;
+  height: 3.5rem !important;
+  line-height: 3rem !important;
 }
 .ant-menu-vertical .ant-menu-item:not(:last-child),
 .ant-menu-vertical-left .ant-menu-item:not(:last-child),
@@ -64,10 +81,6 @@
   margin-bottom: 4px;
 }
 
-.ant-menu-sub.ant-menu-inline > .ant-menu-item {
-  height: 31px;
-  line-height: 31px;
-}
 .ant-menu-item-selected,
 .ant-menu-submenu-selected,
 .ant-menu-submenu-title:hover,

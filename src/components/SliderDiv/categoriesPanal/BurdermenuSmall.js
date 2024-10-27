@@ -1,12 +1,13 @@
-import React, { useState, Suspense, lazy } from "react";
+import React from "react";
 import "./BurdermenuSmall.css";
 import Burdermenu from "../../Burgermenu/Burdermeun";
-// import NavItemes from "../../navItems/NavItemes";
+import SideDrawer from "../../SideDrawer/SideDrawer";
+import NavItemes from "../../navItems/NavItemes";
 import { useDispatch, useSelector } from "react-redux";
 
 //small size left drawer - all components here
 const BurdermenuSmall = () => {
-  // const [SideDrawervisible, setSideDrawervisible] = useState(false);
+  const { mobileSideNav } = useSelector((state) => ({ ...state }));
   const dispatch = useDispatch();
 
   const toggle = () => {
@@ -14,23 +15,21 @@ const BurdermenuSmall = () => {
       type: "SET_SIDENAV_VISIBLE",
       payload: true,
     });
-    // setSideDrawervisible(!SideDrawervisible);
   };
-  // const close = () => {
-  //   setSideDrawervisible(false);
-  // };
-
-  // const SideDrawer = lazy(() => import("../../SideDrawer/SideDrawer"));
+  const close = () => {
+    dispatch({
+      type: "SET_SIDENAV_VISIBLE",
+      payload: false,
+    });
+  };
 
   return (
     <>
       <div className="SmallDevices">
         <Burdermenu click={toggle} />
-        {/* <Suspense fallback={" "}>
-          <SideDrawer Open={SideDrawervisible} close={close}>
-            <div>items here</div>
-          </SideDrawer>
-        </Suspense> */}
+        <SideDrawer Open={mobileSideNav} close={close}>
+          <NavItemes />
+        </SideDrawer>
       </div>
     </>
   );

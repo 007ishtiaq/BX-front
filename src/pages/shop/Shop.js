@@ -75,28 +75,16 @@ const Shop = () => {
             />
           </div>
         ) : (
-          <div className="smallfilterbtncont">
-            <div onClick={toggle} className="smallfilterbtncont btn btnsecond">
-              <div className="filtersvgcont">
-                <Filtersvg />
-              </div>
-              <p>
-                Filter Based on <span>Category</span> | <span>Brand</span> |{" "}
-                <span>Color</span>
-                {JSON.stringify(mobileSideNav)}
-              </p>
-            </div>
-            <SideDrawer Open={mobileSideNav} close={close} Drawer="Filter">
-              <SearchFilter
-                products={products}
-                setProducts={setProducts}
-                page={page}
-                setPage={setPage}
-                perPage={perPage}
-                setProductsCount={setProductsCount}
-              />
-            </SideDrawer>
-          </div>
+          <SideDrawer Open={mobileSideNav} close={close} Drawer="Filter">
+            <SearchFilter
+              products={products}
+              setProducts={setProducts}
+              page={page}
+              setPage={setPage}
+              perPage={perPage}
+              setProductsCount={setProductsCount}
+            />
+          </SideDrawer>
         )}
 
         <div className="filterproright">
