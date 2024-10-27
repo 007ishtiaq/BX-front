@@ -76,11 +76,11 @@ const Header = () => {
     },
     {
       name: "Box by Designs",
-      path: "/shop/?category=670955d0b56d57c109cb06b4",
+      path: `/shop/?category=${categories.length ? categories[10]._id : ""}`,
     },
     {
       name: "Product Labels",
-      path: "/category/?category=retail-product-boxes",
+      path: `/shop/?category=${categories.length ? categories[11]._id : ""}`,
     },
     { name: "About", path: "/aboutus" },
     { name: "Contact", path: "/ContactUs" },
