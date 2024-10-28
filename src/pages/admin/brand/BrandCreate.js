@@ -15,19 +15,9 @@ const BrandCreate = () => {
 
   const [name, setName] = useState("");
   const [image, setImage] = useState("");
-  const [svg, setSvg] = useState("");
   const [loading, setLoading] = useState(false);
   const [brands, setBrands] = useState([]);
   const [showModels, setShowModels] = useState([]);
-
-  const htmlToRender = (htmlString) => {
-    return (
-      <div
-        className="smallsvgpreview"
-        dangerouslySetInnerHTML={{ __html: htmlString }}
-      />
-    );
-  };
 
   // step 1
   const [keyword, setKeyword] = useState("");
@@ -51,13 +41,12 @@ const BrandCreate = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    createBrand({ name, svg, image }, user.token)
+    createBrand({ name, image }, user.token)
       .then((res) => {
         // console.log(res)
         setLoading(false);
         setName("");
         setImage("");
-        setSvg("");
         toast.success(`"${res.data.name}" is created`);
         loadBrands();
       })
@@ -135,15 +124,12 @@ const BrandCreate = () => {
         name={name}
         setName={setName}
         image={image}
-        svg={svg}
-        setSvg={setSvg}
       />
       {/* step 2 and step 3 */}
       <LocalSearch keyword={keyword} setKeyword={setKeyword} />
       {/* step 5 */}
       {brands.filter(searched(keyword)).map((b, index) => (
         <div className="alert alert-secondary" key={b._id}>
-          <span>{htmlToRender(b.svg)} ----- </span>
           <span> {b.name} </span>
           {b.image && (
             <span>

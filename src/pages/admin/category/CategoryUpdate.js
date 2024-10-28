@@ -12,7 +12,6 @@ const CategoryUpdate = ({ history, match }) => {
   const { user } = useSelector((state) => ({ ...state }));
 
   const [name, setName] = useState("");
-  const [svg, setSvg] = useState("");
   const [image, setImage] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -23,7 +22,6 @@ const CategoryUpdate = ({ history, match }) => {
   const loadCategory = () =>
     getCategory(match.params.slug).then((c) => {
       setName(c.data.category.name);
-      setSvg(c.data.category.svg);
       setImage(c.data.category.image);
     });
 
@@ -31,12 +29,11 @@ const CategoryUpdate = ({ history, match }) => {
     e.preventDefault();
     // console.log(name);
     setLoading(true);
-    updateCategory(match.params.slug, { name, svg, image }, user.token)
+    updateCategory(match.params.slug, { name, image }, user.token)
       .then((res) => {
         // console.log(res)
         setLoading(false);
         setName("");
-        setSvg("");
         setImage("");
         toast.success(`"${res.data.name}" is updated`);
         history.push("/AdminPanel?page=CategoryCreate");
@@ -93,8 +90,6 @@ const CategoryUpdate = ({ history, match }) => {
               handleSubmit={handleSubmit}
               name={name}
               setName={setName}
-              svg={svg}
-              setSvg={setSvg}
               image={image}
             />
 

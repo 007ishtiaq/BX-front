@@ -19,20 +19,10 @@ const CategoryCreate = () => {
   const { user } = useSelector((state) => ({ ...state }));
 
   const [name, setName] = useState("");
-  const [svg, setSvg] = useState("");
   const [image, setImage] = useState("");
   const [loading, setLoading] = useState(false);
   const [categories, setCategories] = useState([]);
   const [showModels, setShowModels] = useState([]);
-
-  const htmlToRender = (htmlString) => {
-    return (
-      <div
-        className="smallsvgpreview"
-        dangerouslySetInnerHTML={{ __html: htmlString }}
-      />
-    );
-  };
 
   // step 1
   const [keyword, setKeyword] = useState("");
@@ -57,12 +47,11 @@ const CategoryCreate = () => {
     e.preventDefault();
     // console.log(name);
     setLoading(true);
-    createCategory({ name, svg, image }, user.token)
+    createCategory({ name, image }, user.token)
       .then((res) => {
         // console.log(res)
         setLoading(false);
         setName("");
-        setSvg("");
         setImage("");
         toast.success(`"${res.data.name}" is created`);
         loadCategories();
@@ -139,8 +128,6 @@ const CategoryCreate = () => {
         handleSubmit={handleSubmit}
         name={name}
         setName={setName}
-        svg={svg}
-        setSvg={setSvg}
         image={image}
       />
 
@@ -150,7 +137,6 @@ const CategoryCreate = () => {
       {/* step 5 */}
       {categories.filter(searched(keyword)).map((c, index) => (
         <div className="alert alert-secondary" key={c._id}>
-          <span>{htmlToRender(c.svg)} ----- </span>
           <span> {c.name} </span>
           {c.image && (
             <span>

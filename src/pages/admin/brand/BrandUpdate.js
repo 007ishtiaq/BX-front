@@ -12,7 +12,6 @@ const BrandUpdate = ({ history, match }) => {
   const { user } = useSelector((state) => ({ ...state }));
 
   const [name, setName] = useState("");
-  const [svg, setSvg] = useState("");
   const [image, setImage] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -24,7 +23,6 @@ const BrandUpdate = ({ history, match }) => {
     getBrand(match.params.slug).then((b) => {
       console.log(b);
       setName(b.data.brand.name);
-      setSvg(b.data.brand.svg);
       setImage(b.data.brand.image);
     });
 
@@ -32,12 +30,11 @@ const BrandUpdate = ({ history, match }) => {
     e.preventDefault();
     // console.log(name);
     setLoading(true);
-    updateBrand(match.params.slug, { name, svg, image }, user.token)
+    updateBrand(match.params.slug, { name, image }, user.token)
       .then((res) => {
         // console.log(res)
         setLoading(false);
         setName("");
-        setSvg("");
         setImage("");
         toast.success(`"${res.data.name}" is updated`);
         history.push("/AdminPanel?page=BrandCreate");
@@ -95,8 +92,6 @@ const BrandUpdate = ({ history, match }) => {
               name={name}
               setName={setName}
               image={image}
-              svg={svg}
-              setSvg={setSvg}
             />
             <hr />
           </div>
