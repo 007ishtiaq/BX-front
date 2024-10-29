@@ -7,7 +7,6 @@ import { createOrUpdateUser } from "../../functions/auth";
 import Spinner from "../../components/Spinner/Spinner";
 import Smallspinner from "../../components/Spinner/Smallspinner";
 import { ReactComponent as Logotextblack } from "../../images/headersvgs/logotextblack.svg";
-import { ReactComponent as Logosvg } from "../../images/headersvgs/logosign.svg";
 import { ReactComponent as Googlesvg } from "../../images/login/google.svg";
 import { ReactComponent as Facebooksvg } from "../../images/login/facebook.svg";
 import "./Login.css";
@@ -293,7 +292,7 @@ const Login = ({ history }) => {
                   </div>
                 ) : (
                   <div class="loginlogo">
-                    <Logosvg />
+                    <Logotextblack />
                   </div>
                 )}
               </div>
