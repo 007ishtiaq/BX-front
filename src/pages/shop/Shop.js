@@ -9,6 +9,11 @@ import SideDrawer from "../../components/SideDrawer/SideDrawer";
 import NoItemFound from "../../components/cards/NoItemFound/NoItemFound";
 import { Pagination } from "antd";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
+import {
+  getProductsByPage,
+  fetchProductsByFilter,
+} from "../../functions/product";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -19,9 +24,20 @@ const Shop = () => {
   const [perPage, setPerpage] = useState(20); // per page Size
   const [productsCount, setProductsCount] = useState(0);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 700); // Determine if screen width is greater than 700px
+  const [brand, setBrand] = useState("");
+  const [category, setCategory] = useState("");
+  const [entry, setEntry] = useState(true);
 
   const { mobileSideNav } = useSelector((state) => ({ ...state }));
   const dispatch = useDispatch();
+  let { search } = useSelector((state) => ({ ...state }));
+  const { text } = search;
+
+  function useQuery() {
+    return new URLSearchParams(useLocation().search);
+  }
+  let query = useQuery();
+  let categoryslug = query.get("category");
 
   useEffect(() => {
     const proarea = document.querySelector(".productsarea");
@@ -40,12 +56,92 @@ const Shop = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (categoryslug && entry) {
+      setCategory(categoryslug);
+      fetchProducts({ category: categoryslug });
+      setEntry(false);
+      //reset
+      // setCategory("");
+      setBrand("");
+    } else {
+      loadAllProducts();
+    }
+  }, [page, categoryslug]);
+
+  useEffect(() => {
+    setPage(1);
+  }, [text]);
+
+  const fetchProducts = (arg) => {
+    fetchProductsByFilter({ arg, page, perPage }).then((res) => {
+      setProducts(res.data.products);
+      setProductsCount(res.data.totalProducts);
+    });
+  };
+
+  const loadAllProducts = async () => {
+    try {
+      // setLoading(true);
+      const { data } = await getProductsByPage({ page, perPage });
+      setProducts(data.products);
+      setProductsCount(data.totalProducts);
+    } catch (err) {
+      console.error(err);
+      // toast.error("Failed to load products");
+    } finally {
+      // setLoading(false);
+    }
+  };
+
   const close = () => {
     // setFilterDrawervisible(false);
     dispatch({
       type: "SET_SIDENAV_VISIBLE",
       payload: false,
     });
+  };
+
+  // handle check for categories
+  const handleCheck = async (e) => {
+    dispatch({
+      type: "SEARCH_QUERY",
+      payload: { text: "" },
+    });
+    dispatch({
+      type: "SET_SIDENAV_VISIBLE",
+      payload: false,
+    });
+    // reset
+    setBrand("");
+    setCategory(e.target.value);
+    fetchProducts({ category: e.target.value });
+  };
+
+  const handleBrand = (e) => {
+    dispatch({
+      type: "SEARCH_QUERY",
+      payload: { text: "" },
+    });
+    dispatch({
+      type: "SET_SIDENAV_VISIBLE",
+      payload: false,
+    });
+    setCategory("");
+    setBrand(e.target.value);
+    fetchProducts({ brand: e.target.value });
+  };
+
+  const Clearfilter = () => {
+    loadAllProducts();
+    setEntry(false);
+    dispatch({
+      type: "SEARCH_QUERY",
+      payload: { text: "" },
+    });
+    // reset
+    setCategory("");
+    setBrand("");
   };
 
   // Calculate start and end of the current page range
@@ -58,23 +154,23 @@ const Shop = () => {
         {isDesktop ? (
           <div className="searchfilterleft">
             <SearchFilter
-              products={products}
-              setProducts={setProducts}
-              page={page}
-              setPage={setPage}
-              perPage={perPage}
-              setProductsCount={setProductsCount}
+              handleCheck={handleCheck}
+              category={category}
+              brand={brand}
+              text={text}
+              handleBrand={handleBrand}
+              Clearfilter={Clearfilter}
             />
           </div>
         ) : (
           <SideDrawer Open={mobileSideNav} close={close} Drawer="Filter">
             <SearchFilter
-              products={products}
-              setProducts={setProducts}
-              page={page}
-              setPage={setPage}
-              perPage={perPage}
-              setProductsCount={setProductsCount}
+              handleCheck={handleCheck}
+              category={category}
+              brand={brand}
+              text={text}
+              handleBrand={handleBrand}
+              Clearfilter={Clearfilter}
             />
           </SideDrawer>
         )}
