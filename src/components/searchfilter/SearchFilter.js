@@ -27,9 +27,10 @@ export default function SearchFilter({
   let categoryslug = query.get("category");
 
   const [categories, setCategories] = useState([]); // to show the available list of categories
-  const [category, setCategory] = useState(categoryslug || "");
+  const [category, setCategory] = useState("");
   const [brands, setBrands] = useState([]); // to show the available list of brands
   const [brand, setBrand] = useState("");
+  const [entry, setEntry] = useState(true);
 
   let dispatch = useDispatch();
   let { search } = useSelector((state) => ({ ...state }));
@@ -65,9 +66,10 @@ export default function SearchFilter({
   };
 
   useEffect(() => {
-    if (categoryslug) {
+    if (categoryslug && entry) {
       setCategory(categoryslug);
       fetchProducts({ category: categoryslug });
+      setEntry(false);
       //reset
       // setCategory("");
       setBrand("");
@@ -145,6 +147,7 @@ export default function SearchFilter({
 
   const Clearfilter = () => {
     loadAllProducts();
+    setEntry(false);
     dispatch({
       type: "SEARCH_QUERY",
       payload: { text: "" },

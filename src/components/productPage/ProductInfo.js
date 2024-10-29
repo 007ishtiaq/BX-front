@@ -17,8 +17,6 @@ import Mystars from "../ratingstars/Mystars";
 import { useFormik } from "formik";
 import { UserQuoteSchema } from "../../schemas";
 import Skeleton from "react-loading-skeleton";
-import ProductCardSkull from "../../components/Skeletons/ProductCardSkull";
-import FlashsaleProductCard from "../ProductCards/FlashsaleProductCard";
 import ProductCarousel from "../productCarousel/ProductCarousel";
 
 export default function ProductInfo({
@@ -98,6 +96,12 @@ export default function ProductInfo({
       });
     }
   }, [user]);
+
+  const htmlToRender = (htmlString) => {
+    return (
+      <div className="" dangerouslySetInnerHTML={{ __html: htmlString }} />
+    );
+  };
 
   return (
     <div className="productcontainer">
@@ -265,7 +269,10 @@ export default function ProductInfo({
               <div class="desccontentpara">
                 {/* <strong>About this item: </strong> */}
                 {/* <br /> */}
-                <p className="">{`${product.description}`}</p>
+                {/* <p className="">{`${htmlToRender(product.description)}`}</p> */}
+                <div className="prodhtml">
+                  {htmlToRender(product.description)}
+                </div>
               </div>
             </div>
           </div>
