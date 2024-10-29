@@ -189,13 +189,13 @@ hr {
   font-weight: 500;
 }
 .prodhtml strong {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: #2c2c2c;
 }
 .prodhtml li {
   color: #6b6b6b; /* Text color */
-  font-size: 16px; /* Font size */
+  font-size: 1.4rem; /* Font size */
   line-height: 1.6; /* Spacing between lines */
   padding-left: 20px; /* Space between bullet and text */
   position: relative; /* For custom bullet styling */
@@ -208,7 +208,7 @@ hr {
   font-size: 2rem; /* Bullet size */
   position: absolute;
   left: 0;
-  top: 2px;
+  top: -1px;
   line-height: 1.2; /* Align bullet vertically */
 }
 /* ----------product container right side-------- */
