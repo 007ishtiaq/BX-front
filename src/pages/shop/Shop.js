@@ -16,7 +16,7 @@ const Shop = () => {
   const [contwidth, setContwidth] = useState(0);
   const [FilterDrawervisible, setFilterDrawervisible] = useState(false);
   const [page, setPage] = useState(1); // page number
-  const [perPage, setPerpage] = useState(5); // per page Size
+  const [perPage, setPerpage] = useState(20); // per page Size
   const [productsCount, setProductsCount] = useState(0);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 700); // Determine if screen width is greater than 700px
 
