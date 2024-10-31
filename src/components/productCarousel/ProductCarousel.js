@@ -1,14 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./ProductCarousel.css"; // Assuming you have the same CSS
 
 const ProductCarousel = ({ images }) => {
-  const [mainImage, setMainImage] = useState(images[0].url);
-
-  // const images = ["1.webp", "2.webp", "3.webp", "4.png"];
+  const [mainImage, setMainImage] = useState(images[0]?.url);
 
   const changeImage = (imageSrc) => {
     setMainImage(imageSrc);
   };
+
+  // Update mainImage whenever images changes
+  useEffect(() => {
+    if (images.length > 0) {
+      setMainImage(images[0].url);
+    }
+  }, [images]);
 
   return (
     <div className="product-slider">
