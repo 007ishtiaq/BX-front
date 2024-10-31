@@ -182,51 +182,52 @@ const Shop = () => {
         )}
 
         <div className="filterproright">
-          <div className="rightsideheadercont">
-            <div className="headingname">
-              <div className="foundpros">
-                {!category && productsCount > 0 ? (
-                  <p>
-                    {start}-{end} of over {productsCount} results
-                  </p>
-                ) : (
-                  <div className="cateselect" onClick={Clearfilter}>
-                    Results: {categoryname}{" "}
-                    <span>
-                      <Crosssvg />
-                    </span>{" "}
-                  </div>
-                )}
-              </div>
-              {/* <div className="foundpros">
+          <div className="filterproup">
+            <div className="rightsideheadercont">
+              <div className="headingname">
+                <div className="foundpros">
+                  {!category && productsCount > 0 ? (
+                    <p>
+                      {start}-{end} of over {productsCount} results
+                    </p>
+                  ) : (
+                    <div className="cateselect" onClick={Clearfilter}>
+                      Results: {categoryname}{" "}
+                      <span>
+                        <Crosssvg />
+                      </span>{" "}
+                    </div>
+                  )}
+                </div>
+                {/* <div className="foundpros">
                 {productsCount} {productsCount > 1 ? "Products" : "Product"}{" "}
                 found
               </div> */}
+              </div>
+              <div className="headingright">
+                <span>Sort By: </span>
+                <span className="sortoptions">Popularity</span>
+              </div>
             </div>
-            <div className="headingright">
-              <span>Sort By: </span>
-              <span className="sortoptions">Popularity</span>
+
+            <div className="contentcont">
+              <div className="productsarea">
+                {loading && <h4 className="text-danger">Loading...</h4>}
+
+                {products.length < 1 && <NoItemFound />}
+
+                {products &&
+                  products.map((prod) => (
+                    <FlashsaleProductCard
+                      key={prod._id}
+                      product={prod}
+                      contWidth={contwidth}
+                      WidthIdea={"Seachpagewidth"}
+                    />
+                  ))}
+              </div>
             </div>
           </div>
-
-          <div className="contentcont">
-            <div className="productsarea">
-              {loading && <h4 className="text-danger">Loading...</h4>}
-
-              {products.length < 1 && <NoItemFound />}
-
-              {products &&
-                products.map((prod) => (
-                  <FlashsaleProductCard
-                    key={prod._id}
-                    product={prod}
-                    contWidth={contwidth}
-                    WidthIdea={"Seachpagewidth"}
-                  />
-                ))}
-            </div>
-          </div>
-
           <div className="productreviewbottom searchpagi">
             <div className="previewpagination">
               <Pagination

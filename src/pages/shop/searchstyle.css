@@ -24,6 +24,7 @@
 .filterproright {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .searchpagi {
@@ -127,6 +128,7 @@
   border-radius: 0.4rem;
   width: 79.5%;
   background-color: white;
+  min-height: 70rem;
 }
 .rightsideheadercont {
   display: flex;

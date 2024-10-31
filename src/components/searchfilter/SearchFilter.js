@@ -17,14 +17,14 @@ export default function SearchFilter({
   Clearfilter,
 }) {
   const [categories, setCategories] = useState([]); // to show the available list of categories
-  const [brands, setBrands] = useState([]); // to show the available list of brands
+  // const [brands, setBrands] = useState([]); // to show the available list of brands
 
   useEffect(() => {
     getCategories().then((res) => setCategories(res.data));
 
-    getBrands().then((b) => {
-      setBrands(b.data.map((item) => item.name));
-    });
+    // getBrands().then((b) => {
+    //   setBrands(b.data.map((item) => item.name));
+    // });
   }, []);
 
   // 4. load products based on category
@@ -46,19 +46,19 @@ export default function SearchFilter({
     ));
 
   // 7. show products based on brand name
-  const showBrands = () =>
-    brands.map((b) => (
-      <Radio
-        key={b}
-        value={b}
-        name={b}
-        checked={b === brand}
-        onChange={handleBrand}
-        className="pb-1 pl-4 pr-4"
-      >
-        {b}
-      </Radio>
-    ));
+  // const showBrands = () =>
+  //   brands.map((b) => (
+  //     <Radio
+  //       key={b}
+  //       value={b}
+  //       name={b}
+  //       checked={b === brand}
+  //       onChange={handleBrand}
+  //       className="pb-1 pl-4 pr-4"
+  //     >
+  //       {b}
+  //     </Radio>
+  //   ));
 
   return (
     <div class="filtercont">
@@ -82,13 +82,13 @@ export default function SearchFilter({
           <div style={{ maringTop: "10px" }}>{showCategories()}</div>
         </SubMenu>
 
-        <SubMenu
+        {/* <SubMenu
           class="filtercont"
           key="2"
           title={<div class="filterheading">Populer Industories</div>}
         >
           <div style={{ maringTop: "-10px" }}>{showBrands()}</div>
-        </SubMenu>
+        </SubMenu> */}
       </Menu>
     </div>
   );
