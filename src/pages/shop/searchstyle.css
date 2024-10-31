@@ -39,6 +39,7 @@
   font-size: 1.2rem;
   background-color: #cfcfcf;
   border-radius: 4px;
+  cursor: pointer;
 }
 .cateselect span {
   background: #727272;
