@@ -41,7 +41,7 @@ export default function Reviewsbox() {
                     </div>
                   </div>
                   <div class="reviewposttime">
-                    <span>Reviewed on 02-Oct-2024</span>
+                    <span>Reviewed on 25-Oct-2024</span>
                   </div>
 
                   <div class="reviewtxt thisreviewtxt">
@@ -83,7 +83,7 @@ export default function Reviewsbox() {
                     </div>
                   </div>
                   <div class="reviewposttime">
-                    <span>Reviewed on 16-Sep-2024</span>
+                    <span>Reviewed on 16-Sep-2023</span>
                   </div>
 
                   <div class="reviewtxt thisreviewtxt">
@@ -125,7 +125,7 @@ export default function Reviewsbox() {
                     </div>
                   </div>
                   <div class="reviewposttime">
-                    <span>Reviewed on 28-Sep-2024</span>
+                    <span>Reviewed on 28-March-2023</span>
                   </div>
 
                   <div class="reviewtxt thisreviewtxt">
@@ -167,7 +167,7 @@ export default function Reviewsbox() {
                     </div>
                   </div>
                   <div class="reviewposttime">
-                    <span>Reviewed on 12-Oct-2024</span>
+                    <span>Reviewed on 12-Nov-2022</span>
                   </div>
 
                   <div class="reviewtxt thisreviewtxt">

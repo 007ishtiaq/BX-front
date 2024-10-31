@@ -82,7 +82,7 @@ export default function Scorebanner() {
           <div className="scorecardleft">
             <div className="scorecont">
               <div className="scorecircle">
-                <div className="scoreself">5000 +</div>
+                <div className="scoreself">100 +</div>
                 <div className="scoretxt">Worked With Clients</div>
               </div>
               <div className="scorecircle">
@@ -90,7 +90,7 @@ export default function Scorebanner() {
                 <div className="scoretxt">Client Rate</div>
               </div>
               <div className="scorecircle">
-                <div className="scoreself">6M+</div>
+                <div className="scoreself">6000+</div>
                 <div className="scoretxt">Package Realese</div>
               </div>
             </div>

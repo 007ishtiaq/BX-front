@@ -14,6 +14,7 @@ import {
   getProductsByPage,
   fetchProductsByFilter,
 } from "../../functions/product";
+import { ReactComponent as Crosssvg } from "../../images/admin/cross.svg";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -21,11 +22,12 @@ const Shop = () => {
   const [contwidth, setContwidth] = useState(0);
   const [FilterDrawervisible, setFilterDrawervisible] = useState(false);
   const [page, setPage] = useState(1); // page number
-  const [perPage, setPerpage] = useState(20); // per page Size
+  const [perPage, setPerpage] = useState(5); // per page Size
   const [productsCount, setProductsCount] = useState(0);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 700); // Determine if screen width is greater than 700px
   const [brand, setBrand] = useState("");
   const [category, setCategory] = useState("");
+  const [categoryname, setCategoryname] = useState("");
   const [entry, setEntry] = useState(true);
 
   const { mobileSideNav } = useSelector((state) => ({ ...state }));
@@ -76,6 +78,9 @@ const Shop = () => {
   const fetchProducts = (arg) => {
     fetchProductsByFilter({ arg, page, perPage }).then((res) => {
       setProducts(res.data.products);
+      if (res.data.products.length > 1) {
+        setCategoryname(res.data.products[0].category.name);
+      }
       setProductsCount(res.data.totalProducts);
     });
   };
@@ -115,6 +120,7 @@ const Shop = () => {
     // reset
     setBrand("");
     setCategory(e.target.value);
+    setCategoryname(e.target.name);
     fetchProducts({ category: e.target.value });
   };
 
@@ -179,10 +185,17 @@ const Shop = () => {
           <div className="rightsideheadercont">
             <div className="headingname">
               <div className="foundpros">
-                {productsCount > 0 && (
+                {!category && productsCount > 0 ? (
                   <p>
                     {start}-{end} of over {productsCount} results
                   </p>
+                ) : (
+                  <div className="cateselect" onClick={Clearfilter}>
+                    Results: {categoryname}{" "}
+                    <span>
+                      <Crosssvg />
+                    </span>{" "}
+                  </div>
                 )}
               </div>
               {/* <div className="foundpros">

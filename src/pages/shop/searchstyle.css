@@ -33,6 +33,22 @@
 .searchpagi .previewpagination {
   margin-right: 2rem;
 }
+.cateselect {
+  padding: 0.6rem 0.7rem;
+  color: #343434;
+  font-size: 1.2rem;
+  background-color: #cfcfcf;
+  border-radius: 4px;
+}
+.cateselect span {
+  background: #727272;
+  border-radius: 80%;
+  padding: 0.2rem 0.6rem;
+}
+.cateselect span svg {
+  width: 0.9rem;
+  fill: white;
+}
 /* -----------search filter left side------ */
 
 .searchfilterleft {
@@ -114,6 +130,7 @@
 .rightsideheadercont {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-bottom: 0.1rem solid var(--gry-topbar);
 }
 .headingname {
