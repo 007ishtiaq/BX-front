@@ -78,7 +78,7 @@ const Shop = () => {
   const fetchProducts = (arg) => {
     fetchProductsByFilter({ arg, page, perPage }).then((res) => {
       setProducts(res.data.products);
-      if (res.data.products.length > 1) {
+      if (res.data.products.length > 0) {
         setCategoryname(res.data.products[0].category.name);
       }
       setProductsCount(res.data.totalProducts);
@@ -124,19 +124,19 @@ const Shop = () => {
     fetchProducts({ category: e.target.value });
   };
 
-  const handleBrand = (e) => {
-    dispatch({
-      type: "SEARCH_QUERY",
-      payload: { text: "" },
-    });
-    dispatch({
-      type: "SET_SIDENAV_VISIBLE",
-      payload: false,
-    });
-    setCategory("");
-    setBrand(e.target.value);
-    fetchProducts({ brand: e.target.value });
-  };
+  // const handleBrand = (e) => {
+  //   dispatch({
+  //     type: "SEARCH_QUERY",
+  //     payload: { text: "" },
+  //   });
+  //   dispatch({
+  //     type: "SET_SIDENAV_VISIBLE",
+  //     payload: false,
+  //   });
+  //   setCategory("");
+  //   setBrand(e.target.value);
+  //   fetchProducts({ brand: e.target.value });
+  // };
 
   const Clearfilter = () => {
     loadAllProducts();
@@ -164,7 +164,7 @@ const Shop = () => {
               category={category}
               brand={brand}
               text={text}
-              handleBrand={handleBrand}
+              // handleBrand={handleBrand}
               Clearfilter={Clearfilter}
             />
           </div>
@@ -175,7 +175,7 @@ const Shop = () => {
               category={category}
               brand={brand}
               text={text}
-              handleBrand={handleBrand}
+              // handleBrand={handleBrand}
               Clearfilter={Clearfilter}
             />
           </SideDrawer>

@@ -13,7 +13,7 @@ export default function SearchFilter({
   category,
   brand,
   text,
-  handleBrand,
+  // handleBrand,
   Clearfilter,
 }) {
   const [categories, setCategories] = useState([]); // to show the available list of categories

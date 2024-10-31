@@ -11,7 +11,7 @@ import {
   QuestionCircleOutlined,
 } from "@ant-design/icons";
 import { getCategories } from "../../functions/category";
-import { getBrands } from "../../functions/brands";
+// import { getBrands } from "../../functions/brands";
 import { Menu } from "antd";
 import { ReactComponent as Squaresvg } from "../../images/square.svg";
 
@@ -20,7 +20,7 @@ const { SubMenu } = Menu;
 //small size left drawer - chilren component insider data
 const NavItemes = () => {
   const [categories, setCategories] = useState([]);
-  const [brands, setBrands] = useState([]);
+  // const [brands, setBrands] = useState([]);
   const [openKeys, setOpenKeys] = useState(["1", "2"]);
 
   const history = useHistory();
@@ -31,7 +31,7 @@ const NavItemes = () => {
     getCategories().then((c) => {
       setCategories(c.data);
     });
-    getBrands().then((b) => setBrands(b.data));
+    // getBrands().then((b) => setBrands(b.data));
   }, []);
 
   // Get the whole path including query parameters
@@ -81,7 +81,7 @@ const NavItemes = () => {
             ))}
           </SubMenu>
           {/* Brand working */}
-          <SubMenu
+          {/* <SubMenu
             key="2"
             title={
               <span>
@@ -100,7 +100,7 @@ const NavItemes = () => {
                 </div>
               </Menu.Item>
             ))}
-          </SubMenu>
+          </SubMenu> */}
         </Menu>
       </div>
       <div className="snavlistcont">
