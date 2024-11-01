@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from "react";
 import "../ProductCards/ProductCardsAll.css";
-import { getProductsByCount } from "../../functions/product";
+import { getProductsByCount, getProductsByPage } from "../../functions/product";
 import FlashsaleProductCard from "../ProductCards/FlashsaleProductCard";
 import ProductCardSkull from "../Skeletons/ProductCardSkull";
 import { toast } from "react-hot-toast";
+import { Pagination } from "antd";
 
 export default function CommonProductsCont({ WidthIdea }) {
   const [products, setProducts] = useState([]);
   const [contwidth, setContwidth] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [page, setPage] = useState(1); // page number
+  const [perPage, setPerpage] = useState(24); // per page Size
+  const [productsCount, setProductsCount] = useState(0);
 
   useEffect(() => {
     const proarea = document.querySelector(".productsarea");
@@ -16,23 +20,25 @@ export default function CommonProductsCont({ WidthIdea }) {
     setContwidth(contwidth);
 
     loadAllProducts();
-  }, []);
+  }, [page]);
 
-  const loadAllProducts = () => {
-    getProductsByCount(6)
-      .then((p) => {
-        setLoading(false);
-        setProducts(p.data);
-      })
-      .catch((error) => {
-        if (error.response && error.response.status === 500) {
-          toast.error(error.response.data.error);
-        } else {
-          // Handle other errors
-          toast.error("Something went wrong");
-          // console.error("Error fetching Product:", error);
-        }
-      });
+  const loadAllProducts = async () => {
+    // getProductsByCount(6)
+    //   .then((p) => {
+    //     setLoading(false);
+    //     setProducts(p.data);
+    //   })
+    try {
+      // setLoading(true);
+      const { data } = await getProductsByPage({ page, perPage });
+      setProducts(data.products);
+      setProductsCount(data.totalProducts);
+    } catch (err) {
+      console.error(err);
+      // toast.error("Failed to load products");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -60,6 +66,16 @@ export default function CommonProductsCont({ WidthIdea }) {
                 />
               ))
             )}
+          </div>
+          <div className="productreviewbottom searchpagi">
+            <div className="previewpagination">
+              <Pagination
+                current={page}
+                total={productsCount}
+                pageSize={perPage}
+                onChange={(value) => setPage(value)}
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -126,7 +126,13 @@
   margin: 0 0.5rem;
   padding: 0 0.4rem;
 }
-
+.searchpagi .previewpagination {
+  margin-right: 2rem;
+}
+.previewpagination {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 .dis-side {
   font-size: var(--fontsize-small);
   text-decoration: line-through;
