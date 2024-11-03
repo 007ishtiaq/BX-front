@@ -3,11 +3,11 @@ import "./policiesStyle.css";
 import "../contactUs/contactus.css";
 import { getRelatedStaticText } from "../../functions/staticText";
 
-export default function CookiePolicy() {
+export default function PrivacyPolicy() {
   const [staticTexts, setStaticTexts] = useState([]);
 
   useEffect(() => {
-    getRelatedStaticText("CookiePolicy").then((t) => setStaticTexts(t.data));
+    getRelatedStaticText("PrivacyPolicy").then((t) => setStaticTexts(t.data));
   }, []);
 
   const htmlToRender = (htmlString) => {

@@ -379,6 +379,9 @@ footer {
     background-color: #0f3e74;
     border: 1.5px solid white;
   }
+  .center-footer {
+    padding: 3rem 2rem;
+  }
 }
 @media (max-width: 400px) {
   .footer-logo-side {
@@ -405,6 +408,9 @@ footer {
   }
   .optin-form .error-message {
     width: calc(60% + 11.3rem);
+  }
+  .footer-colum {
+    padding-left: 0rem;
   }
 }
 @media (max-width: 360px) {
