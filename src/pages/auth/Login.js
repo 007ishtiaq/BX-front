@@ -296,7 +296,7 @@ const Login = ({ history }) => {
                   </div>
                 )}
               </div>
-              <div class="welcometxt">Welcome to Appliance Bazar</div>
+              <div class="welcometxt">Welcome to Sharp Edge Packaging</div>
               <div class="guidetxt">Type your Email & Password to Login</div>
               <form onSubmit={handleSubmit} className="submitionform">
                 <div class="logininputcont">

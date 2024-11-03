@@ -192,10 +192,20 @@ export default function Footer() {
               </div>
             </div>
 
-            <div class="footer-colum">
-              <div class="col-heading">Let Us Help You</div>
+            <div class="footer-colum footercolumhide">
+              <div class="col-heading">Populer Categories</div>
               <div class="col-ul">
                 <ul>
+                  <li>
+                    <Link to="/sdvdsvdsvvd" class="col-li">
+                      Box by Designs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/sdvdsvdsvvd" class="col-li">
+                      Product Labels
+                    </Link>
+                  </li>
                   <li>
                     <Link to="/aboutus" class="col-li">
                       About us
@@ -210,18 +220,28 @@ export default function Footer() {
                 </ul>
               </div>
             </div>
-            <div class="footer-colum footercolumhide">
-              <div class="col-heading">Populer Categories</div>
+            <div class="footer-colum">
+              <div class="col-heading">Let Us Help You</div>
               <div class="col-ul">
                 <ul>
                   <li>
-                    <Link to="/sdvdsvdsvvd" class="col-li">
-                      Box by Designs
+                    <Link to="/TermsAndConditions" class="col-li">
+                      Terms & Conditions
                     </Link>
                   </li>
                   <li>
-                    <Link to="/sdvdsvdsvvd" class="col-li">
-                      Product Labels
+                    <Link to="/ReturnandRefundPolicy" class="col-li">
+                      Returns & Refunds policy
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/PrivacyPolicy" class="col-li">
+                      Privacy Policy
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/CookiePolicy" class="col-li">
+                      Cookie Policy
                     </Link>
                   </li>
                 </ul>

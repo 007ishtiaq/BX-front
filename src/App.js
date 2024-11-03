@@ -54,6 +54,13 @@ const ContactUs = lazy(() => import("./pages/contactUs/ContactUs"));
 const ContactFormSingle = lazy(() =>
   import("./pages/admin/activities/ContactFormSingle")
 );
+const CookiePolicy = lazy(() => import("./pages/policies/CookiePolicy"));
+const ReturnandRefundPolicy = lazy(() =>
+  import("./pages/policies/ReturnandRefundPolicy")
+);
+const TermsAndConditions = lazy(() =>
+  import("./pages/policies/TermsAndConditions")
+);
 const ApplyFormSingle = lazy(() =>
   import("./pages/admin/activities/ApplyFormSingle")
 );
@@ -198,7 +205,11 @@ const App = () => {
               path="/category?category=:slug"
               component={CategoryHome}
             />
-
+            <Route
+              exact
+              path="/TermsAndConditions"
+              component={TermsAndConditions}
+            />
             <Route exact path="/aboutus" component={AboutUs} />
             <Route exact path="/ContactUs" component={ContactUs} />
 
