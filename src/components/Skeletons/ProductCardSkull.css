@@ -3,10 +3,13 @@
 }
 .imgskull {
   position: relative;
-  height: 158px;
-  aspect-ratio: 1/1;
+  height: 158px !important;
+  /* aspect-ratio: 1/1; */
   /* width: 183px; */
   border-radius: 0.4rem 0.4rem 0 0;
+}
+.react-loading-skeleton.imgskull {
+  height: 158px !important;
 }
 .imgratecont {
   width: 100%;

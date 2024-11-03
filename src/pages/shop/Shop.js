@@ -15,14 +15,15 @@ import {
   fetchProductsByFilter,
 } from "../../functions/product";
 import { ReactComponent as Crosssvg } from "../../images/admin/cross.svg";
+import CatenameSkull from "../../components/Skeletons/CatenameSkull";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [contwidth, setContwidth] = useState(0);
   const [FilterDrawervisible, setFilterDrawervisible] = useState(false);
   const [page, setPage] = useState(1); // page number
-  const [perPage, setPerpage] = useState(20); // per page Size
+  const [perPage, setPerpage] = useState(5); // per page Size
   const [productsCount, setProductsCount] = useState(0);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 700); // Determine if screen width is greater than 700px
   const [brand, setBrand] = useState("");
@@ -76,8 +77,10 @@ const Shop = () => {
   }, [text]);
 
   const fetchProducts = (arg) => {
+    setLoading(true);
     fetchProductsByFilter({ arg, page, perPage }).then((res) => {
       setProducts(res.data.products);
+      setLoading(false);
       if (res.data.products.length > 0) {
         setCategoryname(res.data.products[0].category.name);
       }
@@ -87,7 +90,7 @@ const Shop = () => {
 
   const loadAllProducts = async () => {
     try {
-      // setLoading(true);
+      setLoading(true);
       const { data } = await getProductsByPage({ page, perPage });
       setProducts(data.products);
       setProductsCount(data.totalProducts);
@@ -95,7 +98,7 @@ const Shop = () => {
       console.error(err);
       // toast.error("Failed to load products");
     } finally {
-      // setLoading(false);
+      setLoading(false);
     }
   };
 
@@ -190,6 +193,8 @@ const Shop = () => {
                     <p>
                       {start}-{end} of over {productsCount} results
                     </p>
+                  ) : !categoryname ? (
+                    <CatenameSkull />
                   ) : (
                     <div className="cateselect" onClick={Clearfilter}>
                       Results: {categoryname}{" "}
@@ -212,11 +217,11 @@ const Shop = () => {
 
             <div className="contentcont">
               <div className="productsarea">
-                {loading && <h4 className="text-danger">Loading...</h4>}
-
-                {products.length < 1 && <NoItemFound />}
-
-                {products &&
+                {loading ? (
+                  <div>load</div>
+                ) : products.length < 1 ? (
+                  <NoItemFound />
+                ) : (
                   products.map((prod) => (
                     <FlashsaleProductCard
                       key={prod._id}
@@ -224,7 +229,8 @@ const Shop = () => {
                       contWidth={contwidth}
                       WidthIdea={"Seachpagewidth"}
                     />
-                  ))}
+                  ))
+                )}
               </div>
             </div>
           </div>
