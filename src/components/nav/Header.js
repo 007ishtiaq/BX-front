@@ -12,7 +12,6 @@ import "../SliderDiv/SliderDiv.css";
 import { ReactComponent as Adminsvg } from "../../images/acnav/admin.svg";
 import { ReactComponent as Callsvg } from "../../images/contactUs/calloutlined.svg";
 import { ReactComponent as Mailsvg } from "../../images/contactUs/mail.svg";
-import { ReactComponent as Clocksvg } from "../../images/headersvgs/clock.svg";
 import { ReactComponent as Facebooksvg } from "../../images/social/facebook.svg";
 import { ReactComponent as Instagramsvg } from "../../images/social/instagram.svg";
 import { ReactComponent as Whatsappsvg } from "../../images/social/Whatsapp.svg";

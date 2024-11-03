@@ -15,7 +15,7 @@ const ProductsGroup = () => {
   const [elementwidth, setElementwidth] = useState(0);
   const dispatch = useDispatch();
 
-  let slug = "boxes-by-designs";
+  let slug = "product-labels";
 
   useEffect(() => {
     if (navigator.onLine) {

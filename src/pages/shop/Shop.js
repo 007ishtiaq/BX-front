@@ -235,6 +235,7 @@ const Shop = () => {
                 total={productsCount}
                 pageSize={perPage}
                 onChange={(value) => setPage(value)}
+                showSizeChanger={false}
               />
             </div>
           </div>

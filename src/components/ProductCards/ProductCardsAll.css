@@ -139,13 +139,16 @@
   color: var(--dark-gray);
 }
 .n-side {
-  overflow: hidden;
+  /* overflow: hidden; */
   text-overflow: ellipsis;
+}
+.n-side :first-child {
+  min-height: 3.4rem;
 }
 .n-side span {
   display: block;
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   white-space: nowrap;
   text-overflow: ellipsis;
   line-height: 1.7rem;
@@ -386,6 +389,10 @@
 @media (max-width: 457px) {
   .itemcolum {
     width: calc(100% / 2 - 0.8rem);
+  }
+  .n-side :first-child {
+    font-size: 1.7rem;
+    min-height: 0;
   }
   .cardcontainer {
     padding: 0.8rem 0.9rem;
