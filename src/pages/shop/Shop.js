@@ -16,6 +16,7 @@ import {
 } from "../../functions/product";
 import { ReactComponent as Crosssvg } from "../../images/admin/cross.svg";
 import CatenameSkull from "../../components/Skeletons/CatenameSkull";
+import Searchloader from "../../components/searchloader/Searchloader";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -219,7 +220,7 @@ const Shop = () => {
             <div className="contentcont">
               <div className="productsarea">
                 {loading ? (
-                  <div>load</div>
+                  <Searchloader />
                 ) : products.length < 1 ? (
                   <NoItemFound />
                 ) : (
