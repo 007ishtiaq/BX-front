@@ -92,6 +92,7 @@ const Shop = () => {
     try {
       setLoading(true);
       const { data } = await getProductsByPage({ page, perPage });
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
       setProducts(data.products);
       setProductsCount(data.totalProducts);
     } catch (err) {
