@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Modal } from "antd";
-import { StarOutlined } from "@ant-design/icons";
 import { useHistory, useParams } from "react-router-dom";
 import { ReactComponent as Editsvg } from "../../images/productpage/edit.svg";
 import { ReactComponent as AddAdrsvg } from "../../images/productpage/addaddress.svg";

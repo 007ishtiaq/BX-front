@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Modal, Button } from "antd";
 import { useDispatch, useSelector } from "react-redux";
-import { StarOutlined } from "@ant-design/icons";
 import { useHistory, useParams } from "react-router-dom";
 
 // user side reviews edit button

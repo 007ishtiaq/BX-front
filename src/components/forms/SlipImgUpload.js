@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 import { Avatar, Badge } from "antd";
 import "./SlipImgUpload.css";
 import toast from "react-hot-toast";
-import { ReloadOutlined } from "@ant-design/icons";
 
 const SlipImgUpload = ({ file, setFile, fileInputRef }) => {
   const { user } = useSelector((state) => ({ ...state }));

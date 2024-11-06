@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Modal, Button } from "antd";
-import { StarOutlined } from "@ant-design/icons";
 import { useHistory, useParams } from "react-router-dom";
 
 // on single Product page rating component below side
