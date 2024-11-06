@@ -19,7 +19,7 @@
   padding: 1rem;
 }
 .contactheadcont {
-  background: #ff9000;
+  background: var(--org-primary);
   border-radius: 0.4rem;
   padding: 1rem;
   font-size: 2rem;

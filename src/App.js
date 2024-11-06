@@ -18,33 +18,19 @@ const Login = lazy(() => import("./pages/auth/Login"));
 const Register = lazy(() => import("./pages/auth/Register"));
 const OtpVerification = lazy(() => import("./pages/auth/OtpVerification"));
 const Home = lazy(() => import("./pages/Home"));
-const Sweden = lazy(() => import("./pages/destination/Sweden"));
-const Australia = lazy(() => import("./pages/destination/Australia"));
-const UK = lazy(() => import("./pages/destination/UnitedKingdom"));
-const Belgium = lazy(() => import("./pages/destination/Belgium"));
-const Denmark = lazy(() => import("./pages/destination/Denmark"));
-const Finland = lazy(() => import("./pages/destination/Finland"));
-const Ireland = lazy(() => import("./pages/destination/Ireland"));
-const France = lazy(() => import("./pages/destination/France"));
-const Cyprus = lazy(() => import("./pages/destination/Cyprus"));
-const ProductUpdate = lazy(() => import("./pages/admin/product/ProductUpdate"));
 const Product = lazy(() => import("./pages/Product"));
-const SuccessStories = lazy(() =>
-  import("./pages/successstories/SuccessStories")
-);
+const ProductUpdate = lazy(() => import("./pages/admin/product/ProductUpdate"));
 const CategoryUpdate = lazy(() =>
   import("./pages/admin/category/CategoryUpdate")
 );
 const Header = lazy(() => import("./components/nav/Header"));
 const NotFound = lazy(() => import("./pages/NotFound/NotFound"));
 const RegisterComplete = lazy(() => import("./pages/auth/RegisterComplete"));
-const ForgotPassword = lazy(() => import("./pages/auth/ForgotPassword"));
 const AdminRoute = lazy(() => import("./components/routes/AdminRoute"));
 const AdminPanel = lazy(() => import("./pages/admin/AdminPanel"));
 const BannerUpdate = lazy(() =>
   import("./pages/admin/Slider&Banners/BannerUpdate")
 );
-const CategoryHome = lazy(() => import("./pages/category/CategoryHome"));
 const StaticTextupdate = lazy(() =>
   import("./pages/admin/statictext/StaticTextupdate")
 );
@@ -188,23 +174,8 @@ const App = () => {
             {/* common unprotected Routes */}
 
             <Route exact path="/" component={Home} />
-            <Route exact path="/Destinations/sweden" component={Sweden} />
-            <Route exact path="/Destinations/australia" component={Australia} />
-            <Route exact path="/Destinations/United-Kingdom" component={UK} />
-            <Route exact path="/Destinations/Belgium" component={Belgium} />
-            <Route exact path="/Destinations/Denmark" component={Denmark} />
-            <Route exact path="/Destinations/Finland" component={Finland} />
-            <Route exact path="/Destinations/Ireland" component={Ireland} />
-            <Route exact path="/Destinations/France" component={France} />
-            <Route exact path="/Destinations/Cyprus" component={Cyprus} />
-            <Route exact path="/Stories" component={SuccessStories} />
             <Route exact path="/product/:slug" component={Product} />
-            <Route exact path="/category" component={CategoryHome} />
-            <Route
-              exact
-              path="/category?category=:slug"
-              component={CategoryHome}
-            />
+
             <Route exact path="/PrivacyPolicy" component={PrivacyPolicy} />
             <Route
               exact
@@ -229,7 +200,6 @@ const App = () => {
             />
             <Route exact path="/shop" component={Shop} />
             <Route exact path="/shop?category=:slug" component={Shop} />
-            {/* <Route exact path="/forgot/password" component={ForgotPassword} /> */}
 
             {/* Admin protected Routes */}
 
